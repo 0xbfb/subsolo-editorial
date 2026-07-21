@@ -1,0 +1,21 @@
+---
+import { withBasePath } from '../../lib/presentation/site-path';
+interface Props {
+  readonly dateLabel: readonly [string, string];
+  readonly slogan: string;
+}
+
+const { dateLabel, slogan } = Astro.props;
+const separator = slogan.indexOf('. ');
+const sloganLineOne = separator >= 0 ? slogan.slice(0, separator + 1) : slogan;
+const sloganLineTwo = separator >= 0 ? slogan.slice(separator + 2) : '';
+const homeHref = withBasePath('/', import.meta.env.BASE_URL);
+---
+<header class="masthead">
+  <div class="mast-meta">{dateLabel[0]}<br />{dateLabel[1]}</div>
+  <a aria-label="Subsolo — página inicial" class="logo" href={homeHref}>SUBSOLO</a>
+  <div class="mast-actions">
+    {sloganLineOne}<br />{sloganLineTwo}<br />
+    <button aria-pressed="false" class="theme-toggle" data-theme-toggle type="button">Inverter papel</button>
+  </div>
+</header>

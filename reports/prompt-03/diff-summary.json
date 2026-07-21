@@ -1,0 +1,483 @@
+{
+  "counts": {
+    "ADDED": 75,
+    "MODIFIED": 4,
+    "DELETED": 0
+  },
+  "files": [
+    {
+      "status": "MODIFIED",
+      "path": "AGENTS.md",
+      "old_sha256": "c52834df923fb39e7bf4dc0a0d3b450346d5d19bd6b2eecf90485865b44da3e7",
+      "new_sha256": "bf272ab6281fd61f4e7022f4d2a687c7ee503ac46cc37817992c832614f6c464"
+    },
+    {
+      "status": "MODIFIED",
+      "path": "CHANGELOG.md",
+      "old_sha256": "083775b0350b56a1ee35cb21f5650857da86b0bbaa471e53b31e8cc7e22caf2a",
+      "new_sha256": "0733877f3bc46e3ec1c5d1e649b7fe4f7a751df31c9a2cd537814f29ce893aec"
+    },
+    {
+      "status": "MODIFIED",
+      "path": "README.md",
+      "old_sha256": "6db0eb7984616216594536dce9456c64841a80b0ee3de0082b325cb7ef7baec9",
+      "new_sha256": "4bcb04e927bdb2840eb37f2716094159dd8da0db4a4c61833d013de3e1b5417a"
+    },
+    {
+      "status": "ADDED",
+      "path": "docs/adr/0007-google-editorial-bootstrap.md",
+      "old_sha256": null,
+      "new_sha256": "371bb5df49ed3a1eea82bb0c7d83de8585e76b0a97071fef45dd9b844dd76e39"
+    },
+    {
+      "status": "ADDED",
+      "path": "docs/development/prompt-03.md",
+      "old_sha256": null,
+      "new_sha256": "1b586b4e213778e99ec2f9afb95049a82b9b7973892ef3f22ec993d732f25aa9"
+    },
+    {
+      "status": "ADDED",
+      "path": "docs/editorial/catalogs.md",
+      "old_sha256": null,
+      "new_sha256": "3d2af3e43da737e30e33fbd3dcd177a5b604e2e7f77e0cc1efcd62e80e5a6ba6"
+    },
+    {
+      "status": "ADDED",
+      "path": "docs/editorial/data-dictionary.md",
+      "old_sha256": null,
+      "new_sha256": "6f1225c436cd149300e349e65e36a4ccd79c3d9103885e1ff8a9986870fbbbdc"
+    },
+    {
+      "status": "ADDED",
+      "path": "docs/editorial/google-workspace-setup.md",
+      "old_sha256": null,
+      "new_sha256": "7826e23e8929041f12ca7b45363188af25bb7a28dc96500ffb45adda5a4d5109"
+    },
+    {
+      "status": "ADDED",
+      "path": "docs/editorial/status-transitions.md",
+      "old_sha256": null,
+      "new_sha256": "d8ed73a47da23d95e092d394dbed458cf07ac7ee8f3dc5afc2cbf407ad735545"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/README.md",
+      "old_sha256": null,
+      "new_sha256": "d87574aecbf4b7d4d8f4881ad447cd0b04b596a6db949472942a40068b02b852"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/articles.json",
+      "old_sha256": null,
+      "new_sha256": "c0c1eb97828661440659f7332e75faf7be8153bd8e43164e9eb479614926d9b5"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/authors.json",
+      "old_sha256": null,
+      "new_sha256": "aeee21a472a5388ffe76d80fb8d7399bb2f0154fae94c9caae979693f639c84a"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/automations.json",
+      "old_sha256": null,
+      "new_sha256": "101af3e8b580e9b4ac858b385ccb152553fafb3c3ce2766cc626847d589cc410"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/channels.json",
+      "old_sha256": null,
+      "new_sha256": "69fc46761549d9c6ccba9ff215557c2acac3a0e65ff6b068b7df3edaf931b4ba"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/configurations.json",
+      "old_sha256": null,
+      "new_sha256": "81ca2d92c41371c65ba6f864a2d225363385ef728df6ec07dc6584ce305ae1f4"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/corrections.json",
+      "old_sha256": null,
+      "new_sha256": "da05aa57364d33cf0807efd41f0c8111dc0c0197f982b45a1baca59687267a78"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/edition.json",
+      "old_sha256": null,
+      "new_sha256": "a633c2b350223398c526fd4847c0a68ef1497705ae97d4c0f5db72d2ccfb9990"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/frames.json",
+      "old_sha256": null,
+      "new_sha256": "d6d895117769a7a7194a6f168fe51cb52b8a45d18ca288e75f161e74b0dc5645"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/pitches.json",
+      "old_sha256": null,
+      "new_sha256": "07a4ad51bd22e7d446d3adf3629e3ac4839b067e4294424d27428ed6105a33fd"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/publications.json",
+      "old_sha256": null,
+      "new_sha256": "29f4ec03075ac090745e579129bb57b62d376e069d4b629a3eadb3439529690f"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/sources.json",
+      "old_sha256": null,
+      "new_sha256": "0980151e637b8b8b505eca930b9f0b1666403ccbcbddbd3c5d3da5cbefbb4de0"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/story.json",
+      "old_sha256": null,
+      "new_sha256": "3dab9861bf6043fbd97306537bf5c918eaa32cf85b2af0e1fc5bf5e2b0bd646e"
+    },
+    {
+      "status": "ADDED",
+      "path": "fixtures/editorial/edition-2026-07-20/topics.json",
+      "old_sha256": null,
+      "new_sha256": "ae2c2fb1951e411b549671ddba82739e41d2f9f1e753ebf3153e5661cdf06c3b"
+    },
+    {
+      "status": "MODIFIED",
+      "path": "package.json",
+      "old_sha256": "8047e2f1f40c9908bfa20012c50b7da79aec9797d3f3b21da8ed9a74d6269453",
+      "new_sha256": "265bff9236560a3afb217d2f477a003f5a13f1210936d2eaab02c2f0856b65f6"
+    },
+    {
+      "status": "ADDED",
+      "path": "reports/prompt-03/catalog-summary.md",
+      "old_sha256": null,
+      "new_sha256": "9846fc7c0306b8772f41dbd99322c97bbc3ed06401c7eace778d3140bd55cbf8"
+    },
+    {
+      "status": "ADDED",
+      "path": "reports/prompt-03/manual-validation.md",
+      "old_sha256": null,
+      "new_sha256": "b2c217c9373f10e59c4669865664e7c7446baf677d51b3979de7a634a71172a7"
+    },
+    {
+      "status": "ADDED",
+      "path": "reports/prompt-03/test-results.md",
+      "old_sha256": null,
+      "new_sha256": "5e31e9c30a42f88301d3354363ab5e0071be30ad00f527ee46fc2e20886ffc4c"
+    },
+    {
+      "status": "ADDED",
+      "path": "scripts/generate-editorial-bootstrap.mjs",
+      "old_sha256": null,
+      "new_sha256": "4112b63d96aedfbd7db09fb94aa0b8c905f6bbab42313113fa9f85d9a521a2cb"
+    },
+    {
+      "status": "ADDED",
+      "path": "scripts/validate-editorial-fixtures.mjs",
+      "old_sha256": null,
+      "new_sha256": "6948296120b09e8e115712e545eba565029a208dbd57f0ea2681fa2b7bf59a6b"
+    },
+    {
+      "status": "ADDED",
+      "path": "src/data/editorial/catalogs/authors.json",
+      "old_sha256": null,
+      "new_sha256": "aeee21a472a5388ffe76d80fb8d7399bb2f0154fae94c9caae979693f639c84a"
+    },
+    {
+      "status": "ADDED",
+      "path": "src/data/editorial/catalogs/channels.json",
+      "old_sha256": null,
+      "new_sha256": "69fc46761549d9c6ccba9ff215557c2acac3a0e65ff6b068b7df3edaf931b4ba"
+    },
+    {
+      "status": "ADDED",
+      "path": "src/data/editorial/catalogs/controlled-values.json",
+      "old_sha256": null,
+      "new_sha256": "a0fa88ca731e5c8a5b0a49671d8aa38bba635a9d92bd733b599083a10a9acd25"
+    },
+    {
+      "status": "ADDED",
+      "path": "src/data/editorial/catalogs/departments.json",
+      "old_sha256": null,
+      "new_sha256": "4fdac08165456b84c7ea7a40457b614a7644d5d66e33687f6557a12ef7655c54"
+    },
+    {
+      "status": "ADDED",
+      "path": "src/data/editorial/catalogs/frames.json",
+      "old_sha256": null,
+      "new_sha256": "d6d895117769a7a7194a6f168fe51cb52b8a45d18ca288e75f161e74b0dc5645"
+    },
+    {
+      "status": "ADDED",
+      "path": "src/data/editorial/catalogs/topics.json",
+      "old_sha256": null,
+      "new_sha256": "ae2c2fb1951e411b549671ddba82739e41d2f9f1e753ebf3153e5661cdf06c3b"
+    },
+    {
+      "status": "ADDED",
+      "path": "src/lib/application/validate-article-readiness.ts",
+      "old_sha256": null,
+      "new_sha256": "41201427543940d7d69c41341a2aa1102b4364e95c40af1128db9b94506e3343"
+    },
+    {
+      "status": "ADDED",
+      "path": "src/lib/domain/editorial-catalog.ts",
+      "old_sha256": null,
+      "new_sha256": "764b30eb5642563a7e302a41d3b34188e51f52796bc0ad4f760d6addd862fff7"
+    },
+    {
+      "status": "ADDED",
+      "path": "src/lib/domain/editorial-state.ts",
+      "old_sha256": null,
+      "new_sha256": "cd734c0e52d6cd9ba595f23158c4f8d52552f1a96a5f49f45b3eb72537dd68a9"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/calendar/calendars.json",
+      "old_sha256": null,
+      "new_sha256": "4c2e99cecacde2221977c8d3d73dfe73ddcfdc0278a924f774f3c003b99fb794"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/calendar/event-template.json",
+      "old_sha256": null,
+      "new_sha256": "fab59937b4ed75ba16c29f85a3441a4d48eab75b8c344aaaeb736fe289a242f2"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/docs/artigo.md",
+      "old_sha256": null,
+      "new_sha256": "d49ae8869f14d01fcd66c5e1059a4f49d1b7b3c5c67fa666679ff763cb16bd30"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/docs/bom-dia-distopia.md",
+      "old_sha256": null,
+      "new_sha256": "4ec84808543dc1c464150636362d7813472d4504102cf8704072e97bd138d739"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/docs/correcao.md",
+      "old_sha256": null,
+      "new_sha256": "b78ed9b9f44ec0bb3252f825b9f93d793011f26a04c0de217012c3b13ad6602a"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/docs/historia-acompanhada.md",
+      "old_sha256": null,
+      "new_sha256": "ca8ff1a3b61c4f6d487d57863f0f7a054e1f9248dcbdee6c320585101a4ff27f"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/docs/mapa-do-dia.md",
+      "old_sha256": null,
+      "new_sha256": "8393238bf619fbe500ac260f8351cfafb3eba731ad623328c9e6e5697e0ab1dd"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/drive/README.md",
+      "old_sha256": null,
+      "new_sha256": "52cdb4f9ae361698506fe105a6253780c12d0486a8bbd84934ee8927571ea93a"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/drive/structure.json",
+      "old_sha256": null,
+      "new_sha256": "beaf7549bb8d9b95fdef3eb355d379d54ad074760be44f181cf47595dff5f3fa"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/gmail/README.md",
+      "old_sha256": null,
+      "new_sha256": "732e53d8f4548cf18f29f6e243b255fb070bfbfe4d5681c5e8e07ba83fa82bfa"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/gmail/labels.json",
+      "old_sha256": null,
+      "new_sha256": "9a8f2e9fadacc39bae09cd8058a0a4d38033113dc62142c648a37074f6fdc6ab"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/README.md",
+      "old_sha256": null,
+      "new_sha256": "ea8ad340807dd4279c6c63319cb73bd2e38d5c79ae3754d74adb004a9cd3ad58"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/ARTIGOS.csv",
+      "old_sha256": null,
+      "new_sha256": "421aa2a81245bf23944f64619afaf8d94655c85e4f097074fef9a348963644b1"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/ARTIGOS.json",
+      "old_sha256": null,
+      "new_sha256": "c0c1eb97828661440659f7332e75faf7be8153bd8e43164e9eb479614926d9b5"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/AUTOMACOES.csv",
+      "old_sha256": null,
+      "new_sha256": "a79bbe010e6b8197a3f4ba848ef3f0ca54aa0ea7dae336cbb335d2df41bcda75"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/AUTOMACOES.json",
+      "old_sha256": null,
+      "new_sha256": "101af3e8b580e9b4ac858b385ccb152553fafb3c3ce2766cc626847d589cc410"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/AUTORES.csv",
+      "old_sha256": null,
+      "new_sha256": "4159589c8ce6ccf3bf1dc59502580abd6932c1f8a4b92021e9624c2d5b02d98c"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/AUTORES.json",
+      "old_sha256": null,
+      "new_sha256": "aeee21a472a5388ffe76d80fb8d7399bb2f0154fae94c9caae979693f639c84a"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/CANAIS.csv",
+      "old_sha256": null,
+      "new_sha256": "83dc455c8cdff364dcee213080b62c24dd28d0764bfcaa4e21b9a74c08022eae"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/CANAIS.json",
+      "old_sha256": null,
+      "new_sha256": "69fc46761549d9c6ccba9ff215557c2acac3a0e65ff6b068b7df3edaf931b4ba"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/CONFIGURACOES.csv",
+      "old_sha256": null,
+      "new_sha256": "42a246f7d20ff8ff9631af0c33757892e58463b1c64c532400200650075b0c19"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/CONFIGURACOES.json",
+      "old_sha256": null,
+      "new_sha256": "81ca2d92c41371c65ba6f864a2d225363385ef728df6ec07dc6584ce305ae1f4"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/CORRECOES.csv",
+      "old_sha256": null,
+      "new_sha256": "f2d3e7e5188a81dd00c5597596bcd88ad0c9da7771beb2d0174dc3d2a134d28b"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/CORRECOES.json",
+      "old_sha256": null,
+      "new_sha256": "da05aa57364d33cf0807efd41f0c8111dc0c0197f982b45a1baca59687267a78"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/EDICOES.csv",
+      "old_sha256": null,
+      "new_sha256": "af275dfe217d9587997fcb3c148ebb7f165f34e141292536fa53be9b96332a4b"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/EDICOES.json",
+      "old_sha256": null,
+      "new_sha256": "47486e2fd061ef6866ee992dff62773ee6c845674fe2fcc465150c56616aeb29"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/FONTES.csv",
+      "old_sha256": null,
+      "new_sha256": "244df20eea8e60923b2859146128a8fb76bb0eee35448024458a3092ad8319f8"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/FONTES.json",
+      "old_sha256": null,
+      "new_sha256": "0980151e637b8b8b505eca930b9f0b1666403ccbcbddbd3c5d3da5cbefbb4de0"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/PAUTAS.csv",
+      "old_sha256": null,
+      "new_sha256": "fc6a955282153b9295becdb8abb3b9bab14b627c3388c93ce66bcfbe67efe94c"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/PAUTAS.json",
+      "old_sha256": null,
+      "new_sha256": "07a4ad51bd22e7d446d3adf3629e3ac4839b067e4294424d27428ed6105a33fd"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/PUBLICACOES.csv",
+      "old_sha256": null,
+      "new_sha256": "ab1c65da1a457a9475f488d086a0f74ed26aa46b736456122b7287934d2e7454"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/PUBLICACOES.json",
+      "old_sha256": null,
+      "new_sha256": "29f4ec03075ac090745e579129bb57b62d376e069d4b629a3eadb3439529690f"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/QUADROS.csv",
+      "old_sha256": null,
+      "new_sha256": "cdf45b8fb5afec8c743f61c0d42e19ba07d6174f764f3ba4ab5f6483ac3f6178"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/QUADROS.json",
+      "old_sha256": null,
+      "new_sha256": "d6d895117769a7a7194a6f168fe51cb52b8a45d18ca288e75f161e74b0dc5645"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/TEMAS.csv",
+      "old_sha256": null,
+      "new_sha256": "118d8dbf8e30f0838509068ec7517d8bd46e0b8d1d204637166b73a9f0444d01"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/bootstrap/TEMAS.json",
+      "old_sha256": null,
+      "new_sha256": "ae2c2fb1951e411b549671ddba82739e41d2f9f1e753ebf3153e5661cdf06c3b"
+    },
+    {
+      "status": "ADDED",
+      "path": "templates/google/sheets/workbook.schema.json",
+      "old_sha256": null,
+      "new_sha256": "9c45cacbaaf38b68b61695b79ddab765b64bd98647a460f27fc7e53f62fff59d"
+    },
+    {
+      "status": "ADDED",
+      "path": "tests/application/article-readiness.test.ts",
+      "old_sha256": null,
+      "new_sha256": "d374078c5b3d04f02de8edc496d82394fe59d8578b63c9903f8f1350b19613ba"
+    },
+    {
+      "status": "ADDED",
+      "path": "tests/domain/editorial-state.test.ts",
+      "old_sha256": null,
+      "new_sha256": "636645776f1e0e24f332a4bacf14cde44e417bcf130922a195a7c401944b5966"
+    },
+    {
+      "status": "ADDED",
+      "path": "tests/editorial/bootstrap-static.test.mjs",
+      "old_sha256": null,
+      "new_sha256": "a23cb59da54e815efbe3994f069ff41134f8ab1a029ba3ba9d3f5d2b4c246a41"
+    },
+    {
+      "status": "ADDED",
+      "path": "tests/editorial/fixtures-static.test.mjs",
+      "old_sha256": null,
+      "new_sha256": "5921fc4adba57d3c6f8aac42f606459358309117e02e30b472f438af9fa27113"
+    }
+  ]
+}

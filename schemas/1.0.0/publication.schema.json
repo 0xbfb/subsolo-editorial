@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://subsolo.invalid/schemas/1.0.0/public-publication.schema.json",
+  "title": "Public Publication",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "edition_id",
+    "title",
+    "slug",
+    "description",
+    "channel",
+    "section",
+    "type",
+    "status",
+    "authors",
+    "editor",
+    "topics",
+    "territories",
+    "story_id",
+    "published_at",
+    "updated_at",
+    "featured",
+    "language",
+    "image"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^pub_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "edition_id": {
+      "type": "string",
+      "pattern": "^ed_\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 96
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "channel": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 96
+    },
+    "section": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 96
+    },
+    "type": {
+      "enum": [
+        "noticia",
+        "reportagem",
+        "analise",
+        "investigacao",
+        "editorial",
+        "guia",
+        "documento-comentado",
+        "boletim",
+        "acompanhamento",
+        "perfil",
+        "ensaio",
+        "analise-de-partida"
+      ]
+    },
+    "status": {
+      "enum": [
+        "publicado",
+        "em-desenvolvimento",
+        "atualizado",
+        "corrigido",
+        "concluido",
+        "inconclusivo",
+        "aguardando-confirmacao",
+        "arquivado",
+        "retirado"
+      ]
+    },
+    "authors": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "maxLength": 96
+      }
+    },
+    "editor": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 96
+    },
+    "topics": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "maxLength": 96
+      }
+    },
+    "territories": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "maxLength": 96
+      }
+    },
+    "story_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^story_[0-9A-HJKMNP-TV-Z]{26}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "language": {
+      "const": "pt-BR"
+    },
+    "image": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "src",
+            "alt"
+          ],
+          "properties": {
+            "src": {
+              "type": "string",
+              "minLength": 1
+            },
+            "alt": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

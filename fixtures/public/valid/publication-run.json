@@ -1,0 +1,13 @@
+{
+  "edition_id": "ed_2026-07-20",
+  "generated_at": "2026-07-20T15:00:00-03:00",
+  "revision": 1,
+  "run_id": "run_20260720T150000-0300_r1",
+  "schema_version": "1.0.0",
+  "source_workspace_sha256": "a98bde7cf49df7e09d82dd81c0aaae1c05d3dfd4e82748321903b8ccd7d85d1e",
+  "state": "packaged",
+  "validation": {
+    "issues": 0,
+    "status": "passed"
+  }
+}

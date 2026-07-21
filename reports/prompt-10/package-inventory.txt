@@ -1,0 +1,35 @@
+PACOTE R1
+Archive:  fixtures/packager/golden/r1.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+     1060  2026-07-20 15:00   checksums.sha256
+      139  2026-07-20 15:00   edition.md
+      631  2026-07-20 15:00   manifest.json
+      355  2026-07-20 15:00   publication-run.json
+        3  2026-07-20 15:00   publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0/corrections.json
+        3  2026-07-20 15:00   publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0/media.json
+      778  2026-07-20 15:00   publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0/provenance.public.json
+     1278  2026-07-20 15:00   publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0/publication.md
+      442  2026-07-20 15:00   publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0/sources.json
+      738  2026-07-20 15:00   reports/provenance.public.json
+      627  2026-07-20 15:00   reports/validation.json
+---------                     -------
+     6054                     11 files
+
+PACOTE R2
+Archive:  fixtures/packager/golden/r2.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+     1060  2026-07-20 16:30   checksums.sha256
+      131  2026-07-20 16:30   edition.md
+      656  2026-07-20 16:30   manifest.json
+      355  2026-07-20 16:30   publication-run.json
+        3  2026-07-20 16:30   publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0/corrections.json
+        3  2026-07-20 16:30   publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0/media.json
+      778  2026-07-20 16:30   publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0/provenance.public.json
+     1360  2026-07-20 16:30   publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0/publication.md
+      442  2026-07-20 16:30   publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0/sources.json
+      738  2026-07-20 16:30   reports/provenance.public.json
+      627  2026-07-20 16:30   reports/validation.json
+---------                     -------
+     6153                     11 files

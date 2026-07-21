@@ -1,0 +1,82 @@
+{
+  "name": "07 · Confirmação de publicação",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "none",
+    "timezone": "America/Sao_Paulo"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "subsolo/github-deploy-confirmed",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "webhook-github-autorizado",
+      "name": "Webhook GitHub autorizado",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "node /workspace/cli/subsolo.mjs reconcile --input /workspace/fixtures/n8n/reconciliation-candidate.json --dry-run"
+      },
+      "id": "validar-deploy",
+      "name": "Validar deploy",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        280,
+        0
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "registrar-confirmação",
+      "name": "Registrar confirmação",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        560,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook GitHub autorizado": {
+      "main": [
+        [
+          {
+            "node": "Validar deploy",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar deploy": {
+      "main": [
+        [
+          {
+            "node": "Registrar confirmação",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "subsolo_export": "sanitized",
+    "schema_version": "1.0.0"
+  }
+}

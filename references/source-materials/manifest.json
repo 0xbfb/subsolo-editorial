@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "project_version": "0.1.0-dev",
+  "files": [
+    {
+      "file": "subsolo_plano_tecnico_desenvolvimento_v2.0.md",
+      "kind": "technical-plan",
+      "status": "canonical",
+      "size_bytes": 50401,
+      "sha256": "f63e3a9f18f1184d79e9d40ac7e77213a4f4751447ebf86eee7aa16a4ebf7eda",
+      "source_path_at_bootstrap": "/mnt/data/subsolo_plano_tecnico_desenvolvimento_v2.0.md"
+    },
+    {
+      "file": "subsolo_stack_custo_zero_v1.md",
+      "kind": "stack",
+      "status": "canonical",
+      "size_bytes": 42421,
+      "sha256": "0b868b2e5fb085202d8192b6f5bee1acc0c406d10aa54ea14a8391334c757861",
+      "source_path_at_bootstrap": "/mnt/data/subsolo_stack_custo_zero_v1.md"
+    },
+    {
+      "file": "subsolo_diretrizes_ux_ui_v1.0.md",
+      "kind": "ux-ui",
+      "status": "canonical",
+      "size_bytes": 36020,
+      "sha256": "e432d07e500da88cc9a1c923c6be4a1707432994dba59a4b8a942715a5e93187",
+      "source_path_at_bootstrap": "/mnt/data/subsolo_diretrizes_ux_ui_v1.0.md"
+    },
+    {
+      "file": "subsolo_base_editorial_html_v1.0.zip",
+      "kind": "visual-reference",
+      "status": "canonical",
+      "size_bytes": 38865,
+      "sha256": "90c091c6d010011deaa7dd348b82ac151444ec2617e482f9cb967f21a4a3eae6",
+      "source_path_at_bootstrap": "/mnt/data/subsolo_base_editorial_html_v1.0.zip"
+    },
+    {
+      "file": "ecossistema_editorial_bdd_canais_e_quadros_v1.1.md",
+      "kind": "editorial-ecosystem",
+      "status": "canonical",
+      "size_bytes": 49778,
+      "sha256": "48dc585ea44be8f770e7ce323f8ee81536b5ead7fe40a3df6a00ee5db7841669",
+      "source_path_at_bootstrap": "/mnt/data/ecossistema_editorial_bdd_canais_e_quadros_v1.1(1).md"
+    },
+    {
+      "file": "bom_dia_distopia_prompt_mestre_v2.md",
+      "kind": "bdd-prompt",
+      "status": "canonical",
+      "size_bytes": 26377,
+      "sha256": "60e31fbe28957d3450dc5f583ab9c2adc526001b05867ced1668f610475daa54",
+      "source_path_at_bootstrap": "/mnt/data/bom_dia_distopia_prompt_mestre_v2.md"
+    },
+    {
+      "file": "subsolo_manual_mesa_de_abertura_v1.0.md",
+      "kind": "opening-desk",
+      "status": "canonical",
+      "size_bytes": 28792,
+      "sha256": "c386249182952a147bafe10868f63d6722cecda81a1fff11e5b1b18bf3ea6018",
+      "source_path_at_bootstrap": "/mnt/data/subsolo_manual_mesa_de_abertura_v1.0(1).md"
+    },
+    {
+      "file": "redacao_011_dossies_editoriais_v1.0.zip",
+      "kind": "editorial-staff",
+      "status": "canonical",
+      "size_bytes": 333001,
+      "sha256": "7b31a67a2822971ce507bb1210977aa8804cedd5edfca83ec8e0352d22be0c90",
+      "source_path_at_bootstrap": "/mnt/data/redacao_011_dossies_editoriais_v1.0(1).zip"
+    },
+    {
+      "file": "subsolo_guia_visual_retratos_editores_v1.0.md",
+      "kind": "portrait-guide",
+      "status": "canonical",
+      "size_bytes": 40545,
+      "sha256": "5672e74eecb939b9885c97fe626daee23f10b7edc93a8a83db52709caebf1ef6",
+      "source_path_at_bootstrap": "/mnt/data/subsolo_guia_visual_retratos_editores_v1.0(1).md"
+    },
+    {
+      "file": "subsolo_prompts_desenvolvimento_ate_v1.0.md",
+      "kind": "development-prompts",
+      "status": "canonical",
+      "size_bytes": 82531,
+      "sha256": "b38466c1c42fbd944ff43ff9609caf994b83ab21ee8218ae7b195760ce29910c",
+      "source_path_at_bootstrap": "/mnt/data/subsolo_prompts_desenvolvimento_ate_v1.0.md"
+    },
+    {
+      "file": "subsolo_clean_desktop.png",
+      "kind": "visual-screenshot",
+      "status": "supporting",
+      "size_bytes": 333826,
+      "sha256": "ba81701046084dfcb44872017676ad5c0c227ea517a287964072364a4412ba0d",
+      "source_path_at_bootstrap": "/mnt/data/subsolo_clean_desktop.png"
+    },
+    {
+      "file": "subsolo_clean_mobile.png",
+      "kind": "visual-screenshot",
+      "status": "supporting",
+      "size_bytes": 301240,
+      "sha256": "f9db5581796560e9a987c74ca929a7ba1a610ca29c93816071bfeabe72e599a9",
+      "source_path_at_bootstrap": "/mnt/data/subsolo_clean_mobile.png"
+    }
+  ]
+}

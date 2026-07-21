@@ -1,0 +1,360 @@
+# Full Node test suite
+2026-07-20T20:26:50+00:00
+TAP version 13
+# Subtest: fixture possui edição e publicações de canais diferentes
+ok 1 - fixture possui edição e publicações de canais diferentes
+  ---
+  duration_ms: 0.5623
+  type: 'test'
+  ...
+# Subtest: todas as publicações possuem sumário, seções, fontes e conexões válidas
+ok 2 - todas as publicações possuem sumário, seções, fontes e conexões válidas
+  ---
+  duration_ms: 0.207071
+  type: 'test'
+  ...
+# Subtest: conteúdo não contém html executável
+ok 3 - conteúdo não contém html executável
+  ---
+  duration_ms: 0.321423
+  type: 'test'
+  ...
+# Subtest: catálogo declara nove schemas públicos na versão 1.0.0
+ok 4 - catálogo declara nove schemas públicos na versão 1.0.0
+  ---
+  duration_ms: 0.575015
+  type: 'test'
+  ...
+# Subtest: Astro usa loaders atuais e Zod sem contaminar o domínio
+ok 5 - Astro usa loaders atuais e Zod sem contaminar o domínio
+  ---
+  duration_ms: 0.301651
+  type: 'test'
+  ...
+# Subtest: fixture pública contém front matter e blocos permitidos
+ok 6 - fixture pública contém front matter e blocos permitidos
+  ---
+  duration_ms: 0.097735
+  type: 'test'
+  ...
+# Subtest: fixture insegura exercita detecção de script
+ok 7 - fixture insegura exercita detecção de script
+  ---
+  duration_ms: 0.084302
+  type: 'test'
+  ...
+# Subtest: fixture privada exercita rejeição de campos desconhecidos
+ok 8 - fixture privada exercita rejeição de campos desconhecidos
+  ---
+  duration_ms: 0.130549
+  type: 'test'
+  ...
+# Subtest: Astro aceita site e base por ambiente
+ok 9 - Astro aceita site e base por ambiente
+  ---
+  duration_ms: 4.566029
+  type: 'test'
+  ...
+# Subtest: componentes estruturais aplicam base path
+ok 10 - componentes estruturais aplicam base path
+  ---
+  duration_ms: 2.925313
+  type: 'test'
+  ...
+# Subtest: verificador aceita artefato mínimo íntegro
+ok 11 - verificador aceita artefato mínimo íntegro
+  ---
+  duration_ms: 213.361585
+  type: 'test'
+  ...
+# Subtest: varredura rejeita chave privada
+ok 12 - varredura rejeita chave privada
+  ---
+  duration_ms: 119.983349
+  type: 'test'
+  ...
+# Subtest: workflows de CI, preview e deploy existem
+ok 13 - workflows de CI, preview e deploy existem
+  ---
+  duration_ms: 73.162068
+  type: 'test'
+  ...
+# Subtest: preview não recebe permissão de Pages
+ok 14 - preview não recebe permissão de Pages
+  ---
+  duration_ms: 1.348917
+  type: 'test'
+  ...
+# Subtest: deploy usa ambiente e permissões mínimas
+ok 15 - deploy usa ambiente e permissões mínimas
+  ---
+  duration_ms: 1.15287
+  type: 'test'
+  ...
+# Subtest: artefato é validado antes do upload
+ok 16 - artefato é validado antes do upload
+  ---
+  duration_ms: 3.497339
+  type: 'test'
+  ...
+# Subtest: workbook declara as doze abas obrigatórias
+ok 17 - workbook declara as doze abas obrigatórias
+  ---
+  duration_ms: 0.945021
+  type: 'test'
+  ...
+# Subtest: cada aba possui bootstrap CSV e JSON
+ok 18 - cada aba possui bootstrap CSV e JSON
+  ---
+  duration_ms: 4.181285
+  type: 'test'
+  ...
+# Subtest: catálogos iniciais correspondem aos documentos canônicos
+ok 19 - catálogos iniciais correspondem aos documentos canônicos
+  ---
+  duration_ms: 0.228479
+  type: 'test'
+  ...
+# Subtest: todo canal possui editor existente e todo quadro possui canal
+ok 20 - todo canal possui editor existente e todo quadro possui canal
+  ---
+  duration_ms: 0.221734
+  type: 'test'
+  ...
+# Subtest: fixture representa edição, pauta, artigo, autor, canal, quadro, fonte, publicação e correção
+ok 21 - fixture representa edição, pauta, artigo, autor, canal, quadro, fonte, publicação e correção
+  ---
+  duration_ms: 0.614723
+  type: 'test'
+  ...
+# Subtest: referências principais da fixture são resolvíveis
+ok 22 - referências principais da fixture são resolvíveis
+  ---
+  duration_ms: 0.251468
+  type: 'test'
+  ...
+# Subtest: campos privados permanecem explicitamente privados no workbook
+ok 23 - campos privados permanecem explicitamente privados no workbook
+  ---
+  duration_ms: 5.373399
+  type: 'test'
+  ...
+# Subtest: dry-run é determinístico e não grava destino
+ok 24 - dry-run é determinístico e não grava destino
+  ---
+  duration_ms: 85.24252
+  type: 'test'
+  ...
+# Subtest: apply gera os cinco arquivos públicos esperados
+ok 25 - apply gera os cinco arquivos públicos esperados
+  ---
+  duration_ms: 9.405337
+  type: 'test'
+  ...
+# Subtest: mesma entrada gera bytes iguais ao golden
+ok 26 - mesma entrada gera bytes iguais ao golden
+  ---
+  duration_ms: 3.003099
+  type: 'test'
+  ...
+# Subtest: IDs derivados são estáveis e mudam por seed
+ok 27 - IDs derivados são estáveis e mudam por seed
+  ---
+  duration_ms: 0.324073
+  type: 'test'
+  ...
+# Subtest: proveniência pública usa hashes e não expõe IDs do Google
+ok 28 - proveniência pública usa hashes e não expõe IDs do Google
+  ---
+  duration_ms: 1.697766
+  type: 'test'
+  ...
+# Subtest: allowlist remove campos privados de fontes, correções e mídia
+ok 29 - allowlist remove campos privados de fontes, correções e mídia
+  ---
+  duration_ms: 2.003921
+  type: 'test'
+  ...
+# Subtest: overwrite atômico remove arquivo obsoleto
+ok 30 - overwrite atômico remove arquivo obsoleto
+  ---
+  duration_ms: 12.307952
+  type: 'test'
+  ...
+# Subtest: rejeita sugestão pendente
+ok 31 - rejeita sugestão pendente
+  ---
+  duration_ms: 1.706901
+  type: 'test'
+  ...
+# Subtest: rejeita comentários internos
+ok 32 - rejeita comentários internos
+  ---
+  duration_ms: 15.417217
+  type: 'test'
+  ...
+# Subtest: rejeita link privado
+ok 33 - rejeita link privado
+  ---
+  duration_ms: 46.323903
+  type: 'test'
+  ...
+# Subtest: rejeita metadado obrigatório ausente
+ok 34 - rejeita metadado obrigatório ausente
+  ---
+  duration_ms: 1.298703
+  type: 'test'
+  ...
+# Subtest: rejeita revisão factual pendente
+ok 35 - rejeita revisão factual pendente
+  ---
+  duration_ms: 2.127362
+  type: 'test'
+  ...
+# Subtest: rejeita conflito de título
+ok 36 - rejeita conflito de título
+  ---
+  duration_ms: 1.51339
+  type: 'test'
+  ...
+# Subtest: imagem de capa é reconstruída por allowlist
+ok 37 - imagem de capa é reconstruída por allowlist
+  ---
+  duration_ms: 2.31697
+  type: 'test'
+  ...
+# Subtest: rejeita imagem de capa privada
+ok 38 - rejeita imagem de capa privada
+  ---
+  duration_ms: 2.139372
+  type: 'test'
+  ...
+# Subtest: rejeita data pública sem fuso explícito
+ok 39 - rejeita data pública sem fuso explícito
+  ---
+  duration_ms: 1.23447
+  type: 'test'
+  ...
+# Subtest: rejeita mídia sem derivado público
+ok 40 - rejeita mídia sem derivado público
+  ---
+  duration_ms: 2.140107
+  type: 'test'
+  ...
+# Subtest: rejeita booleano textual em destaque
+ok 41 - rejeita booleano textual em destaque
+  ---
+  duration_ms: 1.41358
+  type: 'test'
+  ...
+# Subtest: rejeita destino existente sem overwrite
+ok 42 - rejeita destino existente sem overwrite
+  ---
+  duration_ms: 2.151527
+  type: 'test'
+  ...
+# Subtest: todas as imagens possuem versão explícita
+ok 43 - todas as imagens possuem versão explícita
+  ---
+  duration_ms: 0.9841
+  type: 'test'
+  ...
+# Subtest: portas administrativas são vinculadas a localhost
+ok 44 - portas administrativas são vinculadas a localhost
+  ---
+  duration_ms: 0.36902
+  type: 'test'
+  ...
+# Subtest: cada serviço possui healthcheck
+ok 45 - cada serviço possui healthcheck
+  ---
+  duration_ms: 0.184914
+  type: 'test'
+  ...
+# Subtest: postgres não publica porta no host
+ok 46 - postgres não publica porta no host
+  ---
+  duration_ms: 1.439022
+  type: 'test'
+  ...
+# Subtest: arquivos Astro possuem front matter e imports relativos resolvíveis
+ok 47 - arquivos Astro possuem front matter e imports relativos resolvíveis
+  ---
+  duration_ms: 114.191402
+  type: 'test'
+  ...
+# Subtest: tokens textuais essenciais atingem contraste AA em ambos os papéis
+ok 48 - tokens textuais essenciais atingem contraste AA em ambos os papéis
+  ---
+  duration_ms: 0.889526
+  type: 'test'
+  ...
+# Subtest: rotas editoriais essenciais existem
+ok 49 - rotas editoriais essenciais existem
+  ---
+  duration_ms: 12.11601
+  type: 'test'
+  ...
+# Subtest: busca não simula funcionalidade antes do Pagefind
+ok 50 - busca não simula funcionalidade antes do Pagefind
+  ---
+  duration_ms: 1.612352
+  type: 'test'
+  ...
+# Subtest: página de matéria usa componentes de transparência editorial
+ok 51 - página de matéria usa componentes de transparência editorial
+  ---
+  duration_ms: 1.272348
+  type: 'test'
+  ...
+# Subtest: home tem links reais e manchete continua sem span sublinhado
+ok 52 - home tem links reais e manchete continua sem span sublinhado
+  ---
+  duration_ms: 1.839281
+  type: 'test'
+  ...
+# Subtest: Jornal Concreto usa tokens e componentes em vez de CSS inline
+ok 53 - Jornal Concreto usa tokens e componentes em vez de CSS inline
+  ---
+  duration_ms: 6.2484
+  type: 'test'
+  ...
+# Subtest: manchete principal não recebe sublinhado e títulos secundários recebem
+ok 54 - manchete principal não recebe sublinhado e títulos secundários recebem
+  ---
+  duration_ms: 3.714536
+  type: 'test'
+  ...
+# Subtest: conteúdo editorial da home está fora dos componentes
+ok 55 - conteúdo editorial da home está fora dos componentes
+  ---
+  duration_ms: 1.794217
+  type: 'test'
+  ...
+# Subtest: não reintroduz mensagens de protótipo no código público
+ok 56 - não reintroduz mensagens de protótipo no código público
+  ---
+  duration_ms: 102.732734
+  type: 'test'
+  ...
+# Subtest: tema é persistido, sincronizado e permanece progressivo
+ok 57 - tema é persistido, sincronizado e permanece progressivo
+  ---
+  duration_ms: 1.647786
+  type: 'test'
+  ...
+# Subtest: rota interna de inventário existe fora da navegação pública
+ok 58 - rota interna de inventário existe fora da navegação pública
+  ---
+  duration_ms: 1.569257
+  type: 'test'
+  ...
+1..58
+# tests 58
+# suites 0
+# pass 58
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 455.354521

@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "release": "1.0.0-pre",
+  "source_package": "subsolo-1.0.0-pre.zip",
+  "source_package_sha256": "58cc33533c742f59ea0a1559312b5f9d6badc0ff316b14edc5029dbde6de6e37",
+  "policy": "Git source import excludes generated screenshots and embedded archival ZIP/PNG source materials. They remain in the clean release ZIP.",
+  "omitted_count": 13,
+  "omitted": [
+    {
+      "path": "reports/prompt-17/media-contact-sheet.png",
+      "size_bytes": 191625,
+      "sha256": "40b51ac8aff5d9196ef64ec8c9dd2c4185e3bf1c197f669e50ae98743517de36",
+      "classification": "generated-or-archival-binary"
+    },
+    {
+      "path": "reports/prompt-20/screenshots/archive-mobile.png",
+      "size_bytes": 149340,
+      "sha256": "166da02d20fac71814505b406f9279068999cadb4900e1e1bb4bbc0ebf4fb6fa",
+      "classification": "generated-or-archival-binary"
+    },
+    {
+      "path": "reports/prompt-20/screenshots/article-desktop.png",
+      "size_bytes": 353644,
+      "sha256": "1ed9d3828de3dbd05a1970bcc4c374c98a273a4856783598dcac9ba8ce7c9e27",
+      "classification": "generated-or-archival-binary"
+    },
+    {
+      "path": "reports/prompt-20/screenshots/home-desktop.png",
+      "size_bytes": 298922,
+      "sha256": "143c18e079f8f33f0545eaf1fca9774dcdeefd60deebff59b99f0184d9888bbc",
+      "classification": "generated-or-archival-binary"
+    },
+    {
+      "path": "reports/prompt-20/screenshots/home-mobile.png",
+      "size_bytes": 202069,
+      "sha256": "cfe0a3be30cea4764a857b1587e0beaea35f6ab66035bba02374582b30eb22c8",
+      "classification": "generated-or-archival-binary"
+    },
+    {
+      "path": "reports/prompt-05/screenshots/comparison-desktop.png",
+      "size_bytes": 1286828,
+      "sha256": "497a4972ffab6aa5533e353897eb0f232284b8f7271315589eb3fe21629e95a3",
+      "classification": "generated-or-archival-binary"
+    },
+    {
+      "path": "reports/prompt-05/screenshots/comparison-mobile.png",
+      "size_bytes": 1176518,
+      "sha256": "e54feff97f564ebe8752acea9d99a3a0798ea5bc7977a9abc0484c950da7b183",
+      "classification": "generated-or-archival-binary"
+    },
+    {
+      "path": "reports/prompt-05/screenshots/jornal-concreto-desktop.png",
+      "size_bytes": 367274,
+      "sha256": "45d9f4f9d740dc9f8b0d96a8a7825182c0b9425904701e032127ecd7a69a0e34",
+      "classification": "generated-or-archival-binary"
+    },
+    {
+      "path": "reports/prompt-05/screenshots/jornal-concreto-mobile.png",
+      "size_bytes": 332669,
+      "sha256": "12e27b59b44b0ac4da26b14edfb375c0e5338556693b17a39b0f973885bcc404",
+      "classification": "generated-or-archival-binary"
+    },
+    {
+      "path": "references/source-materials/redacao_011_dossies_editoriais_v1.0.zip",
+      "size_bytes": 333001,
+      "sha256": "7b31a67a2822971ce507bb1210977aa8804cedd5edfca83ec8e0352d22be0c90",
+      "classification": "generated-or-archival-binary"
+    },
+    {
+      "path": "references/source-materials/subsolo_base_editorial_html_v1.0.zip",
+      "size_bytes": 38865,
+      "sha256": "90c091c6d010011deaa7dd348b82ac151444ec2617e482f9cb967f21a4a3eae6",
+      "classification": "generated-or-archival-binary"
+    },
+    {
+      "path": "references/source-materials/subsolo_clean_desktop.png",
+      "size_bytes": 333826,
+      "sha256": "ba81701046084dfcb44872017676ad5c0c227ea517a287964072364a4412ba0d",
+      "classification": "generated-or-archival-binary"
+    },
+    {
+      "path": "references/source-materials/subsolo_clean_mobile.png",
+      "size_bytes": 301240,
+      "sha256": "f9db5581796560e9a987c74ca929a7ba1a610ca29c93816071bfeabe72e599a9",
+      "classification": "generated-or-archival-binary"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+---
+import { channels, authors, topics } from '../../lib/presentation/site-repository';
+import { discoveryFacets } from '../../lib/presentation/archive-repository';
+import { withBasePath } from '../../lib/presentation/site-path';
+const indexHref = withBasePath('/archive-index.json', import.meta.env.BASE_URL);
+const pagefindHref = withBasePath('/pagefind/pagefind.js', import.meta.env.BASE_URL);
+const searchScriptHref = withBasePath('/assets/search.js', import.meta.env.BASE_URL);
+const channelOptions = channels.filter((item) => discoveryFacets.channel[item.slug]);
+const authorOptions = authors.filter((item) => discoveryFacets.author[item.slug]);
+const topicOptions = topics.filter((item) => discoveryFacets.topic[item.slug]);
+---
+<section class="search-panel" data-search-root data-index-href={indexHref} data-pagefind-href={pagefindHref}>
+  <form class="search-form" data-search-form>
+    <label class="search-query">Pesquisar no acervo
+      <input type="search" name="q" autocomplete="off" placeholder="Título, texto, pessoa, organização ou local" />
+    </label>
+    <div class="search-filters">
+      <label>Canal<select name="channel"><option value="">Todos</option>{channelOptions.map((item) => <option value={item.slug}>{item.name}</option>)}</select></label>
+      <label>Tema<select name="topic"><option value="">Todos</option>{topicOptions.map((item) => <option value={item.slug}>{item.name}</option>)}</select></label>
+      <label>Autor<select name="author"><option value="">Todos</option>{authorOptions.map((item) => <option value={item.slug}>{item.nickname}</option>)}</select></label>
+      <label>Tipo<select name="type"><option value="">Todos</option>{Object.keys(discoveryFacets.type).map((item) => <option value={item}>{item}</option>)}</select></label>
+      <label>Estado<select name="state"><option value="">Todos</option>{Object.keys(discoveryFacets.state).map((item) => <option value={item}>{item}</option>)}</select></label>
+    </div>
+    <div class="search-actions"><button type="submit">Buscar</button><button type="reset">Limpar filtros</button></div>
+  </form>
+  <p class="search-status" aria-live="polite" data-search-status>Carregando índice estático…</p>
+  <ol class="search-results" data-search-results></ol>
+  <noscript><p class="empty-state">A busca textual exige JavaScript. O arquivo por data, canal, tema e autor continua disponível sem JavaScript.</p></noscript>
+</section>
+<script src={searchScriptHref} defer></script>

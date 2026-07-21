@@ -1,0 +1,5 @@
+$ tsc --version
+Version 5.8.3
+
+$ tsc strict isolated modules
+PASS

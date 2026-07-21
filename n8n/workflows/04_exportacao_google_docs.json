@@ -1,0 +1,88 @@
+{
+  "name": "04 · Exportação Google Docs",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "none",
+    "timezone": "America/Sao_Paulo"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "id": "entrada-do-artigo",
+      "name": "Entrada do artigo",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "node /workspace/cli/subsolo.mjs export-doc --provider google --article-id {{$json.article_id}} --spreadsheet-id {{$env.SUBSOLO_GOOGLE_SPREADSHEET_ID}} --destination /workspace/.runtime/tmp/exports/{{$json.article_id}} --apply"
+      },
+      "id": "executar-exportador",
+      "name": "Executar exportador",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        260,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "05_empacotamento_drive"
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "id": "executar-workflow-05",
+      "name": "Executar workflow 05",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1,
+      "position": [
+        540,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Entrada do artigo": {
+      "main": [
+        [
+          {
+            "node": "Executar exportador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Executar exportador": {
+      "main": [
+        [
+          {
+            "node": "Executar workflow 05",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "subsolo_export": "sanitized",
+    "schema_version": "1.0.0"
+  }
+}

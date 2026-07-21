@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manual de Sobrevivência Digital — Subsolo</title>
+    <link>https://subsolo.example/</link>
+    <description>Transformar acontecimentos de tecnologia, segurança, privacidade e plataformas em ações verificáveis.</description>
+    <language>pt-BR</language>
+    <atom:link href="https://subsolo.example/rss/canais/manual-de-sobrevivencia-digital.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Seu aplicativo mudou os termos. Eis o que merece atenção de verdade</title>
+      <link>https://subsolo.example/2026/07/20/seu-aplicativo-mudou-os-termos/</link>
+      <guid isPermaLink="true">https://subsolo.example/2026/07/20/seu-aplicativo-mudou-os-termos/</guid>
+      <pubDate>Mon, 20 Jul 2026 14:20:00 GMT</pubDate>
+      <description>O corpo foi ocultado; a URL, o título e o motivo da retirada permanecem públicos.</description>
+    </item>
+    <item>
+      <title>Antes que a falha vire produto: protocolo mínimo para equipes pequenas</title>
+      <link>https://subsolo.example/arquivo/registros/antes-que-a-falha-vire-produto-protocolo-minimo-para-equipes-pequenas/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/antes-que-a-falha-vire-produto-protocolo-minimo-para-equipes-pequenas/</guid>
+      <pubDate>Tue, 14 Jul 2026 22:30:00 GMT</pubDate>
+      <description>Um procedimento defensivo para inventário, triagem, correção, comunicação e rollback em organizações pequenas.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,16 @@
+[
+  {
+    "accessed_at": "2026-07-20T11:00:00-03:00",
+    "archived_url": null,
+    "id": "src_NZD4WH4FEC4QNRDGCHXR9QB8CJ",
+    "published_at": "2026-07-20T09:00:00-03:00",
+    "publisher": "Operador metropolitano",
+    "schema_version": "1.0.0",
+    "supports": [
+      "claim-interrupcao"
+    ],
+    "title": "Relatório operacional da manhã",
+    "type": "documento-primario",
+    "url": "https://example.org/relatorio-operacional"
+  }
+]

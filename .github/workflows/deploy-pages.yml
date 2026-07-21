@@ -1,0 +1,83 @@
+name: Publicar GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  build:
+    name: Construir artefato público
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - name: Configurar GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v6.0.0
+      - name: Preparar projeto
+        uses: ./.github/actions/setup-project
+      - name: Resolver URL e base do Pages
+        shell: bash
+        env:
+          PAGES_ORIGIN: ${{ steps.pages.outputs.origin }}
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          set -euo pipefail
+          base_path="${PAGES_BASE_PATH:-/}"
+          echo "SUBSOLO_SITE_URL=$PAGES_ORIGIN" >> "$GITHUB_ENV"
+          echo "SUBSOLO_BASE_PATH=$base_path" >> "$GITHUB_ENV"
+      - name: Validar fonte pública
+        run: pnpm check:release
+      - name: Auditar hardening pré-build
+        run: pnpm hardening:prebuild
+      - name: Testar
+        run: pnpm test
+      - name: Construir
+        run: pnpm build
+      - name: Verificar artefato
+        run: pnpm verify:dist
+      - name: Auditar artefato endurecido
+        run: pnpm hardening:artifact
+      - name: Procurar segredos e dados privados
+        run: pnpm scan:public-artifact
+      - name: Enviar artefato Pages
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: dist/
+
+  deploy:
+    name: Implantar e verificar
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5.0.0
+      - name: Checkout para smoke test
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - name: Smoke test pós-deploy
+        run: node scripts/smoke-site.mjs "${{ steps.deployment.outputs.page_url }}"

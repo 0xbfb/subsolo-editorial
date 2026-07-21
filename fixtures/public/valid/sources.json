@@ -1,0 +1,16 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "src_01K0ABCDEFFGHJKMNPQRSTVWXC",
+    "type": "documento-primario",
+    "title": "Relatório operacional",
+    "publisher": "Órgão público de exemplo",
+    "url": "https://example.org/relatorio",
+    "published_at": "2026-07-20T07:55:00-03:00",
+    "accessed_at": "2026-07-20T08:00:00-03:00",
+    "archived_url": null,
+    "supports": [
+      "claim-incident-start"
+    ]
+  }
+]

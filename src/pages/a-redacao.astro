@@ -1,0 +1,30 @@
+---
+import Breadcrumbs from '../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../components/editorial/PageIntro.astro';
+import SectionRule from '../components/editorial/SectionRule.astro';
+import AuthorCard from '../components/directory/AuthorCard.astro';
+import JornalConcretoLayout from '../layouts/JornalConcretoLayout.astro';
+import { authors, channels, editorialSite } from '../lib/presentation/site-repository';
+import { navigationFor } from '../lib/presentation/editorial-site';
+import { withBasePath } from '../lib/presentation/site-path';
+
+const editors = authors.filter((author) => author.role_type === 'editor');
+---
+<JornalConcretoLayout title="A Redação" description="Manifesto, princípios e corpo editorial do Subsolo." dateLabel={editorialSite.site.dateLabel} navigation={navigationFor('/a-redacao/')} canonicalPath="/a-redacao/">
+  <main id="conteudo">
+    <Breadcrumbs items={[{ label: 'Início', href: '/' }, 'A Redação']} />
+    <PageIntro eyebrow="Institucional" title="A Redação" summary="Uma redação estranha, especializada e organizada para acompanhar sistemas que preferem ser tratados como incidentes isolados." />
+    <section class="manifesto-copy">
+      <h2>Manifesto</h2>
+      <p>O Subsolo existe para reduzir ruído, preservar contexto e acompanhar o que acontece depois que a manchete perde interesse comercial. A redação trabalha com documentos, cronologias, fontes explícitas e estados de apuração visíveis.</p>
+      <p>Humor e sarcasmo são ferramentas editoriais. Não substituem evidência, não atingem vítimas e não transformam hipótese em fato.</p>
+      <h2>Princípios</h2>
+      <ul><li>Relevância define hierarquia.</li><li>Leitura vem antes da atmosfera.</li><li>Correções permanecem visíveis.</li><li>Histórias continuam depois da publicação.</li><li>Automação não substitui decisão editorial.</li></ul>
+    </section>
+    <SectionRule label="Editores" detail={`${editors.length} responsáveis`} />
+    <section class="author-directory author-directory--editors">{editors.map((author) => <AuthorCard slug={author.slug} nickname={author.nickname} role={author.role} department={author.department} portrait={author.portrait} />)}</section>
+    <p class="directory-action"><a class="button-link" href={withBasePath('/redacao/', import.meta.env.BASE_URL)}>Ver o corpo editorial completo</a></p>
+    <SectionRule label="Canais" detail={`${channels.length} produtos editoriais`} light />
+    <section class="channel-summary-list">{channels.map((channel) => <article><h3><a href={withBasePath(`/canais/${channel.slug}/`, import.meta.env.BASE_URL)}>{channel.name}</a></h3><p>{channel.function}</p></article>)}</section>
+  </main>
+</JornalConcretoLayout>

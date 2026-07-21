@@ -1,0 +1,45 @@
+{
+  "messages": [
+    {
+      "id": "gmail-001",
+      "internalDate": "1784547300000",
+      "labelIds": [
+        "SUBSOLO/Pautas"
+      ],
+      "snippet": "Sugestão de pauta com relatório anexo.",
+      "payload": {
+        "headers": [
+          {
+            "name": "From",
+            "value": "Fonte Confiável <pauta@fonte-confiavel.example>"
+          },
+          {
+            "name": "Subject",
+            "value": "Sugestão: relatório de transparência publicado"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<gmail-001@fonte-confiavel.example>"
+          }
+        ],
+        "mimeType": "multipart/mixed",
+        "parts": [
+          {
+            "mimeType": "text/plain",
+            "body": {
+              "data": "TyByZWxhdMOzcmlvIGZvaSBwdWJsaWNhZG8uIEFzIGluZm9ybWHDp8O1ZXMgYWluZGEgcHJlY2lzYW0gZGUgdmVyaWZpY2HDp8Ojby4"
+            }
+          },
+          {
+            "filename": "relatorio.pdf",
+            "mimeType": "application/pdf",
+            "body": {
+              "attachmentId": "att-pdf-001",
+              "size": 42000
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

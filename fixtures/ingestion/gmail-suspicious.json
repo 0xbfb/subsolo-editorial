@@ -1,0 +1,37 @@
+{
+  "messages": [
+    {
+      "id": "gmail-exe",
+      "internalDate": "1784547300000",
+      "payload": {
+        "headers": [
+          {
+            "name": "From",
+            "value": "Fonte Confiável <pauta@fonte-confiavel.example>"
+          },
+          {
+            "name": "Subject",
+            "value": "Arquivo para análise"
+          }
+        ],
+        "mimeType": "multipart/mixed",
+        "parts": [
+          {
+            "mimeType": "text/plain",
+            "body": {
+              "data": "QW5leG8gcGFyYSBhbsOhbGlzZS4"
+            }
+          },
+          {
+            "filename": "documento.exe",
+            "mimeType": "application/x-msdownload",
+            "body": {
+              "attachmentId": "att-exe",
+              "size": 9000
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+---
+import type { EditorialBlock as Block } from '../../lib/presentation/editorial-site';
+interface Props { readonly block: Block; }
+const { block } = Astro.props;
+---
+<aside class:list={['editorial-block', `editorial-block--${block.kind}`]} aria-label={block.label}>
+  <div class="editorial-block__label">{block.label}</div>
+  <p>{block.text}</p>
+</aside>

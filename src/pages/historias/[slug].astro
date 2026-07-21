@@ -1,0 +1,25 @@
+---
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../../components/editorial/PageIntro.astro';
+import Timeline from '../../components/archive/Timeline.astro';
+import ArchiveCollection from '../../components/discovery/ArchiveCollection.astro';
+import JornalConcretoLayout from '../../layouts/JornalConcretoLayout.astro';
+import { editorialSite, authorNames } from '../../lib/presentation/site-repository';
+import { archiveEntriesForStory } from '../../lib/presentation/archive-repository';
+import { navigationFor } from '../../lib/presentation/editorial-site';
+
+export function getStaticPaths() {
+  return editorialSite.stories.map((story) => ({ params: { slug: story.slug }, props: { story } }));
+}
+const { story } = Astro.props;
+const publications = archiveEntriesForStory(story.slug);
+---
+<JornalConcretoLayout title={story.title} description={story.summary} dateLabel={editorialSite.site.dateLabel} navigation={navigationFor(`/historias/${story.slug}/`)} canonicalPath={`/historias/${story.slug}/`}>
+  <main id="conteudo">
+    <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Arquivo', href: '/arquivo/' }, story.title]} />
+    <PageIntro eyebrow={`História acompanhada · ${story.status}`} title={story.title} summary={story.summary} detail={`Guardião editorial: ${authorNames[story.guardian]} · próximo evento ${story.nextExpectedEvent}`} />
+    <section class="split-layout story-overview"><div><h2>Atores</h2><ul>{story.actors.map((actor) => <li>{actor}</li>)}</ul></div><div><h2>Questões abertas</h2><ul>{story.openQuestions.map((question) => <li>{question}</li>)}</ul></div></section>
+    <section><h2>Cronologia</h2><Timeline items={story.timeline} /></section>
+    <section><h2>Publicações relacionadas</h2><ArchiveCollection entries={publications} /></section>
+  </main>
+</JornalConcretoLayout>

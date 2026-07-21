@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "apply",
+  "source": "freshrss",
+  "generated_at": "2026-07-20T23:04:02.023Z",
+  "input_count": 2,
+  "created_count": 1,
+  "planned_count": 0,
+  "duplicate_count": 0,
+  "probable_duplicate_count": 1,
+  "rejected_count": 0,
+  "quarantine_count": 0,
+  "editorial_transition": "TRIAGEM_ONLY",
+  "publication_effects": false,
+  "warnings": [],
+  "outcomes": [
+    {
+      "disposition": "created",
+      "pauta_id": "pauta-2026-07-20-b0ce669787d21f17",
+      "status": "TRIAGEM",
+      "classification": "PRELIMINAR_NAO_EDITORIAL",
+      "source_record_id": "release/001",
+      "claim_nature": "COMUNICADO_OU_RELEASE"
+    },
+    {
+      "disposition": "probable-duplicate",
+      "code": "SUBSOLO_INGEST_DUPLICATE_PROBABLE",
+      "source_record_id": "release/002",
+      "duplicate_of": "pauta-2026-07-20-b0ce669787d21f17",
+      "similarity": 0.8333333333333334
+    }
+  ],
+  "provider": "fixture",
+  "output": "/mnt/data/subsolo-p15-work/subsolo-0.8.1-dev/.runtime/prompt-15/releases",
+  "sheets_write": false
+}

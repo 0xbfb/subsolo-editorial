@@ -1,0 +1,23 @@
+{
+  "status": "conditional-pass",
+  "issues": [],
+  "blockers": [
+    "pnpm-lock.yaml ausente: auditoria transitiva de vulnerabilidades e licenças permanece bloqueadora para 1.0.0."
+  ],
+  "directDependencies": 10,
+  "reviewedLicenses": 10,
+  "advisoryDecisions": 0,
+  "lockfile": false,
+  "secrets": {
+    "status": "pass",
+    "scannedFiles": 872
+  },
+  "headers": {
+    "status": "pass"
+  },
+  "permissions": {
+    "status": "pass",
+    "workflows": 4,
+    "services": 6
+  }
+}

@@ -1,0 +1,4 @@
+---
+import Breadcrumbs from '../components/navigation/Breadcrumbs.astro'; import PageIntro from '../components/editorial/PageIntro.astro'; import SearchInterface from '../components/discovery/SearchInterface.astro'; import JornalConcretoLayout from '../layouts/JornalConcretoLayout.astro'; import { editorialSite } from '../lib/presentation/site-repository'; import { navigationFor } from '../lib/presentation/editorial-site';
+---
+<JornalConcretoLayout title="Busca" description="Busca textual e facetada do arquivo editorial do Subsolo." dateLabel={editorialSite.site.dateLabel} navigation={navigationFor('/busca/')} canonicalPath="/busca/"><main id="conteudo"><Breadcrumbs items={[{label:'Início',href:'/'},'Busca']} /><PageIntro eyebrow="Busca estática" title="Procure no que ficou" summary="Pesquisa no título e no corpo, com filtros por canal, tema, autor, tipo e estado. O índice é gerado no build e não exige backend." /><SearchInterface /></main></JornalConcretoLayout>

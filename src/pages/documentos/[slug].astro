@@ -1,0 +1,24 @@
+---
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../../components/editorial/PageIntro.astro';
+import DocumentExcerpt from '../../components/editorial/DocumentExcerpt.astro';
+import ArticleCard from '../../components/article/ArticleCard.astro';
+import JornalConcretoLayout from '../../layouts/JornalConcretoLayout.astro';
+import { editorialSite, channelNames, authorNames } from '../../lib/presentation/site-repository';
+import { findPublication, navigationFor } from '../../lib/presentation/editorial-site';
+
+export function getStaticPaths() {
+  return editorialSite.documents.map((document) => ({ params: { slug: document.slug }, props: { document } }));
+}
+const { document } = Astro.props;
+const publications = document.relatedPublicationIds.map((id) => findPublication(editorialSite, id));
+---
+<JornalConcretoLayout title={document.title} description={document.summary} dateLabel={editorialSite.site.dateLabel} navigation={navigationFor(`/documentos/${document.slug}/`)} canonicalPath={`/documentos/${document.slug}/`}>
+  <main id="conteudo">
+    <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Arquivo', href: '/arquivo/' }, document.title]} />
+    <PageIntro eyebrow={document.type} title={document.title} summary={document.summary} detail={`${document.publisher} · ${document.date}`} />
+    <p><a class="button-link" href={document.sourceUrl}>Abrir documento de origem</a></p>
+    <section class="document-reading"><h2>Trechos comentados</h2>{document.excerpts.map((excerpt) => <DocumentExcerpt {...excerpt} />)}</section>
+    <section><h2>Publicações que usam este documento</h2><div class="edition-stack">{publications.map((publication) => <ArticleCard publication={publication} channelName={channelNames[publication.channel]} authorNames={publication.authors.map((slug) => authorNames[slug])} />)}</div></section>
+  </main>
+</JornalConcretoLayout>

@@ -1,0 +1,44 @@
+Files subsolo-0.3.0-dev/AGENTS.md and subsolo-0.3.1-dev/AGENTS.md differ
+Files subsolo-0.3.0-dev/CHANGELOG.md and subsolo-0.3.1-dev/CHANGELOG.md differ
+Files subsolo-0.3.0-dev/README.md and subsolo-0.3.1-dev/README.md differ
+Only in subsolo-0.3.1-dev/docs/architecture: routes.md
+Only in subsolo-0.3.1-dev/docs/content: page-contracts.md
+Only in subsolo-0.3.1-dev/docs/development: prompt-06.md
+Files subsolo-0.3.0-dev/package.json and subsolo-0.3.1-dev/package.json differ
+Only in subsolo-0.3.1-dev/reports: prompt-06
+Only in subsolo-0.3.1-dev/scripts: render-editorial-preview.mjs
+Only in subsolo-0.3.1-dev/scripts: validate-editorial-site.mjs
+Only in subsolo-0.3.1-dev/scripts: validate-preview-html.py
+Only in subsolo-0.3.1-dev/scripts: validate-preview-links.mjs
+Only in subsolo-0.3.1-dev/src/components: archive
+Only in subsolo-0.3.1-dev/src/components: article
+Only in subsolo-0.3.1-dev/src/components: directory
+Only in subsolo-0.3.1-dev/src/components/editorial: DocumentExcerpt.astro
+Only in subsolo-0.3.1-dev/src/components/editorial: PageIntro.astro
+Files subsolo-0.3.0-dev/src/components/home/DailyEditionBanner.astro and subsolo-0.3.1-dev/src/components/home/DailyEditionBanner.astro differ
+Files subsolo-0.3.0-dev/src/components/home/HomeHero.astro and subsolo-0.3.1-dev/src/components/home/HomeHero.astro differ
+Files subsolo-0.3.0-dev/src/components/layout/SiteFooter.astro and subsolo-0.3.1-dev/src/components/layout/SiteFooter.astro differ
+Files subsolo-0.3.0-dev/src/components/navigation/Breadcrumbs.astro and subsolo-0.3.1-dev/src/components/navigation/Breadcrumbs.astro differ
+Only in subsolo-0.3.1-dev/src/data/fixtures: editorial-site.json
+Files subsolo-0.3.0-dev/src/data/fixtures/jornal-concreto-home.json and subsolo-0.3.1-dev/src/data/fixtures/jornal-concreto-home.json differ
+Files subsolo-0.3.0-dev/src/layouts/JornalConcretoLayout.astro and subsolo-0.3.1-dev/src/layouts/JornalConcretoLayout.astro differ
+Only in subsolo-0.3.1-dev/src/lib/presentation: editorial-site.ts
+Files subsolo-0.3.0-dev/src/lib/presentation/home-page.ts and subsolo-0.3.1-dev/src/lib/presentation/home-page.ts differ
+Only in subsolo-0.3.1-dev/src/lib/presentation: site-repository.ts
+Only in subsolo-0.3.1-dev/src/pages: 2026
+Only in subsolo-0.3.1-dev/src/pages: 404.astro
+Only in subsolo-0.3.1-dev/src/pages: a-redacao.astro
+Only in subsolo-0.3.1-dev/src/pages: agora.astro
+Only in subsolo-0.3.1-dev/src/pages: arquivo
+Only in subsolo-0.3.1-dev/src/pages: busca.astro
+Only in subsolo-0.3.1-dev/src/pages: canais
+Only in subsolo-0.3.1-dev/src/pages: documentos
+Only in subsolo-0.3.1-dev/src/pages: edicoes
+Only in subsolo-0.3.1-dev/src/pages: historias
+Files subsolo-0.3.0-dev/src/pages/index.astro and subsolo-0.3.1-dev/src/pages/index.astro differ
+Only in subsolo-0.3.1-dev/src/pages: redacao
+Only in subsolo-0.3.1-dev/src/pages: temas
+Files subsolo-0.3.0-dev/src/styles/jornal-concreto.css and subsolo-0.3.1-dev/src/styles/jornal-concreto.css differ
+Only in subsolo-0.3.1-dev/tests/contract: editorial-site-static.test.mjs
+Only in subsolo-0.3.1-dev/tests/visual: editorial-routes-static.test.mjs
+Files subsolo-0.3.0-dev/tests/visual/jornal-concreto-static.test.mjs and subsolo-0.3.1-dev/tests/visual/jornal-concreto-static.test.mjs differ

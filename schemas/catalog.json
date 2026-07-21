@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "draft": "https://json-schema.org/draft/2020-12/schema",
+  "schemas": [
+    "1.0.0/author.schema.json",
+    "1.0.0/channel.schema.json",
+    "1.0.0/correction.schema.json",
+    "1.0.0/edition.schema.json",
+    "1.0.0/media.schema.json",
+    "1.0.0/package-manifest.schema.json",
+    "1.0.0/publication-run.schema.json",
+    "1.0.0/publication.schema.json",
+    "1.0.0/redirect.schema.json",
+    "1.0.0/source.schema.json",
+    "1.0.0/story.schema.json",
+    "1.0.0/tombstone.schema.json",
+    "1.0.0/topic.schema.json"
+  ]
+}

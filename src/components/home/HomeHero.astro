@@ -1,0 +1,27 @@
+---
+import StatusBadge from '../editorial/StatusBadge.astro';
+import StorySummary from '../editorial/StorySummary.astro';
+import type { HomePageData } from '../../lib/presentation/home-page';
+import { withBasePath } from '../../lib/presentation/site-path';
+
+interface Props {
+  readonly hero: HomePageData['hero'];
+  readonly sideStories: HomePageData['sideStories'];
+}
+const { hero, sideStories } = Astro.props;
+const heroHref = withBasePath(hero.href, import.meta.env.BASE_URL);
+---
+<section class="hero-grid" aria-labelledby="manchete-principal">
+  <article>
+    <div class="kicker">{hero.channel} · {hero.state}</div>
+    <h1 id="manchete-principal"><a class="hero-headline" href={heroHref}>{hero.title}</a></h1>
+    <p class="lead dropcap">{hero.summary}</p>
+    <div class="article-meta-row">
+      <StatusBadge label={hero.state} kind={hero.stateKind} />
+      <span class="meta">{hero.time} · {hero.readingTime} · por {hero.author}</span>
+    </div>
+  </article>
+  <aside class="side-column" aria-label="Outros destaques">
+    {sideStories.map((story) => <StorySummary {...story} compact />)}
+  </aside>
+</section>

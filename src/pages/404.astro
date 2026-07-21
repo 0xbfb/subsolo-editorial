@@ -1,0 +1,13 @@
+---
+import PageIntro from '../components/editorial/PageIntro.astro';
+import JornalConcretoLayout from '../layouts/JornalConcretoLayout.astro';
+import { withBasePath } from '../lib/presentation/site-path';
+import { editorialSite } from '../lib/presentation/site-repository';
+import { navigationFor } from '../lib/presentation/editorial-site';
+---
+<JornalConcretoLayout title="Página não encontrada" description="A página solicitada não existe no arquivo do Subsolo." dateLabel={editorialSite.site.dateLabel} navigation={navigationFor(Astro.url.pathname)} canonicalPath="/404/">
+  <main id="conteudo">
+    <PageIntro eyebrow="Erro 404" title="Este túnel termina em concreto" summary="A página não existe, mudou de endereço antes da publicação ou nunca passou pela redação." />
+    <p><a class="button-link" href={withBasePath('/', import.meta.env.BASE_URL)}>Voltar ao início</a> <a class="button-link button-link--quiet" href={withBasePath('/arquivo/', import.meta.env.BASE_URL)}>Abrir o arquivo</a></p>
+  </main>
+</JornalConcretoLayout>

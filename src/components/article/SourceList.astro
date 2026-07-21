@@ -1,0 +1,18 @@
+---
+import type { EditorialSource } from '../../lib/presentation/editorial-site';
+interface Props { readonly sources: readonly EditorialSource[]; }
+const { sources } = Astro.props;
+---
+<section class="source-panel" aria-labelledby="fontes-heading">
+  <h2 id="fontes-heading">Fontes e documentos</h2>
+  <ol>
+    {sources.map((source) => (
+      <li>
+        <div class="kicker">{source.type}</div>
+        <h3><a href={source.url}>{source.title}</a></h3>
+        <p>{source.publisher} · acesso {source.accessedAt}</p>
+        <p class="small muted">{source.note}</p>
+      </li>
+    ))}
+  </ol>
+</section>

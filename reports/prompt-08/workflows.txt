@@ -1,0 +1,1 @@
+Workflows aprovados: 4 arquivos, permissões mínimas e versões explícitas.

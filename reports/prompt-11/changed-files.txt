@@ -1,0 +1,30 @@
+SUBSOLO 0.6.1-dev — arquivos alterados
+
+Adicionados: 16
+A docs/adr/0013-google-drive-technical-archive.md
+A docs/development/prompt-11.md
+A docs/operations/google-drive-retention.md
+A docs/operations/google-drive-technical-archive.md
+A reports/prompt-11/changed-files.txt
+A reports/prompt-11/test-results.md
+A reports/prompt-11/upload-report.md
+A src/lib/application/archive-edition-package.d.mts
+A src/lib/application/archive-edition-package.mjs
+A src/lib/domain/package-archive.ts
+A src/lib/infrastructure/google/google-drive.d.mts
+A src/lib/infrastructure/google/google-drive.mjs
+A tests/drive/archive-application.test.mjs
+A tests/drive/cli.test.mjs
+A tests/drive/google-drive-adapter.test.mjs
+A tests/drive/integration.test.mjs
+
+Modificados: 7
+M .env.example
+M AGENTS.md
+M CHANGELOG.md
+M README.md
+M cli/subsolo.mjs
+M docs/adr/README.md
+M package.json
+
+Removidos: 0

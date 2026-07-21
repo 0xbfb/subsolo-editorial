@@ -1,0 +1,23 @@
+---
+import type { EditorialCorrection } from '../../lib/presentation/editorial-site';
+interface Props { readonly corrections: readonly EditorialCorrection[]; }
+const { corrections } = Astro.props;
+const labels: Record<EditorialCorrection['type'], string> = {
+  'correcao-factual': 'Correção factual',
+  esclarecimento: 'Esclarecimento',
+  'atualizacao-material': 'Atualização material',
+  retirada: 'Retirada',
+};
+---
+{corrections.length > 0 && (
+  <section class="correction-list" aria-labelledby="correcoes-heading">
+    <h2 id="correcoes-heading">Histórico de alterações</h2>
+    {corrections.map((correction) => (
+      <article class:list={['correction-entry', correction.type]}>
+        <p class="correction-meta"><strong>{labels[correction.type]}</strong> · {correction.date} · r{correction.previousRevision} → r{correction.newRevision}</p>
+        <p>{correction.summary}</p>
+        <p><strong>Impacto:</strong> {correction.impact}</p>
+      </article>
+    ))}
+  </section>
+)}

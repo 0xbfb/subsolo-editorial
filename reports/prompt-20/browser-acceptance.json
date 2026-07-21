@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "engine": "system Chromium through Python Playwright",
+  "source": "deterministic preview, not Astro dist",
+  "routes": 5,
+  "viewport_runs": 10,
+  "issues": [],
+  "results": [
+    {
+      "route": "home",
+      "viewport": "desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "title": "Início · Subsolo",
+      "main_text_characters": 1473,
+      "horizontal_overflow_px": 0,
+      "first_focus": {
+        "tag": "A",
+        "text": "Pular para o conteúdo",
+        "href": "#conteudo"
+      },
+      "checks": {
+        "title": true,
+        "lang_pt_br": true,
+        "single_main": true,
+        "single_h1": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "critical_text": true,
+        "no_horizontal_overflow": true,
+        "skip_first_focus": true,
+        "no_console_errors": true
+      },
+      "screenshot": "reports/prompt-20/screenshots/home-desktop.png"
+    },
+    {
+      "route": "home",
+      "viewport": "mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "Início · Subsolo",
+      "main_text_characters": 1473,
+      "horizontal_overflow_px": 0,
+      "first_focus": {
+        "tag": "A",
+        "text": "Pular para o conteúdo",
+        "href": "#conteudo"
+      },
+      "checks": {
+        "title": true,
+        "lang_pt_br": true,
+        "single_main": true,
+        "single_h1": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "critical_text": true,
+        "no_horizontal_overflow": true,
+        "skip_first_focus": true,
+        "no_console_errors": true
+      },
+      "screenshot": "reports/prompt-20/screenshots/home-mobile.png"
+    },
+    {
+      "route": "article",
+      "viewport": "desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "title": "A cidade terceirizou o relógio — e agora ninguém sabe quem responde pelo atraso · Subsolo",
+      "main_text_characters": 2683,
+      "horizontal_overflow_px": 0,
+      "first_focus": {
+        "tag": "A",
+        "text": "Pular para o conteúdo",
+        "href": "#conteudo"
+      },
+      "checks": {
+        "title": true,
+        "lang_pt_br": true,
+        "single_main": true,
+        "single_h1": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "critical_text": true,
+        "no_horizontal_overflow": true,
+        "skip_first_focus": true,
+        "no_console_errors": true
+      },
+      "screenshot": "reports/prompt-20/screenshots/article-desktop.png"
+    },
+    {
+      "route": "article",
+      "viewport": "mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "A cidade terceirizou o relógio — e agora ninguém sabe quem responde pelo atraso · Subsolo",
+      "main_text_characters": 2683,
+      "horizontal_overflow_px": 0,
+      "first_focus": {
+        "tag": "A",
+        "text": "Pular para o conteúdo",
+        "href": "#conteudo"
+      },
+      "checks": {
+        "title": true,
+        "lang_pt_br": true,
+        "single_main": true,
+        "single_h1": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "critical_text": true,
+        "no_horizontal_overflow": true,
+        "skip_first_focus": true,
+        "no_console_errors": true
+      },
+      "screenshot": null
+    },
+    {
+      "route": "archive",
+      "viewport": "desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "title": "Arquivo · Subsolo",
+      "main_text_characters": 1000,
+      "horizontal_overflow_px": 0,
+      "first_focus": {
+        "tag": "A",
+        "text": "Pular para o conteúdo",
+        "href": "#conteudo"
+      },
+      "checks": {
+        "title": true,
+        "lang_pt_br": true,
+        "single_main": true,
+        "single_h1": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "critical_text": true,
+        "no_horizontal_overflow": true,
+        "skip_first_focus": true,
+        "no_console_errors": true
+      },
+      "screenshot": null
+    },
+    {
+      "route": "archive",
+      "viewport": "mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "Arquivo · Subsolo",
+      "main_text_characters": 1000,
+      "horizontal_overflow_px": 0,
+      "first_focus": {
+        "tag": "A",
+        "text": "Pular para o conteúdo",
+        "href": "#conteudo"
+      },
+      "checks": {
+        "title": true,
+        "lang_pt_br": true,
+        "single_main": true,
+        "single_h1": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "critical_text": true,
+        "no_horizontal_overflow": true,
+        "skip_first_focus": true,
+        "no_console_errors": true
+      },
+      "screenshot": "reports/prompt-20/screenshots/archive-mobile.png"
+    },
+    {
+      "route": "search",
+      "viewport": "desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "title": "Busca · Subsolo",
+      "main_text_characters": 200,
+      "horizontal_overflow_px": 0,
+      "first_focus": {
+        "tag": "A",
+        "text": "Pular para o conteúdo",
+        "href": "#conteudo"
+      },
+      "checks": {
+        "title": true,
+        "lang_pt_br": true,
+        "single_main": true,
+        "single_h1": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "critical_text": true,
+        "no_horizontal_overflow": true,
+        "skip_first_focus": true,
+        "no_console_errors": true
+      },
+      "screenshot": null
+    },
+    {
+      "route": "search",
+      "viewport": "mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "Busca · Subsolo",
+      "main_text_characters": 200,
+      "horizontal_overflow_px": 0,
+      "first_focus": {
+        "tag": "A",
+        "text": "Pular para o conteúdo",
+        "href": "#conteudo"
+      },
+      "checks": {
+        "title": true,
+        "lang_pt_br": true,
+        "single_main": true,
+        "single_h1": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "critical_text": true,
+        "no_horizontal_overflow": true,
+        "skip_first_focus": true,
+        "no_console_errors": true
+      },
+      "screenshot": null
+    },
+    {
+      "route": "newsroom",
+      "viewport": "desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "title": "Redação · Subsolo",
+      "main_text_characters": 4795,
+      "horizontal_overflow_px": 0,
+      "first_focus": {
+        "tag": "A",
+        "text": "Pular para o conteúdo",
+        "href": "#conteudo"
+      },
+      "checks": {
+        "title": true,
+        "lang_pt_br": true,
+        "single_main": true,
+        "single_h1": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "critical_text": true,
+        "no_horizontal_overflow": true,
+        "skip_first_focus": true,
+        "no_console_errors": true
+      },
+      "screenshot": null
+    },
+    {
+      "route": "newsroom",
+      "viewport": "mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "Redação · Subsolo",
+      "main_text_characters": 4795,
+      "horizontal_overflow_px": 0,
+      "first_focus": {
+        "tag": "A",
+        "text": "Pular para o conteúdo",
+        "href": "#conteudo"
+      },
+      "checks": {
+        "title": true,
+        "lang_pt_br": true,
+        "single_main": true,
+        "single_h1": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "critical_text": true,
+        "no_horizontal_overflow": true,
+        "skip_first_focus": true,
+        "no_console_errors": true
+      },
+      "screenshot": null
+    }
+  ],
+  "manual_acceptance_substitute": false
+}

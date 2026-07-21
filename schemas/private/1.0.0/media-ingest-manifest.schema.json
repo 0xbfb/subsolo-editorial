@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://subsolo.invalid/schemas/private/1.0.0/media-ingest-manifest.schema.json",
+  "title": "Private Media Ingest Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "kind",
+    "slug",
+    "source_path",
+    "declared_mime",
+    "alt",
+    "caption",
+    "credit",
+    "license",
+    "approved"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^media_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "kind": {
+      "enum": [
+        "portrait",
+        "article",
+        "documentary"
+      ]
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "source_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "declared_mime": {
+      "enum": [
+        "image/jpeg",
+        "image/png",
+        "image/webp",
+        "image/avif",
+        "image/tiff"
+      ]
+    },
+    "alt": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 320
+    },
+    "caption": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "credit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approved": {
+      "const": true
+    },
+    "author_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "visual_guide_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "focus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "y": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "portrait"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "author_slug",
+          "visual_guide_reference",
+          "focus"
+        ]
+      }
+    }
+  ]
+}

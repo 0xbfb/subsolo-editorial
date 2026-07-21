@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ed_2026-07-20",
+  "date": "2026-07-20",
+  "timezone": "America/Sao_Paulo",
+  "lifecycle_state": "aberta",
+  "revision": 0,
+  "current_run_id": null,
+  "opened_at": "2026-07-20T05:55:00-03:00",
+  "published_at": null,
+  "sealed_at": null,
+  "publications": [
+    {
+      "id": "pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+      "channel": "sao-paulo-sob-o-capo",
+      "date": "2026-07-20",
+      "path": "publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+      "position": 10,
+      "featured": true,
+      "slot_state": "confirmado",
+      "public": true
+    }
+  ],
+  "private": {
+    "map_day_id": "mapa_2026-07-20",
+    "slots": [
+      {
+        "id": "slot-tarde",
+        "state": "reservado",
+        "working_title": "Pauta ainda não confirmada"
+      },
+      {
+        "id": "slot-noite",
+        "state": "aberto"
+      }
+    ],
+    "deferred": [
+      {
+        "pitch_id": "pauta_privada_01",
+        "reason": "aguardando documento"
+      }
+    ],
+    "withdrawn": []
+  },
+  "history": [
+    {
+      "command": "open",
+      "at": "2026-07-20T05:55:00-03:00"
+    },
+    {
+      "command": "append",
+      "publication_id": "pub_MB76FYPQZ5RTPENBAR5611AJJ0"
+    }
+  ]
+}

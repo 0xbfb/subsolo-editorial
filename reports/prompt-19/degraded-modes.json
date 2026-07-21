@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "issues": [],
+  "site": "/mnt/data/subsolo-p19-work/subsolo-0.9.1-dev/reports/prompt-06/preview",
+  "htmlFiles": 114,
+  "pagesWithCriticalContentWithoutJs": 114,
+  "worstHtmlOnlySeconds": 0.58,
+  "profile": {
+    "downlink_kbps": 400,
+    "round_trip_ms": 150,
+    "critical_content_seconds": 8
+  }
+}

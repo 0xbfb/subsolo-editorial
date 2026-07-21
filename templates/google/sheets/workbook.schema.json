@@ -1,0 +1,1176 @@
+{
+  "workbook_name": "SUBSOLO — Controle Editorial",
+  "schema_version": "1.0.0",
+  "timezone": "America/Sao_Paulo",
+  "status_authority": "Google Sheets antes da publicação; GitHub após o merge da versão pública.",
+  "tabs": {
+    "PAUTAS": [
+      {
+        "name": "pauta_id",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "Identificador estável da pauta."
+      },
+      {
+        "name": "titulo_provisorio",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "Título interno inicial."
+      },
+      {
+        "name": "origem",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "Origem da pauta.",
+        "enum_source": "origins"
+      },
+      {
+        "name": "url_origem",
+        "type": "url",
+        "required": false,
+        "visibility": "private",
+        "description": "URL inicial da origem."
+      },
+      {
+        "name": "prioridade",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "Prioridade editorial A–E.",
+        "enum_source": "priorities"
+      },
+      {
+        "name": "nivel_cobertura",
+        "type": "integer",
+        "required": true,
+        "visibility": "private",
+        "description": "Nível de cobertura 0–5.",
+        "enum_source": "coverage_levels"
+      },
+      {
+        "name": "destino_inicial",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "Destino definido pela Mesa.",
+        "enum_source": "destinations"
+      },
+      {
+        "name": "canal_provavel",
+        "type": "reference",
+        "required": false,
+        "visibility": "private",
+        "description": "Canal inicial, ainda revisável."
+      },
+      {
+        "name": "quadro_provavel",
+        "type": "reference",
+        "required": false,
+        "visibility": "private",
+        "description": "Quadro inicial, ainda revisável."
+      },
+      {
+        "name": "responsavel",
+        "type": "reference",
+        "required": true,
+        "visibility": "private",
+        "description": "Repórter principal."
+      },
+      {
+        "name": "editor",
+        "type": "reference",
+        "required": true,
+        "visibility": "private",
+        "description": "Editor responsável."
+      },
+      {
+        "name": "guardiao_editorial",
+        "type": "reference",
+        "required": false,
+        "visibility": "private",
+        "description": "Guardião da história."
+      },
+      {
+        "name": "status",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "Estado operacional.",
+        "enum_source": "editorial_statuses"
+      },
+      {
+        "name": "prazo",
+        "type": "datetime",
+        "required": false,
+        "visibility": "private",
+        "description": "Prazo ou checkpoint."
+      },
+      {
+        "name": "proximo_gatilho",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Informação necessária para nova decisão."
+      },
+      {
+        "name": "documento",
+        "type": "url",
+        "required": false,
+        "visibility": "private",
+        "description": "Google Docs da matéria."
+      },
+      {
+        "name": "pasta_drive",
+        "type": "url",
+        "required": false,
+        "visibility": "private",
+        "description": "Pasta de pesquisa."
+      },
+      {
+        "name": "criado_em",
+        "type": "datetime",
+        "required": true,
+        "visibility": "private",
+        "description": "Criação."
+      },
+      {
+        "name": "atualizado_em",
+        "type": "datetime",
+        "required": true,
+        "visibility": "private",
+        "description": "Última atualização."
+      },
+      {
+        "name": "observacoes_privadas",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Notas que nunca entram no pacote público."
+      },
+      {
+        "name": "classificacao_preliminar",
+        "type": "enum",
+        "required": false,
+        "visibility": "private",
+        "description": "Classificação automática explicitamente não editorial."
+      },
+      {
+        "name": "verificacao",
+        "type": "enum",
+        "required": false,
+        "visibility": "private",
+        "description": "Estado inicial de verificação."
+      },
+      {
+        "name": "claim_nature",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Natureza da alegação recebida."
+      },
+      {
+        "name": "source_fingerprint",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Fingerprint de deduplicação."
+      },
+      {
+        "name": "source_record_id",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Identificador da entrada na fonte."
+      },
+      {
+        "name": "source_origin",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Origem humana ou técnica preservada."
+      },
+      {
+        "name": "source_published_at",
+        "type": "datetime",
+        "required": false,
+        "visibility": "private",
+        "description": "Data de publicação da fonte."
+      },
+      {
+        "name": "fact_occurred_at",
+        "type": "datetime",
+        "required": false,
+        "visibility": "private",
+        "description": "Data do fato, quando separadamente conhecida."
+      },
+      {
+        "name": "snippet_preliminar",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Snippet privado e não verificado."
+      },
+      {
+        "name": "snippet_natureza",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Rótulo explícito da natureza do snippet."
+      },
+      {
+        "name": "origin_trace_json",
+        "type": "json",
+        "required": false,
+        "visibility": "private",
+        "description": "Rastreabilidade privada da origem."
+      },
+      {
+        "name": "quarantine_manifest_json",
+        "type": "json",
+        "required": false,
+        "visibility": "private",
+        "description": "Metadados privados de anexos em quarentena."
+      }
+    ],
+    "ARTIGOS": [
+      {
+        "name": "artigo_id",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "Identificador interno estável."
+      },
+      {
+        "name": "pauta_id",
+        "type": "reference",
+        "required": true,
+        "visibility": "private",
+        "description": "Pauta de origem."
+      },
+      {
+        "name": "edition_id",
+        "type": "reference",
+        "required": false,
+        "visibility": "private",
+        "description": "Edição planejada."
+      },
+      {
+        "name": "titulo",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Título final."
+      },
+      {
+        "name": "slug",
+        "type": "slug",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Slug definido antes da publicação."
+      },
+      {
+        "name": "linha_fina",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Resumo editorial."
+      },
+      {
+        "name": "descricao_seo",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Descrição para busca e compartilhamento."
+      },
+      {
+        "name": "canal",
+        "type": "reference",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Canal editorial."
+      },
+      {
+        "name": "quadro",
+        "type": "reference",
+        "required": false,
+        "visibility": "candidate_public",
+        "description": "Quadro editorial."
+      },
+      {
+        "name": "tipo",
+        "type": "enum",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Natureza do conteúdo.",
+        "enum_source": "content_types"
+      },
+      {
+        "name": "autor",
+        "type": "reference",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Assinatura principal."
+      },
+      {
+        "name": "editor",
+        "type": "reference",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Editor responsável."
+      },
+      {
+        "name": "prioridade",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "Prioridade operacional.",
+        "enum_source": "priorities"
+      },
+      {
+        "name": "status",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "Estado operacional.",
+        "enum_source": "editorial_statuses"
+      },
+      {
+        "name": "documento",
+        "type": "url",
+        "required": true,
+        "visibility": "private",
+        "description": "Google Docs."
+      },
+      {
+        "name": "pasta_drive",
+        "type": "url",
+        "required": true,
+        "visibility": "private",
+        "description": "Pasta de trabalho."
+      },
+      {
+        "name": "imagem_capa",
+        "type": "url",
+        "required": false,
+        "visibility": "private",
+        "description": "Original ou arquivo de trabalho."
+      },
+      {
+        "name": "texto_alt",
+        "type": "string",
+        "required": false,
+        "visibility": "candidate_public",
+        "description": "Texto alternativo."
+      },
+      {
+        "name": "revisao_editorial",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "Estado da revisão editorial.",
+        "enum_source": "review_states"
+      },
+      {
+        "name": "revisao_factual",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "Estado da revisão factual.",
+        "enum_source": "review_states"
+      },
+      {
+        "name": "revisao_tecnica",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "Estado da validação técnica.",
+        "enum_source": "review_states"
+      },
+      {
+        "name": "comentarios_resolvidos",
+        "type": "boolean",
+        "required": true,
+        "visibility": "private",
+        "description": "Confirmação humana de que os comentários editoriais do Google Docs foram resolvidos."
+      },
+      {
+        "name": "data_planejada",
+        "type": "datetime",
+        "required": false,
+        "visibility": "private",
+        "description": "Data desejada."
+      },
+      {
+        "name": "data_publicada",
+        "type": "datetime",
+        "required": false,
+        "visibility": "public_after_merge",
+        "description": "Data pública."
+      },
+      {
+        "name": "branch",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Branch."
+      },
+      {
+        "name": "pull_request",
+        "type": "url",
+        "required": false,
+        "visibility": "private",
+        "description": "Pull request."
+      },
+      {
+        "name": "url_publicada",
+        "type": "url",
+        "required": false,
+        "visibility": "public_after_merge",
+        "description": "URL final."
+      },
+      {
+        "name": "revisao",
+        "type": "integer",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Revisão pública."
+      },
+      {
+        "name": "ultima_atualizacao",
+        "type": "datetime",
+        "required": true,
+        "visibility": "private",
+        "description": "Última atualização operacional."
+      }
+    ],
+    "EDICOES": [
+      {
+        "name": "edition_id",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Identificador diário."
+      },
+      {
+        "name": "edition_date",
+        "type": "date",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Data editorial."
+      },
+      {
+        "name": "status",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "Ciclo da edição.",
+        "enum_source": "edition_statuses"
+      },
+      {
+        "name": "revision",
+        "type": "integer",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Revisão pública."
+      },
+      {
+        "name": "mapa_do_dia",
+        "type": "url",
+        "required": true,
+        "visibility": "private",
+        "description": "Documento privado da Mesa."
+      },
+      {
+        "name": "manifest_path",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Manifest gerado."
+      },
+      {
+        "name": "package_checksum",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "SHA-256."
+      },
+      {
+        "name": "drive_file_id",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "ZIP preservado."
+      },
+      {
+        "name": "branch",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Branch."
+      },
+      {
+        "name": "pull_request",
+        "type": "url",
+        "required": false,
+        "visibility": "private",
+        "description": "PR."
+      },
+      {
+        "name": "commit_sha",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Commit público."
+      },
+      {
+        "name": "deployment_url",
+        "type": "url",
+        "required": false,
+        "visibility": "public_after_merge",
+        "description": "Página da edição."
+      },
+      {
+        "name": "opened_at",
+        "type": "datetime",
+        "required": false,
+        "visibility": "private",
+        "description": "Abertura."
+      },
+      {
+        "name": "sealed_at",
+        "type": "datetime",
+        "required": false,
+        "visibility": "public_after_merge",
+        "description": "Fechamento."
+      },
+      {
+        "name": "last_error",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Erro operacional resumido."
+      }
+    ],
+    "AUTORES": [
+      {
+        "name": "author_id",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "ID estável."
+      },
+      {
+        "name": "nickname",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Apelido público."
+      },
+      {
+        "name": "slug",
+        "type": "slug",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Rota pública."
+      },
+      {
+        "name": "role",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Cargo."
+      },
+      {
+        "name": "department",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Departamento."
+      },
+      {
+        "name": "role_type",
+        "type": "enum",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Editor ou jornalista."
+      },
+      {
+        "name": "blog",
+        "type": "string",
+        "required": false,
+        "visibility": "candidate_public",
+        "description": "Blog ou coluna."
+      },
+      {
+        "name": "status",
+        "type": "enum",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Situação."
+      },
+      {
+        "name": "profile_version",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "Versão do dossiê."
+      },
+      {
+        "name": "dossier_path",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "Referência canônica."
+      }
+    ],
+    "CANAIS": [
+      {
+        "name": "channel_id",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "ID estável."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Nome público."
+      },
+      {
+        "name": "slug",
+        "type": "slug",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Rota."
+      },
+      {
+        "name": "department",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "Departamento responsável."
+      },
+      {
+        "name": "editor_id",
+        "type": "reference",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Editor."
+      },
+      {
+        "name": "question",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Pergunta editorial."
+      },
+      {
+        "name": "function",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Função."
+      },
+      {
+        "name": "periodicity",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Periodicidade."
+      },
+      {
+        "name": "status",
+        "type": "enum",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Situação."
+      },
+      {
+        "name": "is_daily",
+        "type": "boolean",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Canal diário."
+      }
+    ],
+    "QUADROS": [
+      {
+        "name": "frame_id",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "ID estável e qualificado pelo canal."
+      },
+      {
+        "name": "channel_id",
+        "type": "reference",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Canal proprietário."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Nome."
+      },
+      {
+        "name": "slug",
+        "type": "slug",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Slug local."
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Função resumida."
+      },
+      {
+        "name": "position",
+        "type": "integer",
+        "required": true,
+        "visibility": "private",
+        "description": "Ordem padrão."
+      },
+      {
+        "name": "required",
+        "type": "boolean",
+        "required": true,
+        "visibility": "private",
+        "description": "Obrigatório em toda edição."
+      },
+      {
+        "name": "status",
+        "type": "enum",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Situação."
+      }
+    ],
+    "TEMAS": [
+      {
+        "name": "topic_id",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "ID estável."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Nome."
+      },
+      {
+        "name": "slug",
+        "type": "slug",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Rota."
+      },
+      {
+        "name": "status",
+        "type": "enum",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Situação."
+      },
+      {
+        "name": "is_sensitive",
+        "type": "boolean",
+        "required": true,
+        "visibility": "private",
+        "description": "Exige revisão adicional."
+      }
+    ],
+    "FONTES": [
+      {
+        "name": "source_id",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "ID estável."
+      },
+      {
+        "name": "pauta_id",
+        "type": "reference",
+        "required": false,
+        "visibility": "private",
+        "description": "Pauta."
+      },
+      {
+        "name": "artigo_id",
+        "type": "reference",
+        "required": false,
+        "visibility": "private",
+        "description": "Artigo."
+      },
+      {
+        "name": "type",
+        "type": "enum",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Tipo.",
+        "enum_source": "source_types"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Título."
+      },
+      {
+        "name": "publisher",
+        "type": "string",
+        "required": false,
+        "visibility": "candidate_public",
+        "description": "Publicador."
+      },
+      {
+        "name": "url",
+        "type": "url",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "URL pública quando aplicável."
+      },
+      {
+        "name": "published_at",
+        "type": "datetime",
+        "required": false,
+        "visibility": "candidate_public",
+        "description": "Data da fonte."
+      },
+      {
+        "name": "accessed_at",
+        "type": "datetime",
+        "required": true,
+        "visibility": "candidate_public",
+        "description": "Acesso."
+      },
+      {
+        "name": "confidential",
+        "type": "boolean",
+        "required": true,
+        "visibility": "private",
+        "description": "Fonte protegida; nunca exportar identificação."
+      },
+      {
+        "name": "notes_private",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Notas de checagem."
+      }
+    ],
+    "PUBLICACOES": [
+      {
+        "name": "publication_id",
+        "type": "string",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "ID público."
+      },
+      {
+        "name": "artigo_id",
+        "type": "reference",
+        "required": true,
+        "visibility": "private",
+        "description": "Artigo de origem."
+      },
+      {
+        "name": "edition_id",
+        "type": "reference",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Edição."
+      },
+      {
+        "name": "revision",
+        "type": "integer",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Revisão."
+      },
+      {
+        "name": "public_state",
+        "type": "enum",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Estado público.",
+        "enum_source": "public_states"
+      },
+      {
+        "name": "published_at",
+        "type": "datetime",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Publicação."
+      },
+      {
+        "name": "updated_at",
+        "type": "datetime",
+        "required": false,
+        "visibility": "public_after_merge",
+        "description": "Atualização."
+      },
+      {
+        "name": "url",
+        "type": "url",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "URL."
+      },
+      {
+        "name": "commit_sha",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "Commit."
+      },
+      {
+        "name": "package_checksum",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "Pacote."
+      }
+    ],
+    "CORRECOES": [
+      {
+        "name": "correction_id",
+        "type": "string",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "ID."
+      },
+      {
+        "name": "publication_id",
+        "type": "reference",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Publicação."
+      },
+      {
+        "name": "type",
+        "type": "enum",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Natureza.",
+        "enum_source": "correction_types"
+      },
+      {
+        "name": "summary",
+        "type": "string",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Explicação pública."
+      },
+      {
+        "name": "reason",
+        "type": "string",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Motivo editorial da alteração."
+      },
+      {
+        "name": "impact",
+        "type": "string",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Impacto na leitura."
+      },
+      {
+        "name": "previous_revision",
+        "type": "integer",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Revisão anterior."
+      },
+      {
+        "name": "new_revision",
+        "type": "integer",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Nova revisão."
+      },
+      {
+        "name": "canonical_path",
+        "type": "string",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "URL canônica após a revisão."
+      },
+      {
+        "name": "previous_path",
+        "type": "string",
+        "required": false,
+        "visibility": "public_after_merge",
+        "description": "URL anterior quando houver mudança de slug."
+      },
+      {
+        "name": "body_visibility",
+        "type": "enum",
+        "required": true,
+        "visibility": "public_after_merge",
+        "description": "Corpo público integral ou tombstone.",
+        "enum_source": "body_visibility_states"
+      },
+      {
+        "name": "status",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "Fluxo operacional.",
+        "enum_source": "editorial_statuses"
+      },
+      {
+        "name": "requested_at",
+        "type": "datetime",
+        "required": true,
+        "visibility": "private",
+        "description": "Solicitação."
+      },
+      {
+        "name": "published_at",
+        "type": "datetime",
+        "required": false,
+        "visibility": "public_after_merge",
+        "description": "Publicação da nota."
+      },
+      {
+        "name": "requested_by",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Solicitante interno ou externo."
+      },
+      {
+        "name": "package_sha256",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Checksum do pacote da revisão."
+      },
+      {
+        "name": "branch",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Branch da revisão pós-publicação."
+      },
+      {
+        "name": "pull_request",
+        "type": "url",
+        "required": false,
+        "visibility": "private",
+        "description": "Pull request da revisão pós-publicação."
+      }
+    ],
+    "AUTOMACOES": [
+      {
+        "name": "automation_id",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "ID do workflow."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "Nome."
+      },
+      {
+        "name": "enabled",
+        "type": "boolean",
+        "required": true,
+        "visibility": "private",
+        "description": "Ativa."
+      },
+      {
+        "name": "mode",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "MANUAL, DRY_RUN ou APPLY."
+      },
+      {
+        "name": "last_run_id",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Última execução."
+      },
+      {
+        "name": "last_status",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Resultado."
+      },
+      {
+        "name": "last_run_at",
+        "type": "datetime",
+        "required": false,
+        "visibility": "private",
+        "description": "Horário."
+      },
+      {
+        "name": "next_action",
+        "type": "string",
+        "required": false,
+        "visibility": "private",
+        "description": "Ação necessária."
+      }
+    ],
+    "CONFIGURACOES": [
+      {
+        "name": "key",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "Chave."
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "Valor não secreto."
+      },
+      {
+        "name": "type",
+        "type": "enum",
+        "required": true,
+        "visibility": "private",
+        "description": "string, integer, boolean, enum."
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": true,
+        "visibility": "private",
+        "description": "Descrição."
+      },
+      {
+        "name": "secret",
+        "type": "boolean",
+        "required": true,
+        "visibility": "private",
+        "description": "Se verdadeiro, o valor real não pode ficar no Sheets."
+      }
+    ]
+  }
+}

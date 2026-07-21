@@ -1,0 +1,30 @@
+---
+import Breadcrumbs from '../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../components/editorial/PageIntro.astro';
+import JornalConcretoLayout from '../layouts/JornalConcretoLayout.astro';
+import { editorialSite } from '../lib/presentation/site-repository';
+import { navigationFor } from '../lib/presentation/editorial-site';
+---
+<JornalConcretoLayout
+  title="Privacidade"
+  description="Como o portal público do Subsolo trata dados, preferências locais e serviços de terceiros."
+  dateLabel={editorialSite.site.dateLabel}
+  navigation={navigationFor('/privacidade/')}
+  canonicalPath="/privacidade/"
+>
+  <main id="conteudo">
+    <Breadcrumbs items={[{ label: 'Início', href: '/' }, 'Privacidade']} />
+    <PageIntro eyebrow="Política inicial" title="Leitura sem vigilância editorial" summary="O portal não instala analytics, não cria perfil de leitor e não exige conta para acessar o arquivo." detail="Versão 1.0 · 21 de julho de 2026" />
+    <section class="manifesto-copy" aria-labelledby="dados-coletados">
+      <h2 id="dados-coletados">Dados tratados pelo portal</h2>
+      <p>O Subsolo não incorpora analytics, publicidade comportamental, pixels de rastreamento ou formulários de cadastro. A preferência de tema claro ou escuro pode ser armazenada apenas no navegador, na chave <code>subsolo-theme</code>, e não é transmitida à redação.</p>
+      <p>O provedor de hospedagem e a infraestrutura de rede podem processar registros técnicos necessários para entregar o site e proteger o serviço. O Subsolo não usa esses registros para construir perfis de leitura.</p>
+      <h2>Busca e conteúdo externo</h2>
+      <p>A busca pública é executada no navegador sobre um índice estático hospedado no mesmo domínio. Links para fontes externas são abertos por decisão do leitor e passam a seguir as políticas do destino.</p>
+      <h2>Serviços editoriais privados</h2>
+      <p>FreshRSS, SearXNG, n8n, PostgreSQL, Uptime Kuma e ntfy pertencem à operação interna. Eles não são expostos como recursos do portal público e não recebem eventos de leitura.</p>
+      <h2>Contato e revisão</h2>
+      <p>Solicitações de correção, retirada ou privacidade devem usar o canal institucional publicado pela redação quando o domínio definitivo estiver configurado. Esta política deve ser revista antes da versão 1.0.0.</p>
+    </section>
+  </main>
+</JornalConcretoLayout>

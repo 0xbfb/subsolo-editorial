@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Correções — Subsolo</title>
+    <link>https://subsolo.example/</link>
+    <description>Correções, esclarecimentos, atualizações materiais e retiradas registradas pelo Subsolo.</description>
+    <language>pt-BR</language>
+    <atom:link href="https://subsolo.example/rss/correcoes.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Retirada: Seu aplicativo mudou os termos. Eis o que merece atenção de verdade</title>
+      <link>https://subsolo.example/2026/07/20/seu-aplicativo-mudou-os-termos/</link>
+      <guid isPermaLink="true">https://subsolo.example/2026/07/20/seu-aplicativo-mudou-os-termos/</guid>
+      <pubDate>Mon, 20 Jul 2026 22:00:00 GMT</pubDate>
+      <description>A publicação foi retirada e substituída por uma nota pública permanente. Impacto: O corpo foi ocultado; o registro continua disponível no arquivo e na busca.</description>
+    </item>
+    <item>
+      <title>Correção: A cidade terceirizou o relógio — e agora ninguém sabe quem responde pelo atraso</title>
+      <link>https://subsolo.example/2026/07/20/a-cidade-terceirizou-o-relogio/</link>
+      <guid isPermaLink="true">https://subsolo.example/2026/07/20/a-cidade-terceirizou-o-relogio/</guid>
+      <pubDate>Mon, 20 Jul 2026 19:10:00 GMT</pubDate>
+      <description>O horário correto da interrupção é 7h42, não 7h24. Impacto: A cronologia foi corrigida sem alterar a conclusão estrutural da reportagem.</description>
+    </item>
+  </channel>
+</rss>

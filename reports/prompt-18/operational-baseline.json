@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-07-20T23:45:00-03:00",
+  "version": "0.9.0-dev",
+  "evidence_kind": "source-tree-and-generated-assets",
+  "astro_build_executed": false,
+  "public_file_count": 16,
+  "public_bytes": 71042,
+  "discovery_records": 25,
+  "feeds": 11,
+  "uptime_monitors": 9,
+  "n8n_workflows": 12,
+  "github_workflows": 5,
+  "node_tests": 225,
+  "rpo_hours": 24,
+  "rto_hours": 4
+}

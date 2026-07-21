@@ -1,0 +1,36 @@
+---
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../../../components/editorial/PageIntro.astro';
+import SectionRule from '../../../components/editorial/SectionRule.astro';
+import PagefindMetadata from '../../../components/discovery/PagefindMetadata.astro';
+import JornalConcretoLayout from '../../../layouts/JornalConcretoLayout.astro';
+import { archiveRecords, type DiscoveryEntry } from '../../../lib/presentation/archive-repository';
+import { channelNames, authorNames, topicBySlug } from '../../../lib/presentation/site-repository';
+import { navigationFor } from '../../../lib/presentation/editorial-site';
+import { withBasePath } from '../../../lib/presentation/site-path';
+
+export function getStaticPaths() {
+  return archiveRecords.map((record) => ({ params: { slug: record.slug }, props: { record } }));
+}
+interface Props { readonly record: DiscoveryEntry; }
+const { record } = Astro.props;
+const dateLabel = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long', timeZone: 'America/Sao_Paulo' }).format(new Date(`${record.date}T12:00:00-03:00`));
+---
+<JornalConcretoLayout title={record.title} description={record.summary} dateLabel={['ARQUIVO SUBTERRÂNEO', dateLabel.toUpperCase()]} navigation={navigationFor(record.href)} canonicalPath={record.href} ogType="article">
+  <main id="conteudo" data-pagefind-body>
+    <PagefindMetadata channel={record.channel} topics={record.topics} authors={record.authors} type={record.type} state={record.state} story={record.story} date={record.date} title={record.title} summary={record.summary} />
+    <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Arquivo', href: '/arquivo/' }, record.title]} />
+    <PageIntro eyebrow={`${channelNames[record.channel]} · ${record.type}`} title={record.title} summary={record.summary} detail={`${dateLabel} · ${record.state}`} />
+    <section class="archive-record-copy">
+      <h2>Registro preservado</h2>
+      <p>Esta página preserva a identificação editorial e o contexto essencial da publicação no arquivo vivo. Quando houver pacote técnico correspondente, ele permanece como fonte de preservação integral.</p>
+      <dl class="archive-record-facts">
+        <div><dt>Autoria</dt><dd>{record.authors.map((slug) => authorNames[slug] ?? slug).join(', ')}</dd></div>
+        <div><dt>Canal</dt><dd><a href={withBasePath(`/canais/${record.channel}/`, import.meta.env.BASE_URL)}>{channelNames[record.channel]}</a></dd></div>
+        <div><dt>Temas</dt><dd>{record.topics.map((slug) => topicBySlug[slug]?.name ?? slug).join(', ')}</dd></div>
+        <div><dt>Correções</dt><dd>{record.correctionCount}</dd></div>
+      </dl>
+    </section>
+    {record.story && <><SectionRule label="História acompanhada" detail={record.story} /><p><a class="button-link" href={withBasePath(`/historias/${record.story}/`, import.meta.env.BASE_URL)}>Abrir cronologia</a></p></>}
+  </main>
+</JornalConcretoLayout>

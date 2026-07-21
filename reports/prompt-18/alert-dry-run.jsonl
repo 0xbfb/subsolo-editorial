@@ -1,0 +1,2 @@
+{"timestamp":"2026-07-21T02:32:43Z","level":"info","service":"subsolo-infra","event":"operation","message":"Alerta warning/TEST_ALERT para subsolo; ação definida."}
+{"timestamp":"2026-07-21T02:32:43Z","level":"info","service":"subsolo-infra","event":"operation","message":"DRY-RUN: nenhum alerta enviado."}

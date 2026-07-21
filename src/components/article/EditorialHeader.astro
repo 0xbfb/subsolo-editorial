@@ -1,0 +1,29 @@
+---
+import StatusBadge from '../editorial/StatusBadge.astro';
+import type { EditorialPublication } from '../../lib/presentation/editorial-site';
+
+interface Props {
+  readonly publication: EditorialPublication;
+  readonly channelName: string;
+  readonly authorNames: readonly string[];
+  readonly editorName: string;
+  readonly publishedLabel: string;
+  readonly updatedLabel?: string | null;
+}
+const { publication, channelName, authorNames, editorName, publishedLabel, updatedLabel } = Astro.props;
+---
+<header class="article-header">
+  <div class="kicker">{channelName} · {publication.type}</div>
+  <h1>{publication.title}</h1>
+  <p class="article-deck">{publication.subtitle}</p>
+  <div class="article-meta-row article-meta-row--wrap">
+    <StatusBadge label={publication.state} kind={publication.stateKind} />
+    <span class="meta">Por {authorNames.join(', ')} · edição {editorName}</span>
+  </div>
+  <dl class="publication-facts publication-facts--inline">
+    <div><dt>Publicado</dt><dd>{publishedLabel}</dd></div>
+    {updatedLabel && <div><dt>Atualizado</dt><dd>{updatedLabel}</dd></div>}
+    <div><dt>Leitura</dt><dd>{publication.readingTime}</dd></div>
+    <div><dt>Território</dt><dd>{publication.territories.join(', ')}</dd></div>
+  </dl>
+</header>

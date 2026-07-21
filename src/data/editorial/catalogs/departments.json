@@ -1,0 +1,134 @@
+[
+  {
+    "department_id": "departamento-da-megacidade-sao-paulo-sob-o-capo",
+    "name": "Departamento da Megacidade — São Paulo Sob o Capô",
+    "editor_id": "redacao011-trilho",
+    "member_ids": [
+      "redacao011-trilho",
+      "redacao011-malu",
+      "redacao011-anexo",
+      "redacao011-garoa",
+      "redacao011-norte"
+    ],
+    "status": "ativo"
+  },
+  {
+    "department_id": "departamento-de-antecipacao-sinais-fracos",
+    "name": "Departamento de Antecipação — Sinais Fracos",
+    "editor_id": "redacao011-limiar",
+    "member_ids": [
+      "redacao011-limiar",
+      "redacao011-radar",
+      "redacao011-eco",
+      "redacao011-ruido"
+    ],
+    "status": "ativo"
+  },
+  {
+    "department_id": "departamento-de-autonomia-manual-de-sobrevivencia-digital",
+    "name": "Departamento de Autonomia — Manual de Sobrevivência Digital",
+    "editor_id": "redacao011-modo",
+    "member_ids": [
+      "redacao011-modo",
+      "redacao011-patch",
+      "redacao011-plano_b",
+      "redacao011-chave"
+    ],
+    "status": "ativo"
+  },
+  {
+    "department_id": "departamento-de-cultura-digital-sem-marketing",
+    "name": "Departamento de Cultura Digital sem Marketing",
+    "editor_id": "redacao011-yumi",
+    "member_ids": [
+      "redacao011-yumi",
+      "redacao011-save",
+      "redacao011-fork",
+      "redacao011-vhs"
+    ],
+    "status": "ativo"
+  },
+  {
+    "department_id": "departamento-de-governanca-digital-poder-de-plataforma",
+    "name": "Departamento de Governança Digital — Poder de Plataforma",
+    "editor_id": "redacao011-lock",
+    "member_ids": [
+      "redacao011-lock",
+      "redacao011-termos",
+      "redacao011-root",
+      "redacao011-proxy"
+    ],
+    "status": "ativo"
+  },
+  {
+    "department_id": "departamento-de-investigacoes-autopsia-da-semana",
+    "name": "Departamento de Investigações — Autópsia da Semana",
+    "editor_id": "redacao011-corte",
+    "member_ids": [
+      "redacao011-corte",
+      "redacao011-fio",
+      "redacao011-subsolo",
+      "redacao011-sonda"
+    ],
+    "status": "ativo"
+  },
+  {
+    "department_id": "departamento-de-memoria-depois-da-poeira",
+    "name": "Departamento de Memória — Depois da Poeira",
+    "editor_id": "redacao011-recibo",
+    "member_ids": [
+      "redacao011-recibo",
+      "redacao011-replay",
+      "redacao011-prazo"
+    ],
+    "status": "ativo"
+  },
+  {
+    "department_id": "departamento-de-xadrez-em-profundidade",
+    "name": "Departamento de Xadrez em Profundidade",
+    "editor_id": "redacao011-clara",
+    "member_ids": [
+      "redacao011-clara",
+      "redacao011-zeit",
+      "redacao011-humano"
+    ],
+    "status": "ativo"
+  },
+  {
+    "department_id": "mesa-central-bom-dia-distopia",
+    "name": "Mesa Central — Bom Dia, Distopia",
+    "editor_id": "redacao011-cora",
+    "member_ids": [
+      "redacao011-cora",
+      "redacao011-zeca",
+      "redacao011-mina",
+      "redacao011-pavio",
+      "redacao011-sabia"
+    ],
+    "status": "ativo"
+  },
+  {
+    "department_id": "mesa-de-dados-clima-e-mercados",
+    "name": "Mesa de Dados, Clima e Mercados",
+    "editor_id": "redacao011-intervalo",
+    "member_ids": [
+      "redacao011-intervalo",
+      "redacao011-candle",
+      "redacao011-barometro",
+      "redacao011-pulso"
+    ],
+    "status": "ativo"
+  },
+  {
+    "department_id": "nucleo-de-evidencias-e-arquivo",
+    "name": "Núcleo de Evidências e Arquivo",
+    "editor_id": "redacao011-vera",
+    "member_ids": [
+      "redacao011-vera",
+      "redacao011-hash",
+      "redacao011-rodape",
+      "redacao011-lupa"
+    ],
+    "status": "ativo"
+  }
+]

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Depois da Poeira — Subsolo</title>
+    <link>https://subsolo.example/</link>
+    <description>Acompanhar desfechos, atrasos, recuos, contradições, promessas e consequências de histórias já noticiadas.</description>
+    <language>pt-BR</language>
+    <atom:link href="https://subsolo.example/rss/canais/depois-da-poeira.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sete dias depois: bloqueio, tarifa e campanha por procuração</title>
+      <link>https://subsolo.example/arquivo/registros/sete-dias-depois-bloqueio-tarifa-e-campanha-por-procuracao/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/sete-dias-depois-bloqueio-tarifa-e-campanha-por-procuracao/</guid>
+      <pubDate>Sat, 18 Jul 2026 18:00:00 GMT</pubDate>
+      <description>Três histórias foram revistas somente pelas mudanças materiais registradas ao longo da semana.</description>
+    </item>
+  </channel>
+</rss>

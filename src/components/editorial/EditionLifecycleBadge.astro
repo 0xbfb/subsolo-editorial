@@ -1,0 +1,9 @@
+---
+interface Props { status: string; revision: number; sealedAt?: string | null; }
+const { status, revision, sealedAt = null } = Astro.props;
+const sealed = status === 'selada';
+---
+<aside class:list={['edition-lifecycle-badge', { 'is-sealed': sealed }]} aria-label="Estado da edição">
+  <strong>{sealed ? 'EDIÇÃO SELADA' : 'EDIÇÃO EM ATUALIZAÇÃO'}</strong>
+  <span>revisão {revision}{sealedAt ? ` · encerrada ${sealedAt}` : ''}</span>
+</aside>

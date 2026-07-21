@@ -1,0 +1,23 @@
+[
+  {
+    "key": "timezone",
+    "value": "America/Sao_Paulo",
+    "type": "string",
+    "description": "Fuso editorial.",
+    "secret": false
+  },
+  {
+    "key": "morning_slot",
+    "value": "07:00",
+    "type": "string",
+    "description": "Horário recomendado do BDD.",
+    "secret": false
+  },
+  {
+    "key": "drive_root_id",
+    "value": "SET_IN_ENV",
+    "type": "string",
+    "description": "ID da raiz; valor real fora do Sheets.",
+    "secret": true
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@domain/*": ["src/lib/domain/*"],
+      "@application/*": ["src/lib/application/*"],
+      "@infrastructure/*": ["src/lib/infrastructure/*"],
+      "@presentation/*": ["src/lib/presentation/*"]
+    },
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true
+  },
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", "node_modules", "references"]
+}

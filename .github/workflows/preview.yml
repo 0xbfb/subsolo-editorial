@@ -1,0 +1,59 @@
+name: Preview editorial
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  build-preview:
+    name: Gerar artefato de preview
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - name: Preparar projeto
+        uses: ./.github/actions/setup-project
+      - name: Executar validação editorial
+        run: pnpm check:release
+      - name: Auditar hardening pré-build
+        run: pnpm hardening:prebuild
+      - name: Construir preview
+        run: pnpm build
+        env:
+          SUBSOLO_SITE_URL: https://preview.invalid
+          SUBSOLO_BASE_PATH: /
+      - name: Verificar preview
+        run: pnpm verify:dist && pnpm hardening:artifact
+      - name: Gerar resumo
+        shell: bash
+        run: |
+          {
+            echo "## Preview editorial"
+            echo
+            echo "- Pull request: #${{ github.event.pull_request.number }}"
+            echo "- Commit: \`${GITHUB_SHA}\`"
+            echo "- Artefato: \`subsolo-preview-pr-${{ github.event.pull_request.number }}\`"
+            echo "- O preview é disponibilizado como artefato para revisão; GitHub Pages não oferece preview público de PR de forma geral."
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Enviar preview
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: subsolo-preview-pr-${{ github.event.pull_request.number }}
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9

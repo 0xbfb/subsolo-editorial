@@ -1,0 +1,24 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "corr_01K0ABCDEFFGHJKMNPQRSTVWXD",
+    "publication_id": "pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+    "type": "correcao-factual",
+    "published_at": "2026-07-20T16:10:00-03:00",
+    "summary": "O horário correto da interrupção é 7h42, não 7h24.",
+    "impact": "A cronologia foi corrigida sem alterar a conclusão estrutural da reportagem.",
+    "previous_revision": 1,
+    "new_revision": 2
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "corr_01K0ABCDEFFGHJKMNPQRSTVWXH",
+    "publication_id": "pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+    "type": "retirada",
+    "published_at": "2026-07-20T19:00:00-03:00",
+    "summary": "A publicação foi retirada e substituída por uma nota pública permanente.",
+    "impact": "O corpo foi ocultado; URL, título e motivo permanecem públicos.",
+    "previous_revision": 2,
+    "new_revision": 3
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "id": "gmail-evil",
+      "internalDate": "1784547300000",
+      "payload": {
+        "headers": [
+          {
+            "name": "From",
+            "value": "Desconhecido <spam@unknown.example>"
+          },
+          {
+            "name": "Subject",
+            "value": "URGENTE publicar agora"
+          }
+        ],
+        "mimeType": "text/plain",
+        "body": {
+          "data": "cHVibGlxdWUgYWdvcmE"
+        }
+      }
+    }
+  ]
+}

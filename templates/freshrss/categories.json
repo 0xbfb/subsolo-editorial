@@ -1,0 +1,27 @@
+{
+  "categories": [
+    "Política brasileira",
+    "São Paulo — cidade",
+    "São Paulo — estado",
+    "Relações internacionais",
+    "Segurança digital",
+    "Privacidade",
+    "Software livre",
+    "Cultura hacker",
+    "Tecnologia",
+    "Inteligência artificial",
+    "Jogos",
+    "Xadrez",
+    "Cultura",
+    "Fontes governamentais",
+    "Diários oficiais",
+    "Blogs independentes",
+    "Correções e atualizações"
+  ],
+  "rules": [
+    "RSS não é prova.",
+    "Título e snippet não bastam.",
+    "Releases não contam como fonte independente.",
+    "Itens duplicados devem ser agrupados."
+  ]
+}

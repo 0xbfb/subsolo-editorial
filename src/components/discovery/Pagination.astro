@@ -1,0 +1,19 @@
+---
+import { withBasePath } from '../../lib/presentation/site-path';
+interface Props {
+  readonly page: number;
+  readonly pageCount: number;
+  readonly hrefForPage: (page: number) => string;
+}
+const { page, pageCount, hrefForPage } = Astro.props;
+const pages = Array.from({ length: pageCount }, (_, index) => index + 1);
+---
+{pageCount > 1 && (
+  <nav class="pagination" aria-label="Paginação do arquivo">
+    {page > 1 ? <a rel="prev" href={withBasePath(hrefForPage(page - 1), import.meta.env.BASE_URL)}>← Anterior</a> : <span aria-disabled="true">← Anterior</span>}
+    <ol>
+      {pages.map((number) => <li><a href={withBasePath(hrefForPage(number), import.meta.env.BASE_URL)} aria-current={number === page ? 'page' : undefined}>{number}</a></li>)}
+    </ol>
+    {page < pageCount ? <a rel="next" href={withBasePath(hrefForPage(page + 1), import.meta.env.BASE_URL)}>Próxima →</a> : <span aria-disabled="true">Próxima →</span>}
+  </nav>
+)}

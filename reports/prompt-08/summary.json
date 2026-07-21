@@ -1,0 +1,22 @@
+{
+  "version": "0.5.0-dev",
+  "prompt": 8,
+  "node_tests": 58,
+  "exporter_tests": 19,
+  "passed": 58,
+  "failed": 0,
+  "public_contracts": 9,
+  "source_files_verified": 12,
+  "exported_files": [
+    "publication.md",
+    "sources.json",
+    "corrections.json",
+    "media.json",
+    "provenance.public.json"
+  ],
+  "dry_run_wrote_files": false,
+  "deterministic_apply": true,
+  "public_parser": "passed",
+  "public_artifact_scan": "passed",
+  "external_calls": 0
+}

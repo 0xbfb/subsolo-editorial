@@ -1,0 +1,79 @@
+{
+  "name": "06 · Criação de pull request",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "none",
+    "timezone": "America/Sao_Paulo"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "id": "pacote-preservado",
+      "name": "Pacote preservado",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "node /workspace/cli/subsolo.mjs orchestrate --input /workspace/fixtures/n8n/publication-candidate.json --apply"
+      },
+      "id": "orquestrar-branch-e-pr",
+      "name": "Orquestrar branch e PR",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        300,
+        0
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "aguardar-revisão-humana",
+      "name": "Aguardar revisão humana",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        600,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Pacote preservado": {
+      "main": [
+        [
+          {
+            "node": "Orquestrar branch e PR",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Orquestrar branch e PR": {
+      "main": [
+        [
+          {
+            "node": "Aguardar revisão humana",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "subsolo_export": "sanitized",
+    "schema_version": "1.0.0"
+  }
+}

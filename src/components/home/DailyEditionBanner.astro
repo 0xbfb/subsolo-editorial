@@ -1,0 +1,23 @@
+---
+import type { HomePageData } from '../../lib/presentation/home-page';
+import { withBasePath } from '../../lib/presentation/site-path';
+interface Props {
+  readonly edition: HomePageData['dailyEdition'];
+}
+const { edition } = Astro.props;
+const editionHref = withBasePath(edition.href, import.meta.env.BASE_URL);
+---
+<section class="bdd-banner" aria-labelledby="bdd-heading">
+  <div>
+    <div class="kicker">{edition.eyebrow}</div>
+    <div class="bdd-title" id="bdd-heading">{edition.title[0]}<br />{edition.title[1]}</div>
+    <p>{edition.summary}</p>
+  </div>
+  <div>
+    <ol class="bdd-list">
+      {edition.items.map((item, index) => (
+        <li>{index === edition.items.length - 1 ? <a class="future-link" href={editionHref}>{item}</a> : <span>{item}</span>}</li>
+      ))}
+    </ol>
+  </div>
+</section>

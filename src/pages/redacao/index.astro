@@ -1,0 +1,16 @@
+---
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../../components/editorial/PageIntro.astro';
+import AuthorCard from '../../components/directory/AuthorCard.astro';
+import JornalConcretoLayout from '../../layouts/JornalConcretoLayout.astro';
+import { authors, editorialSite } from '../../lib/presentation/site-repository';
+import { navigationFor } from '../../lib/presentation/editorial-site';
+---
+<JornalConcretoLayout title="Redação" description="Diretório do corpo editorial do Subsolo." dateLabel={editorialSite.site.dateLabel} navigation={navigationFor('/redacao/')} canonicalPath="/redacao/">
+  <main id="conteudo">
+    <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'A Redação', href: '/a-redacao/' }, 'Diretório']} />
+    <PageIntro eyebrow="Corpo editorial" title="Redação" summary="Editores, jornalistas e especialidades que sustentam os canais e as coberturas do Subsolo." />
+    <h2 class="visually-hidden" id="diretorio-redacao">Diretório editorial</h2>
+    <section class="author-directory" aria-labelledby="diretorio-redacao">{authors.map((author) => <AuthorCard slug={author.slug} nickname={author.nickname} role={author.role} department={author.department} portrait={author.portrait} />)}</section>
+  </main>
+</JornalConcretoLayout>

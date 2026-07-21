@@ -1,0 +1,712 @@
+{
+  "site": {
+    "description": "Subsolo — portal editorial independente. O ruído passa. O que importa fica.",
+    "dateLabel": [
+      "SEGUNDA-FEIRA",
+      "20 JULHO 2026"
+    ],
+    "closingLabel": "Fechamento 11:42 BRT"
+  },
+  "edition": {
+    "id": "ed_2026-07-20",
+    "date": "2026-07-20",
+    "label": "20 de julho de 2026",
+    "revision": 3,
+    "status": "selada",
+    "publishedAt": "2026-07-20T07:05:00-03:00",
+    "closing": "07:00 BRT",
+    "title": "A cidade parou por alguns minutos. A responsabilidade conseguiu ficar parada por mais tempo.",
+    "summary": "A edição reúne transporte metropolitano, dependência de plataforma, autonomia digital e os sinais que merecem acompanhamento durante o dia.",
+    "publicationIds": [
+      "pub-bdd-20260720",
+      "pub-transporte-20260720",
+      "pub-plataforma-20260720",
+      "pub-termos-20260720"
+    ],
+    "sealedAt": "21:00 BRT",
+    "revisionHistory": [
+      {
+        "revision": 1,
+        "publishedAt": "07:05 BRT",
+        "status": "publicada",
+        "summary": "Abertura com o BDD e a primeira publicação confirmada."
+      },
+      {
+        "revision": 2,
+        "publishedAt": "15:00 BRT",
+        "status": "publicada",
+        "summary": "Atualização vespertina e reordenação editorial."
+      },
+      {
+        "revision": 3,
+        "publishedAt": "21:00 BRT",
+        "status": "selada",
+        "summary": "Fechamento definitivo da edição diária."
+      }
+    ]
+  },
+  "publications": [
+    {
+      "id": "pub-transporte-20260720",
+      "slug": "a-cidade-terceirizou-o-relogio",
+      "date": "2026-07-20",
+      "channel": "sao-paulo-sob-o-capo",
+      "section": "cidade",
+      "type": "reportagem",
+      "state": "Corrigido",
+      "stateKind": "corrected",
+      "title": "A cidade terceirizou o relógio — e agora ninguém sabe quem responde pelo atraso",
+      "subtitle": "Uma falha repetida expõe contratos fragmentados, fiscalização opaca e a velha tecnologia pública de empurrar responsabilidade até ela cair no colo do passageiro.",
+      "authors": [
+        "malu"
+      ],
+      "editor": "trilho",
+      "publishedAt": "2026-07-20T10:48:00-03:00",
+      "updatedAt": "2026-07-20T16:10:00-03:00",
+      "readingTime": "8 min",
+      "territories": [
+        "São Paulo"
+      ],
+      "topics": [
+        "mobilidade",
+        "infraestrutura",
+        "concessoes"
+      ],
+      "story": "operacao-transporte-metropolitano",
+      "featured": true,
+      "toc": [
+        [
+          "o-acontecimento",
+          "O acontecimento"
+        ],
+        [
+          "contrato-fragmentado",
+          "O contrato fragmentado"
+        ],
+        [
+          "responsabilidade",
+          "Sob responsabilidade de quem?"
+        ],
+        [
+          "ainda-nao-sabemos",
+          "O que ainda não sabemos"
+        ]
+      ],
+      "sections": [
+        {
+          "id": "o-acontecimento",
+          "heading": "O acontecimento",
+          "paragraphs": [
+            "A operação metropolitana registrou uma interrupção durante o pico da manhã. O primeiro aviso atribuiu o problema a uma falha de comunicação; a atualização seguinte deslocou a causa para um equipamento mantido por outra empresa.",
+            "Para o passageiro, a cadeia de contratos não alterou o resultado: espera maior, informação incompleta e nenhuma resposta única sobre prevenção."
+          ],
+          "blocks": [
+            {
+              "kind": "fact",
+              "label": "Fato confirmado",
+              "text": "O registro operacional marca o início do incidente às 7h42 e a normalização gradual depois das 8h20."
+            }
+          ]
+        },
+        {
+          "id": "contrato-fragmentado",
+          "heading": "O contrato fragmentado",
+          "paragraphs": [
+            "A manutenção, a comunicação e a operação aparecem distribuídas entre contratos diferentes. Essa divisão pode especializar serviços, mas também permite que cada responsável descreva apenas sua parte e deixe a falha sistêmica sem dono.",
+            "O relatório público registra procedimentos preventivos. Os anexos de ocorrência, porém, descrevem respostas improvisadas semelhantes às observadas em episódios anteriores."
+          ],
+          "blocks": [
+            {
+              "kind": "why-it-matters",
+              "label": "Por que importa",
+              "text": "Quando o serviço é dividido em fornecedores, a fiscalização precisa recompor o sistema inteiro. Sem isso, a terceirização também terceiriza a memória do problema."
+            }
+          ]
+        },
+        {
+          "id": "responsabilidade",
+          "heading": "Sob responsabilidade de quem?",
+          "paragraphs": [
+            "O operador responde pela comunicação ao passageiro. A empresa de manutenção responde pelo equipamento. O órgão concedente fiscaliza metas e reincidências. Nenhum desses papéis elimina a obrigação pública de explicar por que a mesma vulnerabilidade continua voltando.",
+            "A reportagem solicitou a série histórica de falhas e os registros de penalidade. Até o fechamento, apenas a nota operacional havia sido disponibilizada."
+          ],
+          "blocks": [
+            {
+              "kind": "document",
+              "label": "Documento de origem",
+              "text": "O relatório operacional e o trecho contratual relevante estão disponíveis na página de documento comentado."
+            }
+          ]
+        },
+        {
+          "id": "ainda-nao-sabemos",
+          "heading": "O que ainda não sabemos",
+          "paragraphs": [
+            "A causa raiz não foi apresentada em documento público. Também não está claro se houve descumprimento de meta contratual nem se a reincidência produzirá sanção."
+          ],
+          "blocks": [
+            {
+              "kind": "unknown",
+              "label": "Ainda não confirmado",
+              "text": "A hipótese de falha recorrente no mesmo subsistema é consistente com relatos anteriores, mas depende da série técnica ainda não entregue."
+            },
+            {
+              "kind": "next-step",
+              "label": "Próximo passo",
+              "text": "O próximo ponto verificável é a publicação do relatório técnico completo, prevista para 25 de julho."
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "doc-relatorio-operacional",
+        "src-contrato-operacao"
+      ],
+      "corrections": [
+        {
+          "date": "20 de julho de 2026, 16h10",
+          "publishedAt": "2026-07-20T16:10:00-03:00",
+          "type": "correcao-factual",
+          "summary": "O horário correto da interrupção é 7h42, não 7h24.",
+          "impact": "A cronologia foi corrigida sem alterar a conclusão estrutural da reportagem.",
+          "previousRevision": 1,
+          "newRevision": 2
+        }
+      ],
+      "connectionIds": [
+        "pub-bdd-20260720",
+        "pub-plataforma-20260720"
+      ],
+      "bodyVisibility": "full",
+      "tombstone": null
+    },
+    {
+      "id": "pub-bdd-20260720",
+      "slug": "bom-dia-distopia-20-de-julho-de-2026",
+      "date": "2026-07-20",
+      "channel": "bom-dia-distopia",
+      "section": "agora",
+      "type": "boletim",
+      "state": "Publicado",
+      "stateKind": "confirmed",
+      "title": "Bom Dia, Distopia — 20 de julho de 2026",
+      "subtitle": "A edição matinal organiza os fatos que merecem atravessar o ruído antes que o trânsito e os comunicados oficiais façam hora extra.",
+      "authors": [
+        "cora"
+      ],
+      "editor": "cora",
+      "publishedAt": "2026-07-20T07:05:00-03:00",
+      "updatedAt": null,
+      "readingTime": "12 min",
+      "territories": [
+        "São Paulo",
+        "Brasil",
+        "Mundo"
+      ],
+      "topics": [
+        "sao-paulo",
+        "tecnologia",
+        "privacidade"
+      ],
+      "story": "operacao-transporte-metropolitano",
+      "featured": false,
+      "toc": [
+        [
+          "abertura",
+          "Abertura"
+        ],
+        [
+          "cidade",
+          "Cidade"
+        ],
+        [
+          "plataformas",
+          "Tecnologia e plataformas"
+        ],
+        [
+          "pings",
+          "Pings do Subsolo"
+        ]
+      ],
+      "sections": [
+        {
+          "id": "abertura",
+          "heading": "Abertura",
+          "paragraphs": [
+            "São Paulo acordou com a infraestrutura praticando aquele esporte municipal em que o problema corre de um lado e a responsabilidade pega outra linha. No setor digital, as plataformas atualizaram regras com a delicadeza habitual de um contrato que já marcou a caixa por você."
+          ],
+          "blocks": []
+        },
+        {
+          "id": "cidade",
+          "heading": "São Paulo e a máquina urbana",
+          "paragraphs": [
+            "Uma interrupção no transporte metropolitano afetou o pico da manhã. O serviço foi normalizado, mas a causa técnica e a eventual reincidência continuam sem documentação pública completa.",
+            "A cobertura do dia acompanhará a divisão de responsabilidades e o relatório prometido pelo operador."
+          ],
+          "blocks": [
+            {
+              "kind": "fact",
+              "label": "Fato confirmado",
+              "text": "A ocorrência foi registrada e a operação retornou gradualmente."
+            },
+            {
+              "kind": "next-step",
+              "label": "Próximo passo",
+              "text": "A redação acompanhará a entrega do relatório técnico e eventuais medidas regulatórias."
+            }
+          ]
+        },
+        {
+          "id": "plataformas",
+          "heading": "Tecnologia e plataformas",
+          "paragraphs": [
+            "Uma plataforma de distribuição alterou critérios de acesso e cobrança. A mudança é apresentada como ajuste comercial, mas transfere risco para quem depende da infraestrutura para alcançar usuários."
+          ],
+          "blocks": [
+            {
+              "kind": "declaration",
+              "label": "Declaração",
+              "text": "A empresa afirma que a regra melhora sustentabilidade e previsibilidade. Desenvolvedores ouvidos contestam a ausência de alternativa prática."
+            }
+          ]
+        },
+        {
+          "id": "pings",
+          "heading": "Pings do Subsolo",
+          "paragraphs": [
+            "Uma ferramenta livre de autenticação publicou uma correção estável; administradores devem revisar versões suportadas.",
+            "A consulta pública sobre dados urbanos entra na última semana de contribuições."
+          ],
+          "blocks": []
+        }
+      ],
+      "sourceIds": [
+        "doc-relatorio-operacional",
+        "src-termos-plataforma"
+      ],
+      "corrections": [],
+      "connectionIds": [
+        "pub-transporte-20260720",
+        "pub-plataforma-20260720",
+        "pub-termos-20260720"
+      ],
+      "bodyVisibility": "full",
+      "tombstone": null
+    },
+    {
+      "id": "pub-plataforma-20260720",
+      "slug": "nova-regra-ou-desapareca-da-fila",
+      "date": "2026-07-20",
+      "channel": "poder-de-plataforma",
+      "section": "tecnologia",
+      "type": "analise",
+      "state": "Análise",
+      "stateKind": "analysis",
+      "title": "Aceite a nova regra ou desapareça da fila",
+      "subtitle": "A mudança reorganiza distribuição, risco e dependência sem chamar isso de poder.",
+      "authors": [
+        "termos"
+      ],
+      "editor": "lock",
+      "publishedAt": "2026-07-20T12:10:00-03:00",
+      "updatedAt": "2026-07-20T18:20:00-03:00",
+      "readingTime": "7 min",
+      "territories": [
+        "Global"
+      ],
+      "topics": [
+        "plataformas-digitais",
+        "economia",
+        "desenvolvimento-de-software"
+      ],
+      "story": null,
+      "featured": false,
+      "toc": [
+        [
+          "mudanca",
+          "A mudança"
+        ],
+        [
+          "dependencia",
+          "A dependência criada"
+        ],
+        [
+          "alternativas",
+          "Alternativas e saídas"
+        ]
+      ],
+      "sections": [
+        {
+          "id": "mudanca",
+          "heading": "A mudança",
+          "paragraphs": [
+            "A plataforma passou a condicionar maior alcance a um novo modelo de cobrança. Formalmente, ninguém é obrigado a aderir. Na prática, quem recusa perde a principal rota de descoberta dentro do próprio mercado."
+          ],
+          "blocks": [
+            {
+              "kind": "declaration",
+              "label": "Declaração",
+              "text": "A empresa descreve a mudança como opção adicional. O desenho da distribuição indica que a opção tem peso estrutural."
+            }
+          ]
+        },
+        {
+          "id": "dependencia",
+          "heading": "A dependência criada",
+          "paragraphs": [
+            "Distribuição, pagamento, identidade e descoberta permanecem concentrados no mesmo intermediário. A taxa não compra apenas um serviço: compra acesso à infraestrutura que decide quem será encontrado."
+          ],
+          "blocks": [
+            {
+              "kind": "why-it-matters",
+              "label": "Por que importa",
+              "text": "Uma escolha comercial deixa de ser voluntária quando recusar significa perder acesso ao mercado que a própria empresa organiza."
+            }
+          ]
+        },
+        {
+          "id": "alternativas",
+          "heading": "Alternativas e saídas",
+          "paragraphs": [
+            "Distribuição direta e lojas concorrentes reduzem parte da dependência, mas não substituem imediatamente escala, identidade e pagamentos. Interoperabilidade e portabilidade são as saídas estruturais; nenhuma delas depende apenas da boa vontade da plataforma."
+          ],
+          "blocks": [
+            {
+              "kind": "unknown",
+              "label": "O que ainda não sabemos",
+              "text": "A empresa não publicou dados suficientes para medir como a mudança afetará projetos pequenos e mercados regionais."
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "src-termos-plataforma"
+      ],
+      "corrections": [],
+      "connectionIds": [
+        "pub-bdd-20260720",
+        "pub-termos-20260720"
+      ],
+      "bodyVisibility": "full",
+      "tombstone": null
+    },
+    {
+      "id": "pub-termos-20260720",
+      "slug": "seu-aplicativo-mudou-os-termos",
+      "date": "2026-07-20",
+      "channel": "manual-de-sobrevivencia-digital",
+      "section": "tecnologia",
+      "type": "guia",
+      "state": "Retirado",
+      "stateKind": "corrected",
+      "title": "Seu aplicativo mudou os termos. Eis o que merece atenção de verdade",
+      "subtitle": "Três verificações úteis, duas permissões dispensáveis e uma alternativa aberta que funciona.",
+      "authors": [
+        "modo"
+      ],
+      "editor": "modo",
+      "publishedAt": "2026-07-20T11:20:00-03:00",
+      "updatedAt": "2026-07-20T19:00:00-03:00",
+      "readingTime": "5 min",
+      "territories": [
+        "Global"
+      ],
+      "topics": [
+        "privacidade",
+        "seguranca-digital",
+        "software-livre"
+      ],
+      "story": null,
+      "featured": false,
+      "toc": [
+        [
+          "agora",
+          "O que fazer agora"
+        ],
+        [
+          "nao-precisa",
+          "O que não precisa ser feito"
+        ],
+        [
+          "alternativa",
+          "Alternativa aberta"
+        ]
+      ],
+      "sections": [
+        {
+          "id": "agora",
+          "heading": "O que fazer agora",
+          "paragraphs": [
+            "Revise permissões de localização, contatos e atividade em segundo plano. Confirme se a mudança ampliou compartilhamento com terceiros e se existe opção real de recusa."
+          ],
+          "blocks": [
+            {
+              "kind": "action",
+              "label": "Ação recomendada",
+              "text": "Registre as configurações atuais, desative permissões sem relação com a função principal e exporte seus dados antes de decidir migrar."
+            }
+          ]
+        },
+        {
+          "id": "nao-precisa",
+          "heading": "O que não precisa ser feito",
+          "paragraphs": [
+            "Não é necessário apagar imediatamente a conta apenas porque os termos mudaram. Primeiro identifique o que mudou, se a regra se aplica à sua região e quais funções deixam de operar quando você recusa."
+          ],
+          "blocks": []
+        },
+        {
+          "id": "alternativa",
+          "heading": "Alternativa aberta",
+          "paragraphs": [
+            "Uma ferramenta livre pode cobrir a função principal sem integrar publicidade e perfilamento. A migração exige exportação manual e possui menos integrações, mas devolve controle sobre dados e formato."
+          ],
+          "blocks": [
+            {
+              "kind": "why-it-matters",
+              "label": "Limite real",
+              "text": "Software livre reduz dependência, não elimina trabalho de configuração nem garante que toda função proprietária tenha equivalente imediato."
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "src-termos-plataforma"
+      ],
+      "corrections": [
+        {
+          "date": "20 de julho de 2026, 19h00",
+          "publishedAt": "2026-07-20T19:00:00-03:00",
+          "type": "retirada",
+          "summary": "A publicação foi retirada e substituída por uma nota pública permanente.",
+          "impact": "O corpo foi ocultado; o registro continua disponível no arquivo e na busca.",
+          "previousRevision": 1,
+          "newRevision": 2
+        }
+      ],
+      "connectionIds": [
+        "pub-plataforma-20260720"
+      ],
+      "bodyVisibility": "tombstone",
+      "tombstone": {
+        "publishedAt": "2026-07-20T19:00:00-03:00",
+        "reason": "O documento central não sustentava a identificação publicada da empresa responsável.",
+        "impact": "O corpo foi ocultado; a URL, o título e o motivo da retirada permanecem públicos.",
+        "originalPublishedAt": "2026-07-20T11:20:00-03:00"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "slug": "operacao-transporte-metropolitano",
+      "title": "Operação do transporte metropolitano",
+      "status": "Aberta",
+      "summary": "Acompanhamento de falhas, contratos, fiscalização e responsabilização no transporte metropolitano.",
+      "guardian": "trilho",
+      "topics": [
+        "mobilidade",
+        "infraestrutura",
+        "concessoes"
+      ],
+      "publicationIds": [
+        "pub-bdd-20260720",
+        "pub-transporte-20260720"
+      ],
+      "nextExpectedEvent": "2026-07-25",
+      "timeline": [
+        {
+          "date": "15 JUL",
+          "title": "Primeiro alerta",
+          "text": "Usuários registram instabilidade semelhante no mesmo trecho operacional."
+        },
+        {
+          "date": "18 JUL",
+          "title": "Promessa de revisão",
+          "text": "O operador informa que os procedimentos preventivos serão revisados."
+        },
+        {
+          "date": "20 JUL · 07:42",
+          "title": "Nova interrupção",
+          "text": "O serviço registra falha durante o pico da manhã."
+        },
+        {
+          "date": "25 JUL",
+          "title": "Próximo evento esperado",
+          "text": "Prazo informado para publicação do relatório técnico completo."
+        }
+      ],
+      "actors": [
+        "Operador do serviço",
+        "Empresa de manutenção",
+        "Órgão concedente",
+        "Agência fiscalizadora"
+      ],
+      "openQuestions": [
+        "A falha ocorreu no mesmo subsistema?",
+        "Houve descumprimento de meta contratual?",
+        "Qual medida evita nova reincidência?"
+      ]
+    },
+    {
+      "slug": "crise-ormuz",
+      "title": "Crise operacional em Ormuz",
+      "status": "Em desenvolvimento",
+      "summary": "Bloqueio, ataques, frete e energia acompanhados como uma história de infraestrutura geopolítica.",
+      "guardian": "pavio",
+      "topics": [
+        "relacoes-internacionais",
+        "geopolitica",
+        "energia"
+      ],
+      "publicationIds": [],
+      "nextExpectedEvent": "Nova atualização operacional ou diplomática verificável",
+      "timeline": [
+        {
+          "date": "2026-07-13",
+          "title": "Ormuz sob cobrança: quem autorizou o pedágio da guerra?",
+          "text": "A cobertura separou bloqueio militar, liberdade de navegação e proposta de cobrança para mostrar o que possuía execução e o que permanecia retórica."
+        },
+        {
+          "date": "2026-07-13",
+          "title": "A semana antes do alarme: frete, café e campanha por procuração",
+          "text": "Três sinais verificáveis foram organizados por evidência, horizonte e gatilhos de confirmação."
+        },
+        {
+          "date": "2026-07-14",
+          "title": "Bom Dia, Distopia — 14 de julho de 2026",
+          "text": "A disputa em Ormuz ganhou materialidade enquanto o mercado ensaiou calma sem apresentar atestado médico."
+        },
+        {
+          "date": "2026-07-18",
+          "title": "Sete dias depois: bloqueio, tarifa e campanha por procuração",
+          "text": "Três histórias foram revistas somente pelas mudanças materiais registradas ao longo da semana."
+        }
+      ],
+      "actors": [
+        "Estados Unidos",
+        "Irã",
+        "Operadores marítimos"
+      ],
+      "openQuestions": [
+        "Qual é o alcance real do bloqueio?",
+        "Que mecanismo sustenta a proposta de cobrança?"
+      ]
+    },
+    {
+      "slug": "tarifas-comerciais",
+      "title": "Escalada tarifária e resposta brasileira",
+      "status": "Em desenvolvimento",
+      "summary": "Acompanhamento das ordens, exceções, respostas e efeitos setoriais da disputa comercial.",
+      "guardian": "lupa",
+      "topics": [
+        "economia",
+        "relacoes-internacionais",
+        "trabalho"
+      ],
+      "publicationIds": [],
+      "nextExpectedEvent": "Entrada em vigor e publicação das orientações aduaneiras",
+      "timeline": [
+        {
+          "date": "2026-07-15",
+          "title": "Bom Dia, Distopia — 15 de julho de 2026",
+          "text": "Serviços recuaram, tarifas avançaram e a política fez o esforço habitual para transformar incerteza em palanque."
+        },
+        {
+          "date": "2026-07-15",
+          "title": "A lista ainda não saiu, mas as fábricas já refazem a conta",
+          "text": "Exposição setorial e limites dos dados disponíveis foram apresentados sem antecipar a lista tarifária definitiva."
+        },
+        {
+          "date": "2026-07-15",
+          "title": "Tarifa como arma eleitoral: quem paga quando comércio vira campanha",
+          "text": "A estratégia tarifária foi desmontada como instrumento jurídico, econômico e político, com atenção a quem absorve o custo."
+        },
+        {
+          "date": "2026-07-16",
+          "title": "Bom Dia, Distopia — 16 de julho de 2026",
+          "text": "A tarifa ganhou data, exceções e uma quantidade industrial de respostas que ainda não eram decisões."
+        },
+        {
+          "date": "2026-07-16",
+          "title": "O mapa real do tarifaço: atingidos, exceções e pontos ainda abertos",
+          "text": "A ordem publicada foi organizada por setor, vigência, alcance e investigações adicionais."
+        }
+      ],
+      "actors": [
+        "Governo brasileiro",
+        "Governo dos Estados Unidos",
+        "Setores exportadores"
+      ],
+      "openQuestions": [
+        "Quais setores ficam efetivamente expostos?",
+        "Quais exceções sobreviverão à implementação?"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "slug": "relatorio-operacional",
+      "title": "Relatório operacional do serviço",
+      "publisher": "Órgão público de exemplo",
+      "date": "20 de julho de 2026",
+      "type": "Documento primário",
+      "sourceUrl": "https://example.org/documentos/relatorio-operacional.pdf",
+      "summary": "Registro operacional que descreve horário, impacto e resposta inicial ao incidente.",
+      "excerpts": [
+        {
+          "page": "p. 3",
+          "text": "A interrupção foi identificada às 7h42, com acionamento das equipes de operação e manutenção.",
+          "comment": "O documento fixa o horário, mas não identifica a causa raiz."
+        },
+        {
+          "page": "p. 6",
+          "text": "Os procedimentos preventivos previstos no plano de manutenção permanecem vigentes.",
+          "comment": "A vigência do procedimento não demonstra que ele tenha sido executado nem que seja suficiente."
+        }
+      ],
+      "relatedPublicationIds": [
+        "pub-transporte-20260720"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "doc-relatorio-operacional",
+      "type": "Documento primário",
+      "title": "Relatório operacional do serviço",
+      "publisher": "Órgão público de exemplo",
+      "url": "/documentos/relatorio-operacional/",
+      "accessedAt": "20 JUL · 10:00",
+      "note": "Documento comentado pelo Subsolo."
+    },
+    {
+      "id": "src-contrato-operacao",
+      "type": "Documento primário",
+      "title": "Contrato de operação e manutenção",
+      "publisher": "Órgão concedente de exemplo",
+      "url": "https://example.org/documentos/contrato-operacao.pdf",
+      "accessedAt": "20 JUL · 10:12",
+      "note": "Trechos sobre manutenção preventiva e fiscalização."
+    },
+    {
+      "id": "src-termos-plataforma",
+      "type": "Comunicado oficial",
+      "title": "Atualização dos termos de distribuição",
+      "publisher": "Plataforma de exemplo",
+      "url": "https://example.org/comunicado/plataforma",
+      "accessedAt": "20 JUL · 05:15",
+      "note": "Comunicado empresarial; não constitui confirmação independente."
+    }
+  ],
+  "redirects": [
+    {
+      "publicationId": "pub-plataforma-20260720",
+      "fromPath": "/2026/07/20/aceite-a-nova-regra-ou-desapareca-da-fila/",
+      "toPath": "/2026/07/20/nova-regra-ou-desapareca-da-fila/",
+      "statusCode": 308,
+      "effectiveAt": "2026-07-20T18:20:00-03:00",
+      "reason": "O slug foi encurtado; a URL anterior permanece como redirect permanente."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "corr_01K0ABCDEFFGHJKMNPQRSTVWXD",
+    "publication_id": "pub_01K0ABCDEFFGHJKMNPQRSTVWXY",
+    "type": "correcao-factual",
+    "published_at": "2026-07-20T14:31:00-03:00",
+    "summary": "O horário correto era 7h42, não 7h24.",
+    "impact": "A alteração corrige a cronologia sem mudar a análise estrutural.",
+    "previous_revision": 1,
+    "new_revision": 2
+  }
+]

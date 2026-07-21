@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';
+test('edition page shows revision history and seal without exposing private slots',async()=>{const page=await readFile('src/pages/edicoes/2026/07/20/index.astro','utf8');assert.match(page,/EditionLifecycleBadge/);assert.match(page,/revisionHistory/);assert.equal(/map_day_id|pautas reservadas|slot-reservado/.test(page),false);});
+test('edition update workflow is sanitized and has no merge node',async()=>{const raw=await readFile('n8n/workflows/09_atualizacao_edicao_diaria.json','utf8');const wf=JSON.parse(raw);assert.equal(wf.meta.subsolo_export,'sanitized');assert.equal(/credential|private[_-]?key|gh pr merge|auto.?merge/i.test(raw),false);});

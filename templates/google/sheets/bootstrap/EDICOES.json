@@ -1,0 +1,19 @@
+[
+  {
+    "edition_id": "ed_2026-07-20",
+    "edition_date": "2026-07-20",
+    "status": "ABERTA",
+    "revision": 1,
+    "mapa_do_dia": "https://docs.google.com/document/d/fixture-mapa-do-dia",
+    "manifest_path": "",
+    "package_checksum": "",
+    "drive_file_id": "",
+    "branch": "publish/ed_2026-07-20-r1",
+    "pull_request": "https://github.com/example/subsolo/pull/20",
+    "commit_sha": "",
+    "deployment_url": "https://example.github.io/subsolo/edicoes/2026/07/20/",
+    "opened_at": "2026-07-20T05:50:00-03:00",
+    "sealed_at": "",
+    "last_error": ""
+  }
+]

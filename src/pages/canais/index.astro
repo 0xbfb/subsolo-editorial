@@ -1,0 +1,18 @@
+---
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../../components/editorial/PageIntro.astro';
+import ChannelCard from '../../components/editorial/ChannelCard.astro';
+import JornalConcretoLayout from '../../layouts/JornalConcretoLayout.astro';
+import { channels, editorialSite } from '../../lib/presentation/site-repository';
+import { navigationFor } from '../../lib/presentation/editorial-site';
+---
+<JornalConcretoLayout title="Canais" description="Os nove canais editoriais do Subsolo." dateLabel={editorialSite.site.dateLabel} navigation={navigationFor('/canais/')} canonicalPath="/canais/">
+  <main id="conteudo">
+    <Breadcrumbs items={[{ label: 'Início', href: '/' }, 'Canais']} />
+    <PageIntro eyebrow="Produtos editoriais" title="Canais" summary="Cada canal responde a uma pergunta própria e resolve uma limitação diferente do noticiário diário." />
+    <h2 class="visually-hidden" id="diretorio-canais">Diretório de canais</h2>
+    <section class="channel-directory channel-directory--full" aria-labelledby="diretorio-canais">
+      {channels.map((channel, index) => <ChannelCard number={String(index + 1).padStart(2, '0')} name={channel.name} summary={channel.function} href={`/canais/${channel.slug}/`} />)}
+    </section>
+  </main>
+</JornalConcretoLayout>

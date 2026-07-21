@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0-pre",
+  "status": "pass-offline-fixture",
+  "external_services_used": false,
+  "exported_files": 5,
+  "golden_files_compared": 5,
+  "package": {
+    "name": "subsolo-edicao-20260720T150000-0300-r1.zip",
+    "sha256": "84263841a5ba6e1ba1294e234c18ac555f9fef869f0b105d1b98391e177d5d94"
+  },
+  "restore": {
+    "status": "restorable",
+    "components_validated": 5,
+    "volume_archives_extracted": 4,
+    "postgres_header_valid": true
+  },
+  "steps": [
+    {
+      "name": "export-dry-run",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs export-doc --provider fixture --sheet fixtures/exporter/valid/sheet-row.json --document fixtures/exporter/valid/document.json --destination /tmp/subsolo-pre-flow-oKLAOf/export-a --dry-run",
+      "status": 0,
+      "duration_ms": 81,
+      "stdout_tail": [
+        "      \"internal_markers\": 0,",
+        "      \"private_fields_exported\": 0",
+        "    }",
+        "  }",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "export-apply-a",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs export-doc --provider fixture --sheet fixtures/exporter/valid/sheet-row.json --document fixtures/exporter/valid/document.json --destination /tmp/subsolo-pre-flow-oKLAOf/export-a --apply",
+      "status": 0,
+      "duration_ms": 90,
+      "stdout_tail": [
+        "    \"/tmp/subsolo-pre-flow-oKLAOf/export-a/corrections.json\",",
+        "    \"/tmp/subsolo-pre-flow-oKLAOf/export-a/media.json\",",
+        "    \"/tmp/subsolo-pre-flow-oKLAOf/export-a/provenance.public.json\"",
+        "  ]",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "export-apply-b",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs export-doc --provider fixture --sheet fixtures/exporter/valid/sheet-row.json --document fixtures/exporter/valid/document.json --destination /tmp/subsolo-pre-flow-oKLAOf/export-b --apply",
+      "status": 0,
+      "duration_ms": 89,
+      "stdout_tail": [
+        "    \"/tmp/subsolo-pre-flow-oKLAOf/export-b/corrections.json\",",
+        "    \"/tmp/subsolo-pre-flow-oKLAOf/export-b/media.json\",",
+        "    \"/tmp/subsolo-pre-flow-oKLAOf/export-b/provenance.public.json\"",
+        "  ]",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "package-dry-run",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs package --workspace fixtures/packager/edition-r1 --destination /tmp/subsolo-pre-flow-oKLAOf/packages-a --dry-run",
+      "status": 0,
+      "duration_ms": 95,
+      "stdout_tail": [
+        "      \"bytes\": 627,",
+        "      \"sha256\": \"114423406e3eef3277d20c9ca5a5aa3dbb9a52b44e191f8663110bbf79a1270a\"",
+        "    }",
+        "  ]",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "package-apply-a",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs package --workspace fixtures/packager/edition-r1 --destination /tmp/subsolo-pre-flow-oKLAOf/packages-a --apply",
+      "status": 0,
+      "duration_ms": 100,
+      "stdout_tail": [
+        "  \"destination\": \"/tmp/subsolo-pre-flow-oKLAOf/packages-a/subsolo-edicao-20260720T150000-0300-r1.zip\",",
+        "  \"package_bytes\": 7724,",
+        "  \"package_sha256\": \"84263841a5ba6e1ba1294e234c18ac555f9fef869f0b105d1b98391e177d5d94\",",
+        "  \"entries\": 11",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "package-apply-b",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs package --workspace fixtures/packager/edition-r1 --destination /tmp/subsolo-pre-flow-oKLAOf/packages-b --apply",
+      "status": 0,
+      "duration_ms": 101,
+      "stdout_tail": [
+        "  \"destination\": \"/tmp/subsolo-pre-flow-oKLAOf/packages-b/subsolo-edicao-20260720T150000-0300-r1.zip\",",
+        "  \"package_bytes\": 7724,",
+        "  \"package_sha256\": \"84263841a5ba6e1ba1294e234c18ac555f9fef869f0b105d1b98391e177d5d94\",",
+        "  \"entries\": 11",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-package",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs validate-package --package /tmp/subsolo-pre-flow-oKLAOf/packages-a/subsolo-edicao-20260720T150000-0300-r1.zip",
+      "status": 0,
+      "duration_ms": 77,
+      "stdout_tail": [
+        "  \"revision\": 1,",
+        "  \"entries\": 11,",
+        "  \"checksums_valid\": true,",
+        "  \"package_sha256\": \"84263841a5ba6e1ba1294e234c18ac555f9fef869f0b105d1b98391e177d5d94\"",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "restore-dry-run",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs restore --package /tmp/subsolo-pre-flow-oKLAOf/packages-a/subsolo-edicao-20260720T150000-0300-r1.zip --destination /tmp/subsolo-pre-flow-oKLAOf/restored --dry-run",
+      "status": 0,
+      "duration_ms": 78,
+      "stdout_tail": [
+        "  \"revision\": 1,",
+        "  \"entries\": 11,",
+        "  \"checksums_valid\": true,",
+        "  \"package_sha256\": \"84263841a5ba6e1ba1294e234c18ac555f9fef869f0b105d1b98391e177d5d94\"",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "restore-apply",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs restore --package /tmp/subsolo-pre-flow-oKLAOf/packages-a/subsolo-edicao-20260720T150000-0300-r1.zip --destination /tmp/subsolo-pre-flow-oKLAOf/restored --apply",
+      "status": 0,
+      "duration_ms": 86,
+      "stdout_tail": [
+        "  \"run_id\": \"run_20260720T150000-0300_r1\",",
+        "  \"revision\": 1,",
+        "  \"written\": 11,",
+        "  \"checksums_valid\": true",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-subsolo-edicao-20260720T070500-0300-r1.zip",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs validate-package --package fixtures/edition-lifecycle/golden/packages/subsolo-edicao-20260720T070500-0300-r1.zip",
+      "status": 0,
+      "duration_ms": 80,
+      "stdout_tail": [
+        "  \"revision\": 1,",
+        "  \"entries\": 11,",
+        "  \"checksums_valid\": true,",
+        "  \"package_sha256\": \"ecec2d8d49fd084a46e69ecef9361062418ab1715646327c1a3153af26374361\"",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-subsolo-edicao-20260720T150000-0300-r2.zip",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs validate-package --package fixtures/edition-lifecycle/golden/packages/subsolo-edicao-20260720T150000-0300-r2.zip",
+      "status": 0,
+      "duration_ms": 82,
+      "stdout_tail": [
+        "  \"revision\": 2,",
+        "  \"entries\": 11,",
+        "  \"checksums_valid\": true,",
+        "  \"package_sha256\": \"afc65416af1a63e6f3d97e1209fa0c3ffe7118f5085dcf9b04041f1d92746c9a\"",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-subsolo-edicao-20260720T210000-0300-r3.zip",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs validate-package --package fixtures/edition-lifecycle/golden/packages/subsolo-edicao-20260720T210000-0300-r3.zip",
+      "status": 0,
+      "duration_ms": 79,
+      "stdout_tail": [
+        "  \"revision\": 3,",
+        "  \"entries\": 11,",
+        "  \"checksums_valid\": true,",
+        "  \"package_sha256\": \"9c8be19e24eceae01f92542cf89d94898725a38b48d5b6375899bbff2c4da5fe\"",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-r2-correction.zip",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs validate-package --package fixtures/post-publication/golden/r2-correction.zip",
+      "status": 0,
+      "duration_ms": 81,
+      "stdout_tail": [
+        "  \"revision\": 2,",
+        "  \"entries\": 11,",
+        "  \"checksums_valid\": true,",
+        "  \"package_sha256\": \"b7619ec333f54849749911393ffd87be4959a8d907569108b21ba99cde0fb41f\"",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-r3-withdrawal.zip",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs validate-package --package fixtures/post-publication/golden/r3-withdrawal.zip",
+      "status": 0,
+      "duration_ms": 79,
+      "stdout_tail": [
+        "  \"revision\": 3,",
+        "  \"entries\": 11,",
+        "  \"checksums_valid\": true,",
+        "  \"package_sha256\": \"f859d5529018049fab364ec525eefb5d66b56a77f14d73747fbb8a4c1546292e\"",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "orchestrate-dry-run",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs orchestrate --input fixtures/n8n/publication-candidate.json --dry-run",
+      "status": 0,
+      "duration_ms": 76,
+      "stdout_tail": [
+        "  ],",
+        "  \"branch\": \"editorial/art_subsolo_2026_0001-r1\",",
+        "  \"merge\": \"human-required\",",
+        "  \"writes\": false",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "reconcile-consistent",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs reconcile --input fixtures/observability/reconciliation-consistent.json --dry-run",
+      "status": 0,
+      "duration_ms": 73,
+      "stdout_tail": [
+        "  },",
+        "  \"issues\": [],",
+        "  \"writes\": false,",
+        "  \"disposition\": \"consistent\"",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "media-dry-run",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs media --manifest fixtures/media/portrait/manifest.json --destination /tmp/subsolo-pre-flow-oKLAOf/media --dry-run",
+      "status": 0,
+      "duration_ms": 1337,
+      "stdout_tail": [
+        "      \"public_path\": \"/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-social.jpg\",",
+        "      \"output_path\": \"/tmp/subsolo-pre-flow-oKLAOf/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-social.jpg\"",
+        "    }",
+        "  ]",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "media-apply",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node cli/subsolo.mjs media --manifest fixtures/media/portrait/manifest.json --destination /tmp/subsolo-pre-flow-oKLAOf/media --apply",
+      "status": 0,
+      "duration_ms": 3587,
+      "stdout_tail": [
+        "    \"metadata_removed\": true,",
+        "    \"derivative_count\": 12,",
+        "    \"total_public_bytes\": 164966",
+        "  }",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "media-validate",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-media-assets.mjs /tmp/subsolo-pre-flow-oKLAOf/media",
+      "status": 0,
+      "duration_ms": 1315,
+      "stdout_tail": [
+        "Ativos de mídia aprovados: 12 derivados."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "backup-volume-n8n_data",
+      "command": "tar -czf /tmp/subsolo-pre-flow-oKLAOf/backup-staging/n8n_data.tar.gz -C /tmp/subsolo-pre-flow-oKLAOf/n8n_data .",
+      "status": 0,
+      "duration_ms": 29,
+      "stdout_tail": [
+        ""
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "backup-volume-freshrss_data",
+      "command": "tar -czf /tmp/subsolo-pre-flow-oKLAOf/backup-staging/freshrss_data.tar.gz -C /tmp/subsolo-pre-flow-oKLAOf/freshrss_data .",
+      "status": 0,
+      "duration_ms": 29,
+      "stdout_tail": [
+        ""
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "backup-volume-freshrss_extensions",
+      "command": "tar -czf /tmp/subsolo-pre-flow-oKLAOf/backup-staging/freshrss_extensions.tar.gz -C /tmp/subsolo-pre-flow-oKLAOf/freshrss_extensions .",
+      "status": 0,
+      "duration_ms": 29,
+      "stdout_tail": [
+        ""
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "backup-volume-uptime_kuma_data",
+      "command": "tar -czf /tmp/subsolo-pre-flow-oKLAOf/backup-staging/uptime_kuma_data.tar.gz -C /tmp/subsolo-pre-flow-oKLAOf/uptime_kuma_data .",
+      "status": 0,
+      "duration_ms": 29,
+      "stdout_tail": [
+        ""
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "backup-manifest-create",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/backup-manifest.mjs create --directory /tmp/subsolo-pre-flow-oKLAOf/backup-staging --created-at 2026-07-21T12:00:00Z --product-version 1.0.0-pre",
+      "status": 0,
+      "duration_ms": 81,
+      "stdout_tail": [
+        "{\"schema_version\":1,\"backup_id\":\"backup_20260721120000Z\",\"created_at\":\"2026-07-21T12:00:00Z\",\"product_version\":\"1.0.0-pre\",\"encrypted_transport_required\":true,\"rpo_hours\":24,\"rto_hours\":4,\"components\":[{\"name\":\"postgres.dump\",\"bytes\":24,\"sha256\":\"e1905b9e76c93dbf429a767b177fe8af7515a88f3f4475d80a5cd2ffc048972a\"},{\"name\":\"n8n_data.tar.gz\",\"bytes\":163,\"sha256\":\"0771025fe03b596d9732a7536ac48894b4bd497259cadce9f9183dba7247011e\"},{\"name\":\"freshrss_data.tar.gz\",\"bytes\":167,\"sha256\":\"72a3a97725c1df2d10046987c73d353b231f1749f891bd6663b43e2fee0a0ec2\"},{\"name\":\"freshrss_extensions.tar.gz\",\"bytes\":170,\"sha256\":\"a6467e67d75b15aa72ed1545aa65356fe6f26e4dbe1bdcd2f25b105463a3cc8f\"},{\"name\":\"uptime_kuma_data.tar.gz\",\"bytes\":169,\"sha256\":\"87ab466de70d49622b4d35433aa48cbeacd94b6e08297ee9838c2c9244ec875a\"},{\"name\":\"runtime.json\",\"bytes\":89,\"sha256\":\"9896b30726d69562f5be51e92513a2134271a3b6c069c905a65c2370e97830f8\"}]}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "backup-manifest-validate",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/backup-manifest.mjs validate --directory /tmp/subsolo-pre-flow-oKLAOf/backup-staging",
+      "status": 0,
+      "duration_ms": 77,
+      "stdout_tail": [
+        "{\"valid\":true,\"backup_id\":\"backup_20260721120000Z\",\"components\":6,\"bytes\":782}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "backup-tar",
+      "command": "tar -czf /tmp/subsolo-pre-flow-oKLAOf/subsolo-backup-pre.tar.gz -C /tmp/subsolo-pre-flow-oKLAOf/backup-staging .",
+      "status": 0,
+      "duration_ms": 31,
+      "stdout_tail": [
+        ""
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "backup-encrypt",
+      "command": "openssl enc -aes-256-cbc -pbkdf2 -salt -in /tmp/subsolo-pre-flow-oKLAOf/subsolo-backup-pre.tar.gz -out /tmp/subsolo-pre-flow-oKLAOf/backup/subsolo-backup-pre.tar.gz.enc -pass file:/tmp/subsolo-pre-flow-oKLAOf/backup.pass",
+      "status": 0,
+      "duration_ms": 25,
+      "stdout_tail": [
+        ""
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "backup-restore-test",
+      "command": "sh infra/scripts/restore.sh --test --backup-file /tmp/subsolo-pre-flow-oKLAOf/backup/subsolo-backup-pre.tar.gz.enc --passphrase-file /tmp/subsolo-pre-flow-oKLAOf/backup.pass --report /tmp/subsolo-pre-flow-oKLAOf/restore-report.json",
+      "status": 0,
+      "duration_ms": 358,
+      "stdout_tail": [
+        "{\"timestamp\":\"2026-07-21T10:48:36Z\",\"level\":\"info\",\"service\":\"subsolo-infra\",\"event\":\"operation\",\"message\":\"Restore test concluído com estado restorable.\"}"
+      ],
+      "stderr_tail": []
+    }
+  ]
+}

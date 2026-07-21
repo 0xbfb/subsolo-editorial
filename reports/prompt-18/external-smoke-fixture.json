@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-07-21T02:35:49.709Z",
+  "root_url": "file:///tmp/tmp.H7PWiYINjR/",
+  "ok": true,
+  "checks": [
+    {
+      "path": "/",
+      "url": "file:///tmp/tmp.H7PWiYINjR/",
+      "kind": "html",
+      "ok": true,
+      "status": 200,
+      "duration_ms": 1,
+      "bytes": 121,
+      "error": null
+    },
+    {
+      "path": "agora/",
+      "url": "file:///tmp/tmp.H7PWiYINjR/agora/",
+      "kind": "html",
+      "ok": true,
+      "status": 200,
+      "duration_ms": 1,
+      "bytes": 121,
+      "error": null
+    },
+    {
+      "path": "arquivo/",
+      "url": "file:///tmp/tmp.H7PWiYINjR/arquivo/",
+      "kind": "html",
+      "ok": true,
+      "status": 200,
+      "duration_ms": 1,
+      "bytes": 121,
+      "error": null
+    },
+    {
+      "path": "rss.xml",
+      "url": "file:///tmp/tmp.H7PWiYINjR/rss.xml",
+      "kind": "xml",
+      "ok": true,
+      "status": 200,
+      "duration_ms": 1,
+      "bytes": 67,
+      "error": null
+    },
+    {
+      "path": "sitemap.xml",
+      "url": "file:///tmp/tmp.H7PWiYINjR/sitemap.xml",
+      "kind": "xml",
+      "ok": true,
+      "status": 200,
+      "duration_ms": 1,
+      "bytes": 116,
+      "error": null
+    },
+    {
+      "path": "archive-index.json",
+      "url": "file:///tmp/tmp.H7PWiYINjR/archive-index.json",
+      "kind": "json",
+      "ok": true,
+      "status": 200,
+      "duration_ms": 1,
+      "bytes": 37,
+      "error": null
+    }
+  ],
+  "metrics": {
+    "checks": 6,
+    "failed": 0,
+    "total_bytes": 583,
+    "max_duration_ms": 1
+  }
+}

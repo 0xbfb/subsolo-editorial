@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "topics": {
+    "operations": {"purpose":"Falhas operacionais com ação definida","minimum_severity":"warning"},
+    "critical": {"purpose":"Perda de dados, publicação inconsistente ou restore falho","minimum_severity":"critical"},
+    "publishing": {"purpose":"Build, pacote, PR e publicação","minimum_severity":"info"}
+  },
+  "rules": [
+    "Tópicos reais devem ser não previsíveis e configurados fora do repositório.",
+    "Tokens nunca aparecem em logs ou exports n8n.",
+    "Alertas devem conter código, componente e ação recomendada."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": [
+    "../../src/lib/domain/discovery.d.mts",
+    "../../src/lib/presentation/archive-repository.ts",
+    "../../src/lib/presentation/site-repository.ts",
+    "../../src/lib/presentation/editorial-site.ts",
+    "../../src/lib/presentation/home-page.ts"
+  ]
+}

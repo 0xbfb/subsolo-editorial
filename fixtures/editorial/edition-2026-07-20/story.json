@@ -1,0 +1,16 @@
+{
+  "story_id": "historia-operacao-transporte-metropolitano",
+  "title": "Operação do transporte metropolitano",
+  "slug": "operacao-transporte-metropolitano",
+  "status": "ABERTA",
+  "guardian_id": "redacao011-trilho",
+  "topic_ids": [
+    "tema-sao-paulo",
+    "tema-mobilidade",
+    "tema-concessoes"
+  ],
+  "publication_ids": [
+    "pub-2026-07-20-bdd-r1"
+  ],
+  "next_expected_event": "2026-07-25"
+}

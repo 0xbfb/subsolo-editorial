@@ -1,0 +1,296 @@
+[
+  {
+    "topic_id": "tema-brasil",
+    "name": "Brasil",
+    "slug": "brasil",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-sao-paulo",
+    "name": "São Paulo",
+    "slug": "sao-paulo",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-politica-brasileira",
+    "name": "Política brasileira",
+    "slug": "politica-brasileira",
+    "status": "ativo",
+    "is_sensitive": true
+  },
+  {
+    "topic_id": "tema-administracao-publica",
+    "name": "Administração pública",
+    "slug": "administracao-publica",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-relacoes-internacionais",
+    "name": "Relações internacionais",
+    "slug": "relacoes-internacionais",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-geopolitica",
+    "name": "Geopolítica",
+    "slug": "geopolitica",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-trabalho",
+    "name": "Trabalho",
+    "slug": "trabalho",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-economia",
+    "name": "Economia",
+    "slug": "economia",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-saude",
+    "name": "Saúde",
+    "slug": "saude",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-educacao",
+    "name": "Educação",
+    "slug": "educacao",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-justica",
+    "name": "Justiça",
+    "slug": "justica",
+    "status": "ativo",
+    "is_sensitive": true
+  },
+  {
+    "topic_id": "tema-direitos-civis",
+    "name": "Direitos civis",
+    "slug": "direitos-civis",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-infraestrutura",
+    "name": "Infraestrutura",
+    "slug": "infraestrutura",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-mobilidade",
+    "name": "Mobilidade",
+    "slug": "mobilidade",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-energia",
+    "name": "Energia",
+    "slug": "energia",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-agua-e-saneamento",
+    "name": "Água e saneamento",
+    "slug": "agua-e-saneamento",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-habitacao",
+    "name": "Habitação",
+    "slug": "habitacao",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-meio-ambiente",
+    "name": "Meio ambiente",
+    "slug": "meio-ambiente",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-clima",
+    "name": "Clima",
+    "slug": "clima",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-seguranca-publica",
+    "name": "Segurança pública",
+    "slug": "seguranca-publica",
+    "status": "ativo",
+    "is_sensitive": true
+  },
+  {
+    "topic_id": "tema-vigilancia",
+    "name": "Vigilância",
+    "slug": "vigilancia",
+    "status": "ativo",
+    "is_sensitive": true
+  },
+  {
+    "topic_id": "tema-cultura-hacker",
+    "name": "Cultura hacker",
+    "slug": "cultura-hacker",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-seguranca-digital",
+    "name": "Segurança digital",
+    "slug": "seguranca-digital",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-privacidade",
+    "name": "Privacidade",
+    "slug": "privacidade",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-software-livre",
+    "name": "Software livre",
+    "slug": "software-livre",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-desenvolvimento-de-software",
+    "name": "Desenvolvimento de software",
+    "slug": "desenvolvimento-de-software",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-tecnologia",
+    "name": "Tecnologia",
+    "slug": "tecnologia",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-inteligencia-artificial",
+    "name": "Inteligência artificial",
+    "slug": "inteligencia-artificial",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-plataformas-digitais",
+    "name": "Plataformas digitais",
+    "slug": "plataformas-digitais",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-industria-de-jogos",
+    "name": "Indústria de jogos",
+    "slug": "industria-de-jogos",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-preservacao-digital",
+    "name": "Preservação digital",
+    "slug": "preservacao-digital",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-cultura-digital",
+    "name": "Cultura digital",
+    "slug": "cultura-digital",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-xadrez-profissional",
+    "name": "Xadrez profissional",
+    "slug": "xadrez-profissional",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-bitcoin",
+    "name": "Bitcoin",
+    "slug": "bitcoin",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-bnb",
+    "name": "BNB",
+    "slug": "bnb",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-cambio",
+    "name": "Câmbio",
+    "slug": "cambio",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-mercados",
+    "name": "Mercados",
+    "slug": "mercados",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-documentos-publicos",
+    "name": "Documentos públicos",
+    "slug": "documentos-publicos",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-concessoes",
+    "name": "Concessões",
+    "slug": "concessoes",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-contratos-publicos",
+    "name": "Contratos públicos",
+    "slug": "contratos-publicos",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-historia-da-internet",
+    "name": "História da internet",
+    "slug": "historia-da-internet",
+    "status": "ativo",
+    "is_sensitive": false
+  },
+  {
+    "topic_id": "tema-governanca-digital",
+    "name": "Governança digital",
+    "slug": "governanca-digital",
+    "status": "ativo",
+    "is_sensitive": false
+  }
+]

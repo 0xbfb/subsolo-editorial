@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "findings": [],
+  "reviewed_literals": [
+    {
+      "kind": "todo-literal-in-validator-pattern",
+      "path": "cli/exporter-core.mjs",
+      "line": 67,
+      "decision": "accepted",
+      "reason": "A palavra TODO faz parte da expressão que bloqueia marcadores internos em documentos exportados; não representa tarefa pendente."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+---
+import DiscoveryCard from './DiscoveryCard.astro';
+import type { DiscoveryEntry } from '../../lib/presentation/archive-repository';
+import { channelNames, authorNames } from '../../lib/presentation/site-repository';
+interface Props { readonly entries: readonly DiscoveryEntry[]; }
+const { entries } = Astro.props;
+---
+<section class="discovery-list">
+  {entries.map((entry) => <DiscoveryCard entry={entry} channelName={channelNames[entry.channel] ?? entry.channel} authorNames={entry.authors.map((slug) => authorNames[slug] ?? slug)} />)}
+</section>

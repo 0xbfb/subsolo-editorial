@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "baseUrl": "../..",
+    "paths": {
+      "@domain/*": ["src/lib/domain/*"],
+      "@application/*": ["src/lib/application/*"],
+      "@infrastructure/*": ["src/lib/infrastructure/*"],
+      "@presentation/*": ["src/lib/presentation/*"]
+    },
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "allowJs": false
+  },
+  "include": [
+    "../../src/lib/**/*.ts",
+    "../../src/lib/**/*.mts"
+  ],
+  "exclude": [
+    "../../src/lib/presentation/public-zod-schemas.ts",
+    "../../src/lib/presentation/security-headers.ts"
+  ]
+}

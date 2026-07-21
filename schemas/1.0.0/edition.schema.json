@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://subsolo.invalid/schemas/1.0.0/public-edition.schema.json",
+  "title": "Public Edition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "date",
+    "revision",
+    "status",
+    "timezone",
+    "published_at",
+    "sealed_at",
+    "supersedes",
+    "publications"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^ed_\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "publicada",
+        "selada",
+        "corrigida"
+      ]
+    },
+    "timezone": {
+      "const": "America/Sao_Paulo"
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sealed_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "supersedes": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "publications": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "position",
+          "featured"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^pub_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "position": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "featured": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

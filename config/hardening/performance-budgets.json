@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "route": {
+    "html_uncompressed_bytes": 262144,
+    "html_gzip_bytes": 65536,
+    "critical_css_uncompressed_bytes": 98304,
+    "critical_css_gzip_bytes": 24576,
+    "blocking_javascript_uncompressed_bytes": 8192,
+    "initial_javascript_uncompressed_bytes": 98304,
+    "initial_transfer_estimate_bytes": 409600,
+    "largest_image_bytes": 307200
+  },
+  "site": {
+    "archive_index_bytes": 524288,
+    "pagefind_index_bytes": 20971520,
+    "total_artifact_bytes": 1073741824,
+    "maximum_route_count": 50000
+  },
+  "scale": {
+    "synthetic_publications": 10000,
+    "generation_ms": 5000,
+    "heap_delta_bytes": 268435456,
+    "archive_index_bytes": 12582912,
+    "rss_items": 100,
+    "page_size": 25
+  },
+  "slow_connection_profile": {
+    "downlink_kbps": 400,
+    "round_trip_ms": 150,
+    "critical_content_seconds": 8
+  }
+}

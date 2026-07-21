@@ -1,0 +1,11 @@
+{
+  "kind": "withdrawal",
+  "at": "2026-07-20T19:00:00-03:00",
+  "previous_revision": 1,
+  "summary": "A reportagem foi retirada e substituída por uma nota pública permanente.",
+  "reason": "O documento central não podia sustentar a identificação publicada da empresa responsável.",
+  "impact": "O corpo foi ocultado; a URL, o título, o motivo e o histórico da retirada permanecem públicos.",
+  "factual_change": false,
+  "material_change": false,
+  "hide_body": true
+}

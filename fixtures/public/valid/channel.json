@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sao-paulo-sob-o-capo",
+  "name": "São Paulo Sob o Capô",
+  "slug": "sao-paulo-sob-o-capo",
+  "question": "Como a cidade realmente funciona e quem responde quando ela falha?",
+  "description": "Acompanha infraestrutura, serviços, concessões e falhas recorrentes.",
+  "periodicity": "Semanal e extraordinária quando a pauta exigir.",
+  "editor_id": "trilho",
+  "status": "ativo",
+  "accent": "#B48714"
+}

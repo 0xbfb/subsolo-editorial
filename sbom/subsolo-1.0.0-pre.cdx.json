@@ -1,0 +1,282 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:21531810-6168-1815-7a68-91a4e1e6983b",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-07-21T00:00:00Z",
+    "component": {
+      "type": "application",
+      "bom-ref": "pkg:npm/subsolo@1.0.0-pre",
+      "name": "subsolo",
+      "version": "1.0.0-pre",
+      "purl": "pkg:npm/subsolo@1.0.0-pre"
+    },
+    "properties": [
+      {
+        "name": "subsolo:completeness",
+        "value": "direct-dependencies-only"
+      },
+      {
+        "name": "subsolo:lockfile-present",
+        "value": "false"
+      },
+      {
+        "name": "subsolo:transitive-audit-status",
+        "value": "blocked"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/%40eslint%2Fjs@10.0.1",
+      "name": "@eslint/js",
+      "version": "10.0.1",
+      "scope": "optional",
+      "purl": "pkg:npm/%40eslint%2Fjs@10.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "subsolo:dependency-level",
+          "value": "direct"
+        },
+        {
+          "name": "subsolo:installed",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/%40playwright%2Ftest@1.57.0",
+      "name": "@playwright/test",
+      "version": "1.57.0",
+      "scope": "optional",
+      "purl": "pkg:npm/%40playwright%2Ftest@1.57.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "subsolo:dependency-level",
+          "value": "direct"
+        },
+        {
+          "name": "subsolo:installed",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/%40types%2Fnode@26.1.1",
+      "name": "@types/node",
+      "version": "26.1.1",
+      "scope": "optional",
+      "purl": "pkg:npm/%40types%2Fnode@26.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "subsolo:dependency-level",
+          "value": "direct"
+        },
+        {
+          "name": "subsolo:installed",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/astro@7.1.2",
+      "name": "astro",
+      "version": "7.1.2",
+      "scope": "required",
+      "purl": "pkg:npm/astro@7.1.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "subsolo:dependency-level",
+          "value": "direct"
+        },
+        {
+          "name": "subsolo:installed",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/eslint@10.7.0",
+      "name": "eslint",
+      "version": "10.7.0",
+      "scope": "optional",
+      "purl": "pkg:npm/eslint@10.7.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "subsolo:dependency-level",
+          "value": "direct"
+        },
+        {
+          "name": "subsolo:installed",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/pagefind@1.5.2",
+      "name": "pagefind",
+      "version": "1.5.2",
+      "scope": "optional",
+      "purl": "pkg:npm/pagefind@1.5.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "subsolo:dependency-level",
+          "value": "direct"
+        },
+        {
+          "name": "subsolo:installed",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/prettier@3.9.5",
+      "name": "prettier",
+      "version": "3.9.5",
+      "scope": "optional",
+      "purl": "pkg:npm/prettier@3.9.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "subsolo:dependency-level",
+          "value": "direct"
+        },
+        {
+          "name": "subsolo:installed",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/typescript@6.0.3",
+      "name": "typescript",
+      "version": "6.0.3",
+      "scope": "optional",
+      "purl": "pkg:npm/typescript@6.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "subsolo:dependency-level",
+          "value": "direct"
+        },
+        {
+          "name": "subsolo:installed",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/typescript-eslint@8.64.0",
+      "name": "typescript-eslint",
+      "version": "8.64.0",
+      "scope": "optional",
+      "purl": "pkg:npm/typescript-eslint@8.64.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "subsolo:dependency-level",
+          "value": "direct"
+        },
+        {
+          "name": "subsolo:installed",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/vitest@4.1.10",
+      "name": "vitest",
+      "version": "4.1.10",
+      "scope": "optional",
+      "purl": "pkg:npm/vitest@4.1.10",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "subsolo:dependency-level",
+          "value": "direct"
+        },
+        {
+          "name": "subsolo:installed",
+          "value": "false"
+        }
+      ]
+    }
+  ]
+}

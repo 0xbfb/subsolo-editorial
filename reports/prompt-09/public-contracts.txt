@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "schemas": 9,
+  "draft": "2020-12"
+}

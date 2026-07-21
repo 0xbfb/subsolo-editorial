@@ -1,0 +1,2 @@
+publication_id,artigo_id,edition_id,revision,public_state,published_at,updated_at,url,commit_sha,package_checksum
+pub-2026-07-20-bdd-r1,artigo-2026-07-20-bdd,ed_2026-07-20,1,PUBLICADO,2026-07-20T07:05:00-03:00,,https://example.github.io/subsolo/2026/07/20/bom-dia-distopia-20-de-julho-de-2026/,fixture000000000000000000000000000000000001,fixture-sha256-pending-real-package-stage

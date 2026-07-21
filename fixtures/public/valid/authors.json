@@ -1,0 +1,24 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "author_01K0ABCDEFFGHJKMNPQRSTVWXA",
+    "nickname": "Trilho",
+    "slug": "trilho",
+    "role": "editor",
+    "title": "Editor de São Paulo Sob o Capô",
+    "bio": "Jornalista de infraestrutura, serviços e operação urbana.",
+    "status": "ativo",
+    "portrait": null
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "author_01K0ABCDEFFGHJKMNPQRSTVWXB",
+    "nickname": "Cora",
+    "slug": "cora",
+    "role": "editor",
+    "title": "Editora da Mesa Central",
+    "bio": "Coordena a abertura editorial e o Bom Dia, Distopia.",
+    "status": "ativo",
+    "portrait": null
+  }
+]

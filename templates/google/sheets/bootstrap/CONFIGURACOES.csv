@@ -1,0 +1,4 @@
+key,value,type,description,secret
+timezone,America/Sao_Paulo,string,Fuso editorial.,false
+morning_slot,07:00,string,Horário recomendado do BDD.,false
+drive_root_id,SET_IN_ENV,string,ID da raiz; valor real fora do Sheets.,true

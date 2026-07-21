@@ -1,0 +1,75 @@
+frame_id,channel_id,name,slug,description,position,required,status
+bom-dia-distopia--abertura,bom-dia-distopia,Abertura,abertura,Abertura curta e variável que apresenta o clima geral da edição.,1,true,ativo
+bom-dia-distopia--manchetes-principais,bom-dia-distopia,Manchetes principais,manchetes-principais,"Fatos de maior impacto, consequência prática ou relevância estratégica.",2,true,ativo
+bom-dia-distopia--noticias-relevantes,bom-dia-distopia,Notícias relevantes,noticias-relevantes,Fatos importantes apresentados em blocos menores.,3,false,ativo
+bom-dia-distopia--pings-do-subsolo,bom-dia-distopia,Pings do Subsolo,pings-do-subsolo,Registros breves de acontecimentos que merecem acompanhamento.,4,false,ativo
+bom-dia-distopia--mercados,bom-dia-distopia,Mercados,mercados,"Leitura diária de BTC, BNB, USD e BRL com dados atuais e limitações explícitas.",5,false,ativo
+bom-dia-distopia--clima-e-alertas,bom-dia-distopia,Clima e alertas,clima-e-alertas,"Previsão e alertas para São Paulo, diferenciando previsão, tendência e aviso oficial.",6,false,ativo
+bom-dia-distopia--encerramento,bom-dia-distopia,Encerramento,encerramento,"Síntese autoral curta, sem fórmula fixa e sem banalizar fatos graves.",7,true,ativo
+depois-da-poeira--o-que-mudou,depois-da-poeira,O que mudou,o-que-mudou,Atualizações materiais sobre histórias anteriormente apresentadas.,1,false,ativo
+depois-da-poeira--o-que-nao-aconteceu,depois-da-poeira,O que não aconteceu,o-que-nao-aconteceu,"Promessas, prazos, entregas, anúncios ou previsões que não se concretizaram.",2,false,ativo
+depois-da-poeira--o-que-envelheceu-mal,depois-da-poeira,O Que Envelheceu Mal,o-que-envelheceu-mal,"Declarações, análises ou previsões que foram contrariadas por fatos posteriores.",3,false,ativo
+depois-da-poeira--placar-de-promessas,depois-da-poeira,Placar de Promessas,placar-de-promessas,Acompanhamento estruturado de compromissos verificáveis feitos por:,4,false,ativo
+depois-da-poeira--historias-ainda-abertas,depois-da-poeira,Histórias ainda abertas,historias-ainda-abertas,"Processos, investigações, crises, guerras, projetos de lei, concessões, obras e mudanças regulatórias que ainda não possuem desfecho.",5,false,ativo
+depois-da-poeira--a-semana-em-contradicoes,depois-da-poeira,A Semana em Contradições,a-semana-em-contradicoes,"Confronta declarações incompatíveis, mudanças de posição ou diferenças entre discurso e prática.",6,false,ativo
+depois-da-poeira--veredito-provisorio,depois-da-poeira,Veredito provisório,veredito-provisorio,Classifica o estado atual de cada história como:,7,false,ativo
+sinais-fracos--sinais-emergentes,sinais-fracos,Sinais emergentes,sinais-emergentes,"Pequenas mudanças com potencial de crescimento, como:",1,false,ativo
+sinais-fracos--agenda-de-atencao,sinais-fracos,Agenda de atenção,agenda-de-atencao,Eventos futuros com capacidade de gerar impacto:,2,false,ativo
+sinais-fracos--riscos-em-formacao,sinais-fracos,Riscos em formação,riscos-em-formacao,"Situações que ainda não constituem crise, mas acumulam condições para uma.",3,false,ativo
+sinais-fracos--o-que-pode-dar-errado,sinais-fracos,O Que Pode Dar Errado,o-que-pode-dar-errado,Análise de modos plausíveis de falha em acontecimentos futuros.,4,false,ativo
+sinais-fracos--termometro-do-hype,sinais-fracos,Termômetro do Hype,termometro-do-hype,"Avalia tecnologias, produtos ou tendências comparando:",5,false,ativo
+sinais-fracos--cemiterio-do-hype,sinais-fracos,Cemitério do Hype,cemiterio-do-hype,"Revisita tecnologias ou promessas anteriormente apresentadas como inevitáveis, mas que perderam relevância, foram abandonadas ou tiveram impacto muito menor que o previsto.",6,false,ativo
+sinais-fracos--indicadores,sinais-fracos,Indicadores,indicadores,Utiliza números que ajudem a identificar mudança antes de sua consolidação.,7,false,ativo
+autopsia-da-semana--o-acontecimento,autopsia-da-semana,O acontecimento,o-acontecimento,Descrição factual e delimitada do tema central.,1,false,ativo
+autopsia-da-semana--como-chegamos-aqui,autopsia-da-semana,Como Chegamos Aqui,como-chegamos-aqui,"Contexto histórico, político, econômico, jurídico ou tecnológico necessário para compreender o presente.",2,false,ativo
+autopsia-da-semana--quem-esta-envolvido,autopsia-da-semana,Quem está envolvido,quem-esta-envolvido,Mapeamento de:,3,false,ativo
+autopsia-da-semana--quem-ganha-com-isso,autopsia-da-semana,Quem Ganha com Isso?,quem-ganha-com-isso,Analisa incentivos e distribuição de:,4,false,ativo
+autopsia-da-semana--quem-perde-ou-assume-o-risco,autopsia-da-semana,Quem perde ou assume o risco,quem-perde-ou-assume-o-risco,"Identifica grupos que suportam custos, efeitos colaterais, dependências ou perda de direitos.",5,false,ativo
+autopsia-da-semana--o-documento-diz,autopsia-da-semana,O Documento Diz,o-documento-diz,"Leitura de fontes primárias, como:",6,false,ativo
+autopsia-da-semana--um-tema-cinco-visoes,autopsia-da-semana,"Um Tema, Cinco Visões",um-tema-cinco-visoes,Apresenta perspectivas de atores relevantes sem tratá-las como igualmente verdadeiras por obrigação.,7,false,ativo
+autopsia-da-semana--mapa-da-concentracao,autopsia-da-semana,Mapa da Concentração,mapa-da-concentracao,"Identifica relações de propriedade, dependência, infraestrutura e controle de mercado.",8,false,ativo
+autopsia-da-semana--glossario-da-distopia,autopsia-da-semana,Glossário da Distopia,glossario-da-distopia,Explica conceitos indispensáveis para compreender a edição.,9,false,ativo
+autopsia-da-semana--o-que-ainda-nao-sabemos,autopsia-da-semana,O que ainda não sabemos,o-que-ainda-nao-sabemos,"Lista lacunas, disputas factuais e limitações da análise.",10,false,ativo
+autopsia-da-semana--cenarios,autopsia-da-semana,Cenários,cenarios,"Apresenta consequências possíveis, indicando:",11,false,ativo
+manual-de-sobrevivencia-digital--o-que-aconteceu,manual-de-sobrevivencia-digital,O que aconteceu,o-que-aconteceu,Resumo objetivo do evento que motivou a edição.,1,false,ativo
+manual-de-sobrevivencia-digital--quem-e-afetado,manual-de-sobrevivencia-digital,Quem é afetado,quem-e-afetado,Define claramente:,2,false,ativo
+manual-de-sobrevivencia-digital--o-que-fazer-agora,manual-de-sobrevivencia-digital,O que fazer agora,o-que-fazer-agora,"Ações prioritárias, ordenadas por urgência.",3,false,ativo
+manual-de-sobrevivencia-digital--o-que-nao-precisa-ser-feito,manual-de-sobrevivencia-digital,O que não precisa ser feito,o-que-nao-precisa-ser-feito,"Evita pânico, soluções desnecessárias e medidas desproporcionais.",4,false,ativo
+manual-de-sobrevivencia-digital--ferramenta-livre-da-semana,manual-de-sobrevivencia-digital,Ferramenta Livre da Semana,ferramenta-livre-da-semana,"Apresenta uma ferramenta genuinamente livre e útil, com:",5,false,ativo
+manual-de-sobrevivencia-digital--alternativa-a-plataforma-dominante,manual-de-sobrevivencia-digital,Alternativa à plataforma dominante,alternativa-a-plataforma-dominante,"Mostra serviços, protocolos ou práticas capazes de reduzir dependência.",6,false,ativo
+manual-de-sobrevivencia-digital--automacao-aberta,manual-de-sobrevivencia-digital,Automação Aberta,automacao-aberta,Descreve uma automação feita com ferramentas gratuitas ou livres.,7,false,ativo
+manual-de-sobrevivencia-digital--direitos-digitais-na-pratica,manual-de-sobrevivencia-digital,Direitos Digitais na Prática,direitos-digitais-na-pratica,Explica direitos aplicáveis a situações como:,8,false,ativo
+manual-de-sobrevivencia-digital--patch-notes-da-vida-digital,manual-de-sobrevivencia-digital,Patch Notes da Vida Digital,patch-notes-da-vida-digital,"Resume mudanças em serviços, aplicativos, sistemas ou plataformas que alterem:",9,false,ativo
+manual-de-sobrevivencia-digital--o-que-precisa-da-sua-atencao,manual-de-sobrevivencia-digital,O que precisa da sua atenção,o-que-precisa-da-sua-atencao,Reúne:,10,false,ativo
+sao-paulo-sob-o-capo--falhas-da-semana,sao-paulo-sob-o-capo,Falhas da semana,falhas-da-semana,Reúne incidentes relevantes com:,1,false,ativo
+sao-paulo-sob-o-capo--falhou-de-novo,sao-paulo-sob-o-capo,Falhou de Novo,falhou-de-novo,Identifica recorrência e compara o incidente atual com ocorrências anteriores.,2,false,ativo
+sao-paulo-sob-o-capo--sob-responsabilidade-de-quem,sao-paulo-sob-o-capo,Sob responsabilidade de quem?,sob-responsabilidade-de-quem,Mapeia:,3,false,ativo
+sao-paulo-sob-o-capo--maquina-publica,sao-paulo-sob-o-capo,Máquina Pública,maquina-publica,Explica como determinada política ou decisão será executada:,4,false,ativo
+sao-paulo-sob-o-capo--o-documento-diz,sao-paulo-sob-o-capo,O Documento Diz,o-documento-diz,"Analisa contratos, editais, decisões, relatórios, auditorias e dados oficiais.",5,false,ativo
+sao-paulo-sob-o-capo--placar-de-promessas,sao-paulo-sob-o-capo,Placar de Promessas,placar-de-promessas,Acompanha promessas públicas locais com prazo e resultado verificável.,6,false,ativo
+sao-paulo-sob-o-capo--vigilancia-em-expansao,sao-paulo-sob-o-capo,Vigilância em Expansão,vigilancia-em-expansao,Monitora:,7,false,ativo
+sao-paulo-sob-o-capo--proximas-decisoes,sao-paulo-sob-o-capo,Próximas decisões,proximas-decisoes,Lista:,8,false,ativo
+poder-de-plataforma--mudanca-de-regra,poder-de-plataforma,Mudança de regra,mudanca-de-regra,Acompanha alterações em:,1,false,ativo
+poder-de-plataforma--quem-sera-afetado,poder-de-plataforma,Quem será afetado,quem-sera-afetado,"Mapeia usuários, empresas, trabalhadores, desenvolvedores e comunidades.",2,false,ativo
+poder-de-plataforma--dependencia-criada,poder-de-plataforma,Dependência criada,dependencia-criada,"Explica o que se torna difícil, caro ou impossível sem determinada plataforma.",3,false,ativo
+poder-de-plataforma--mapa-da-concentracao,poder-de-plataforma,Mapa da Concentração,mapa-da-concentracao,Apresenta relações de:,4,false,ativo
+poder-de-plataforma--vigilancia-e-dados,poder-de-plataforma,Vigilância e dados,vigilancia-e-dados,Analisa:,5,false,ativo
+poder-de-plataforma--industria-dos-jogos-sem-marketing,poder-de-plataforma,Indústria dos Jogos sem Marketing,industria-dos-jogos-sem-marketing,Examina decisões de plataformas e empresas da indústria de jogos envolvendo:,6,false,ativo
+poder-de-plataforma--termometro-do-hype,poder-de-plataforma,Termômetro do Hype,termometro-do-hype,Avalia produtos e tecnologias promovidos por grandes empresas em comparação com evidências reais.,7,false,ativo
+poder-de-plataforma--direitos-e-regulacao,poder-de-plataforma,Direitos e regulação,direitos-e-regulacao,Acompanha respostas de:,8,false,ativo
+poder-de-plataforma--alternativas-e-saidas,poder-de-plataforma,Alternativas e saídas,alternativas-e-saidas,Mostra:,9,false,ativo
+cultura-digital-sem-marketing--o-jogo-alem-do-hype,cultura-digital-sem-marketing,O Jogo Além do Hype,o-jogo-alem-do-hype,"Analisa um jogo, gênero, projeto ou fenômeno considerando:",1,false,ativo
+cultura-digital-sem-marketing--industria-dos-jogos-sem-marketing,cultura-digital-sem-marketing,Indústria dos Jogos sem Marketing,industria-dos-jogos-sem-marketing,Acompanha:,2,false,ativo
+cultura-digital-sem-marketing--arqueologia-digital,cultura-digital-sem-marketing,Arqueologia Digital,arqueologia-digital,Recupera a história de:,3,false,ativo
+cultura-digital-sem-marketing--internet-que-ainda-presta,cultura-digital-sem-marketing,Internet que Ainda Presta,internet-que-ainda-presta,"Seleciona projetos, comunidades, sites, protocolos ou iniciativas que preservem características de uma internet:",4,false,ativo
+cultura-digital-sem-marketing--a-semana-no-software-livre,cultura-digital-sem-marketing,A Semana no Software Livre,a-semana-no-software-livre,Resume acontecimentos relevantes relacionados a:,5,false,ativo
+cultura-digital-sem-marketing--cemiterio-do-hype,cultura-digital-sem-marketing,Cemitério do Hype,cemiterio-do-hype,"Revisita tecnologias, produtos, formatos ou promessas culturais que foram apresentados como inevitáveis, mas:",6,false,ativo
+cultura-digital-sem-marketing--a-historia-que-quase-ninguem-cobriu,cultura-digital-sem-marketing,A História que Quase Ninguém Cobriu,a-historia-que-quase-ninguem-cobriu,"Destaca acontecimentos cultural ou tecnicamente importantes que receberam pouca atenção, como:",7,false,ativo
+cultura-digital-sem-marketing--o-que-o-marketing-omitiu,cultura-digital-sem-marketing,O que o marketing omitiu,o-que-o-marketing-omitiu,Confronta a comunicação promocional com:,8,false,ativo
+xadrez-em-profundidade--uma-partida-uma-historia,xadrez-em-profundidade,"Uma Partida, Uma História",uma-partida-uma-historia,Analisa uma partida relevante com:,1,false,ativo
+xadrez-em-profundidade--momento-critico,xadrez-em-profundidade,Momento Crítico,momento-critico,Seleciona uma posição decisiva e explica:,2,false,ativo
+xadrez-em-profundidade--meta-do-xadrez,xadrez-em-profundidade,Meta do Xadrez,meta-do-xadrez,Acompanha tendências em:,3,false,ativo
+xadrez-em-profundidade--alem-do-resultado,xadrez-em-profundidade,Além do Resultado,alem-do-resultado,Examina o que a classificação ou o placar não mostra:,4,false,ativo
+xadrez-em-profundidade--engine-e-humano,xadrez-em-profundidade,Engine e Humano,engine-e-humano,"Compara avaliação computacional e decisão prática, destacando:",5,false,ativo
+xadrez-em-profundidade--circuito-e-bastidores,xadrez-em-profundidade,Circuito e Bastidores,circuito-e-bastidores,Acompanha:,6,false,ativo
+xadrez-em-profundidade--historia-em-repeticao,xadrez-em-profundidade,História em Repetição,historia-em-repeticao,"Relaciona uma partida, abertura ou situação atual com precedentes históricos relevantes.",7,false,ativo

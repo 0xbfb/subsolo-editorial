@@ -1,0 +1,4 @@
+$ docker --version
+bash: line 9: docker: command not found
+$ docker compose version
+bash: line 11: docker: command not found

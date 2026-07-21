@@ -1,0 +1,20 @@
+[
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "overflow": 0,
+    "headline_decoration": "none",
+    "channel_decoration": "underline"
+  },
+  {
+    "viewport": "mobile",
+    "width": 390,
+    "height": 844,
+    "overflow": 0,
+    "headline_decoration": "none",
+    "channel_decoration": "underline",
+    "theme_after_toggle": "dark",
+    "pressed_after_toggle": "true"
+  }
+]

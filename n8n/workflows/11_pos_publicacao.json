@@ -1,0 +1,73 @@
+{
+  "name": "11 · Correções e pós-publicação",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "none",
+    "timezone": "America/Sao_Paulo"
+  },
+  "nodes": [
+    {
+      "parameters": { "inputSource": "passthrough" },
+      "id": "entrada-pos-publicacao",
+      "name": "Entrada pós-publicação",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "command": "node /workspace/cli/subsolo.mjs post-publication --state /workspace/.runtime/input/post-publication-state.json --payload /workspace/.runtime/input/post-publication-change.json --output /workspace/.runtime/output/post-publication-state.json --apply"
+      },
+      "id": "aplicar-revisao",
+      "name": "Aplicar revisão pública",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [280, 0]
+    },
+    {
+      "parameters": {
+        "workflowId": { "value": "05_empacotamento_drive", "mode": "id" },
+        "options": { "waitForSubWorkflow": true }
+      },
+      "id": "pacote-drive",
+      "name": "Gerar e preservar pacote",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [560, 0]
+    },
+    {
+      "parameters": {
+        "workflowId": { "value": "06_criacao_pull_request", "mode": "id" },
+        "options": { "waitForSubWorkflow": true }
+      },
+      "id": "criar-pr",
+      "name": "Criar pull request",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [840, 0]
+    },
+    {
+      "parameters": {},
+      "id": "merge-humano",
+      "name": "Aguardar merge humano",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [1120, 0]
+    }
+  ],
+  "connections": {
+    "Entrada pós-publicação": { "main": [[{ "node": "Aplicar revisão pública", "type": "main", "index": 0 }]] },
+    "Aplicar revisão pública": { "main": [[{ "node": "Gerar e preservar pacote", "type": "main", "index": 0 }]] },
+    "Gerar e preservar pacote": { "main": [[{ "node": "Criar pull request", "type": "main", "index": 0 }]] },
+    "Criar pull request": { "main": [[{ "node": "Aguardar merge humano", "type": "main", "index": 0 }]] }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "subsolo_export": "sanitized",
+    "schema_version": "1.0.0",
+    "editorial_effect": "post-publication-revision"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "publication_id": "pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+  "article_id": "art_subsolo_2026_0001",
+  "edition_id": "ed_2026-07-20",
+  "title": "A cidade terceirizou o relógio",
+  "original_path": "/2026/07/20/a-cidade-terceirizou-o-relogio/",
+  "canonical_path": "/2026/07/20/a-cidade-terceirizou-o-relogio/",
+  "status": "publicado",
+  "body_visibility": "full",
+  "revision": 1,
+  "published_at": "2026-07-20T15:00:00-03:00",
+  "updated_at": null,
+  "current_package": {
+    "run_id": "run_20260720T150000-0300_r1",
+    "sha256": "fb6ae871eb71add1a7acc8f22868ed4e02177ace4101fd34fd1f923c4ff8d3d0",
+    "path": "fixtures/packager/golden/r1.zip"
+  },
+  "current_pull_request_url": "https://github.example/subsolo/pull/1",
+  "corrections": [],
+  "redirects": [],
+  "tombstone": null,
+  "history": [
+    {
+      "id": "change_00000000000000000000000000",
+      "revision": 1,
+      "kind": "publication",
+      "published_at": "2026-07-20T15:00:00-03:00",
+      "summary": "Publicação original.",
+      "reason": "Primeira versão pública aprovada.",
+      "impact": "Cria a URL e o registro público inicial.",
+      "previous_revision": 0,
+      "package_sha256": "fb6ae871eb71add1a7acc8f22868ed4e02177ace4101fd34fd1f923c4ff8d3d0",
+      "package_path": "fixtures/packager/golden/r1.zip",
+      "pull_request_url": "https://github.example/subsolo/pull/1"
+    }
+  ]
+}

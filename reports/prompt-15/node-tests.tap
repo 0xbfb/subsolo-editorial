@@ -1,0 +1,1024 @@
+TAP version 13
+# Subtest: fixture possui edição e publicações de canais diferentes
+ok 1 - fixture possui edição e publicações de canais diferentes
+  ---
+  duration_ms: 1.085252
+  type: 'test'
+  ...
+# Subtest: todas as publicações possuem sumário, seções, fontes e conexões válidas
+ok 2 - todas as publicações possuem sumário, seções, fontes e conexões válidas
+  ---
+  duration_ms: 0.36605
+  type: 'test'
+  ...
+# Subtest: conteúdo não contém html executável
+ok 3 - conteúdo não contém html executável
+  ---
+  duration_ms: 0.832883
+  type: 'test'
+  ...
+# Subtest: catálogo declara onze schemas públicos na versão 1.0.0
+ok 4 - catálogo declara onze schemas públicos na versão 1.0.0
+  ---
+  duration_ms: 1.137171
+  type: 'test'
+  ...
+# Subtest: Astro usa loaders atuais e Zod sem contaminar o domínio
+ok 5 - Astro usa loaders atuais e Zod sem contaminar o domínio
+  ---
+  duration_ms: 0.739283
+  type: 'test'
+  ...
+# Subtest: fixture pública contém front matter e blocos permitidos
+ok 6 - fixture pública contém front matter e blocos permitidos
+  ---
+  duration_ms: 0.273796
+  type: 'test'
+  ...
+# Subtest: fixture insegura exercita detecção de script
+ok 7 - fixture insegura exercita detecção de script
+  ---
+  duration_ms: 0.253358
+  type: 'test'
+  ...
+# Subtest: fixture privada exercita rejeição de campos desconhecidos
+ok 8 - fixture privada exercita rejeição de campos desconhecidos
+  ---
+  duration_ms: 0.395499
+  type: 'test'
+  ...
+# Subtest: Astro aceita site e base por ambiente
+ok 9 - Astro aceita site e base por ambiente
+  ---
+  duration_ms: 9.081292
+  type: 'test'
+  ...
+# Subtest: componentes estruturais aplicam base path
+ok 10 - componentes estruturais aplicam base path
+  ---
+  duration_ms: 6.661714
+  type: 'test'
+  ...
+# Subtest: verificador aceita artefato mínimo íntegro
+ok 11 - verificador aceita artefato mínimo íntegro
+  ---
+  duration_ms: 590.212144
+  type: 'test'
+  ...
+# Subtest: varredura rejeita chave privada
+ok 12 - varredura rejeita chave privada
+  ---
+  duration_ms: 805.397047
+  type: 'test'
+  ...
+# Subtest: workflows de CI, preview e deploy existem
+ok 13 - workflows de CI, preview e deploy existem
+  ---
+  duration_ms: 12.818658
+  type: 'test'
+  ...
+# Subtest: preview não recebe permissão de Pages
+ok 14 - preview não recebe permissão de Pages
+  ---
+  duration_ms: 3.140608
+  type: 'test'
+  ...
+# Subtest: deploy usa ambiente e permissões mínimas
+ok 15 - deploy usa ambiente e permissões mínimas
+  ---
+  duration_ms: 2.600141
+  type: 'test'
+  ...
+# Subtest: artefato é validado antes do upload
+ok 16 - artefato é validado antes do upload
+  ---
+  duration_ms: 5.493787
+  type: 'test'
+  ...
+# Subtest: busca integra Pagefind com fallback no archive-index
+ok 17 - busca integra Pagefind com fallback no archive-index
+  ---
+  duration_ms: 11.981322
+  type: 'test'
+  ...
+# Subtest: páginas indexáveis delimitam o corpo e filtros
+ok 18 - páginas indexáveis delimitam o corpo e filtros
+  ---
+  duration_ms: 4.10999
+  type: 'test'
+  ...
+# Subtest: arquivo oferece paginação e navegação temporal
+ok 19 - arquivo oferece paginação e navegação temporal
+  ---
+  duration_ms: 5.596096
+  type: 'test'
+  ...
+# Subtest: build executa Pagefind depois do Astro
+ok 20 - build executa Pagefind depois do Astro
+  ---
+  duration_ms: 67.984347
+  type: 'test'
+  ...
+# Subtest: arquivo combina publicações e registros em ordem reversa
+ok 21 - arquivo combina publicações e registros em ordem reversa
+  ---
+  duration_ms: 1.315206
+  type: 'test'
+  ...
+# Subtest: paginação é determinística e rejeita página inexistente
+ok 22 - paginação é determinística e rejeita página inexistente
+  ---
+  duration_ms: 1.063252
+  type: 'test'
+  ...
+# Subtest: rotas anuais mensais e diárias são únicas
+ok 23 - rotas anuais mensais e diárias são únicas
+  ---
+  duration_ms: 1.239755
+  type: 'test'
+  ...
+# Subtest: filtro por data retorna o dia correto
+ok 24 - filtro por data retorna o dia correto
+  ---
+  duration_ms: 0.298056
+  type: 'test'
+  ...
+# Subtest: facetas incluem canal tema autor tipo estado e história
+ok 25 - facetas incluem canal tema autor tipo estado e história
+  ---
+  duration_ms: 0.952248
+  type: 'test'
+  ...
+# Subtest: archive-index é compacto e não contém corpo editorial
+ok 26 - archive-index é compacto e não contém corpo editorial
+  ---
+  duration_ms: 2.973778
+  type: 'test'
+  ...
+# Subtest: feeds RSS escapam conteúdo e têm GUID estável
+ok 27 - feeds RSS escapam conteúdo e têm GUID estável
+  ---
+  duration_ms: 72.591545
+  type: 'test'
+  ...
+# Subtest: sitemap e robots apontam para URLs absolutas
+ok 28 - sitemap e robots apontam para URLs absolutas
+  ---
+  duration_ms: 1.148197
+  type: 'test'
+  ...
+# Subtest: registro inválido é rejeitado
+ok 29 - registro inválido é rejeitado
+  ---
+  duration_ms: 0.59873
+  type: 'test'
+  ...
+# Subtest: dry-run descreve caminho e não grava recibo
+ok 30 - dry-run descreve caminho e não grava recibo
+  ---
+  duration_ms: 90.105835
+  type: 'test'
+  ...
+# Subtest: apply só persiste file ID depois de metadata e download verificados
+ok 31 - apply só persiste file ID depois de metadata e download verificados
+  ---
+  duration_ms: 92.544548
+  type: 'test'
+  ...
+# Subtest: reexecução encontra checksum remoto e não envia outro arquivo
+ok 32 - reexecução encontra checksum remoto e não envia outro arquivo
+  ---
+  duration_ms: 88.263515
+  type: 'test'
+  ...
+# Subtest: metadata incompatível impede persistência do recibo
+ok 33 - metadata incompatível impede persistência do recibo
+  ---
+  duration_ms: 9.823353
+  type: 'test'
+  ...
+# Subtest: download divergente impede persistência do recibo
+ok 34 - download divergente impede persistência do recibo
+  ---
+  duration_ms: 8.997821
+  type: 'test'
+  ...
+# Subtest: publish exige --skip-git no Prompt 11
+ok 35 - publish exige --skip-git no Prompt 11
+  ---
+  duration_ms: 692.571098
+  type: 'test'
+  ...
+# Subtest: publish sem credencial falha fechado antes de qualquer upload
+ok 36 - publish sem credencial falha fechado antes de qualquer upload
+  ---
+  duration_ms: 988.075686
+  type: 'test'
+  ...
+# Subtest: valida raiz e cria somente a hierarquia técnica ausente
+ok 37 - valida raiz e cria somente a hierarquia técnica ausente
+  ---
+  duration_ms: 200.499021
+  type: 'test'
+  ...
+# Subtest: dry-run marca pastas faltantes sem criar recursos
+ok 38 - dry-run marca pastas faltantes sem criar recursos
+  ---
+  duration_ms: 1.85452
+  type: 'test'
+  ...
+# Subtest: busca duplicidade por pasta, MIME e appProperties, não apenas pelo nome
+ok 39 - busca duplicidade por pasta, MIME e appProperties, não apenas pelo nome
+  ---
+  duration_ms: 1.298335
+  type: 'test'
+  ...
+# Subtest: upload resumível envia chunks e conclui com metadata
+ok 40 - upload resumível envia chunks e conclui com metadata
+  ---
+  duration_ms: 4.365067
+  type: 'test'
+  ...
+# Subtest: interrupção consulta a sessão e retoma do último byte confirmado
+ok 41 - interrupção consulta a sessão e retoma do último byte confirmado
+  ---
+  duration_ms: 4.385111
+  type: 'test'
+  ...
+# Subtest: raiz sem autorização gera erro acionável e não é tratada como pasta ausente
+ok 42 - raiz sem autorização gera erro acionável e não é tratada como pasta ausente
+  ---
+  duration_ms: 1.411062
+  type: 'test'
+  ...
+# Subtest: conta de serviço solicita drive.file por padrão
+ok 43 - conta de serviço solicita drive.file por padrão
+  ---
+  duration_ms: 1606.103269
+  type: 'test'
+  ...
+# Subtest: quota 429 é repetida e termina quando o Drive responde
+ok 44 - quota 429 é repetida e termina quando o Drive responde
+  ---
+  duration_ms: 1.991326
+  type: 'test'
+  ...
+# Subtest: timeout do Drive é normalizado como retryable
+ok 45 - timeout do Drive é normalizado como retryable
+  ---
+  duration_ms: 69.008011
+  type: 'test'
+  ...
+# Subtest: sessão que não confirma a conclusão é rejeitada como upload parcial
+ok 46 - sessão que não confirma a conclusão é rejeitada como upload parcial
+  ---
+  duration_ms: 2.473926
+  type: 'test'
+  ...
+# Subtest: ciclo integrado cria caminho, envia, confirma, baixa e registra sem URL privada
+ok 47 - ciclo integrado cria caminho, envia, confirma, baixa e registra sem URL privada
+  ---
+  duration_ms: 481.666311
+  type: 'test'
+  ...
+# Subtest: planned edition opens once
+ok 48 - planned edition opens once
+  ---
+  duration_ms: 3.047049
+  type: 'test'
+  ...
+# Subtest: reserved and open slots stay private
+ok 49 - reserved and open slots stay private
+  ---
+  duration_ms: 0.913526
+  type: 'test'
+  ...
+# Subtest: publication from another date requires explicit carryover
+ok 50 - publication from another date requires explicit carryover
+  ---
+  duration_ms: 2.959911
+  type: 'test'
+  ...
+# Subtest: r1, r2 and seal preserve URLs and revision chain
+ok 51 - r1, r2 and seal preserve URLs and revision chain
+  ---
+  duration_ms: 2.601944
+  type: 'test'
+  ...
+# Subtest: sealed edition rejects common append
+ok 52 - sealed edition rejects common append
+  ---
+  duration_ms: 0.641143
+  type: 'test'
+  ...
+# Subtest: sealed correction is a formal new revision
+ok 53 - sealed correction is a formal new revision
+  ---
+  duration_ms: 0.669022
+  type: 'test'
+  ...
+# Subtest: public edition strips Map of Day, reserved slots, deferred and withdrawn
+ok 54 - public edition strips Map of Day, reserved slots, deferred and withdrawn
+  ---
+  duration_ms: 0.890613
+  type: 'test'
+  ...
+# Subtest: package each revision and preserve prior ZIPs
+ok 55 - package each revision and preserve prior ZIPs
+  ---
+  duration_ms: 1289.480787
+  type: 'test'
+  ...
+# Subtest: edition page shows revision history and seal without exposing private slots
+ok 56 - edition page shows revision history and seal without exposing private slots
+  ---
+  duration_ms: 87.449114
+  type: 'test'
+  ...
+# Subtest: edition update workflow is sanitized and has no merge node
+ok 57 - edition update workflow is sanitized and has no merge node
+  ---
+  duration_ms: 3.378771
+  type: 'test'
+  ...
+# Subtest: workbook declara as doze abas obrigatórias
+ok 58 - workbook declara as doze abas obrigatórias
+  ---
+  duration_ms: 2.599331
+  type: 'test'
+  ...
+# Subtest: cada aba possui bootstrap CSV e JSON
+ok 59 - cada aba possui bootstrap CSV e JSON
+  ---
+  duration_ms: 9.863483
+  type: 'test'
+  ...
+# Subtest: catálogos iniciais correspondem aos documentos canônicos
+ok 60 - catálogos iniciais correspondem aos documentos canônicos
+  ---
+  duration_ms: 0.665896
+  type: 'test'
+  ...
+# Subtest: todo canal possui editor existente e todo quadro possui canal
+ok 61 - todo canal possui editor existente e todo quadro possui canal
+  ---
+  duration_ms: 0.64429
+  type: 'test'
+  ...
+# Subtest: fixture representa edição, pauta, artigo, autor, canal, quadro, fonte, publicação e correção
+ok 62 - fixture representa edição, pauta, artigo, autor, canal, quadro, fonte, publicação e correção
+  ---
+  duration_ms: 77.322163
+  type: 'test'
+  ...
+# Subtest: referências principais da fixture são resolvíveis
+ok 63 - referências principais da fixture são resolvíveis
+  ---
+  duration_ms: 0.860513
+  type: 'test'
+  ...
+# Subtest: campos privados permanecem explicitamente privados no workbook
+ok 64 - campos privados permanecem explicitamente privados no workbook
+  ---
+  duration_ms: 14.477107
+  type: 'test'
+  ...
+# Subtest: dry-run é determinístico e não grava destino
+ok 65 - dry-run é determinístico e não grava destino
+  ---
+  duration_ms: 107.366989
+  type: 'test'
+  ...
+# Subtest: apply gera os cinco arquivos públicos esperados
+ok 66 - apply gera os cinco arquivos públicos esperados
+  ---
+  duration_ms: 192.442952
+  type: 'test'
+  ...
+# Subtest: mesma entrada gera bytes iguais ao golden
+ok 67 - mesma entrada gera bytes iguais ao golden
+  ---
+  duration_ms: 12.183663
+  type: 'test'
+  ...
+# Subtest: IDs derivados são estáveis e mudam por seed
+ok 68 - IDs derivados são estáveis e mudam por seed
+  ---
+  duration_ms: 0.720537
+  type: 'test'
+  ...
+# Subtest: proveniência pública usa hashes e não expõe IDs do Google
+ok 69 - proveniência pública usa hashes e não expõe IDs do Google
+  ---
+  duration_ms: 84.964078
+  type: 'test'
+  ...
+# Subtest: allowlist remove campos privados de fontes, correções e mídia
+ok 70 - allowlist remove campos privados de fontes, correções e mídia
+  ---
+  duration_ms: 5.852319
+  type: 'test'
+  ...
+# Subtest: overwrite atômico remove arquivo obsoleto
+ok 71 - overwrite atômico remove arquivo obsoleto
+  ---
+  duration_ms: 301.108484
+  type: 'test'
+  ...
+# Subtest: rejeita sugestão pendente
+ok 72 - rejeita sugestão pendente
+  ---
+  duration_ms: 3.574962
+  type: 'test'
+  ...
+# Subtest: rejeita comentários internos
+ok 73 - rejeita comentários internos
+  ---
+  duration_ms: 85.402787
+  type: 'test'
+  ...
+# Subtest: rejeita link privado
+ok 74 - rejeita link privado
+  ---
+  duration_ms: 5.191175
+  type: 'test'
+  ...
+# Subtest: rejeita metadado obrigatório ausente
+ok 75 - rejeita metadado obrigatório ausente
+  ---
+  duration_ms: 3.034717
+  type: 'test'
+  ...
+# Subtest: rejeita revisão factual pendente
+ok 76 - rejeita revisão factual pendente
+  ---
+  duration_ms: 3.688035
+  type: 'test'
+  ...
+# Subtest: rejeita conflito de título
+ok 77 - rejeita conflito de título
+  ---
+  duration_ms: 87.304187
+  type: 'test'
+  ...
+# Subtest: imagem de capa é reconstruída por allowlist
+ok 78 - imagem de capa é reconstruída por allowlist
+  ---
+  duration_ms: 4.7059
+  type: 'test'
+  ...
+# Subtest: rejeita imagem de capa privada
+ok 79 - rejeita imagem de capa privada
+  ---
+  duration_ms: 5.766395
+  type: 'test'
+  ...
+# Subtest: rejeita data pública sem fuso explícito
+ok 80 - rejeita data pública sem fuso explícito
+  ---
+  duration_ms: 4.978147
+  type: 'test'
+  ...
+# Subtest: rejeita mídia sem derivado público
+ok 81 - rejeita mídia sem derivado público
+  ---
+  duration_ms: 87.257511
+  type: 'test'
+  ...
+# Subtest: rejeita booleano textual em destaque
+ok 82 - rejeita booleano textual em destaque
+  ---
+  duration_ms: 4.344162
+  type: 'test'
+  ...
+# Subtest: rejeita destino existente sem overwrite
+ok 83 - rejeita destino existente sem overwrite
+  ---
+  duration_ms: 3.864214
+  type: 'test'
+  ...
+# Subtest: transforma Google Docs com headings, blocos, lista, tabela, citação e link
+ok 84 - transforma Google Docs com headings, blocos, lista, tabela, citação e link
+  ---
+  duration_ms: 99.778813
+  type: 'test'
+  ...
+# Subtest: documento com múltiplas abas exige seleção explícita
+ok 85 - documento com múltiplas abas exige seleção explícita
+  ---
+  duration_ms: 4.651088
+  type: 'test'
+  ...
+# Subtest: detecta sugestões pendentes na resposta do Docs
+ok 86 - detecta sugestões pendentes na resposta do Docs
+  ---
+  duration_ms: 88.189966
+  type: 'test'
+  ...
+# Subtest: provider Docs usa endpoint somente leitura, includeTabsContent e cache efêmero
+ok 87 - provider Docs usa endpoint somente leitura, includeTabsContent e cache efêmero
+  ---
+  duration_ms: 193.849678
+  type: 'test'
+  ...
+# Subtest: converte linhas do Sheets e preserva tipos estruturados
+ok 88 - converte linhas do Sheets e preserva tipos estruturados
+  ---
+  duration_ms: 6.575959
+  type: 'test'
+  ...
+# Subtest: provider Sheets pagina por faixas e encontra artigo na segunda página
+ok 89 - provider Sheets pagina por faixas e encontra artigo na segunda página
+  ---
+  duration_ms: 5.282938
+  type: 'test'
+  ...
+# Subtest: providers Google produzem exatamente os mesmos bytes do provider fixture
+ok 90 - providers Google produzem exatamente os mesmos bytes do provider fixture
+  ---
+  duration_ms: 98.714739
+  type: 'test'
+  ...
+# Subtest: request repete 429 e respeita Retry-After
+ok 91 - request repete 429 e respeita Retry-After
+  ---
+  duration_ms: 87.779962
+  type: 'test'
+  ...
+# Subtest: request normaliza acesso negado sem retry
+ok 92 - request normaliza acesso negado sem retry
+  ---
+  duration_ms: 2.732053
+  type: 'test'
+  ...
+# Subtest: request encerra chamadas que excedem timeout
+ok 93 - request encerra chamadas que excedem timeout
+  ---
+  duration_ms: 6.736585
+  type: 'test'
+  ...
+# Subtest: logger redige tokens, chaves e IDs privados
+ok 94 - logger redige tokens, chaves e IDs privados
+  ---
+  duration_ms: 0.866119
+  type: 'test'
+  ...
+# Subtest: token efêmero ausente produz erro acionável
+ok 95 - token efêmero ausente produz erro acionável
+  ---
+  duration_ms: 0.353886
+  type: 'test'
+  ...
+# Subtest: conta de serviço cria JWT, usa somente scopes de leitura e reutiliza token
+ok 96 - conta de serviço cria JWT, usa somente scopes de leitura e reutiliza token
+  ---
+  duration_ms: 1027.19935
+  type: 'test'
+  ...
+# Subtest: JSON inválido em coluna estruturada é rejeitado
+ok 97 - JSON inválido em coluna estruturada é rejeitado
+  ---
+  duration_ms: 0.347775
+  type: 'test'
+  ...
+# Subtest: integração Google exige confirmação humana de comentários resolvidos
+ok 98 - integração Google exige confirmação humana de comentários resolvidos
+  ---
+  duration_ms: 2.781716
+  type: 'test'
+  ...
+# Subtest: provider Sheets falha fechado ao atingir limite de páginas
+ok 99 - provider Sheets falha fechado ao atingir limite de páginas
+  ---
+  duration_ms: 2.451689
+  type: 'test'
+  ...
+# Subtest: todas as imagens possuem versão explícita
+ok 100 - todas as imagens possuem versão explícita
+  ---
+  duration_ms: 1.47094
+  type: 'test'
+  ...
+# Subtest: portas administrativas são vinculadas a localhost
+ok 101 - portas administrativas são vinculadas a localhost
+  ---
+  duration_ms: 0.657841
+  type: 'test'
+  ...
+# Subtest: cada serviço possui healthcheck
+ok 102 - cada serviço possui healthcheck
+  ---
+  duration_ms: 0.323761
+  type: 'test'
+  ...
+# Subtest: postgres não publica porta no host
+ok 103 - postgres não publica porta no host
+  ---
+  duration_ms: 0.447141
+  type: 'test'
+  ...
+# Subtest: CLI fixture dry-run has no filesystem effects
+ok 104 - CLI fixture dry-run has no filesystem effects
+  ---
+  duration_ms: 1018.762963
+  type: 'test'
+  ...
+# Subtest: CLI apply writes pitches and triage reports only
+ok 105 - CLI apply writes pitches and triage reports only
+  ---
+  duration_ms: 426.651518
+  type: 'test'
+  ...
+# Subtest: repeated fixture apply does not duplicate a pitch
+ok 106 - repeated fixture apply does not duplicate a pitch
+  ---
+  duration_ms: 348.148696
+  type: 'test'
+  ...
+# Subtest: live Gmail without token fails closed
+ok 107 - live Gmail without token fails closed
+  ---
+  duration_ms: 139.255241
+  type: 'test'
+  ...
+# Subtest: canonical URL removes tracking and sorts query params
+ok 108 - canonical URL removes tracking and sorts query params
+  ---
+  duration_ms: 93.561818
+  type: 'test'
+  ...
+# Subtest: FreshRSS preserves publication date separately from fact date
+ok 109 - FreshRSS preserves publication date separately from fact date
+  ---
+  duration_ms: 3.02072
+  type: 'test'
+  ...
+# Subtest: release remains an unverified communication
+ok 110 - release remains an unverified communication
+  ---
+  duration_ms: 1.346585
+  type: 'test'
+  ...
+# Subtest: same fingerprint is an exact duplicate
+ok 111 - same fingerprint is an exact duplicate
+  ---
+  duration_ms: 1.044172
+  type: 'test'
+  ...
+# Subtest: same canonical URL with changed release title is probable duplicate
+ok 112 - same canonical URL with changed release title is probable duplicate
+  ---
+  duration_ms: 96.208041
+  type: 'test'
+  ...
+# Subtest: trusted Gmail attachment is quarantined but not downloaded or opened
+ok 113 - trusted Gmail attachment is quarantined but not downloaded or opened
+  ---
+  duration_ms: 87.96803
+  type: 'test'
+  ...
+# Subtest: untrusted Gmail sender is rejected
+ok 114 - untrusted Gmail sender is rejected
+  ---
+  duration_ms: 5.903253
+  type: 'test'
+  ...
+# Subtest: suspicious attachment rejects pitch and still plans quarantine metadata
+ok 115 - suspicious attachment rejects pitch and still plans quarantine metadata
+  ---
+  duration_ms: 6.161436
+  type: 'test'
+  ...
+# Subtest: SearXNG snippet is explicitly unverified and partial search is warned
+ok 116 - SearXNG snippet is explicitly unverified and partial search is warned
+  ---
+  duration_ms: 89.090316
+  type: 'test'
+  ...
+# Subtest: dry-run never writes repository or quarantine
+ok 117 - dry-run never writes repository or quarantine
+  ---
+  duration_ms: 3.00424
+  type: 'test'
+  ...
+# Subtest: all generated pitches remain preliminary and never approved
+ok 118 - all generated pitches remain preliminary and never approved
+  ---
+  duration_ms: 3.062073
+  type: 'test'
+  ...
+# Subtest: source fingerprint includes canonical URL, title and origin
+ok 119 - source fingerprint includes canonical URL, title and origin
+  ---
+  duration_ms: 0.547052
+  type: 'test'
+  ...
+# Subtest: FreshRSS requires an endpoint
+ok 120 - FreshRSS requires an endpoint
+  ---
+  duration_ms: 2.014724
+  type: 'test'
+  ...
+# Subtest: FreshRSS authenticates with ClientLogin and reads the reading list
+ok 121 - FreshRSS authenticates with ClientLogin and reads the reading list
+  ---
+  duration_ms: 203.442445
+  type: 'test'
+  ...
+# Subtest: Gmail client only lists and reads messages
+ok 122 - Gmail client only lists and reads messages
+  ---
+  duration_ms: 1.747063
+  type: 'test'
+  ...
+# Subtest: Gmail requires a readonly token
+ok 123 - Gmail requires a readonly token
+  ---
+  duration_ms: 0.212361
+  type: 'test'
+  ...
+# Subtest: SearXNG sends JSON search and reports unresponsive engines
+ok 124 - SearXNG sends JSON search and reports unresponsive engines
+  ---
+  duration_ms: 1.968499
+  type: 'test'
+  ...
+# Subtest: SearXNG unavailable is normalized as retryable network failure
+ok 125 - SearXNG unavailable is normalized as retryable network failure
+  ---
+  duration_ms: 0.592669
+  type: 'test'
+  ...
+# Subtest: upstream HTTP 500 is retryable and actionable
+ok 126 - upstream HTTP 500 is retryable and actionable
+  ---
+  duration_ms: 0.833168
+  type: 'test'
+  ...
+# Subtest: Sheets writer reads existing PAUTAS and appends RAW rows only
+ok 127 - Sheets writer reads existing PAUTAS and appends RAW rows only
+  ---
+  duration_ms: 84.279159
+  type: 'test'
+  ...
+# Subtest: Sheets writer token provider uses a separate spreadsheets scope
+ok 128 - Sheets writer token provider uses a separate spreadsheets scope
+  ---
+  duration_ms: 0.767068
+  type: 'test'
+  ...
+# Subtest: idempotency key is stable per article and revision
+ok 129 - idempotency key is stable per article and revision
+  ---
+  duration_ms: 86.843085
+  type: 'test'
+  ...
+# Subtest: dry-run explains all ordered effects and writes nothing
+ok 130 - dry-run explains all ordered effects and writes nothing
+  ---
+  duration_ms: 1.467546
+  type: 'test'
+  ...
+# Subtest: one candidate creates exactly one PR and archives before Git
+ok 131 - one candidate creates exactly one PR and archives before Git
+  ---
+  duration_ms: 3.518118
+  type: 'test'
+  ...
+# Subtest: completed run is idempotent
+ok 132 - completed run is idempotent
+  ---
+  duration_ms: 1.044665
+  type: 'test'
+  ...
+# Subtest: lock contention fails before effects
+ok 133 - lock contention fails before effects
+  ---
+  duration_ms: 0.956336
+  type: 'test'
+  ...
+# Subtest: Drive failure prevents branch and PR and creates actionable dead letter
+ok 134 - Drive failure prevents branch and PR and creates actionable dead letter
+  ---
+  duration_ms: 3.967527
+  type: 'test'
+  ...
+# Subtest: Sheets divergence blocks orchestration
+ok 135 - Sheets divergence blocks orchestration
+  ---
+  duration_ms: 0.696391
+  type: 'test'
+  ...
+# Subtest: existing PR is returned instead of duplicated
+ok 136 - existing PR is returned instead of duplicated
+  ---
+  duration_ms: 0.357774
+  type: 'test'
+  ...
+# Subtest: reconciliation never silently applies ambiguous fixes
+ok 137 - reconciliation never silently applies ambiguous fixes
+  ---
+  duration_ms: 0.888186
+  type: 'test'
+  ...
+# Subtest: ten sanitized workflows are valid and credential-free
+ok 138 - ten sanitized workflows are valid and credential-free
+  ---
+  duration_ms: 106.134993
+  type: 'test'
+  ...
+# Subtest: Drive workflow precedes PR workflow in the exported map
+ok 139 - Drive workflow precedes PR workflow in the exported map
+  ---
+  duration_ms: 5.282304
+  type: 'test'
+  ...
+# Subtest: ingestion workflows are triage-only and cannot publish
+ok 140 - ingestion workflows are triage-only and cannot publish
+  ---
+  duration_ms: 89.717177
+  type: 'test'
+  ...
+# Subtest: SearXNG workflow reads a fixed JSON query file instead of interpolating shell text
+ok 141 - SearXNG workflow reads a fixed JSON query file instead of interpolating shell text
+  ---
+  duration_ms: 2.833147
+  type: 'test'
+  ...
+# Subtest: CLI package dry-run retorna plano sem escrever
+ok 142 - CLI package dry-run retorna plano sem escrever
+  ---
+  duration_ms: 908.004285
+  type: 'test'
+  ...
+# Subtest: CLI package, validate-package e restore completam o ciclo
+ok 143 - CLI package, validate-package e restore completam o ciclo
+  ---
+  duration_ms: 634.99516
+  type: 'test'
+  ...
+# Subtest: CLI retorna erro estruturado para revisão sem pacote anterior
+ok 144 - CLI retorna erro estruturado para revisão sem pacote anterior
+  ---
+  duration_ms: 148.182552
+  type: 'test'
+  ...
+# Subtest: dry-run é determinístico e não grava ZIP
+ok 145 - dry-run é determinístico e não grava ZIP
+  ---
+  duration_ms: 394.652722
+  type: 'test'
+  ...
+# Subtest: apply gera ZIP determinístico em destinos diferentes
+ok 146 - apply gera ZIP determinístico em destinos diferentes
+  ---
+  duration_ms: 104.341139
+  type: 'test'
+  ...
+# Subtest: pacote contém estrutura pública e checksums válidos
+ok 147 - pacote contém estrutura pública e checksums válidos
+  ---
+  duration_ms: 14.275831
+  type: 'test'
+  ...
+# Subtest: nome padrão inclui timestamp, fuso e revisão
+ok 148 - nome padrão inclui timestamp, fuso e revisão
+  ---
+  duration_ms: 76.938997
+  type: 'test'
+  ...
+# Subtest: restore dry-run não grava e apply reconstrói os arquivos
+ok 149 - restore dry-run não grava e apply reconstrói os arquivos
+  ---
+  duration_ms: 118.373766
+  type: 'test'
+  ...
+# Subtest: restore rejeita pacote corrompido
+ok 150 - restore rejeita pacote corrompido
+  ---
+  duration_ms: 79.538247
+  type: 'test'
+  ...
+# Subtest: r2 exige pacote anterior e valida supersedes
+ok 151 - r2 exige pacote anterior e valida supersedes
+  ---
+  duration_ms: 35.414358
+  type: 'test'
+  ...
+# Subtest: r2 rejeita supersedes divergente
+ok 152 - r2 rejeita supersedes divergente
+  ---
+  duration_ms: 24.584072
+  type: 'test'
+  ...
+# Subtest: destino existente idêntico é detectado como duplicado
+ok 153 - destino existente idêntico é detectado como duplicado
+  ---
+  duration_ms: 63.392699
+  type: 'test'
+  ...
+# Subtest: rejeita revisão inválida
+ok 154 - rejeita revisão inválida
+  ---
+  duration_ms: 4.741941
+  type: 'test'
+  ...
+# Subtest: rejeita symlink no workspace
+ok 155 - rejeita symlink no workspace
+  ---
+  duration_ms: 5.200265
+  type: 'test'
+  ...
+# Subtest: rejeita caminho de publicação fora da raiz permitida
+ok 156 - rejeita caminho de publicação fora da raiz permitida
+  ---
+  duration_ms: 4.355843
+  type: 'test'
+  ...
+# Subtest: restore rejeita path traversal forjado no ZIP
+ok 157 - restore rejeita path traversal forjado no ZIP
+  ---
+  duration_ms: 13.966841
+  type: 'test'
+  ...
+# Subtest: arquivos Astro possuem front matter e imports relativos resolvíveis
+ok 158 - arquivos Astro possuem front matter e imports relativos resolvíveis
+  ---
+  duration_ms: 609.390489
+  type: 'test'
+  ...
+# Subtest: tokens textuais essenciais atingem contraste AA em ambos os papéis
+ok 159 - tokens textuais essenciais atingem contraste AA em ambos os papéis
+  ---
+  duration_ms: 1.74318
+  type: 'test'
+  ...
+# Subtest: rotas editoriais essenciais existem
+ok 160 - rotas editoriais essenciais existem
+  ---
+  duration_ms: 185.818429
+  type: 'test'
+  ...
+# Subtest: busca ativa Pagefind e mantém fallback estático
+ok 161 - busca ativa Pagefind e mantém fallback estático
+  ---
+  duration_ms: 3.419624
+  type: 'test'
+  ...
+# Subtest: página de matéria usa transparência editorial e metadados de busca
+ok 162 - página de matéria usa transparência editorial e metadados de busca
+  ---
+  duration_ms: 1.788541
+  type: 'test'
+  ...
+# Subtest: home tem links reais e manchete continua sem span sublinhado
+ok 163 - home tem links reais e manchete continua sem span sublinhado
+  ---
+  duration_ms: 3.292744
+  type: 'test'
+  ...
+# Subtest: Jornal Concreto usa tokens e componentes em vez de CSS inline
+ok 164 - Jornal Concreto usa tokens e componentes em vez de CSS inline
+  ---
+  duration_ms: 94.64703
+  type: 'test'
+  ...
+# Subtest: manchete principal não recebe sublinhado e títulos secundários recebem
+ok 165 - manchete principal não recebe sublinhado e títulos secundários recebem
+  ---
+  duration_ms: 6.799592
+  type: 'test'
+  ...
+# Subtest: conteúdo editorial da home está fora dos componentes
+ok 166 - conteúdo editorial da home está fora dos componentes
+  ---
+  duration_ms: 3.548269
+  type: 'test'
+  ...
+# Subtest: não reintroduz mensagens de protótipo no código público
+ok 167 - não reintroduz mensagens de protótipo no código público
+  ---
+  duration_ms: 403.167275
+  type: 'test'
+  ...
+# Subtest: tema é persistido, sincronizado e permanece progressivo
+ok 168 - tema é persistido, sincronizado e permanece progressivo
+  ---
+  duration_ms: 3.861622
+  type: 'test'
+  ...
+# Subtest: rota interna de inventário existe fora da navegação pública
+ok 169 - rota interna de inventário existe fora da navegação pública
+  ---
+  duration_ms: 3.252115
+  type: 'test'
+  ...
+1..169
+# tests 169
+# suites 0
+# pass 169
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3468.387427

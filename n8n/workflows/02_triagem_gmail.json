@@ -1,0 +1,56 @@
+{
+  "name": "02 · Triagem Gmail",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "none",
+    "timezone": "America/Sao_Paulo"
+  },
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "agenda-ou-manual",
+      "name": "Agenda ou manual",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "node /workspace/cli/subsolo.mjs ingest --source gmail --provider live --state /workspace/.runtime/editorial/pitches.json --output /workspace/.runtime/reports/gmail --policy /workspace/.runtime/config/ingestion-policy.json --spreadsheet-id {{$env.SUBSOLO_GOOGLE_SPREADSHEET_ID}} --apply"
+      },
+      "id": "triar-mensagens",
+      "name": "Triar mensagens sem responder",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        260,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Agenda ou manual": {
+      "main": [
+        [
+          {
+            "node": "Triar mensagens sem responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "subsolo_export": "sanitized",
+    "schema_version": "1.0.0",
+    "editorial_effect": "triage-only"
+  }
+}

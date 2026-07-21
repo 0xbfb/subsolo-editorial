@@ -1,0 +1,36 @@
+---
+import JornalConcretoLayout from '../../layouts/JornalConcretoLayout.astro';
+import homeFixture from '../../data/fixtures/jornal-concreto-home.json';
+import { parseHomePageData } from '../../lib/presentation/home-page';
+const page = parseHomePageData(homeFixture);
+---
+<JornalConcretoLayout
+  title="Inventário visual"
+  description="Inventário interno dos elementos visuais do Jornal Concreto."
+  dateLabel={page.dateLabel}
+  navigation={page.navigation}
+>
+  <main id="conteudo">
+    <div class="design-note">
+      <strong>Inventário interno.</strong> Esta rota não integra a navegação pública e existe para validar tokens, tipografia, estados e comportamento responsivo.
+    </div>
+    <section aria-labelledby="tipografia">
+      <div class="kicker">Sistema visual</div>
+      <h1 id="tipografia">Jornal Concreto</h1>
+      <p class="lead dropcap">Conteúdo na superfície. Atmosfera no subsolo. O tema usa papel técnico, regras rígidas e cor funcional contida.</p>
+      <div class="article-meta-row">
+        <span class="status developing">Em desenvolvimento</span>
+        <span class="status confirmed">Confirmado</span>
+        <span class="status analysis">Análise</span>
+        <span class="status document">Documento</span>
+        <span class="status corrected">Corrigido</span>
+      </div>
+    </section>
+    <div class="section-rule light"><span>Tokens visuais</span><span>Claro e escuro</span></div>
+    <section class="news-grid" aria-label="Amostra de cartões">
+      <article class="news-card"><div class="kicker">Manchete</div><h3><span class="story-title">Título editorial sublinhado</span></h3><p>O sublinhado identifica chamadas secundárias. A manchete principal permanece limpa.</p></article>
+      <article class="news-card"><div class="kicker">Documento</div><h3><span class="story-title">Fonte primária comentada</span></h3><p>Azul documental, estrutura legível e nenhuma decoração que dispute com a leitura.</p></article>
+      <article class="news-card"><div class="kicker">Ação</div><h3><span class="story-title">Orientação prática e proporcional</span></h3><p>Estados usam texto, forma e cor; nunca dependem apenas da cor.</p></article>
+    </section>
+  </main>
+</JornalConcretoLayout>

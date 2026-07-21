@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  validate:
+    name: Validar, testar e construir
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - name: Preparar projeto
+        uses: ./.github/actions/setup-project
+      - name: Verificar workflows
+        run: pnpm verify:workflows
+      - name: Auditar segurança e permissões
+        run: pnpm audit:security && pnpm check:permissions && pnpm check:headers
+      - name: Verificar acessibilidade da fonte
+        run: pnpm check:a11y
+      - name: Lint
+        run: pnpm lint
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Testes
+        run: pnpm test
+      - name: Build estático
+        run: pnpm build
+      - name: Verificar artefato
+        run: pnpm verify:dist
+      - name: Auditar acessibilidade, desempenho e modos degradados
+        run: node scripts/check-a11y.mjs --site dist && pnpm check:performance && pnpm test:degraded
+      - name: Testar escala do acervo
+        run: pnpm test:scale
+      - name: Procurar segredos e dados privados
+        run: pnpm scan:public-artifact
+      - name: Verificar formatação
+        run: pnpm format:check

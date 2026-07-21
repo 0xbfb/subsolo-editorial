@@ -1,0 +1,9 @@
+---
+import ResponsiveImage from './ResponsiveImage.astro';
+interface Props {readonly portrait: any|null;readonly nickname:string;readonly size?:'card'|'profile'|'circle';readonly showCredit?:boolean;}
+const {portrait,nickname,size='card',showCredit=false}=Astro.props;const variant=size==='profile'?'profile':size==='circle'?'circle-safe':'card';
+const placeholderClass=['portrait-placeholder',size==='profile'&&'portrait-placeholder--large'];
+---
+<div class:list={['portrait',`portrait--${size}`]}>
+  {portrait ? <><div class="portrait__media"><div class:list={placeholderClass} aria-hidden="true">{nickname.slice(0,1)}</div><ResponsiveImage media={portrait} variant={variant} className="portrait__picture" loading={size==='profile'?'eager':'lazy'} /></div>{showCredit&&<p class="media-credit">{portrait.credit} · {portrait.license}</p>}</> : <div class:list={placeholderClass} aria-hidden="true">{nickname.slice(0,1)}</div>}
+</div>

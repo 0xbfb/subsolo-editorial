@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "id": "media_01K0ABCDEFFGHJKMNPQRSTVWXE",
+  "kind": "portrait",
+  "slug": "cora-fixture",
+  "source_path": "../source/cora-fixture-master.jpg",
+  "declared_mime": "image/jpeg",
+  "alt": "Retrato técnico de teste com formas geométricas, usado apenas para validar cortes e formatos do pipeline.",
+  "caption": "Fixture técnica; não representa integrante da redação.",
+  "credit": "Subsolo — fixture técnica",
+  "license": "Uso exclusivo em testes do projeto",
+  "approved": true,
+  "author_slug": "cora",
+  "visual_guide_reference": "subsolo_guia_visual_retratos_editores_v1.0.md#18.4",
+  "focus": {
+    "x": 0.5,
+    "y": 0.42
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "correction",
+  "at": "2026-07-20T16:10:00-03:00",
+  "previous_revision": 1,
+  "summary": "O horário correto da interrupção é 7h42, não 7h24.",
+  "reason": "A primeira versão transcreveu dois algarismos em ordem invertida.",
+  "impact": "A cronologia foi corrigida sem alterar a conclusão estrutural da reportagem.",
+  "factual_change": true,
+  "material_change": false
+}

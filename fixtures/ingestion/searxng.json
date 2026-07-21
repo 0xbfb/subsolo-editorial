@@ -1,0 +1,29 @@
+{
+  "query": "contrato transporte São Paulo",
+  "results": [
+    {
+      "title": "Contrato de concessão recebe aditivo",
+      "url": "https://documentos.example/contrato/aditivo",
+      "content": "Resultado de busca: documento publicado pelo órgão responsável.",
+      "engine": "brave",
+      "publishedDate": "2026-07-20T12:00:00-03:00",
+      "category": "general"
+    },
+    {
+      "title": "Análise secundária do aditivo contratual",
+      "url": "https://jornal.example/cidade/aditivo",
+      "content": "Snippet de busca resumindo a cobertura.",
+      "engines": [
+        "duckduckgo",
+        "bing"
+      ],
+      "category": "news"
+    }
+  ],
+  "unresponsive_engines": [
+    [
+      "engine-x",
+      "timeout"
+    ]
+  ]
+}

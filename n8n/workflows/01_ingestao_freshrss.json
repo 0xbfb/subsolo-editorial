@@ -1,0 +1,56 @@
+{
+  "name": "01 · Ingestão FreshRSS",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "none",
+    "timezone": "America/Sao_Paulo"
+  },
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "agenda-ou-manual",
+      "name": "Agenda ou manual",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "node /workspace/cli/subsolo.mjs ingest --source freshrss --provider live --state /workspace/.runtime/editorial/pitches.json --output /workspace/.runtime/reports/freshrss --spreadsheet-id {{$env.SUBSOLO_GOOGLE_SPREADSHEET_ID}} --apply"
+      },
+      "id": "captar-feeds",
+      "name": "Captar feeds como triagem",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        260,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Agenda ou manual": {
+      "main": [
+        [
+          {
+            "node": "Captar feeds como triagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "subsolo_export": "sanitized",
+    "schema_version": "1.0.0",
+    "editorial_effect": "triage-only"
+  }
+}

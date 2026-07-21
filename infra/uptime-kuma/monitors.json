@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "limitations": [
+    "O Kuma local não detecta o desligamento da própria máquina.",
+    "A disponibilidade pública é verificada adicionalmente pelo GitHub Actions agendado."
+  ],
+  "public": [
+    {"id":"subsolo-homepage","name":"SUBSOLO — Homepage","type":"http","url":"${SUBSOLO_PUBLIC_URL}","interval_seconds":300,"retries":2,"expected_status":[200]},
+    {"id":"subsolo-rss","name":"SUBSOLO — RSS","type":"http","url":"${SUBSOLO_PUBLIC_URL}rss.xml","interval_seconds":600,"retries":2,"expected_status":[200]},
+    {"id":"subsolo-sitemap","name":"SUBSOLO — Sitemap","type":"http","url":"${SUBSOLO_PUBLIC_URL}sitemap.xml","interval_seconds":600,"retries":2,"expected_status":[200]},
+    {"id":"subsolo-archive-index","name":"SUBSOLO — Índice de arquivo","type":"http","url":"${SUBSOLO_PUBLIC_URL}archive-index.json","interval_seconds":900,"retries":2,"expected_status":[200]}
+  ],
+  "local": [
+    {"id":"local-n8n","name":"LOCAL — n8n","type":"http","url":"http://n8n:5678/healthz","interval_seconds":120,"retries":2,"expected_status":[200]},
+    {"id":"local-freshrss","name":"LOCAL — FreshRSS","type":"http","url":"http://freshrss/","interval_seconds":180,"retries":2,"expected_status":[200,302]},
+    {"id":"local-searxng","name":"LOCAL — SearXNG","type":"http","url":"http://searxng:8080/","interval_seconds":180,"retries":2,"expected_status":[200]},
+    {"id":"local-postgres","name":"LOCAL — PostgreSQL","type":"tcp","host":"postgres","port":5432,"interval_seconds":120,"retries":2},
+    {"id":"local-ntfy","name":"LOCAL — ntfy","type":"http","url":"http://ntfy/v1/health","interval_seconds":180,"retries":2,"expected_status":[200]}
+  ]
+}

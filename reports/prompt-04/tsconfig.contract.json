@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "rootDir": "../../src/lib",
+    "outDir": "./compiled",
+    "declaration": true
+  },
+  "include": [
+    "../../src/lib/domain/public-contract.ts",
+    "../../src/lib/domain/identifiers.ts",
+    "../../src/lib/domain/schema-version.ts",
+    "../../src/lib/domain/markdown-contract.ts",
+    "../../src/lib/domain/public-validation.ts",
+    "../../src/lib/domain/referential-validation.ts",
+    "../../src/lib/application/parse-publication-document.ts"
+  ]
+}

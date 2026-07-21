@@ -1,0 +1,3 @@
+source_id,pauta_id,artigo_id,type,title,publisher,url,published_at,accessed_at,confidential,notes_private
+fonte-2026-07-20-relatorio-operacional,pauta-2026-07-20-transporte-metropolitano,artigo-2026-07-20-transporte,DOCUMENTO_PRIMARIO,Relatório operacional do serviço,Órgão público de exemplo,https://example.org/documentos/relatorio-operacional.pdf,2026-07-20T09:30:00-03:00,2026-07-20T10:00:00-03:00,false,Fixture de fonte pública.
+fonte-2026-07-20-termos-plataforma,pauta-2026-07-20-termos-plataforma,artigo-2026-07-20-plataforma,COMUNICADO_OFICIAL,Atualização dos termos de distribuição,Plataforma de exemplo,https://example.org/comunicado/plataforma,2026-07-20T04:00:00-03:00,2026-07-20T05:15:00-03:00,false,Comunicado não constitui confirmação independente.

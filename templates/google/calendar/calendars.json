@@ -1,0 +1,63 @@
+{
+  "calendars": [
+    {
+      "name": "SUBSOLO — Editorial",
+      "purpose": "Mesa, checkpoints, prazos e revisão."
+    },
+    {
+      "name": "SUBSOLO — Entrevistas",
+      "purpose": "Entrevistas e retornos de fontes."
+    },
+    {
+      "name": "SUBSOLO — Eventos",
+      "purpose": "Eventos, julgamentos, votações e lançamentos."
+    },
+    {
+      "name": "SUBSOLO — Publicações",
+      "purpose": "Slots e datas de publicação."
+    },
+    {
+      "name": "SUBSOLO — Embargos",
+      "purpose": "Materiais com restrição temporal."
+    }
+  ],
+  "event_required_fields": [
+    "title",
+    "entity_id",
+    "responsible",
+    "status",
+    "links"
+  ],
+  "recurring_editorial_events": [
+    {
+      "title": "Mesa de Abertura",
+      "time": "05:30",
+      "timezone": "America/Sao_Paulo",
+      "calendar": "SUBSOLO — Editorial"
+    },
+    {
+      "title": "Publicação do BDD",
+      "time": "07:00",
+      "timezone": "America/Sao_Paulo",
+      "calendar": "SUBSOLO — Publicações"
+    },
+    {
+      "title": "Checkpoint Pós-BDD",
+      "time": "09:30",
+      "timezone": "America/Sao_Paulo",
+      "calendar": "SUBSOLO — Editorial"
+    },
+    {
+      "title": "Virada do Dia",
+      "time": "13:00",
+      "timezone": "America/Sao_Paulo",
+      "calendar": "SUBSOLO — Editorial"
+    },
+    {
+      "title": "Fechamento Vespertino",
+      "time": "17:30",
+      "timezone": "America/Sao_Paulo",
+      "calendar": "SUBSOLO — Editorial"
+    }
+  ]
+}

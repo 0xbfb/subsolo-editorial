@@ -1,0 +1,15 @@
+---
+import EditorialBlock from './EditorialBlock.astro';
+import type { EditorialSection } from '../../lib/presentation/editorial-site';
+interface Props { readonly sections: readonly EditorialSection[]; }
+const { sections } = Astro.props;
+---
+<div class="article-copy">
+  {sections.map((section) => (
+    <section id={section.id} class="article-section">
+      <h2>{section.heading}</h2>
+      {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      {section.blocks.map((block) => <EditorialBlock block={block} />)}
+    </section>
+  ))}
+</div>

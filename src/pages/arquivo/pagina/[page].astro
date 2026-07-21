@@ -1,0 +1,17 @@
+---
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../../../components/editorial/PageIntro.astro';
+import ArchiveCollection from '../../../components/discovery/ArchiveCollection.astro';
+import Pagination from '../../../components/discovery/Pagination.astro';
+import JornalConcretoLayout from '../../../layouts/JornalConcretoLayout.astro';
+import { editorialSite } from '../../../lib/presentation/site-repository';
+import { archivePage, archivePageCount } from '../../../lib/presentation/archive-repository';
+import { navigationFor } from '../../../lib/presentation/editorial-site';
+export function getStaticPaths() { return Array.from({length: Math.max(0, archivePageCount - 1)}, (_, index) => ({ params: { page: String(index + 2) }, props: { page: index + 2 } })); }
+const page = Number(Astro.props.page);
+const pagination = archivePage(page);
+const hrefForPage = (number: number) => number === 1 ? '/arquivo/' : `/arquivo/pagina/${number}/`;
+---
+<JornalConcretoLayout title={`Arquivo — página ${page}`} description="Arquivo editorial paginado do Subsolo." dateLabel={editorialSite.site.dateLabel} navigation={navigationFor('/arquivo/')} canonicalPath={`/arquivo/pagina/${page}/`}>
+  <main id="conteudo"><Breadcrumbs items={[{label:'Início',href:'/'},{label:'Arquivo',href:'/arquivo/'},`Página ${page}`]} /><PageIntro eyebrow="Arquivo vivo" title={`Página ${page}`} summary={`${pagination.total} registros no acervo.`} /><ArchiveCollection entries={pagination.items} /><Pagination page={page} pageCount={pagination.pageCount} hrefForPage={hrefForPage} /></main>
+</JornalConcretoLayout>

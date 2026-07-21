@@ -1,0 +1,27 @@
+---
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../../components/editorial/PageIntro.astro';
+import SectionRule from '../../components/editorial/SectionRule.astro';
+import ArchiveCollection from '../../components/discovery/ArchiveCollection.astro';
+import Pagination from '../../components/discovery/Pagination.astro';
+import JornalConcretoLayout from '../../layouts/JornalConcretoLayout.astro';
+import { editorialSite, channels } from '../../lib/presentation/site-repository';
+import { archivePage, discoveryDates, discoveryEntries } from '../../lib/presentation/archive-repository';
+import { navigationFor } from '../../lib/presentation/editorial-site';
+import { withBasePath } from '../../lib/presentation/site-path';
+const pagination = archivePage(1);
+const hrefForPage = (page: number) => page === 1 ? '/arquivo/' : `/arquivo/pagina/${page}/`;
+---
+<JornalConcretoLayout title="Arquivo" description="Arquivo editorial do Subsolo por data, canal, tema, autor e história." dateLabel={editorialSite.site.dateLabel} navigation={navigationFor('/arquivo/')} canonicalPath="/arquivo/">
+  <main id="conteudo">
+    <Breadcrumbs items={[{ label: 'Início', href: '/' }, 'Arquivo']} />
+    <PageIntro eyebrow="Arquivo vivo" title="O que importa fica" summary={`${discoveryEntries.length} registros organizados por data, canal, tema, autoria e história acompanhada.`} />
+    <SectionRule label="Explorar por data" detail={`${discoveryDates.days.length} dias`} />
+    <nav class="archive-date-grid" aria-label="Arquivo por data">{discoveryDates.days.map((date) => { const [year, month, day] = date.split('-'); return <a href={withBasePath(`/arquivo/${year}/${month}/${day}/`, import.meta.env.BASE_URL)}>{date}</a>; })}</nav>
+    <SectionRule label="Publicações" detail={`Página 1 de ${pagination.pageCount}`} light />
+    <ArchiveCollection entries={pagination.items} />
+    <Pagination page={pagination.page} pageCount={pagination.pageCount} hrefForPage={hrefForPage} />
+    <SectionRule label="Explorar por canal" detail={`${channels.length} canais`} light />
+    <nav class="taxonomy-links" aria-label="Explorar por canal">{channels.map((channel) => <a href={withBasePath(`/canais/${channel.slug}/`, import.meta.env.BASE_URL)}>{channel.name}</a>)}</nav>
+  </main>
+</JornalConcretoLayout>

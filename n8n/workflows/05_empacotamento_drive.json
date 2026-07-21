@@ -1,0 +1,112 @@
+{
+  "name": "05 · Empacotamento e Drive",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "none",
+    "timezone": "America/Sao_Paulo"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "id": "entrada-exportada",
+      "name": "Entrada exportada",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "node /workspace/cli/subsolo.mjs package --workspace {{$json.workspace}} --destination /workspace/.runtime/tmp/packages --apply"
+      },
+      "id": "empacotar",
+      "name": "Empacotar",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        240,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "node /workspace/cli/subsolo.mjs publish --package {{$json.package_path}} --skip-git --drive-root-id {{$env.SUBSOLO_DRIVE_ROOT_FOLDER_ID}} --apply"
+      },
+      "id": "preservar-no-drive",
+      "name": "Preservar no Drive",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        500,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "06_criacao_pull_request"
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "id": "executar-workflow-06",
+      "name": "Executar workflow 06",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1,
+      "position": [
+        760,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Entrada exportada": {
+      "main": [
+        [
+          {
+            "node": "Empacotar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Empacotar": {
+      "main": [
+        [
+          {
+            "node": "Preservar no Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preservar no Drive": {
+      "main": [
+        [
+          {
+            "node": "Executar workflow 06",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "subsolo_export": "sanitized",
+    "schema_version": "1.0.0"
+  }
+}

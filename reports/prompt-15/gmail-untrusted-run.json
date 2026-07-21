@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "apply",
+  "source": "gmail",
+  "generated_at": "2026-07-20T23:04:02.258Z",
+  "input_count": 1,
+  "created_count": 0,
+  "planned_count": 0,
+  "duplicate_count": 0,
+  "probable_duplicate_count": 0,
+  "rejected_count": 1,
+  "quarantine_count": 0,
+  "editorial_transition": "TRIAGEM_ONLY",
+  "publication_effects": false,
+  "warnings": [],
+  "outcomes": [
+    {
+      "disposition": "rejected",
+      "code": "SUBSOLO_INGEST_GMAIL_UNTRUSTED_SENDER",
+      "message": "E-mail sem remetente confiável.",
+      "action": "Revise a entrada e encaminhe para triagem manual.",
+      "retryable": false,
+      "details": {
+        "sender_hash": "606fa3e00fe5"
+      }
+    }
+  ],
+  "provider": "fixture",
+  "output": "/mnt/data/subsolo-p15-work/subsolo-0.8.1-dev/.runtime/prompt-15/gmail-untrusted",
+  "sheets_write": false
+}

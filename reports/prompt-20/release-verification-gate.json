@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0-pre",
+  "generated_at": "2026-07-21T10:42:26.790Z",
+  "status": "no-go",
+  "offline_validation": "pass",
+  "command_count": 28,
+  "commands": [
+    {
+      "name": "node-tests",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/test-all.mjs",
+      "status": 0,
+      "duration_ms": 16301,
+      "stdout_tail": [
+        "# skipped 0",
+        "# todo 0",
+        "# duration_ms 16117.114926",
+        "Suite Node aprovada: 46 arquivos."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "verify-workflows",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/verify-workflows.mjs",
+      "status": 0,
+      "duration_ms": 76,
+      "stdout_tail": [
+        "Workflows aprovados: 5 arquivos, permissões mínimas e versões explícitas."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "verify-source-manifest",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/verify-source-manifest.mjs",
+      "status": 0,
+      "duration_ms": 80,
+      "stdout_tail": [
+        "12 fontes verificadas por SHA-256."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "check-boundaries",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/check-boundaries.mjs",
+      "status": 0,
+      "duration_ms": 85,
+      "stdout_tail": [
+        "Fronteiras arquiteturais válidas."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-infra",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-infra.mjs",
+      "status": 0,
+      "duration_ms": 67,
+      "stdout_tail": [
+        "Infraestrutura estática válida: 6 serviços, 6 healthchecks, 5 portas locais."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-editorial-fixtures",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-editorial-fixtures.mjs",
+      "status": 0,
+      "duration_ms": 70,
+      "stdout_tail": [
+        "  \"pitches\": 2,",
+        "  \"articles\": 3,",
+        "  \"edition\": \"ed_2026-07-20\"",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-public-contracts",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-public-contracts.mjs",
+      "status": 0,
+      "duration_ms": 80,
+      "stdout_tail": [
+        "  \"status\": \"passed\",",
+        "  \"schemas\": 13,",
+        "  \"draft\": \"2020-12\"",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-public-content",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-public-content.mjs",
+      "status": 0,
+      "duration_ms": 71,
+      "stdout_tail": [
+        "  \"roots\": [",
+        "    \"content/publications\"",
+        "  ]",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-editorial-site",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-editorial-site.mjs",
+      "status": 0,
+      "duration_ms": 77,
+      "stdout_tail": [
+        "Fixture editorial válida: 4 publicações, 9 canais, 44 autores, 3 história e 1 documento."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-public-media",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-public-media-if-present.mjs",
+      "status": 0,
+      "duration_ms": 79,
+      "stdout_tail": [
+        "Mídia pública: nenhum ativo aprovado; placeholders permanecem ativos."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-observability",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-observability.mjs",
+      "status": 0,
+      "duration_ms": 92,
+      "stdout_tail": [
+        "Observabilidade válida: 9 monitores, 3 tópicos e smoke externo agendado."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "generate-discovery",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/generate-discovery-assets.mjs",
+      "status": 0,
+      "duration_ms": 100,
+      "stdout_tail": [
+        "Descoberta gerada: 25 registros, 8 dias, 11 feeds."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-discovery",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-discovery-assets.mjs",
+      "status": 0,
+      "duration_ms": 82,
+      "stdout_tail": [
+        "Assets de descoberta válidos: 25 registros, 11 feeds."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "render-preview",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/render-editorial-preview.mjs",
+      "status": 0,
+      "duration_ms": 148,
+      "stdout_tail": [
+        "Preview editorial gerado: 114 rotas em /mnt/data/subsolo-p20-work/subsolo-0.9.1-dev/reports/prompt-06/preview"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "validate-preview-links",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-preview-links.mjs",
+      "status": 0,
+      "duration_ms": 124,
+      "stdout_tail": [
+        "114 páginas e links internos validados."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "scan-preview-artifact",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/scan-public-artifact.mjs reports/prompt-06/preview",
+      "status": 0,
+      "duration_ms": 136,
+      "stdout_tail": [
+        "Artefato público aprovado: 119 arquivos sem segredos ou marcadores privados detectados."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "audit-security",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/audit-security.mjs",
+      "status": 0,
+      "duration_ms": 520,
+      "stdout_tail": [
+        "Auditoria de segurança conditional-pass: 10 dependências diretas, 894 arquivos varridos. Bloqueador registrado: pnpm-lock.yaml ausente: auditoria transitiva de vulnerabilidades e licenças permanece bloqueadora para 1.0.0."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "scan-secrets",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/scan-repository-secrets.mjs",
+      "status": 0,
+      "duration_ms": 508,
+      "stdout_tail": [
+        "Varredura de segredos aprovada: 894 arquivos textuais."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "check-security-headers",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/check-security-headers.mjs",
+      "status": 0,
+      "duration_ms": 129,
+      "stdout_tail": [
+        "CSP e política de referrer aprovadas; 12 diretivas verificadas."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "check-minimum-permissions",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/check-minimum-permissions.mjs",
+      "status": 0,
+      "duration_ms": 84,
+      "stdout_tail": [
+        "Permissões mínimas aprovadas: 4 workflows e 6 serviços."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "check-a11y-static",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/check-a11y.mjs",
+      "status": 0,
+      "duration_ms": 113,
+      "stdout_tail": [
+        "Acessibilidade estática aprovada: 23 páginas-fonte."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "check-performance",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/check-performance.mjs",
+      "status": 0,
+      "duration_ms": 316,
+      "stdout_tail": [
+        "Budgets aprovados: 114 rotas, 330625 bytes; pior rota redacao/index.html com 9929 bytes estimados."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "test-scale",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/test-scale.mjs",
+      "status": 0,
+      "duration_ms": 167,
+      "stdout_tail": [
+        "Escala aprovada: 10000 registros, 79.54 ms, índice 5218932 bytes, heap +16585408."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "test-degraded",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/check-degraded-modes.mjs",
+      "status": 0,
+      "duration_ms": 140,
+      "stdout_tail": [
+        "Modos degradados aprovados: 114/114 páginas com conteúdo crítico sem JS; pior HTML 0.58s."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "typescript-offline",
+      "command": "tsc -p config/release/tsconfig.offline.json",
+      "status": 0,
+      "duration_ms": 921,
+      "stdout_tail": [],
+      "stderr_tail": []
+    },
+    {
+      "name": "python-media-compile",
+      "command": "python3 -m py_compile scripts/process-media.py scripts/browser-acceptance.py",
+      "status": 0,
+      "duration_ms": 1203,
+      "stdout_tail": [],
+      "stderr_tail": []
+    },
+    {
+      "name": "fixture-flow",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/release-fixture-flow.mjs reports/prompt-20/fixture-flow.json",
+      "status": 0,
+      "duration_ms": 8431,
+      "stdout_tail": [
+        "Fluxo fixture aprovado: 28 etapas, pacote subsolo-edicao-20260720T150000-0300-r1.zip, restore restorable."
+      ],
+      "stderr_tail": []
+    },
+    {
+      "name": "generate-sbom",
+      "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/generate-sbom.mjs",
+      "status": 0,
+      "duration_ms": 86,
+      "stdout_tail": [
+        "SBOM direto gerado: subsolo-1.0.0-pre.cdx.json com 10 componentes; inventário transitivo bloqueado sem lockfile."
+      ],
+      "stderr_tail": []
+    }
+  ],
+  "blockers": [
+    {
+      "code": "missing-evidence",
+      "path": "pnpm-lock.yaml",
+      "description": "Lockfile produzido por instalação limpa"
+    },
+    {
+      "code": "missing-evidence",
+      "path": "node_modules/.bin/astro",
+      "description": "Dependências instaladas em ambiente limpo"
+    },
+    {
+      "code": "missing-evidence",
+      "path": "dist/index.html",
+      "description": "Build Astro real"
+    },
+    {
+      "code": "missing-evidence",
+      "path": "dist/pagefind/pagefind.js",
+      "description": "Índice Pagefind real"
+    },
+    {
+      "code": "missing-evidence",
+      "path": "reports/prompt-20/evidence/dependency-audit.json",
+      "description": "Auditoria transitiva de vulnerabilidades e licenças"
+    },
+    {
+      "code": "missing-evidence",
+      "path": "reports/prompt-20/evidence/docker-stack.json",
+      "description": "Stack Docker real e healthchecks"
+    },
+    {
+      "code": "missing-evidence",
+      "path": "reports/prompt-20/evidence/google-workspace.json",
+      "description": "Fluxo real com Docs, Sheets e Drive de teste"
+    },
+    {
+      "code": "missing-evidence",
+      "path": "reports/prompt-20/evidence/github-pages.json",
+      "description": "PR, build, deploy e smoke reais no GitHub Pages"
+    },
+    {
+      "code": "missing-evidence",
+      "path": "reports/prompt-20/evidence/manual-acceptance.json",
+      "description": "Aceite manual desktop, mobile, teclado e leitor de tela"
+    }
+  ],
+  "decision": "NO-GO para RC1"
+}

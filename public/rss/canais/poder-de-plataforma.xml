@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Poder de Plataforma — Subsolo</title>
+    <link>https://subsolo.example/</link>
+    <description>Acompanhar plataformas privadas que operam como infraestrutura de comunicação, trabalho, cultura e distribuição.</description>
+    <language>pt-BR</language>
+    <atom:link href="https://subsolo.example/rss/canais/poder-de-plataforma.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aceite a nova regra ou desapareça da fila</title>
+      <link>https://subsolo.example/2026/07/20/nova-regra-ou-desapareca-da-fila/</link>
+      <guid isPermaLink="true">https://subsolo.example/2026/07/20/nova-regra-ou-desapareca-da-fila/</guid>
+      <pubDate>Mon, 20 Jul 2026 15:10:00 GMT</pubDate>
+      <description>A mudança reorganiza distribuição, risco e dependência sem chamar isso de poder.</description>
+    </item>
+    <item>
+      <title>Moderação eleitoral por memorando: quem decide o protocolo?</title>
+      <link>https://subsolo.example/arquivo/registros/moderacao-eleitoral-por-memorando-quem-decide-o-protocolo/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/moderacao-eleitoral-por-memorando-quem-decide-o-protocolo/</guid>
+      <pubDate>Fri, 17 Jul 2026 18:00:00 GMT</pubDate>
+      <description>O acordo foi lido como arranjo de governança, com obrigações, assimetrias, recursos e transparência.</description>
+    </item>
+    <item>
+      <title>IA como infraestrutura diplomática</title>
+      <link>https://subsolo.example/arquivo/registros/ia-como-infraestrutura-diplomatica/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/ia-como-infraestrutura-diplomatica/</guid>
+      <pubDate>Thu, 16 Jul 2026 22:30:00 GMT</pubDate>
+      <description>Modelos, chips, padrões e acesso foram comparados como instrumentos de influência internacional.</description>
+    </item>
+    <item>
+      <title>Quem recebe o alerta quando a IA encontra a falha?</title>
+      <link>https://subsolo.example/arquivo/registros/quem-recebe-o-alerta-quando-a-ia-encontra-a-falha/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/quem-recebe-o-alerta-quando-a-ia-encontra-a-falha/</guid>
+      <pubDate>Tue, 14 Jul 2026 18:00:00 GMT</pubDate>
+      <description>O circuito privado-público de vulnerabilidades encontradas por IA foi examinado por participação, deveres e exclusões.</description>
+    </item>
+  </channel>
+</rss>

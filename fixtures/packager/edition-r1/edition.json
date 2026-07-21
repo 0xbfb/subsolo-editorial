@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ed_2026-07-20",
+  "date": "2026-07-20",
+  "run_id": "run_20260720T150000-0300_r1",
+  "revision": 1,
+  "status": "publicada",
+  "timezone": "America/Sao_Paulo",
+  "generated_at": "2026-07-20T15:00:00-03:00",
+  "published_at": "2026-07-20T15:00:00-03:00",
+  "sealed_at": null,
+  "supersedes": null,
+  "publications": [
+    {
+      "id": "pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+      "path": "publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+      "channel": "sao-paulo-sob-o-capo",
+      "position": 10,
+      "featured": true
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+---
+import Masthead from '../components/layout/Masthead.astro';
+import PrimaryNav from '../components/navigation/PrimaryNav.astro';
+import SiteFooter from '../components/layout/SiteFooter.astro';
+import ThemeController from '../components/layout/ThemeController.astro';
+import type { NavigationItem } from '../lib/presentation/home-page';
+import '../styles/jornal-concreto.css';
+import { withBasePath } from '../lib/presentation/site-path';
+import { buildContentSecurityPolicy } from '../lib/presentation/security-headers';
+
+interface Props {
+  readonly title: string;
+  readonly description: string;
+  readonly dateLabel: readonly [string, string];
+  readonly navigation: readonly NavigationItem[];
+  readonly canonicalPath?: string;
+  readonly ogType?: 'website' | 'article';
+  readonly jsonLd?: Readonly<Record<string, unknown>>;
+}
+
+const { title, description, dateLabel, navigation, canonicalPath = Astro.url.pathname, ogType = 'website', jsonLd } = Astro.props;
+const publicCanonicalPath = withBasePath(canonicalPath, import.meta.env.BASE_URL);
+const canonical = new URL(publicCanonicalPath, Astro.site ?? Astro.url.origin).toString();
+const jsonLdText = jsonLd ? JSON.stringify(jsonLd) : undefined;
+const contentSecurityPolicy = buildContentSecurityPolicy(jsonLdText);
+---
+<!doctype html>
+<html data-theme="light" lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content={contentSecurityPolicy} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title="Subsolo — Publicações" href={withBasePath('/rss.xml', import.meta.env.BASE_URL)} />
+    <meta property="og:title" content={`${title} · Subsolo`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
+    <title>{title} · Subsolo</title>
+    {jsonLdText && <script type="application/ld+json" set:html={jsonLdText} />}
+    <ThemeController />
+  </head>
+  <body>
+    <div class="sheet">
+      <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+      <Masthead dateLabel={dateLabel} slogan="O ruído passa. O que importa fica." />
+      <PrimaryNav items={navigation} />
+      <div class="page-inner"><slot /></div>
+      <SiteFooter />
+    </div>
+  </body>
+</html>

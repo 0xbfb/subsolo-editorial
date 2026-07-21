@@ -1,0 +1,31 @@
+export const INGESTION_SOURCES = ['freshrss', 'gmail', 'searxng'] as const;
+export type IngestionSource = (typeof INGESTION_SOURCES)[number];
+export const PRELIMINARY_EDITORIAL_STATUS = 'TRIAGEM' as const;
+export const PRELIMINARY_CLASSIFICATION = 'PRELIMINAR_NAO_EDITORIAL' as const;
+export type AttachmentQuarantine = Readonly<{
+  filename: string;
+  mime_type: string;
+  size_bytes: number;
+  attachment_id: string | null;
+  suspicious: boolean;
+  reason: string | null;
+}>;
+export type PreliminaryPitch = Readonly<{
+  pauta_id: string;
+  titulo_provisorio: string;
+  origem: 'FRESHRSS' | 'GMAIL' | 'SEARXNG';
+  url_origem: string;
+  prioridade: 'D';
+  nivel_cobertura: 0;
+  destino_inicial: 'ACOMPANHAMENTO_INTERNO';
+  status: 'TRIAGEM';
+  classificacao_preliminar: 'PRELIMINAR_NAO_EDITORIAL';
+  verificacao: 'NAO_VERIFICADO';
+  source_fingerprint: string;
+  source_record_id: string;
+  source_origin: string;
+  source_published_at: string | null;
+  fact_occurred_at: string | null;
+  snippet_preliminar: string;
+  snippet_natureza: string;
+}>;

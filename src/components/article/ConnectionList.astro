@@ -1,0 +1,22 @@
+---
+import type { EditorialPublication } from '../../lib/presentation/editorial-site';
+import { publicationHref } from '../../lib/presentation/editorial-site';
+import { withBasePath } from '../../lib/presentation/site-path';
+interface Props {
+  readonly publications: readonly EditorialPublication[];
+  readonly channelNames: Readonly<Record<string, string>>;
+}
+const { publications, channelNames } = Astro.props;
+---
+<section class="connections" aria-labelledby="conexoes-heading">
+  <h2 id="conexoes-heading">Conexões</h2>
+  <div class="news-grid">
+    {publications.map((publication) => (
+      <article class="news-card">
+        <div class="kicker">{channelNames[publication.channel] ?? publication.channel}</div>
+        <h3><a href={withBasePath(publicationHref(publication), import.meta.env.BASE_URL)}>{publication.title}</a></h3>
+        <p>{publication.subtitle}</p>
+      </article>
+    ))}
+  </div>
+</section>

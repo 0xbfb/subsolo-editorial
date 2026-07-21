@@ -1,0 +1,25 @@
+---
+interface Props {
+  readonly channel: string;
+  readonly topics: readonly string[];
+  readonly authors: readonly string[];
+  readonly type: string;
+  readonly state: string;
+  readonly story?: string | null;
+  readonly date: string;
+  readonly title: string;
+  readonly summary: string;
+}
+const { channel, topics, authors, type, state, story = null, date, title, summary } = Astro.props;
+---
+<div class="pagefind-metadata" data-pagefind-ignore>
+  <span data-pagefind-filter="channel">{channel}</span>
+  {topics.map((topic) => <span data-pagefind-filter="topic">{topic}</span>)}
+  {authors.map((author) => <span data-pagefind-filter="author">{author}</span>)}
+  <span data-pagefind-filter="type">{type}</span>
+  <span data-pagefind-filter="state">{state}</span>
+  {story && <span data-pagefind-filter="story">{story}</span>}
+  <span data-pagefind-sort="date">{date}</span>
+  <span data-pagefind-meta="title">{title}</span>
+  <span data-pagefind-meta="description">{summary}</span>
+</div>

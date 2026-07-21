@@ -1,0 +1,19 @@
+---
+import type { EditorialPublication } from '../../lib/presentation/editorial-site';
+interface Props { readonly publication: EditorialPublication; }
+const { publication } = Astro.props;
+if (!publication.tombstone) throw new Error('Tombstone ausente para publicação retirada.');
+const tombstone = publication.tombstone;
+---
+<section class="withdrawal-tombstone" aria-labelledby="retirada-heading">
+  <p class="tombstone-kicker">REGISTRO EDITORIAL PRESERVADO</p>
+  <h2 id="retirada-heading">Esta publicação foi retirada</h2>
+  <p>{tombstone.reason}</p>
+  <p><strong>Impacto editorial:</strong> {tombstone.impact}</p>
+  <dl>
+    <div><dt>Publicação original</dt><dd>{tombstone.originalPublishedAt}</dd></div>
+    <div><dt>Retirada registrada</dt><dd>{tombstone.publishedAt}</dd></div>
+    <div><dt>URL</dt><dd>preservada para transparência e continuidade do arquivo</dd></div>
+  </dl>
+  <p class="tombstone-note">O corpo original não está disponível nesta página. O histórico de revisão abaixo permanece público.</p>
+</section>

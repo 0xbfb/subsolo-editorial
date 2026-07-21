@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Autópsia da Semana — Subsolo</title>
+    <link>https://subsolo.example/</link>
+    <description>Analisar um acontecimento, documento, problema ou tendência em profundidade, com contexto, evidência e mapeamento de interesses.</description>
+    <language>pt-BR</language>
+    <atom:link href="https://subsolo.example/rss/canais/autopsia-da-semana.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>O mapa real do tarifaço: atingidos, exceções e pontos ainda abertos</title>
+      <link>https://subsolo.example/arquivo/registros/o-mapa-real-do-tarifaco-atingidos-excecoes-e-pontos-ainda-abertos/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/o-mapa-real-do-tarifaco-atingidos-excecoes-e-pontos-ainda-abertos/</guid>
+      <pubDate>Thu, 16 Jul 2026 18:00:00 GMT</pubDate>
+      <description>A ordem publicada foi organizada por setor, vigência, alcance e investigações adicionais.</description>
+    </item>
+    <item>
+      <title>Tarifa como arma eleitoral: quem paga quando comércio vira campanha</title>
+      <link>https://subsolo.example/arquivo/registros/tarifa-como-arma-eleitoral-quem-paga-quando-comercio-vira-campanha/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/tarifa-como-arma-eleitoral-quem-paga-quando-comercio-vira-campanha/</guid>
+      <pubDate>Wed, 15 Jul 2026 22:30:00 GMT</pubDate>
+      <description>A estratégia tarifária foi desmontada como instrumento jurídico, econômico e político, com atenção a quem absorve o custo.</description>
+    </item>
+    <item>
+      <title>Ormuz sob cobrança: quem autorizou o pedágio da guerra?</title>
+      <link>https://subsolo.example/arquivo/registros/ormuz-sob-cobranca-quem-autorizou-o-pedagio-da-guerra/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/ormuz-sob-cobranca-quem-autorizou-o-pedagio-da-guerra/</guid>
+      <pubDate>Mon, 13 Jul 2026 18:00:00 GMT</pubDate>
+      <description>A cobertura separou bloqueio militar, liberdade de navegação e proposta de cobrança para mostrar o que possuía execução e o que permanecia retórica.</description>
+    </item>
+  </channel>
+</rss>

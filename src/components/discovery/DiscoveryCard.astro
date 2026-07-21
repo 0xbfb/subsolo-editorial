@@ -1,0 +1,23 @@
+---
+import type { DiscoveryEntry } from '../../lib/presentation/archive-repository';
+import { withBasePath } from '../../lib/presentation/site-path';
+interface Props {
+  readonly entry: DiscoveryEntry;
+  readonly channelName: string;
+  readonly authorNames?: readonly string[];
+}
+const { entry, channelName, authorNames = [] } = Astro.props;
+const href = withBasePath(entry.href, import.meta.env.BASE_URL);
+const date = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long', timeZone: 'America/Sao_Paulo' }).format(new Date(`${entry.date}T12:00:00-03:00`));
+---
+<article class="discovery-card">
+  <div class="kicker">{channelName} · {entry.type}</div>
+  <h2><a href={href}>{entry.title}</a></h2>
+  <p>{entry.summary}</p>
+  <div class="discovery-card__meta">
+    <time datetime={entry.publishedAt}>{date}</time>
+    <span>{entry.state}</span>
+    {authorNames.length > 0 && <span>por {authorNames.join(', ')}</span>}
+    {entry.correctionCount > 0 && <span>{entry.correctionCount} correção registrada</span>}
+  </div>
+</article>

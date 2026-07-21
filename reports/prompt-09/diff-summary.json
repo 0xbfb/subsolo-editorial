@@ -1,0 +1,9 @@
+{
+  "version": "0.5.1-dev",
+  "changed_entries": 25,
+  "new_google_runtime_files": 3,
+  "google_fixtures": 6,
+  "google_tests": 16,
+  "node_tests_total": 74,
+  "live_google_call_executed": false
+}

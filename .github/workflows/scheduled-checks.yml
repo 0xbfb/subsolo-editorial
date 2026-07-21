@@ -1,0 +1,56 @@
+name: Verificação externa agendada
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      public_url:
+        description: URL pública opcional
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  public-smoke:
+    name: Smoke externo do portal
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - name: Resolver URL pública
+        id: url
+        shell: bash
+        env:
+          INPUT_URL: ${{ inputs.public_url }}
+          CONFIGURED_URL: ${{ vars.SUBSOLO_PUBLIC_URL }}
+          REPOSITORY: ${{ github.repository }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          set -euo pipefail
+          repo="${REPOSITORY#*/}"
+          url="${INPUT_URL:-${CONFIGURED_URL:-https://${OWNER}.github.io/${repo}/}}"
+          [[ "$url" == */ ]] || url="$url/"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+      - name: Executar smoke externo
+        env:
+          SUBSOLO_SMOKE_ATTEMPTS: '3'
+          SUBSOLO_SMOKE_DELAY_MS: '5000'
+          SUBSOLO_SMOKE_TIMEOUT_MS: '10000'
+        run: node scripts/smoke-site.mjs --url "${{ steps.url.outputs.url }}" --report reports/external-smoke.json
+      - name: Enviar relatório
+        if: always()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: subsolo-external-smoke-${{ github.run_id }}
+          path: reports/external-smoke.json
+          if-no-files-found: error
+          retention-days: 30

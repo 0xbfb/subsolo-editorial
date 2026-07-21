@@ -1,0 +1,38 @@
+{
+  "items": [
+    {
+      "id": "release/001",
+      "title": "Release: empresa anuncia plataforma inevitável",
+      "published": 1784547000,
+      "alternate": [
+        {
+          "href": "https://corp.example/news/plataforma?utm_campaign=release"
+        }
+      ],
+      "origin": {
+        "title": "Sala de imprensa Corp",
+        "htmlUrl": "https://corp.example"
+      },
+      "summary": {
+        "content": "Comunicado da empresa promete transformação total do mercado."
+      }
+    },
+    {
+      "id": "release/002",
+      "title": "Empresa anuncia plataforma inevitável — press release",
+      "published": 1784547060,
+      "alternate": [
+        {
+          "href": "https://corp.example/news/plataforma?ref=mail"
+        }
+      ],
+      "origin": {
+        "title": "Sala de imprensa Corp",
+        "htmlUrl": "https://corp.example"
+      },
+      "summary": {
+        "content": "O mesmo comunicado foi republicado."
+      }
+    }
+  ]
+}

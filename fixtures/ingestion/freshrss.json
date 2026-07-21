@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "feed/item/001",
+      "title": "Metrô publica relatório sobre nova falha operacional",
+      "published": 1784545200,
+      "alternate": [
+        {
+          "href": "https://mobilidade.example/noticia/falha?utm_source=rss"
+        }
+      ],
+      "origin": {
+        "title": "Mobilidade Metropolitana",
+        "htmlUrl": "https://mobilidade.example"
+      },
+      "summary": {
+        "content": "O operador informou que divulgará detalhes técnicos. A informação ainda precisa de confirmação documental."
+      },
+      "categories": [
+        "São Paulo — cidade"
+      ]
+    },
+    {
+      "id": "feed/item/002",
+      "title": "Projeto livre muda licença de componente central",
+      "published": 1784546100,
+      "alternate": [
+        {
+          "href": "https://software.example/projeto/licenca"
+        }
+      ],
+      "origin": {
+        "title": "Software Aberto",
+        "htmlUrl": "https://software.example"
+      },
+      "summary": {
+        "content": "O anúncio foi publicado pelo mantenedor e ainda exige análise independente."
+      },
+      "categories": [
+        "Software livre"
+      ]
+    }
+  ]
+}

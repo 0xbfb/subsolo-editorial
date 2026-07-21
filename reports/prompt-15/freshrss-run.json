@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "apply",
+  "source": "freshrss",
+  "generated_at": "2026-07-20T23:04:01.912Z",
+  "input_count": 2,
+  "created_count": 2,
+  "planned_count": 0,
+  "duplicate_count": 0,
+  "probable_duplicate_count": 0,
+  "rejected_count": 0,
+  "quarantine_count": 0,
+  "editorial_transition": "TRIAGEM_ONLY",
+  "publication_effects": false,
+  "warnings": [],
+  "outcomes": [
+    {
+      "disposition": "created",
+      "pauta_id": "pauta-2026-07-20-93b7cb19c1506b03",
+      "status": "TRIAGEM",
+      "classification": "PRELIMINAR_NAO_EDITORIAL",
+      "source_record_id": "feed/item/001",
+      "claim_nature": "ITEM_DE_AGREGADOR"
+    },
+    {
+      "disposition": "created",
+      "pauta_id": "pauta-2026-07-20-2e5f86854ee5f110",
+      "status": "TRIAGEM",
+      "classification": "PRELIMINAR_NAO_EDITORIAL",
+      "source_record_id": "feed/item/002",
+      "claim_nature": "ITEM_DE_AGREGADOR"
+    }
+  ],
+  "provider": "fixture",
+  "output": "/mnt/data/subsolo-p15-work/subsolo-0.8.1-dev/.runtime/prompt-15/freshrss",
+  "sheets_write": false
+}

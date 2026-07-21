@@ -1,0 +1,23 @@
+{
+  "edition_date": "2026-07-20",
+  "edition_id": "ed_2026-07-20",
+  "generated_at": "2026-07-20T15:00:00-03:00",
+  "package_format": "subsolo-edition-package",
+  "publications": [
+    {
+      "channel": "sao-paulo-sob-o-capo",
+      "featured": true,
+      "id": "pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+      "path": "publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+      "position": 10
+    }
+  ],
+  "published_at": "2026-07-20T15:00:00-03:00",
+  "revision": 1,
+  "run_id": "run_20260720T150000-0300_r1",
+  "schema_version": "1.0.0",
+  "sealed_at": null,
+  "status": "publicada",
+  "supersedes": null,
+  "timezone": "America/Sao_Paulo"
+}

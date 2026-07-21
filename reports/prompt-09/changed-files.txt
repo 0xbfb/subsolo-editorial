@@ -1,0 +1,25 @@
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/.env.example and ./.env.example differ
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/.gitignore and ./.gitignore differ
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/AGENTS.md and ./AGENTS.md differ
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/CHANGELOG.md and ./CHANGELOG.md differ
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/README.md and ./README.md differ
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/cli/exporter-core.mjs and ./cli/exporter-core.mjs differ
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/cli/subsolo.mjs and ./cli/subsolo.mjs differ
+Only in ./docs/adr: 0011-google-workspace-readonly-rest.md
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/docs/adr/README.md and ./docs/adr/README.md differ
+Only in ./docs/development: prompt-09.md
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/docs/editorial/data-dictionary.md and ./docs/editorial/data-dictionary.md differ
+Only in ./docs/operations: google-workspace-readonly.md
+Only in ./docs/operations: google-workspace-troubleshooting.md
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/fixtures/editorial/edition-2026-07-20/articles.json and ./fixtures/editorial/edition-2026-07-20/articles.json differ
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/fixtures/exporter/golden/provenance.public.json and ./fixtures/exporter/golden/provenance.public.json differ
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/fixtures/exporter/valid/sheet-row.json and ./fixtures/exporter/valid/sheet-row.json differ
+Only in ./fixtures: google
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/package.json and ./package.json differ
+Only in ./reports: prompt-09
+Only in ./src/lib/infrastructure: google
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/templates/google/sheets/README.md and ./templates/google/sheets/README.md differ
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/templates/google/sheets/bootstrap/ARTIGOS.csv and ./templates/google/sheets/bootstrap/ARTIGOS.csv differ
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/templates/google/sheets/bootstrap/ARTIGOS.json and ./templates/google/sheets/bootstrap/ARTIGOS.json differ
+Files /mnt/data/subsolo-p9-original/subsolo-0.5.0-dev/templates/google/sheets/workbook.schema.json and ./templates/google/sheets/workbook.schema.json differ
+Only in ./tests: google

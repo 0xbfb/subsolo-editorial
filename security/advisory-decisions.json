@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "reviewed_at": "2026-07-21",
+  "advisories": [],
+  "policy": {
+    "unknown_or_unassessed": "release-blocking",
+    "critical": "release-blocking",
+    "high": "release-blocking unless a time-bounded exception is approved",
+    "moderate": "requires documented owner and deadline",
+    "low": "requires documented decision"
+  },
+  "environment_limit": "No lockfile and no package registry access were available during Prompt 19; absence of listed advisories is not a claim that transitive dependencies are vulnerability-free."
+}

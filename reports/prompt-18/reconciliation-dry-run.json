@@ -1,0 +1,74 @@
+{
+  "mode": "dry-run",
+  "generated_at": "2026-07-20T23:30:00-03:00",
+  "counts": {
+    "sheets": 2,
+    "drive": 2,
+    "github": 2,
+    "deployments": 0,
+    "issues": 6
+  },
+  "issues": [
+    {
+      "code": "DRIVE_PACKAGE_ORPHAN",
+      "severity": "warning",
+      "key": "art_orphan:r1",
+      "action": "Associe o pacote a uma revisão conhecida; não apague automaticamente.",
+      "auto_fix": false,
+      "details": {
+        "file_id": "drive_orphan"
+      }
+    },
+    {
+      "code": "GITHUB_PULL_REQUEST_ORPHAN",
+      "severity": "warning",
+      "key": "art_pr_orphan:r1",
+      "action": "Associe o PR a uma linha editorial ou feche-o manualmente.",
+      "auto_fix": false,
+      "details": {
+        "pr_url": "https://github.invalid/subsolo/pull/9"
+      }
+    },
+    {
+      "code": "DRIVE_FILE_ID_DIVERGED",
+      "severity": "error",
+      "key": "art_subsolo_2026_0001:r2",
+      "action": "Confirme manualmente qual file_id corresponde ao checksum.",
+      "auto_fix": false,
+      "details": {
+        "sheet_file_id": "drive_expected",
+        "drive_file_id": "drive_other"
+      }
+    },
+    {
+      "code": "GITHUB_PULL_REQUEST_MISSING",
+      "severity": "error",
+      "key": "art_subsolo_2026_0001:r2",
+      "action": "Recrie o PR ou corrija o status editorial após confirmação humana.",
+      "auto_fix": false,
+      "details": {}
+    },
+    {
+      "code": "DRIVE_PACKAGE_MISSING",
+      "severity": "error",
+      "key": "art_subsolo_2026_0002:r1",
+      "action": "Rearquive o pacote validado antes de retomar Git ou publicação.",
+      "auto_fix": false,
+      "details": {
+        "package_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      }
+    },
+    {
+      "code": "PUBLIC_DEPLOYMENT_UNCONFIRMED",
+      "severity": "warning",
+      "key": "art_subsolo_2026_0002:r1",
+      "action": "Execute o smoke test externo e confirme o deployment antes de encerrar.",
+      "auto_fix": false,
+      "details": {
+        "commit_sha": "commit_c"
+      }
+    }
+  ],
+  "writes": false,
+  "disposition": "human-review-required"
+}

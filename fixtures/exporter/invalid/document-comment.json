@@ -1,0 +1,8 @@
+{
+  "documentId": "fixture-comment",
+  "revisionId": "rev-3",
+  "title": "Documento comentado",
+  "unresolvedSuggestions": 0,
+  "comments": ["NOTA INTERNA: confirmar o nome da fonte"],
+  "nodes": [{"type":"paragraph","text":"Texto público."}]
+}

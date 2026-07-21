@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: dry-run é determinístico e não grava destino
+ok 1 - dry-run é determinístico e não grava destino
+  ---
+  duration_ms: 12.309567
+  type: 'test'
+  ...
+# Subtest: apply gera os cinco arquivos públicos esperados
+ok 2 - apply gera os cinco arquivos públicos esperados
+  ---
+  duration_ms: 9.888137
+  type: 'test'
+  ...
+# Subtest: mesma entrada gera bytes iguais ao golden
+ok 3 - mesma entrada gera bytes iguais ao golden
+  ---
+  duration_ms: 4.39228
+  type: 'test'
+  ...
+# Subtest: IDs derivados são estáveis e mudam por seed
+ok 4 - IDs derivados são estáveis e mudam por seed
+  ---
+  duration_ms: 0.339946
+  type: 'test'
+  ...
+# Subtest: proveniência pública usa hashes e não expõe IDs do Google
+ok 5 - proveniência pública usa hashes e não expõe IDs do Google
+  ---
+  duration_ms: 1.800948
+  type: 'test'
+  ...
+# Subtest: allowlist remove campos privados de fontes, correções e mídia
+ok 6 - allowlist remove campos privados de fontes, correções e mídia
+  ---
+  duration_ms: 2.615658
+  type: 'test'
+  ...
+# Subtest: overwrite atômico remove arquivo obsoleto
+ok 7 - overwrite atômico remove arquivo obsoleto
+  ---
+  duration_ms: 13.320988
+  type: 'test'
+  ...
+# Subtest: rejeita sugestão pendente
+ok 8 - rejeita sugestão pendente
+  ---
+  duration_ms: 1.870735
+  type: 'test'
+  ...
+# Subtest: rejeita comentários internos
+ok 9 - rejeita comentários internos
+  ---
+  duration_ms: 1.571428
+  type: 'test'
+  ...
+# Subtest: rejeita link privado
+ok 10 - rejeita link privado
+  ---
+  duration_ms: 1.769402
+  type: 'test'
+  ...
+# Subtest: rejeita metadado obrigatório ausente
+ok 11 - rejeita metadado obrigatório ausente
+  ---
+  duration_ms: 1.230444
+  type: 'test'
+  ...
+# Subtest: rejeita revisão factual pendente
+ok 12 - rejeita revisão factual pendente
+  ---
+  duration_ms: 1.057591
+  type: 'test'
+  ...
+# Subtest: rejeita conflito de título
+ok 13 - rejeita conflito de título
+  ---
+  duration_ms: 1.783633
+  type: 'test'
+  ...
+# Subtest: imagem de capa é reconstruída por allowlist
+ok 14 - imagem de capa é reconstruída por allowlist
+  ---
+  duration_ms: 2.19539
+  type: 'test'
+  ...
+# Subtest: rejeita imagem de capa privada
+ok 15 - rejeita imagem de capa privada
+  ---
+  duration_ms: 2.697046
+  type: 'test'
+  ...
+# Subtest: rejeita data pública sem fuso explícito
+ok 16 - rejeita data pública sem fuso explícito
+  ---
+  duration_ms: 2.124613
+  type: 'test'
+  ...
+# Subtest: rejeita mídia sem derivado público
+ok 17 - rejeita mídia sem derivado público
+  ---
+  duration_ms: 1.987592
+  type: 'test'
+  ...
+# Subtest: rejeita booleano textual em destaque
+ok 18 - rejeita booleano textual em destaque
+  ---
+  duration_ms: 2.255335
+  type: 'test'
+  ...
+# Subtest: rejeita destino existente sem overwrite
+ok 19 - rejeita destino existente sem overwrite
+  ---
+  duration_ms: 2.103321
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 155.57131

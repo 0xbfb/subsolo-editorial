@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "apply",
+  "source": "searxng",
+  "generated_at": "2026-07-20T23:04:02.483Z",
+  "input_count": 2,
+  "created_count": 2,
+  "planned_count": 0,
+  "duplicate_count": 0,
+  "probable_duplicate_count": 0,
+  "rejected_count": 0,
+  "quarantine_count": 0,
+  "editorial_transition": "TRIAGEM_ONLY",
+  "publication_effects": false,
+  "warnings": [
+    {
+      "code": "SUBSOLO_INGEST_SEARCH_PARTIAL",
+      "failed_engines": [
+        "engine-x"
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "disposition": "created",
+      "pauta_id": "pauta-2026-07-20-bc3737b9577415af",
+      "status": "TRIAGEM",
+      "classification": "PRELIMINAR_NAO_EDITORIAL",
+      "source_record_id": "a620f855a84791c06425",
+      "claim_nature": "RESULTADO_DE_METABUSCA"
+    },
+    {
+      "disposition": "created",
+      "pauta_id": "pauta-2026-07-20-981424e0525c6061",
+      "status": "TRIAGEM",
+      "classification": "PRELIMINAR_NAO_EDITORIAL",
+      "source_record_id": "2635ce35248a1ea12a2a",
+      "claim_nature": "RESULTADO_DE_METABUSCA"
+    }
+  ],
+  "provider": "fixture",
+  "output": "/mnt/data/subsolo-p15-work/subsolo-0.8.1-dev/.runtime/prompt-15/searxng",
+  "sheets_write": false
+}

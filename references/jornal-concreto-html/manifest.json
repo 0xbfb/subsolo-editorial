@@ -1,0 +1,26 @@
+{
+  "name": "Subsolo — Base Editorial HTML",
+  "version": "1.0.0",
+  "entry": "index.html",
+  "pages": [
+    "agora.html",
+    "arquivo.html",
+    "artigo.html",
+    "autor.html",
+    "boletim.html",
+    "busca.html",
+    "canais.html",
+    "canal.html",
+    "documento.html",
+    "historia.html",
+    "index.html",
+    "redacao.html",
+    "tema.html"
+  ],
+  "assets": [
+    "assets/styles.css",
+    "assets/app.js"
+  ],
+  "offline": true,
+  "language": "pt-BR"
+}

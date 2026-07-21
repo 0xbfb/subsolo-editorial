@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "issues": [],
+  "source": {
+    "issues": [],
+    "pageSources": 23,
+    "componentSources": 34
+  },
+  "rendered": {
+    "issues": [],
+    "htmlFiles": 114
+  },
+  "standardTarget": "WCAG 2.2 AA — automated/static subset; manual assistive-technology review remains a release gate."
+}

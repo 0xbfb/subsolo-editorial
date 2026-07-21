@@ -1,0 +1,24 @@
+---
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../../components/editorial/PageIntro.astro';
+import JornalConcretoLayout from '../../layouts/JornalConcretoLayout.astro';
+import { editorialSite } from '../../lib/presentation/site-repository';
+import { editionHref, navigationFor } from '../../lib/presentation/editorial-site';
+import { withBasePath } from '../../lib/presentation/site-path';
+---
+<JornalConcretoLayout title="Edições" description="Edições diárias publicadas pelo Subsolo." dateLabel={editorialSite.site.dateLabel} navigation={navigationFor('/edicoes/')} canonicalPath="/edicoes/">
+  <main id="conteudo">
+    <Breadcrumbs items={[{ label: 'Início', href: '/' }, 'Edições']} />
+    <PageIntro eyebrow="Arquivo diário" title="Edições" summary="Cada edição preserva a hierarquia e o conjunto de publicações de um dia." />
+    <section class="archive-list">
+      <article>
+        <div class="number">01</div>
+        <div>
+          <div class="kicker">{editorialSite.edition.status} · revisão {editorialSite.edition.revision}</div>
+          <h2><a href={withBasePath(editionHref(editorialSite.edition.date), import.meta.env.BASE_URL)}>{editorialSite.edition.label}</a></h2>
+          <p>{editorialSite.edition.summary}</p>
+        </div>
+      </article>
+    </section>
+  </main>
+</JornalConcretoLayout>

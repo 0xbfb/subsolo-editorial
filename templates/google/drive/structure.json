@@ -1,0 +1,91 @@
+{
+  "root": "SUBSOLO",
+  "status_source": "Google Sheets; pasta serve apenas para organização humana.",
+  "folders": [
+    {
+      "path": "00_ADMINISTRACAO",
+      "purpose": "Corpo editorial, políticas, identidade e modelos.",
+      "classification": "private"
+    },
+    {
+      "path": "01_PAUTAS",
+      "purpose": "Materiais de triagem e pautas.",
+      "classification": "private"
+    },
+    {
+      "path": "02_PESQUISA",
+      "purpose": "Pesquisa por domínio.",
+      "classification": "private"
+    },
+    {
+      "path": "03_EM_PRODUCAO",
+      "purpose": "Arquivos em elaboração.",
+      "classification": "private"
+    },
+    {
+      "path": "04_REVISAO",
+      "purpose": "Materiais em revisão.",
+      "classification": "private"
+    },
+    {
+      "path": "05_PRONTOS_PARA_PUBLICAR",
+      "purpose": "Materiais aprovados aguardando exportação.",
+      "classification": "private"
+    },
+    {
+      "path": "06_PUBLICADOS",
+      "purpose": "Referências humanas de conteúdo publicado.",
+      "classification": "private"
+    },
+    {
+      "path": "07_CORRECOES",
+      "purpose": "Solicitações e materiais de correção.",
+      "classification": "private"
+    },
+    {
+      "path": "08_IMAGENS",
+      "purpose": "Originais e material visual de trabalho.",
+      "classification": "private"
+    },
+    {
+      "path": "09_FONTES_E_DOCUMENTOS",
+      "purpose": "Documentos, entrevistas e fontes.",
+      "classification": "restricted"
+    },
+    {
+      "path": "10_ARQUIVO_EDITORIAL",
+      "purpose": "Arquivo humano da redação.",
+      "classification": "private"
+    },
+    {
+      "path": "90_ARQUIVO_TECNICO/edicoes/YYYY/MM",
+      "purpose": "ZIPs imutáveis de edição.",
+      "classification": "restricted"
+    },
+    {
+      "path": "90_ARQUIVO_TECNICO/relatorios",
+      "purpose": "Relatórios sanitizados de execução.",
+      "classification": "restricted"
+    },
+    {
+      "path": "90_ARQUIVO_TECNICO/schemas",
+      "purpose": "Cópias dos contratos de dados.",
+      "classification": "private"
+    },
+    {
+      "path": "90_ARQUIVO_TECNICO/originais-publicados",
+      "purpose": "Originais autorizados de mídia publicada.",
+      "classification": "restricted"
+    },
+    {
+      "path": "90_ARQUIVO_TECNICO/backups-criptografados",
+      "purpose": "Backups operacionais cifrados.",
+      "classification": "restricted"
+    },
+    {
+      "path": "90_ARQUIVO_TECNICO/recuperacao",
+      "purpose": "Ensaios e relatórios de restauração.",
+      "classification": "restricted"
+    }
+  ]
+}

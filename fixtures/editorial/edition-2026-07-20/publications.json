@@ -1,0 +1,14 @@
+[
+  {
+    "publication_id": "pub-2026-07-20-bdd-r1",
+    "artigo_id": "artigo-2026-07-20-bdd",
+    "edition_id": "ed_2026-07-20",
+    "revision": 1,
+    "public_state": "PUBLICADO",
+    "published_at": "2026-07-20T07:05:00-03:00",
+    "updated_at": "",
+    "url": "https://example.github.io/subsolo/2026/07/20/bom-dia-distopia-20-de-julho-de-2026/",
+    "commit_sha": "fixture000000000000000000000000000000000001",
+    "package_checksum": "fixture-sha256-pending-real-package-stage"
+  }
+]

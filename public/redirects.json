@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "redirects": [
+    {
+      "publicationId": "pub-plataforma-20260720",
+      "fromPath": "/2026/07/20/aceite-a-nova-regra-ou-desapareca-da-fila/",
+      "toPath": "/2026/07/20/nova-regra-ou-desapareca-da-fila/",
+      "statusCode": 308,
+      "effectiveAt": "2026-07-20T18:20:00-03:00",
+      "reason": "O slug foi encurtado; a URL anterior permanece como redirect permanente."
+    }
+  ]
+}

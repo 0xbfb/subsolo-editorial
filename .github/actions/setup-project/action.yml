@@ -1,0 +1,33 @@
+name: Setup Subsolo project
+description: Configura Node, pnpm e dependências do projeto Subsolo.
+inputs:
+  node-version:
+    description: Versão do Node.js.
+    required: false
+    default: '22.16.0'
+  pnpm-version:
+    description: Versão do pnpm.
+    required: false
+    default: '11.15.1'
+runs:
+  using: composite
+  steps:
+    - name: Configurar pnpm
+      uses: pnpm/action-setup@v6.0.9
+      with:
+        version: ${{ inputs.pnpm-version }}
+        run_install: false
+    - name: Configurar Node.js
+      uses: actions/setup-node@v6.5.0
+      with:
+        node-version: ${{ inputs.node-version }}
+    - name: Instalar dependências
+      shell: bash
+      run: |
+        set -euo pipefail
+        if [[ -f pnpm-lock.yaml ]]; then
+          pnpm install --frozen-lockfile
+        else
+          echo "::warning title=Lockfile ausente::pnpm-lock.yaml ainda não foi gerado no ambiente local. A instalação será feita com versões diretas fixadas, mas o merge deve exigir o lockfile assim que ele puder ser produzido."
+          pnpm install --no-frozen-lockfile
+        fi

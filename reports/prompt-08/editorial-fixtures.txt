@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "tabs": 12,
+  "authors": 44,
+  "channels": 9,
+  "frames": 74,
+  "pitches": 2,
+  "articles": 3,
+  "edition": "ed_2026-07-20"
+}

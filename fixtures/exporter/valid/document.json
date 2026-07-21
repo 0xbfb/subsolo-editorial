@@ -1,0 +1,19 @@
+{
+  "documentId": "fixture-transporte",
+  "revisionId": "rev-17",
+  "title": "A cidade terceirizou o relógio",
+  "unresolvedSuggestions": 0,
+  "comments": [],
+  "nodes": [
+    {"type":"heading","level":2,"text":"O acontecimento"},
+    {"type":"paragraph","text":"A operação registrou uma nova interrupção durante a manhã."},
+    {"type":"editorial-block","kind":"fact","children":[{"type":"paragraph","text":"O incidente começou às 7h42, segundo o relatório operacional."}]},
+    {"type":"editorial-block","kind":"why-it-matters","children":[{"type":"paragraph","text":"A fragmentação contratual dificulta identificar responsabilidades e comparar reincidências."}]},
+    {"type":"heading","level":2,"text":"O que ainda não sabemos"},
+    {"type":"paragraph","text":"A causa raiz ainda não foi apresentada em documento público."},
+    {"type":"list","ordered":false,"items":["O operador prometeu relatório conclusivo.","A agência reguladora ainda não se pronunciou."]},
+    {"type":"table","headers":["Horário","Evento"],"rows":[["07:42","Início da interrupção"],["08:31","Retomada parcial"]]},
+    {"type":"quote","text":"A normalização ocorreu de forma gradual."},
+    {"type":"paragraph","text":"[Documento de origem](https://example.org/relatorio-operacional)"}
+  ]
+}

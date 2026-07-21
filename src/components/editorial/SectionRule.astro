@@ -1,0 +1,9 @@
+---
+interface Props {
+  readonly label: string;
+  readonly detail: string;
+  readonly light?: boolean;
+}
+const { label, detail, light = false } = Astro.props;
+---
+<div class:list={['section-rule', { light }]}><span>{label}</span><span>{detail}</span></div>

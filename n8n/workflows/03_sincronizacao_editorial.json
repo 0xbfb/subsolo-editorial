@@ -1,0 +1,86 @@
+{
+  "name": "03 · Sincronização editorial",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "none",
+    "timezone": "America/Sao_Paulo"
+  },
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-ou-agenda",
+      "name": "Manual ou agenda",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "node /workspace/cli/subsolo.mjs orchestrate --input /workspace/fixtures/n8n/publication-candidate.json --dry-run"
+      },
+      "id": "consultar-candidatos",
+      "name": "Consultar candidatos",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        240,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "04_exportacao_google_docs"
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "id": "executar-workflow-04",
+      "name": "Executar workflow 04",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1,
+      "position": [
+        500,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Manual ou agenda": {
+      "main": [
+        [
+          {
+            "node": "Consultar candidatos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Consultar candidatos": {
+      "main": [
+        [
+          {
+            "node": "Executar workflow 04",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "subsolo_export": "sanitized",
+    "schema_version": "1.0.0"
+  }
+}

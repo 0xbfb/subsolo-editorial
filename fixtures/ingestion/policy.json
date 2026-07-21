@@ -1,0 +1,10 @@
+{
+  "trusted_senders": [
+    "pauta@fonte-confiavel.example"
+  ],
+  "trusted_domains": [
+    "assessoria-confiavel.example"
+  ],
+  "duplicate_threshold": 0.82,
+  "note": "Domínios de exemplo. Em produção, configure a lista em arquivo externo ou variável segura."
+}

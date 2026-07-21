@@ -1,0 +1,12 @@
+[
+  {
+    "automation_id": "automation-editorial-sync",
+    "name": "Sincronização editorial",
+    "enabled": false,
+    "mode": "MANUAL",
+    "last_run_id": "",
+    "last_status": "NAO_CONFIGURADA",
+    "last_run_at": "",
+    "next_action": "Implementar somente no Prompt 12."
+  }
+]

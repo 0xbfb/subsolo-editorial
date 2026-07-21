@@ -1,0 +1,79 @@
+{
+  "name": "09 · Atualização da edição diária",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "none",
+    "timezone": "America/Sao_Paulo"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "id": "entrada-revisao",
+      "name": "Entrada de revisão",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "node /workspace/cli/subsolo.mjs edition --command {{$json.command}} --state {{$json.state_path}} --payload {{$json.payload_path}} --output {{$json.output_path}} --package-workspace {{$json.workspace}} --package-destination {{$json.destination}} --apply"
+      },
+      "id": "executar-edicao",
+      "name": "Executar ciclo da edição",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        300,
+        0
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "aguardar-pr",
+      "name": "Aguardar PR da revisão",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        600,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Entrada de revisão": {
+      "main": [
+        [
+          {
+            "node": "Executar ciclo da edição",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Executar ciclo da edição": {
+      "main": [
+        [
+          {
+            "node": "Aguardar PR da revisão",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "subsolo_export": "sanitized",
+    "schema_version": "1.0.0"
+  }
+}

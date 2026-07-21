@@ -1,0 +1,611 @@
+{
+  "schema_version": 1,
+  "plan": "references/source-materials/subsolo_plano_tecnico_desenvolvimento_v2.0.md",
+  "version": "1.0.0-pre",
+  "project_acceptance_criteria": [
+    {
+      "id": 1,
+      "criterion": "Ambiente Docker reproduzível",
+      "status": "partial",
+      "implementation": [
+        "infra/compose.yml",
+        "scripts/validate-infra.mjs",
+        "tests/infra/compose-static.test.mjs"
+      ],
+      "evidence": [
+        "reports/prompt-20/logs/validate-infra.log"
+      ],
+      "assessment": "Configuração estática aprovada; Docker não está instalado e a stack real não foi iniciada."
+    },
+    {
+      "id": 2,
+      "criterion": "Planilha editorial funcional",
+      "status": "partial",
+      "implementation": [
+        "templates/google/sheets/workbook.schema.json",
+        "src/lib/infrastructure/google/google-workspace.mjs",
+        "tests/editorial/sheets-model.test.mjs"
+      ],
+      "evidence": [
+        "reports/prompt-20/logs/validate-editorial-fixtures.log"
+      ],
+      "assessment": "Workbook e adapters validados por fixtures; nenhuma planilha real de homologação foi usada."
+    },
+    {
+      "id": 3,
+      "criterion": "Modelo Google Docs funcional",
+      "status": "partial",
+      "implementation": [
+        "templates/google/docs",
+        "src/lib/infrastructure/google/google-workspace.mjs",
+        "tests/google/google-workspace.test.mjs"
+      ],
+      "evidence": [
+        "reports/prompt-20/fixture-flow.json"
+      ],
+      "assessment": "Modelo e conversão validados por fixture; nenhum documento Google real foi lido."
+    },
+    {
+      "id": 4,
+      "criterion": "Artigo exportável",
+      "status": "pass",
+      "implementation": [
+        "cli/subsolo.mjs",
+        "cli/exporter-core.mjs",
+        "src/lib/application/export-editorial-document.ts",
+        "tests/exporter"
+      ],
+      "evidence": [
+        "reports/prompt-20/fixture-flow.json"
+      ],
+      "assessment": "Exportação completa, golden e determinismo aprovados offline."
+    },
+    {
+      "id": 5,
+      "criterion": "Conteúdo sanitizado",
+      "status": "pass",
+      "implementation": [
+        "cli/exporter-core.mjs",
+        "src/lib/domain/public-validation.ts",
+        "scripts/scan-public-artifact.mjs",
+        "tests/exporter/sanitization.test.mjs"
+      ],
+      "evidence": [
+        "reports/prompt-20/logs/scan-public-artifact-preview.log",
+        "reports/prompt-20/fixture-flow.json"
+      ],
+      "assessment": "Allowlist, bloqueios privados e varredura do artefato aprovados."
+    },
+    {
+      "id": 6,
+      "criterion": "Pacote validado",
+      "status": "pass",
+      "implementation": [
+        "cli/packager-core.mjs",
+        "src/lib/domain/edition-package.ts",
+        "tests/packager"
+      ],
+      "evidence": [
+        "reports/prompt-20/fixture-flow.json"
+      ],
+      "assessment": "ZIP determinístico, checksums, validação e restore aprovados."
+    },
+    {
+      "id": 7,
+      "criterion": "ZIP preservado no Google Drive",
+      "status": "partial",
+      "implementation": [
+        "src/lib/infrastructure/google/google-drive.mjs",
+        "src/lib/application/archive-edition-package.mjs",
+        "tests/drive"
+      ],
+      "evidence": [
+        "reports/prompt-11/upload-report.md"
+      ],
+      "assessment": "Contrato, retomada e idempotência simulados; upload real não executado."
+    },
+    {
+      "id": 8,
+      "criterion": "Branch e pull request automáticos",
+      "status": "partial",
+      "implementation": [
+        "src/lib/application/publication-orchestrator.mjs",
+        "n8n/workflows/06_criacao_pull_request.json",
+        "tests/n8n"
+      ],
+      "evidence": [
+        "reports/prompt-20/fixture-flow.json"
+      ],
+      "assessment": "Orquestração por portas fixture aprovada; branch e PR reais não criados."
+    },
+    {
+      "id": 9,
+      "criterion": "Revisão humana obrigatória",
+      "status": "partial",
+      "implementation": [
+        ".github/pull_request_template.md",
+        "docs/operations/branch-protection.md",
+        "n8n/workflows/06_criacao_pull_request.json"
+      ],
+      "evidence": [
+        "reports/prompt-12/test-results.md"
+      ],
+      "assessment": "Fronteira humana está implementada e merge automático é proibido; nenhum PR real foi homologado."
+    },
+    {
+      "id": 10,
+      "criterion": "Build Astro",
+      "status": "blocked",
+      "implementation": [
+        "astro.config.mjs",
+        "src/pages",
+        "package.json"
+      ],
+      "evidence": [
+        "reports/prompt-20/release-verification.json"
+      ],
+      "assessment": "Bloqueado sem instalação, lockfile e dependências."
+    },
+    {
+      "id": 11,
+      "criterion": "Busca Pagefind",
+      "status": "partial",
+      "implementation": [
+        "pagefind.yml",
+        "src/pages/busca/index.astro",
+        "public/archive-index.json",
+        "tests/discovery-static.test.mjs"
+      ],
+      "evidence": [
+        "reports/prompt-20/logs/validate-discovery.log"
+      ],
+      "assessment": "Fallback e contrato passam; índice Pagefind real em dist não foi produzido."
+    },
+    {
+      "id": 12,
+      "criterion": "Arquivo por data e canal",
+      "status": "pass",
+      "implementation": [
+        "src/lib/domain/discovery.mjs",
+        "src/pages/arquivo",
+        "src/pages/canais",
+        "tests/discovery.test.mjs"
+      ],
+      "evidence": [
+        "reports/prompt-20/logs/validate-discovery.log"
+      ],
+      "assessment": "Arquivo, facetas, feeds e sitemap aprovados offline."
+    },
+    {
+      "id": 13,
+      "criterion": "Deploy no GitHub Pages",
+      "status": "blocked",
+      "implementation": [
+        ".github/workflows/deploy-pages.yml",
+        "scripts/smoke-site.mjs"
+      ],
+      "evidence": [
+        "reports/prompt-20/release-verification.json"
+      ],
+      "assessment": "Workflow validado estaticamente; deploy e URL reais não existem neste ambiente."
+    },
+    {
+      "id": 14,
+      "criterion": "URL sincronizada no Sheets",
+      "status": "partial",
+      "implementation": [
+        "src/lib/application/publication-orchestrator.mjs",
+        "src/lib/infrastructure/google/google-workspace.mjs",
+        "tests/n8n"
+      ],
+      "evidence": [
+        "reports/prompt-12/test-results.md"
+      ],
+      "assessment": "Handoff e atualização simulados; Sheets real não foi alterado."
+    },
+    {
+      "id": 15,
+      "criterion": "Correção versionada",
+      "status": "pass",
+      "implementation": [
+        "src/lib/domain/post-publication.mjs",
+        "src/lib/application/post-publication-orchestrator.mjs",
+        "tests/post-publication"
+      ],
+      "evidence": [
+        "reports/prompt-16/revision-chain.md"
+      ],
+      "assessment": "Correção, redirect, tombstone e pacotes r2/r3 aprovados."
+    },
+    {
+      "id": 16,
+      "criterion": "Edição diária revisável e selável",
+      "status": "pass",
+      "implementation": [
+        "src/lib/domain/edition-lifecycle.ts",
+        "src/lib/application/edition-lifecycle.mjs",
+        "tests/edition-lifecycle"
+      ],
+      "evidence": [
+        "reports/prompt-13/lifecycle-validation.md"
+      ],
+      "assessment": "Cadeia r1/r2/r3 e selo aprovados, sem vazamento de slots privados."
+    },
+    {
+      "id": 17,
+      "criterion": "Backup local",
+      "status": "pass",
+      "implementation": [
+        "infra/scripts/backup.sh",
+        "scripts/backup-manifest.mjs",
+        "tests/observability/backup-manifest.test.mjs"
+      ],
+      "evidence": [
+        "reports/prompt-20/fixture-flow.json"
+      ],
+      "assessment": "Bundle criptografado sintético criado e validado; backup de containers reais não executado."
+    },
+    {
+      "id": 18,
+      "criterion": "Restore testado",
+      "status": "pass",
+      "implementation": [
+        "infra/scripts/restore.sh",
+        "tests/observability/backup-restore.test.mjs"
+      ],
+      "evidence": [
+        "reports/prompt-20/fixture-flow.json"
+      ],
+      "assessment": "Descriptografia, checksums, dump e quatro volumes restaurados em diretório limpo."
+    },
+    {
+      "id": 19,
+      "criterion": "Nenhuma credencial versionada",
+      "status": "pass",
+      "implementation": [
+        "scripts/scan-repository-secrets.mjs",
+        ".gitignore",
+        "SECURITY.md"
+      ],
+      "evidence": [
+        "reports/prompt-20/logs/scan-secrets.log"
+      ],
+      "assessment": "Varredura integral aprovada; nenhuma credencial real detectada."
+    },
+    {
+      "id": 20,
+      "criterion": "Nenhum serviço administrativo público",
+      "status": "partial",
+      "implementation": [
+        "infra/compose.yml",
+        "scripts/check-minimum-permissions.mjs",
+        "tests/infra/security-static.test.mjs"
+      ],
+      "evidence": [
+        "reports/prompt-20/logs/check-permissions.log"
+      ],
+      "assessment": "Bindings e rede aprovados estaticamente; portas reais não foram inspecionadas."
+    },
+    {
+      "id": 21,
+      "criterion": "Leitura básica sem JavaScript",
+      "status": "pass",
+      "implementation": [
+        "src/layouts/JornalConcretoLayout.astro",
+        "scripts/check-degraded-modes.mjs",
+        "scripts/browser-acceptance.py"
+      ],
+      "evidence": [
+        "reports/prompt-20/browser-acceptance.json",
+        "reports/prompt-20/logs/test-degraded.log"
+      ],
+      "assessment": "Preview verificado em Chromium desktop/mobile e em modo degradado."
+    },
+    {
+      "id": 22,
+      "criterion": "Site público independente da máquina local",
+      "status": "partial",
+      "implementation": [
+        ".github/workflows/deploy-pages.yml",
+        "docs/architecture/decisions/0002-public-site-independent.md",
+        "infra/compose.yml"
+      ],
+      "evidence": [
+        "reports/prompt-18/operational-baseline.json"
+      ],
+      "assessment": "Arquitetura não depende da stack local; independência em produção aguarda deploy real."
+    }
+  ],
+  "phase_acceptance": [
+    {
+      "phase": "F0",
+      "name": "Consolidação e contratos",
+      "status": "pass",
+      "assessment": "Contradições removidas; fonte de verdade, exemplos, schemas e CI estático disponíveis.",
+      "evidence": [
+        "docs/adr",
+        "schemas",
+        "fixtures/public",
+        "reports/prompt-04/test-results.md"
+      ]
+    },
+    {
+      "phase": "F1",
+      "name": "Infraestrutura local básica",
+      "status": "partial",
+      "assessment": "Compose, versões, healthchecks e restore fixture aprovados; stack Docker real não iniciada.",
+      "evidence": [
+        "infra",
+        "reports/prompt-20/logs/validate-infra.log",
+        "reports/prompt-20/fixture-flow.json"
+      ]
+    },
+    {
+      "phase": "F2",
+      "name": "Ambiente editorial Google",
+      "status": "partial",
+      "assessment": "Modelos e validações aprovados por fixture; fluxo manual real no Google não homologado.",
+      "evidence": [
+        "templates/google",
+        "fixtures/editorial",
+        "reports/prompt-03/test-results.md"
+      ]
+    },
+    {
+      "phase": "F3",
+      "name": "Domínio e schemas",
+      "status": "pass",
+      "assessment": "Tipos, schemas, IDs, estados, sanitização e fixtures aprovados.",
+      "evidence": [
+        "src/lib/domain",
+        "schemas/1.0.0",
+        "reports/prompt-20/logs/validate-public-contracts.log"
+      ]
+    },
+    {
+      "phase": "F4",
+      "name": "Portal Astro base",
+      "status": "partial",
+      "assessment": "Rotas e apresentação aprovadas por preview determinístico e Chromium; build Astro real e aceite manual pendentes.",
+      "evidence": [
+        "src/pages",
+        "src/components",
+        "reports/prompt-20/browser-acceptance.json"
+      ]
+    },
+    {
+      "phase": "F5",
+      "name": "Publicação manual controlada",
+      "status": "blocked",
+      "assessment": "Workflows e rollback estão definidos; PR, build, deploy e URL final reais não foram executados.",
+      "evidence": [
+        ".github/workflows",
+        "docs/operations/github-pages-publication.md",
+        "reports/prompt-07/first-deploy.md"
+      ]
+    },
+    {
+      "phase": "F6",
+      "name": "Exportador Docs/Sheets",
+      "status": "partial",
+      "assessment": "Exportação determinística e sanitização passam; adapters Google reais não foram chamados.",
+      "evidence": [
+        "cli/exporter-core.mjs",
+        "src/lib/infrastructure/google",
+        "reports/prompt-20/fixture-flow.json"
+      ]
+    },
+    {
+      "phase": "F7",
+      "name": "Pacote de edição e Drive",
+      "status": "partial",
+      "assessment": "Pacote, cadeia e recuperação passam; Drive real não foi usado.",
+      "evidence": [
+        "cli/packager-core.mjs",
+        "src/lib/infrastructure/google/google-drive.mjs",
+        "reports/prompt-20/fixture-flow.json"
+      ]
+    },
+    {
+      "phase": "F8",
+      "name": "n8n de publicação",
+      "status": "partial",
+      "assessment": "Idempotência, lock e ordem de efeitos passam em fixture; n8n, GitHub e Sheets reais pendentes.",
+      "evidence": [
+        "n8n/workflows",
+        "src/lib/application/publication-orchestrator.mjs",
+        "reports/prompt-12/test-results.md"
+      ]
+    },
+    {
+      "phase": "F9",
+      "name": "Edição diária incremental",
+      "status": "pass",
+      "assessment": "Revisões, selo, URLs estáveis e fronteira público/privado comprovados.",
+      "evidence": [
+        "src/lib/domain/edition-lifecycle.ts",
+        "reports/prompt-13/lifecycle-validation.md"
+      ]
+    },
+    {
+      "phase": "F10",
+      "name": "Arquivo e busca",
+      "status": "partial",
+      "assessment": "Arquivo, filtros e feeds passam; Pagefind real em dist está bloqueado.",
+      "evidence": [
+        "src/lib/domain/discovery.mjs",
+        "public/archive-index.json",
+        "reports/prompt-20/logs/validate-discovery.log"
+      ]
+    },
+    {
+      "phase": "F11",
+      "name": "Captação editorial",
+      "status": "partial",
+      "assessment": "Entradas viram apenas TRIAGEM e deduplicação passa; serviços reais não foram chamados.",
+      "evidence": [
+        "src/lib/domain/editorial-ingestion.mjs",
+        "src/lib/infrastructure/ingestion",
+        "reports/prompt-15/triage-report.md"
+      ]
+    },
+    {
+      "phase": "F12",
+      "name": "Correções e retiradas",
+      "status": "pass",
+      "assessment": "Histórico, revisão, redirects e tombstones aprovados.",
+      "evidence": [
+        "src/lib/domain/post-publication.mjs",
+        "reports/prompt-16/redirect-tombstone-validation.md"
+      ]
+    },
+    {
+      "phase": "F13",
+      "name": "Mídia",
+      "status": "partial",
+      "assessment": "Pipeline real com Pillow e derivados passa; retratos editoriais reais permanecem pending.",
+      "evidence": [
+        "scripts/process-media.py",
+        "src/lib/domain/media-pipeline.mjs",
+        "reports/prompt-17/asset-report.md"
+      ]
+    },
+    {
+      "phase": "F14",
+      "name": "Observabilidade e backup",
+      "status": "partial",
+      "assessment": "Backup/restore, reconciliação e alertas passam em fixtures; serviços locais reais não foram iniciados.",
+      "evidence": [
+        "infra/scripts",
+        "src/lib/application/operational-observability.mjs",
+        "reports/prompt-20/fixture-flow.json"
+      ]
+    },
+    {
+      "phase": "F15",
+      "name": "Hardening e release 1.0",
+      "status": "blocked",
+      "assessment": "Controles offline passam; lockfile, auditoria transitiva, build, E2E real e aceite manual bloqueiam o release.",
+      "evidence": [
+        "reports/prompt-20/release-verification.json",
+        "reports/prompt-20/go-no-go.md"
+      ]
+    }
+  ],
+  "prompt_reports": [
+    {
+      "prompt": 1,
+      "report_directory": "reports/prompt-01",
+      "available": true,
+      "files": 2
+    },
+    {
+      "prompt": 2,
+      "report_directory": "reports/prompt-02",
+      "available": true,
+      "files": 3
+    },
+    {
+      "prompt": 3,
+      "report_directory": "reports/prompt-03",
+      "available": true,
+      "files": 5
+    },
+    {
+      "prompt": 4,
+      "report_directory": "reports/prompt-04",
+      "available": true,
+      "files": 7
+    },
+    {
+      "prompt": 5,
+      "report_directory": "reports/prompt-05",
+      "available": true,
+      "files": 21
+    },
+    {
+      "prompt": 6,
+      "report_directory": "reports/prompt-06",
+      "available": true,
+      "files": 256
+    },
+    {
+      "prompt": 7,
+      "report_directory": "reports/prompt-07",
+      "available": true,
+      "files": 4
+    },
+    {
+      "prompt": 8,
+      "report_directory": "reports/prompt-08",
+      "available": true,
+      "files": 28
+    },
+    {
+      "prompt": 9,
+      "report_directory": "reports/prompt-09",
+      "available": true,
+      "files": 29
+    },
+    {
+      "prompt": 10,
+      "report_directory": "reports/prompt-10",
+      "available": true,
+      "files": 4
+    },
+    {
+      "prompt": 11,
+      "report_directory": "reports/prompt-11",
+      "available": true,
+      "files": 3
+    },
+    {
+      "prompt": 12,
+      "report_directory": "reports/prompt-12",
+      "available": true,
+      "files": 3
+    },
+    {
+      "prompt": 13,
+      "report_directory": "reports/prompt-13",
+      "available": true,
+      "files": 4
+    },
+    {
+      "prompt": 14,
+      "report_directory": "reports/prompt-14",
+      "available": true,
+      "files": 20
+    },
+    {
+      "prompt": 15,
+      "report_directory": "reports/prompt-15",
+      "available": true,
+      "files": 26
+    },
+    {
+      "prompt": 16,
+      "report_directory": "reports/prompt-16",
+      "available": true,
+      "files": 12
+    },
+    {
+      "prompt": 17,
+      "report_directory": "reports/prompt-17",
+      "available": true,
+      "files": 5
+    },
+    {
+      "prompt": 18,
+      "report_directory": "reports/prompt-18",
+      "available": true,
+      "files": 33
+    },
+    {
+      "prompt": 19,
+      "report_directory": "reports/prompt-19",
+      "available": true,
+      "files": 57
+    }
+  ]
+}

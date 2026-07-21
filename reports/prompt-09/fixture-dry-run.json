@@ -1,0 +1,62 @@
+{
+  "mode": "dry-run",
+  "article_id": "artigo-2026-07-20-transporte",
+  "publication_id": "pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+  "destination": "/mnt/data/subsolo-p9-work/subsolo-0.5.0-dev/.tmp/p9-fixture",
+  "files": [
+    {
+      "name": "publication.md",
+      "bytes": 1278,
+      "sha256": "5f26d4bf5c1faad6b697a1eaa296baa2a9e481084ab33ff059393fe6b977caf1"
+    },
+    {
+      "name": "sources.json",
+      "bytes": 442,
+      "sha256": "6f05d94cac2bab814c11de3e498c30ef13bed5d394753571c6d8e38f733e72b7"
+    },
+    {
+      "name": "corrections.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "name": "media.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "name": "provenance.public.json",
+      "bytes": 778,
+      "sha256": "7537032b6b973cd69dfbe62a8941fefb23a96ac543b716b83a3ccb2f2d1e1c1c"
+    }
+  ],
+  "provenance": {
+    "schema_version": "1.0.0",
+    "exporter_version": "0.5.1-dev",
+    "article_id": "artigo-2026-07-20-transporte",
+    "publication_id": "pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+    "exported_at": "2026-07-20T15:00:00-03:00",
+    "source_snapshots": {
+      "sheet_sha256": "ef32e7a5e1db659d107c9a237c39b9e6e0a9c73130310268478684631679846e",
+      "document_sha256": "50a57194e4cebe945943b5dc1d9a3325bf85156972fe500dda778c0440d0712d"
+    },
+    "public_files": [
+      "publication.md",
+      "sources.json",
+      "corrections.json",
+      "media.json"
+    ],
+    "source_counts": {
+      "sources": 1,
+      "corrections": 0,
+      "media": 0
+    },
+    "sanitization": {
+      "comments_exported": 0,
+      "suggestions_pending": 0,
+      "private_links": 0,
+      "internal_markers": 0,
+      "private_fields_exported": 0
+    }
+  }
+}

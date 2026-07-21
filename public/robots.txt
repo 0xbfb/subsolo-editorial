@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://subsolo.example/sitemap.xml

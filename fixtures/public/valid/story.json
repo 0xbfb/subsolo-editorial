@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "id": "story_01K0ABCDEFFGHJKMNPQRSTVWXY",
+  "slug": "operacao-transporte-metropolitano",
+  "title": "Operação do transporte metropolitano",
+  "status": "aberta",
+  "summary": "Acompanhamento de falhas, contratos e responsabilização.",
+  "started_at": "2026-07-15",
+  "topics": [
+    "mobilidade",
+    "infraestrutura"
+  ],
+  "actors": [
+    "Órgão público de exemplo",
+    "Operadora de exemplo"
+  ],
+  "next_expected_event": "2026-07-25"
+}

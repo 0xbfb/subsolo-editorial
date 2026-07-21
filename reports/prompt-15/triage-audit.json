@@ -1,0 +1,26 @@
+{
+  "version": "0.8.2-dev",
+  "runs": 6,
+  "input_count": 9,
+  "created_count": 6,
+  "duplicate_count": 0,
+  "probable_duplicate_count": 1,
+  "rejected_count": 2,
+  "quarantine_count": 2,
+  "stored_pitches": 6,
+  "statuses": [
+    "TRIAGEM"
+  ],
+  "classifications": [
+    "PRELIMINAR_NAO_EDITORIAL"
+  ],
+  "publication_effects": false,
+  "warnings": [
+    {
+      "code": "SUBSOLO_INGEST_SEARCH_PARTIAL",
+      "failed_engines": [
+        "engine-x"
+      ]
+    }
+  ]
+}

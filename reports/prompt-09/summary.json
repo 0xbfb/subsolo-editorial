@@ -1,0 +1,9 @@
+{
+  "version": "0.5.1-dev",
+  "node_tests": 74,
+  "passed": 74,
+  "failed": 0,
+  "google_live_call_executed": false,
+  "typescript_isolated": "passed",
+  "pnpm_install": "blocked_eai_again"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://subsolo.invalid/schemas/1.0.0/package-manifest.schema.json",
+  "title": "Subsolo Edition Package Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version","package_format","edition_id","edition_date","run_id","revision","status","timezone","generated_at","published_at","sealed_at","supersedes","publications"],
+  "properties": {
+    "schema_version": {"const":"1.0.0"},
+    "package_format": {"const":"subsolo-edition-package"},
+    "edition_id": {"type":"string","pattern":"^ed_\\d{4}-\\d{2}-\\d{2}$"},
+    "edition_date": {"type":"string","format":"date"},
+    "run_id": {"type":"string","pattern":"^run_\\d{8}T\\d{6}[+-]\\d{4}_r[1-9]\\d*$"},
+    "revision": {"type":"integer","minimum":1},
+    "status": {"enum":["publicada","selada","corrigida"]},
+    "timezone": {"const":"America/Sao_Paulo"},
+    "generated_at": {"type":"string","format":"date-time"},
+    "published_at": {"type":"string","format":"date-time"},
+    "sealed_at": {"anyOf":[{"type":"string","format":"date-time"},{"type":"null"}]},
+    "supersedes": {"anyOf":[{"type":"string","minLength":1},{"type":"null"}]},
+    "publications": {"type":"array","minItems":1,"items":{"type":"object","additionalProperties":false,"required":["id","path","channel","position","featured"],"properties":{"id":{"type":"string","pattern":"^pub_[0-9A-HJKMNP-TV-Z]{26}$"},"path":{"type":"string","pattern":"^publications/pub_[0-9A-HJKMNP-TV-Z]{26}$"},"channel":{"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},"position":{"type":"integer","minimum":0},"featured":{"type":"boolean"}}}}
+  }
+}

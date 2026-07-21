@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "review_triggers": {
+    "publications": 25000,
+    "archive_index_bytes": 8388608,
+    "pagefind_index_bytes": 15728640,
+    "github_pages_artifact_bytes": 805306368,
+    "drive_packages_per_year": 1500,
+    "n8n_executions_per_day": 5000,
+    "postgres_bytes": 5368709120
+  },
+  "required_response": "Open a capacity decision record before any trigger is exceeded.",
+  "automatic_deletion_allowed": false
+}

@@ -1,0 +1,117 @@
+{
+  "pageTitle": "Início",
+  "description": "Subsolo — portal editorial independente. O ruído passa. O que importa fica.",
+  "dateLabel": [
+    "SEGUNDA-FEIRA",
+    "20 JULHO 2026"
+  ],
+  "closingLabel": "Fechamento 11:42 BRT",
+  "breadcrumbs": [
+    "Início"
+  ],
+  "navigation": [
+    {
+      "label": "Início",
+      "href": "/",
+      "current": true,
+      "available": true
+    },
+    {
+      "label": "Agora",
+      "href": "/agora/",
+      "current": false,
+      "available": true
+    },
+    {
+      "label": "Canais",
+      "href": "/canais/",
+      "current": false,
+      "available": true
+    },
+    {
+      "label": "Tecnologia",
+      "href": "/temas/tecnologia/",
+      "current": false,
+      "available": true
+    },
+    {
+      "label": "Arquivo",
+      "href": "/arquivo/",
+      "current": false,
+      "available": true
+    },
+    {
+      "label": "Busca",
+      "href": "/busca/",
+      "current": false,
+      "available": true
+    },
+    {
+      "label": "A Redação",
+      "href": "/a-redacao/",
+      "current": false,
+      "available": true
+    }
+  ],
+  "hero": {
+    "channel": "São Paulo Sob o Capô",
+    "state": "Em desenvolvimento",
+    "stateKind": "developing",
+    "title": "A cidade terceirizou o relógio — e agora ninguém sabe quem responde pelo atraso",
+    "summary": "Uma falha repetida expõe contratos fragmentados, fiscalização opaca e a velha tecnologia pública de empurrar responsabilidade até ela cair no colo do passageiro.",
+    "time": "10:48",
+    "readingTime": "8 min",
+    "author": "Trilho",
+    "href": "/2026/07/20/a-cidade-terceirizou-o-relogio/"
+  },
+  "sideStories": [
+    {
+      "channel": "Poder de Plataforma",
+      "title": "A nova taxa não é só preço: é infraestrutura privada cobrando pedágio",
+      "summary": "Quando uma plataforma controla acesso, pagamento e descoberta, reajuste deixa de ser detalhe comercial.",
+      "href": "/2026/07/20/aceite-a-nova-regra-ou-desapareca-da-fila/"
+    },
+    {
+      "channel": "Manual de Sobrevivência Digital",
+      "title": "Seu aplicativo mudou os termos. Eis o que merece atenção de verdade",
+      "summary": "Três verificações úteis, duas permissões dispensáveis e uma alternativa aberta que funciona.",
+      "href": "/2026/07/20/seu-aplicativo-mudou-os-termos/"
+    }
+  ],
+  "transmissions": [
+    {
+      "channel": "Agora",
+      "title": "O estado atual do portal em uma página",
+      "summary": "Manchetes, histórias abertas, alertas e agenda sem a síndrome de painel de aeroporto.",
+      "href": "/agora/"
+    },
+    {
+      "channel": "Arquivo vivo",
+      "title": "Quatro datas, três versões e uma promessa vencida",
+      "summary": "A cronologia que mostra como um anúncio virou atraso e como o atraso virou rotina administrativa.",
+      "href": "/historias/operacao-transporte-metropolitano/"
+    },
+    {
+      "channel": "Documento",
+      "title": "O contrato diz manutenção preventiva; o relatório registra improviso recorrente",
+      "summary": "Leitura anotada de uma fonte primária e de seus pontos de conflito.",
+      "href": "/documentos/relatorio-operacional/"
+    }
+  ],
+  "dailyEdition": {
+    "eyebrow": "Edição diária",
+    "title": [
+      "Bom Dia,",
+      "Distopia"
+    ],
+    "summary": "Doze acontecimentos e nenhuma obrigação de fingir que coletiva vazia é fato histórico.",
+    "items": [
+      "Transporte muda protocolo após repetição de falhas.",
+      "Taxa privada amplia dependência de mercado.",
+      "Correção técnica exige atualização proporcional.",
+      "Agenda climática altera deslocamentos.",
+      "Abrir edição completa →"
+    ],
+    "href": "/2026/07/20/bom-dia-distopia-20-de-julho-de-2026/"
+  }
+}

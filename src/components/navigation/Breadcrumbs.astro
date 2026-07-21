@@ -1,0 +1,12 @@
+---
+import { withBasePath } from '../../lib/presentation/site-path';
+interface BreadcrumbItem { readonly label: string; readonly href?: string; }
+interface Props { readonly items: readonly (string | BreadcrumbItem)[]; }
+const { items } = Astro.props;
+const normalized = items.map((item) => typeof item === 'string' ? { label: item } : item);
+---
+<nav aria-label="Navegação estrutural" class="breadcrumbs">
+  {normalized.map((item, index) => (
+    <span>{item.href && index < normalized.length - 1 ? <a href={withBasePath(item.href, import.meta.env.BASE_URL)}>{item.label}</a> : item.label}</span>
+  ))}
+</nav>

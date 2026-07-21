@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cultura Digital sem Marketing — Subsolo</title>
+    <link>https://subsolo.example/</link>
+    <description>Analisar jogos, software, comunidades, protocolos e obras digitais sem reproduzir automaticamente o ciclo promocional.</description>
+    <language>pt-BR</language>
+    <atom:link href="https://subsolo.example/rss/canais/cultura-digital-sem-marketing.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Espanha campeã: um gol na prorrogação encerra o ciclo argentino</title>
+      <link>https://subsolo.example/arquivo/registros/espanha-campea-um-gol-na-prorrogacao-encerra-o-ciclo-argentino/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/espanha-campea-um-gol-na-prorrogacao-encerra-o-ciclo-argentino/</guid>
+      <pubDate>Sun, 19 Jul 2026 22:30:00 GMT</pubDate>
+      <description>O resultado oficial e seu contexto esportivo foram registrados sem biografias antecipadas nem épica fabricada.</description>
+    </item>
+    <item>
+      <title>Electronic Arts por US$ 55 bilhões: quando catálogo vira infraestrutura financeira</title>
+      <link>https://subsolo.example/arquivo/registros/electronic-arts-por-us-55-bilhoes-quando-catalogo-vira-infraestrutura-financeira/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/electronic-arts-por-us-55-bilhoes-quando-catalogo-vira-infraestrutura-financeira/</guid>
+      <pubDate>Sat, 18 Jul 2026 22:30:00 GMT</pubDate>
+      <description>O negócio foi examinado por propriedade cultural, dívida, preservação, trabalho e dependência de franquias.</description>
+    </item>
+  </channel>
+</rss>

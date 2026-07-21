@@ -1,0 +1,18 @@
+{
+  "root": "SUBSOLO",
+  "labels": [
+    "SUBSOLO/Pautas",
+    "SUBSOLO/Fontes",
+    "SUBSOLO/Correções",
+    "SUBSOLO/Convites",
+    "SUBSOLO/Parcerias",
+    "SUBSOLO/Aguardando resposta",
+    "SUBSOLO/Arquivado"
+  ],
+  "rules": [
+    "Release não é fonte independente.",
+    "Mensagem sensível não recebe resposta automática.",
+    "Anexo não é publicável sem inspeção.",
+    "Mensagem não é excluída automaticamente."
+  ]
+}

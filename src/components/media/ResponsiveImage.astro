@@ -1,0 +1,9 @@
+---
+import { createPictureModel } from '../../lib/presentation/media-view-model.mjs';
+interface Props { readonly media: unknown; readonly variant?: string; readonly className?: string; readonly loading?: 'lazy'|'eager'; readonly decorative?: boolean; }
+const {media,variant='article',className='',loading='lazy',decorative=false}=Astro.props; const picture=createPictureModel({media,variant});
+---
+{picture.available && <picture class={className}>
+  {picture.sources.map((source)=><source srcset={source.src} type={source.type}/>) }
+  <img src={picture.fallback.src} width={picture.width} height={picture.height} alt={decorative?'':picture.alt} loading={loading} decoding="async" />
+</picture>}

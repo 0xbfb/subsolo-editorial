@@ -1,0 +1,58 @@
+{
+  "name": "10 · Pesquisa assistida SearXNG",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "none",
+    "timezone": "America/Sao_Paulo"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "id": "consulta-manual",
+      "name": "Consulta manual",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "node /workspace/cli/subsolo.mjs ingest --source searxng --provider live --query-file /workspace/.runtime/input/searxng-query.json --state /workspace/.runtime/editorial/pitches.json --output /workspace/.runtime/reports/searxng --spreadsheet-id {{$env.SUBSOLO_GOOGLE_SPREADSHEET_ID}} --apply"
+      },
+      "id": "pesquisar-e-triar",
+      "name": "Pesquisar e criar triagem",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        260,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Consulta manual": {
+      "main": [
+        [
+          {
+            "node": "Pesquisar e criar triagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "subsolo_export": "sanitized",
+    "schema_version": "1.0.0",
+    "editorial_effect": "triage-only"
+  }
+}

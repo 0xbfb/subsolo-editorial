@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>São Paulo Sob o Capô — Subsolo</title>
+    <link>https://subsolo.example/</link>
+    <description>Acompanhar infraestrutura, serviços, concessões, contratos, operação pública e falhas recorrentes em São Paulo.</description>
+    <language>pt-BR</language>
+    <atom:link href="https://subsolo.example/rss/canais/sao-paulo-sob-o-capo.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A cidade terceirizou o relógio — e agora ninguém sabe quem responde pelo atraso</title>
+      <link>https://subsolo.example/2026/07/20/a-cidade-terceirizou-o-relogio/</link>
+      <guid isPermaLink="true">https://subsolo.example/2026/07/20/a-cidade-terceirizou-o-relogio/</guid>
+      <pubDate>Mon, 20 Jul 2026 13:48:00 GMT</pubDate>
+      <description>Uma falha repetida expõe contratos fragmentados, fiscalização opaca e a velha tecnologia pública de empurrar responsabilidade até ela cair no colo do passageiro.</description>
+    </item>
+    <item>
+      <title>A cidade seca: baixa umidade é também problema de infraestrutura</title>
+      <link>https://subsolo.example/arquivo/registros/a-cidade-seca-baixa-umidade-e-tambem-problema-de-infraestrutura/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/a-cidade-seca-baixa-umidade-e-tambem-problema-de-infraestrutura/</guid>
+      <pubDate>Fri, 17 Jul 2026 22:30:00 GMT</pubDate>
+      <description>O alerta de baixa umidade foi relacionado a saúde, trabalho de rua, incêndio e operação urbana.</description>
+    </item>
+  </channel>
+</rss>

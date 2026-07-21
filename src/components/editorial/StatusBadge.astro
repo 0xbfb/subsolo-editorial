@@ -1,0 +1,9 @@
+---
+import type { VisualStatusKind } from '../../lib/presentation/home-page';
+interface Props {
+  readonly label: string;
+  readonly kind: VisualStatusKind;
+}
+const { label, kind } = Astro.props;
+---
+<span class:list={['status', kind]}>{label}</span>

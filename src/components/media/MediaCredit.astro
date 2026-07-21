@@ -1,0 +1,5 @@
+---
+interface Props {readonly credit:string;readonly license:string;readonly caption?:string|null;}
+const {credit,license,caption=null}=Astro.props;
+---
+<figcaption class="media-credit">{caption&&<span>{caption} </span>}<span>Crédito: {credit}.</span> <span>Licença: {license}.</span></figcaption>

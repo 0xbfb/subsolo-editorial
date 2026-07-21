@@ -1,0 +1,29 @@
+{
+  "article_id": "artigo-2026-07-20-transporte",
+  "exported_at": "2026-07-20T16:10:00-03:00",
+  "exporter_version": "0.5.1-dev",
+  "public_files": [
+    "publication.md",
+    "sources.json",
+    "corrections.json",
+    "media.json"
+  ],
+  "publication_id": "pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+  "sanitization": {
+    "comments_exported": 0,
+    "internal_markers": 0,
+    "private_fields_exported": 0,
+    "private_links": 0,
+    "suggestions_pending": 0
+  },
+  "schema_version": "1.0.0",
+  "source_counts": {
+    "corrections": 1,
+    "media": 0,
+    "sources": 1
+  },
+  "source_snapshots": {
+    "document_sha256": "50a57194e4cebe945943b5dc1d9a3325bf85156972fe500dda778c0440d0712d",
+    "sheet_sha256": "ef32e7a5e1db659d107c9a237c39b9e6e0a9c73130310268478684631679846e"
+  }
+}

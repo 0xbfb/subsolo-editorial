@@ -1,0 +1,742 @@
+[
+  {
+    "frame_id": "bom-dia-distopia--abertura",
+    "channel_id": "bom-dia-distopia",
+    "name": "Abertura",
+    "slug": "abertura",
+    "description": "Abertura curta e variável que apresenta o clima geral da edição.",
+    "position": 1,
+    "required": true,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "bom-dia-distopia--manchetes-principais",
+    "channel_id": "bom-dia-distopia",
+    "name": "Manchetes principais",
+    "slug": "manchetes-principais",
+    "description": "Fatos de maior impacto, consequência prática ou relevância estratégica.",
+    "position": 2,
+    "required": true,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "bom-dia-distopia--noticias-relevantes",
+    "channel_id": "bom-dia-distopia",
+    "name": "Notícias relevantes",
+    "slug": "noticias-relevantes",
+    "description": "Fatos importantes apresentados em blocos menores.",
+    "position": 3,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "bom-dia-distopia--pings-do-subsolo",
+    "channel_id": "bom-dia-distopia",
+    "name": "Pings do Subsolo",
+    "slug": "pings-do-subsolo",
+    "description": "Registros breves de acontecimentos que merecem acompanhamento.",
+    "position": 4,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "bom-dia-distopia--mercados",
+    "channel_id": "bom-dia-distopia",
+    "name": "Mercados",
+    "slug": "mercados",
+    "description": "Leitura diária de BTC, BNB, USD e BRL com dados atuais e limitações explícitas.",
+    "position": 5,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "bom-dia-distopia--clima-e-alertas",
+    "channel_id": "bom-dia-distopia",
+    "name": "Clima e alertas",
+    "slug": "clima-e-alertas",
+    "description": "Previsão e alertas para São Paulo, diferenciando previsão, tendência e aviso oficial.",
+    "position": 6,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "bom-dia-distopia--encerramento",
+    "channel_id": "bom-dia-distopia",
+    "name": "Encerramento",
+    "slug": "encerramento",
+    "description": "Síntese autoral curta, sem fórmula fixa e sem banalizar fatos graves.",
+    "position": 7,
+    "required": true,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "depois-da-poeira--o-que-mudou",
+    "channel_id": "depois-da-poeira",
+    "name": "O que mudou",
+    "slug": "o-que-mudou",
+    "description": "Atualizações materiais sobre histórias anteriormente apresentadas.",
+    "position": 1,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "depois-da-poeira--o-que-nao-aconteceu",
+    "channel_id": "depois-da-poeira",
+    "name": "O que não aconteceu",
+    "slug": "o-que-nao-aconteceu",
+    "description": "Promessas, prazos, entregas, anúncios ou previsões que não se concretizaram.",
+    "position": 2,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "depois-da-poeira--o-que-envelheceu-mal",
+    "channel_id": "depois-da-poeira",
+    "name": "O Que Envelheceu Mal",
+    "slug": "o-que-envelheceu-mal",
+    "description": "Declarações, análises ou previsões que foram contrariadas por fatos posteriores.",
+    "position": 3,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "depois-da-poeira--placar-de-promessas",
+    "channel_id": "depois-da-poeira",
+    "name": "Placar de Promessas",
+    "slug": "placar-de-promessas",
+    "description": "Acompanhamento estruturado de compromissos verificáveis feitos por:",
+    "position": 4,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "depois-da-poeira--historias-ainda-abertas",
+    "channel_id": "depois-da-poeira",
+    "name": "Histórias ainda abertas",
+    "slug": "historias-ainda-abertas",
+    "description": "Processos, investigações, crises, guerras, projetos de lei, concessões, obras e mudanças regulatórias que ainda não possuem desfecho.",
+    "position": 5,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "depois-da-poeira--a-semana-em-contradicoes",
+    "channel_id": "depois-da-poeira",
+    "name": "A Semana em Contradições",
+    "slug": "a-semana-em-contradicoes",
+    "description": "Confronta declarações incompatíveis, mudanças de posição ou diferenças entre discurso e prática.",
+    "position": 6,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "depois-da-poeira--veredito-provisorio",
+    "channel_id": "depois-da-poeira",
+    "name": "Veredito provisório",
+    "slug": "veredito-provisorio",
+    "description": "Classifica o estado atual de cada história como:",
+    "position": 7,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sinais-fracos--sinais-emergentes",
+    "channel_id": "sinais-fracos",
+    "name": "Sinais emergentes",
+    "slug": "sinais-emergentes",
+    "description": "Pequenas mudanças com potencial de crescimento, como:",
+    "position": 1,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sinais-fracos--agenda-de-atencao",
+    "channel_id": "sinais-fracos",
+    "name": "Agenda de atenção",
+    "slug": "agenda-de-atencao",
+    "description": "Eventos futuros com capacidade de gerar impacto:",
+    "position": 2,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sinais-fracos--riscos-em-formacao",
+    "channel_id": "sinais-fracos",
+    "name": "Riscos em formação",
+    "slug": "riscos-em-formacao",
+    "description": "Situações que ainda não constituem crise, mas acumulam condições para uma.",
+    "position": 3,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sinais-fracos--o-que-pode-dar-errado",
+    "channel_id": "sinais-fracos",
+    "name": "O Que Pode Dar Errado",
+    "slug": "o-que-pode-dar-errado",
+    "description": "Análise de modos plausíveis de falha em acontecimentos futuros.",
+    "position": 4,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sinais-fracos--termometro-do-hype",
+    "channel_id": "sinais-fracos",
+    "name": "Termômetro do Hype",
+    "slug": "termometro-do-hype",
+    "description": "Avalia tecnologias, produtos ou tendências comparando:",
+    "position": 5,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sinais-fracos--cemiterio-do-hype",
+    "channel_id": "sinais-fracos",
+    "name": "Cemitério do Hype",
+    "slug": "cemiterio-do-hype",
+    "description": "Revisita tecnologias ou promessas anteriormente apresentadas como inevitáveis, mas que perderam relevância, foram abandonadas ou tiveram impacto muito menor que o previsto.",
+    "position": 6,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sinais-fracos--indicadores",
+    "channel_id": "sinais-fracos",
+    "name": "Indicadores",
+    "slug": "indicadores",
+    "description": "Utiliza números que ajudem a identificar mudança antes de sua consolidação.",
+    "position": 7,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "autopsia-da-semana--o-acontecimento",
+    "channel_id": "autopsia-da-semana",
+    "name": "O acontecimento",
+    "slug": "o-acontecimento",
+    "description": "Descrição factual e delimitada do tema central.",
+    "position": 1,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "autopsia-da-semana--como-chegamos-aqui",
+    "channel_id": "autopsia-da-semana",
+    "name": "Como Chegamos Aqui",
+    "slug": "como-chegamos-aqui",
+    "description": "Contexto histórico, político, econômico, jurídico ou tecnológico necessário para compreender o presente.",
+    "position": 2,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "autopsia-da-semana--quem-esta-envolvido",
+    "channel_id": "autopsia-da-semana",
+    "name": "Quem está envolvido",
+    "slug": "quem-esta-envolvido",
+    "description": "Mapeamento de:",
+    "position": 3,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "autopsia-da-semana--quem-ganha-com-isso",
+    "channel_id": "autopsia-da-semana",
+    "name": "Quem Ganha com Isso?",
+    "slug": "quem-ganha-com-isso",
+    "description": "Analisa incentivos e distribuição de:",
+    "position": 4,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "autopsia-da-semana--quem-perde-ou-assume-o-risco",
+    "channel_id": "autopsia-da-semana",
+    "name": "Quem perde ou assume o risco",
+    "slug": "quem-perde-ou-assume-o-risco",
+    "description": "Identifica grupos que suportam custos, efeitos colaterais, dependências ou perda de direitos.",
+    "position": 5,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "autopsia-da-semana--o-documento-diz",
+    "channel_id": "autopsia-da-semana",
+    "name": "O Documento Diz",
+    "slug": "o-documento-diz",
+    "description": "Leitura de fontes primárias, como:",
+    "position": 6,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "autopsia-da-semana--um-tema-cinco-visoes",
+    "channel_id": "autopsia-da-semana",
+    "name": "Um Tema, Cinco Visões",
+    "slug": "um-tema-cinco-visoes",
+    "description": "Apresenta perspectivas de atores relevantes sem tratá-las como igualmente verdadeiras por obrigação.",
+    "position": 7,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "autopsia-da-semana--mapa-da-concentracao",
+    "channel_id": "autopsia-da-semana",
+    "name": "Mapa da Concentração",
+    "slug": "mapa-da-concentracao",
+    "description": "Identifica relações de propriedade, dependência, infraestrutura e controle de mercado.",
+    "position": 8,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "autopsia-da-semana--glossario-da-distopia",
+    "channel_id": "autopsia-da-semana",
+    "name": "Glossário da Distopia",
+    "slug": "glossario-da-distopia",
+    "description": "Explica conceitos indispensáveis para compreender a edição.",
+    "position": 9,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "autopsia-da-semana--o-que-ainda-nao-sabemos",
+    "channel_id": "autopsia-da-semana",
+    "name": "O que ainda não sabemos",
+    "slug": "o-que-ainda-nao-sabemos",
+    "description": "Lista lacunas, disputas factuais e limitações da análise.",
+    "position": 10,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "autopsia-da-semana--cenarios",
+    "channel_id": "autopsia-da-semana",
+    "name": "Cenários",
+    "slug": "cenarios",
+    "description": "Apresenta consequências possíveis, indicando:",
+    "position": 11,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "manual-de-sobrevivencia-digital--o-que-aconteceu",
+    "channel_id": "manual-de-sobrevivencia-digital",
+    "name": "O que aconteceu",
+    "slug": "o-que-aconteceu",
+    "description": "Resumo objetivo do evento que motivou a edição.",
+    "position": 1,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "manual-de-sobrevivencia-digital--quem-e-afetado",
+    "channel_id": "manual-de-sobrevivencia-digital",
+    "name": "Quem é afetado",
+    "slug": "quem-e-afetado",
+    "description": "Define claramente:",
+    "position": 2,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "manual-de-sobrevivencia-digital--o-que-fazer-agora",
+    "channel_id": "manual-de-sobrevivencia-digital",
+    "name": "O que fazer agora",
+    "slug": "o-que-fazer-agora",
+    "description": "Ações prioritárias, ordenadas por urgência.",
+    "position": 3,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "manual-de-sobrevivencia-digital--o-que-nao-precisa-ser-feito",
+    "channel_id": "manual-de-sobrevivencia-digital",
+    "name": "O que não precisa ser feito",
+    "slug": "o-que-nao-precisa-ser-feito",
+    "description": "Evita pânico, soluções desnecessárias e medidas desproporcionais.",
+    "position": 4,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "manual-de-sobrevivencia-digital--ferramenta-livre-da-semana",
+    "channel_id": "manual-de-sobrevivencia-digital",
+    "name": "Ferramenta Livre da Semana",
+    "slug": "ferramenta-livre-da-semana",
+    "description": "Apresenta uma ferramenta genuinamente livre e útil, com:",
+    "position": 5,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "manual-de-sobrevivencia-digital--alternativa-a-plataforma-dominante",
+    "channel_id": "manual-de-sobrevivencia-digital",
+    "name": "Alternativa à plataforma dominante",
+    "slug": "alternativa-a-plataforma-dominante",
+    "description": "Mostra serviços, protocolos ou práticas capazes de reduzir dependência.",
+    "position": 6,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "manual-de-sobrevivencia-digital--automacao-aberta",
+    "channel_id": "manual-de-sobrevivencia-digital",
+    "name": "Automação Aberta",
+    "slug": "automacao-aberta",
+    "description": "Descreve uma automação feita com ferramentas gratuitas ou livres.",
+    "position": 7,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "manual-de-sobrevivencia-digital--direitos-digitais-na-pratica",
+    "channel_id": "manual-de-sobrevivencia-digital",
+    "name": "Direitos Digitais na Prática",
+    "slug": "direitos-digitais-na-pratica",
+    "description": "Explica direitos aplicáveis a situações como:",
+    "position": 8,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "manual-de-sobrevivencia-digital--patch-notes-da-vida-digital",
+    "channel_id": "manual-de-sobrevivencia-digital",
+    "name": "Patch Notes da Vida Digital",
+    "slug": "patch-notes-da-vida-digital",
+    "description": "Resume mudanças em serviços, aplicativos, sistemas ou plataformas que alterem:",
+    "position": 9,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "manual-de-sobrevivencia-digital--o-que-precisa-da-sua-atencao",
+    "channel_id": "manual-de-sobrevivencia-digital",
+    "name": "O que precisa da sua atenção",
+    "slug": "o-que-precisa-da-sua-atencao",
+    "description": "Reúne:",
+    "position": 10,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sao-paulo-sob-o-capo--falhas-da-semana",
+    "channel_id": "sao-paulo-sob-o-capo",
+    "name": "Falhas da semana",
+    "slug": "falhas-da-semana",
+    "description": "Reúne incidentes relevantes com:",
+    "position": 1,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sao-paulo-sob-o-capo--falhou-de-novo",
+    "channel_id": "sao-paulo-sob-o-capo",
+    "name": "Falhou de Novo",
+    "slug": "falhou-de-novo",
+    "description": "Identifica recorrência e compara o incidente atual com ocorrências anteriores.",
+    "position": 2,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sao-paulo-sob-o-capo--sob-responsabilidade-de-quem",
+    "channel_id": "sao-paulo-sob-o-capo",
+    "name": "Sob responsabilidade de quem?",
+    "slug": "sob-responsabilidade-de-quem",
+    "description": "Mapeia:",
+    "position": 3,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sao-paulo-sob-o-capo--maquina-publica",
+    "channel_id": "sao-paulo-sob-o-capo",
+    "name": "Máquina Pública",
+    "slug": "maquina-publica",
+    "description": "Explica como determinada política ou decisão será executada:",
+    "position": 4,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sao-paulo-sob-o-capo--o-documento-diz",
+    "channel_id": "sao-paulo-sob-o-capo",
+    "name": "O Documento Diz",
+    "slug": "o-documento-diz",
+    "description": "Analisa contratos, editais, decisões, relatórios, auditorias e dados oficiais.",
+    "position": 5,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sao-paulo-sob-o-capo--placar-de-promessas",
+    "channel_id": "sao-paulo-sob-o-capo",
+    "name": "Placar de Promessas",
+    "slug": "placar-de-promessas",
+    "description": "Acompanha promessas públicas locais com prazo e resultado verificável.",
+    "position": 6,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sao-paulo-sob-o-capo--vigilancia-em-expansao",
+    "channel_id": "sao-paulo-sob-o-capo",
+    "name": "Vigilância em Expansão",
+    "slug": "vigilancia-em-expansao",
+    "description": "Monitora:",
+    "position": 7,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "sao-paulo-sob-o-capo--proximas-decisoes",
+    "channel_id": "sao-paulo-sob-o-capo",
+    "name": "Próximas decisões",
+    "slug": "proximas-decisoes",
+    "description": "Lista:",
+    "position": 8,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "poder-de-plataforma--mudanca-de-regra",
+    "channel_id": "poder-de-plataforma",
+    "name": "Mudança de regra",
+    "slug": "mudanca-de-regra",
+    "description": "Acompanha alterações em:",
+    "position": 1,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "poder-de-plataforma--quem-sera-afetado",
+    "channel_id": "poder-de-plataforma",
+    "name": "Quem será afetado",
+    "slug": "quem-sera-afetado",
+    "description": "Mapeia usuários, empresas, trabalhadores, desenvolvedores e comunidades.",
+    "position": 2,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "poder-de-plataforma--dependencia-criada",
+    "channel_id": "poder-de-plataforma",
+    "name": "Dependência criada",
+    "slug": "dependencia-criada",
+    "description": "Explica o que se torna difícil, caro ou impossível sem determinada plataforma.",
+    "position": 3,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "poder-de-plataforma--mapa-da-concentracao",
+    "channel_id": "poder-de-plataforma",
+    "name": "Mapa da Concentração",
+    "slug": "mapa-da-concentracao",
+    "description": "Apresenta relações de:",
+    "position": 4,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "poder-de-plataforma--vigilancia-e-dados",
+    "channel_id": "poder-de-plataforma",
+    "name": "Vigilância e dados",
+    "slug": "vigilancia-e-dados",
+    "description": "Analisa:",
+    "position": 5,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "poder-de-plataforma--industria-dos-jogos-sem-marketing",
+    "channel_id": "poder-de-plataforma",
+    "name": "Indústria dos Jogos sem Marketing",
+    "slug": "industria-dos-jogos-sem-marketing",
+    "description": "Examina decisões de plataformas e empresas da indústria de jogos envolvendo:",
+    "position": 6,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "poder-de-plataforma--termometro-do-hype",
+    "channel_id": "poder-de-plataforma",
+    "name": "Termômetro do Hype",
+    "slug": "termometro-do-hype",
+    "description": "Avalia produtos e tecnologias promovidos por grandes empresas em comparação com evidências reais.",
+    "position": 7,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "poder-de-plataforma--direitos-e-regulacao",
+    "channel_id": "poder-de-plataforma",
+    "name": "Direitos e regulação",
+    "slug": "direitos-e-regulacao",
+    "description": "Acompanha respostas de:",
+    "position": 8,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "poder-de-plataforma--alternativas-e-saidas",
+    "channel_id": "poder-de-plataforma",
+    "name": "Alternativas e saídas",
+    "slug": "alternativas-e-saidas",
+    "description": "Mostra:",
+    "position": 9,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "cultura-digital-sem-marketing--o-jogo-alem-do-hype",
+    "channel_id": "cultura-digital-sem-marketing",
+    "name": "O Jogo Além do Hype",
+    "slug": "o-jogo-alem-do-hype",
+    "description": "Analisa um jogo, gênero, projeto ou fenômeno considerando:",
+    "position": 1,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "cultura-digital-sem-marketing--industria-dos-jogos-sem-marketing",
+    "channel_id": "cultura-digital-sem-marketing",
+    "name": "Indústria dos Jogos sem Marketing",
+    "slug": "industria-dos-jogos-sem-marketing",
+    "description": "Acompanha:",
+    "position": 2,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "cultura-digital-sem-marketing--arqueologia-digital",
+    "channel_id": "cultura-digital-sem-marketing",
+    "name": "Arqueologia Digital",
+    "slug": "arqueologia-digital",
+    "description": "Recupera a história de:",
+    "position": 3,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "cultura-digital-sem-marketing--internet-que-ainda-presta",
+    "channel_id": "cultura-digital-sem-marketing",
+    "name": "Internet que Ainda Presta",
+    "slug": "internet-que-ainda-presta",
+    "description": "Seleciona projetos, comunidades, sites, protocolos ou iniciativas que preservem características de uma internet:",
+    "position": 4,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "cultura-digital-sem-marketing--a-semana-no-software-livre",
+    "channel_id": "cultura-digital-sem-marketing",
+    "name": "A Semana no Software Livre",
+    "slug": "a-semana-no-software-livre",
+    "description": "Resume acontecimentos relevantes relacionados a:",
+    "position": 5,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "cultura-digital-sem-marketing--cemiterio-do-hype",
+    "channel_id": "cultura-digital-sem-marketing",
+    "name": "Cemitério do Hype",
+    "slug": "cemiterio-do-hype",
+    "description": "Revisita tecnologias, produtos, formatos ou promessas culturais que foram apresentados como inevitáveis, mas:",
+    "position": 6,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "cultura-digital-sem-marketing--a-historia-que-quase-ninguem-cobriu",
+    "channel_id": "cultura-digital-sem-marketing",
+    "name": "A História que Quase Ninguém Cobriu",
+    "slug": "a-historia-que-quase-ninguem-cobriu",
+    "description": "Destaca acontecimentos cultural ou tecnicamente importantes que receberam pouca atenção, como:",
+    "position": 7,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "cultura-digital-sem-marketing--o-que-o-marketing-omitiu",
+    "channel_id": "cultura-digital-sem-marketing",
+    "name": "O que o marketing omitiu",
+    "slug": "o-que-o-marketing-omitiu",
+    "description": "Confronta a comunicação promocional com:",
+    "position": 8,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "xadrez-em-profundidade--uma-partida-uma-historia",
+    "channel_id": "xadrez-em-profundidade",
+    "name": "Uma Partida, Uma História",
+    "slug": "uma-partida-uma-historia",
+    "description": "Analisa uma partida relevante com:",
+    "position": 1,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "xadrez-em-profundidade--momento-critico",
+    "channel_id": "xadrez-em-profundidade",
+    "name": "Momento Crítico",
+    "slug": "momento-critico",
+    "description": "Seleciona uma posição decisiva e explica:",
+    "position": 2,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "xadrez-em-profundidade--meta-do-xadrez",
+    "channel_id": "xadrez-em-profundidade",
+    "name": "Meta do Xadrez",
+    "slug": "meta-do-xadrez",
+    "description": "Acompanha tendências em:",
+    "position": 3,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "xadrez-em-profundidade--alem-do-resultado",
+    "channel_id": "xadrez-em-profundidade",
+    "name": "Além do Resultado",
+    "slug": "alem-do-resultado",
+    "description": "Examina o que a classificação ou o placar não mostra:",
+    "position": 4,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "xadrez-em-profundidade--engine-e-humano",
+    "channel_id": "xadrez-em-profundidade",
+    "name": "Engine e Humano",
+    "slug": "engine-e-humano",
+    "description": "Compara avaliação computacional e decisão prática, destacando:",
+    "position": 5,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "xadrez-em-profundidade--circuito-e-bastidores",
+    "channel_id": "xadrez-em-profundidade",
+    "name": "Circuito e Bastidores",
+    "slug": "circuito-e-bastidores",
+    "description": "Acompanha:",
+    "position": 6,
+    "required": false,
+    "status": "ativo"
+  },
+  {
+    "frame_id": "xadrez-em-profundidade--historia-em-repeticao",
+    "channel_id": "xadrez-em-profundidade",
+    "name": "História em Repetição",
+    "slug": "historia-em-repeticao",
+    "description": "Relaciona uma partida, abertura ou situação atual com precedentes históricos relevantes.",
+    "position": 7,
+    "required": false,
+    "status": "ativo"
+  }
+]

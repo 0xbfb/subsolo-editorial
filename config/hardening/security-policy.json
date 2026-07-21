@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "public_origin_policy": "self-only",
+  "content_security_policy": {
+    "default-src": ["'self'"],
+    "base-uri": ["'self'"],
+    "connect-src": ["'self'"],
+    "font-src": ["'self'"],
+    "form-action": ["'self'"],
+    "img-src": ["'self'"],
+    "manifest-src": ["'self'"],
+    "media-src": ["'self'"],
+    "object-src": ["'none'"],
+    "script-src": ["'self'", "'wasm-unsafe-eval'"],
+    "style-src": ["'self'"],
+    "worker-src": ["'self'", "blob:"]
+  },
+  "forbidden_csp_tokens": ["'unsafe-inline'", "'unsafe-eval'", "*", "data:", "http:"],
+  "referrer_policy": "strict-origin-when-cross-origin",
+  "allowed_public_protocols": ["https:", "mailto:"],
+  "local_services_must_bind_loopback": true,
+  "analytics_allowed": false,
+  "tracking_cookies_allowed": false,
+  "repository_secret_scan_max_bytes": 2097152,
+  "accepted_action_references": "exact-semver",
+  "residual_platform_limits": [
+    "GitHub Pages does not provide repository-controlled arbitrary response headers.",
+    "frame-ancestors, Permissions-Policy and X-Content-Type-Options require an HTTP response header and are not claimed through meta tags."
+  ]
+}

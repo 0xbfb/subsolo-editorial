@@ -1,0 +1,16 @@
+---
+import { withBasePath } from '../../lib/presentation/site-path';
+interface Props {
+  readonly number: string;
+  readonly name: string;
+  readonly summary: string;
+  readonly href?: string;
+}
+const { number, name, summary, href } = Astro.props;
+const publicHref = href ? withBasePath(href, import.meta.env.BASE_URL) : undefined;
+---
+<article>
+  <div class="number">{number}</div>
+  <h3>{publicHref ? <a href={publicHref}>{name}</a> : <span class="channel-card__title">{name}</span>}</h3>
+  <p>{summary}</p>
+</article>

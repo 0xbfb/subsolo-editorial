@@ -1,0 +1,11 @@
+{
+  "kind": "slug-change",
+  "at": "2026-07-20T18:20:00-03:00",
+  "previous_revision": 1,
+  "summary": "O slug foi encurtado para representar melhor o título final.",
+  "reason": "A URL original continha uma formulação provisória mais longa que o necessário.",
+  "impact": "O caminho antigo permanece acessível por redirect permanente para a URL canônica.",
+  "new_slug": "cidade-terceirizou-o-relogio",
+  "factual_change": false,
+  "material_change": false
+}

@@ -1,0 +1,2 @@
+edition_id,edition_date,status,revision,mapa_do_dia,manifest_path,package_checksum,drive_file_id,branch,pull_request,commit_sha,deployment_url,opened_at,sealed_at,last_error
+ed_2026-07-20,2026-07-20,ABERTA,1,https://docs.google.com/document/d/fixture-mapa-do-dia,,,,publish/ed_2026-07-20-r1,https://github.com/example/subsolo/pull/20,,https://example.github.io/subsolo/edicoes/2026/07/20/,2026-07-20T05:50:00-03:00,,

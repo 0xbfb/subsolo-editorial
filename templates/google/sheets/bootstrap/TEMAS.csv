@@ -1,0 +1,43 @@
+topic_id,name,slug,status,is_sensitive
+tema-brasil,Brasil,brasil,ativo,false
+tema-sao-paulo,São Paulo,sao-paulo,ativo,false
+tema-politica-brasileira,Política brasileira,politica-brasileira,ativo,true
+tema-administracao-publica,Administração pública,administracao-publica,ativo,false
+tema-relacoes-internacionais,Relações internacionais,relacoes-internacionais,ativo,false
+tema-geopolitica,Geopolítica,geopolitica,ativo,false
+tema-trabalho,Trabalho,trabalho,ativo,false
+tema-economia,Economia,economia,ativo,false
+tema-saude,Saúde,saude,ativo,false
+tema-educacao,Educação,educacao,ativo,false
+tema-justica,Justiça,justica,ativo,true
+tema-direitos-civis,Direitos civis,direitos-civis,ativo,false
+tema-infraestrutura,Infraestrutura,infraestrutura,ativo,false
+tema-mobilidade,Mobilidade,mobilidade,ativo,false
+tema-energia,Energia,energia,ativo,false
+tema-agua-e-saneamento,Água e saneamento,agua-e-saneamento,ativo,false
+tema-habitacao,Habitação,habitacao,ativo,false
+tema-meio-ambiente,Meio ambiente,meio-ambiente,ativo,false
+tema-clima,Clima,clima,ativo,false
+tema-seguranca-publica,Segurança pública,seguranca-publica,ativo,true
+tema-vigilancia,Vigilância,vigilancia,ativo,true
+tema-cultura-hacker,Cultura hacker,cultura-hacker,ativo,false
+tema-seguranca-digital,Segurança digital,seguranca-digital,ativo,false
+tema-privacidade,Privacidade,privacidade,ativo,false
+tema-software-livre,Software livre,software-livre,ativo,false
+tema-desenvolvimento-de-software,Desenvolvimento de software,desenvolvimento-de-software,ativo,false
+tema-tecnologia,Tecnologia,tecnologia,ativo,false
+tema-inteligencia-artificial,Inteligência artificial,inteligencia-artificial,ativo,false
+tema-plataformas-digitais,Plataformas digitais,plataformas-digitais,ativo,false
+tema-industria-de-jogos,Indústria de jogos,industria-de-jogos,ativo,false
+tema-preservacao-digital,Preservação digital,preservacao-digital,ativo,false
+tema-cultura-digital,Cultura digital,cultura-digital,ativo,false
+tema-xadrez-profissional,Xadrez profissional,xadrez-profissional,ativo,false
+tema-bitcoin,Bitcoin,bitcoin,ativo,false
+tema-bnb,BNB,bnb,ativo,false
+tema-cambio,Câmbio,cambio,ativo,false
+tema-mercados,Mercados,mercados,ativo,false
+tema-documentos-publicos,Documentos públicos,documentos-publicos,ativo,false
+tema-concessoes,Concessões,concessoes,ativo,false
+tema-contratos-publicos,Contratos públicos,contratos-publicos,ativo,false
+tema-historia-da-internet,História da internet,historia-da-internet,ativo,false
+tema-governanca-digital,Governança digital,governanca-digital,ativo,false

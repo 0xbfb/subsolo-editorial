@@ -1,0 +1,24 @@
+Files /mnt/data/subsolo-p10-base/subsolo-0.5.1-dev/AGENTS.md and ./AGENTS.md differ
+Files /mnt/data/subsolo-p10-base/subsolo-0.5.1-dev/CHANGELOG.md and ./CHANGELOG.md differ
+Files /mnt/data/subsolo-p10-base/subsolo-0.5.1-dev/README.md and ./README.md differ
+cli: packager-core.mjs
+Files /mnt/data/subsolo-p10-base/subsolo-0.5.1-dev/cli/subsolo.mjs and ./cli/subsolo.mjs differ
+docs/adr: 0012-deterministic-edition-package.md
+Files /mnt/data/subsolo-p10-base/subsolo-0.5.1-dev/docs/adr/README.md and ./docs/adr/README.md differ
+Files /mnt/data/subsolo-p10-base/subsolo-0.5.1-dev/docs/content/error-catalog.md and ./docs/content/error-catalog.md differ
+Files /mnt/data/subsolo-p10-base/subsolo-0.5.1-dev/docs/content/public-schema-reference.md and ./docs/content/public-schema-reference.md differ
+docs/development: prompt-10.md
+docs/operations: edition-packages.md
+fixtures: packager
+fixtures/public/valid: package-manifest.json
+fixtures/public/valid: publication-run.json
+Files /mnt/data/subsolo-p10-base/subsolo-0.5.1-dev/package.json and ./package.json differ
+reports: prompt-10
+schemas/1.0.0: package-manifest.schema.json
+schemas/1.0.0: publication-run.schema.json
+Files /mnt/data/subsolo-p10-base/subsolo-0.5.1-dev/schemas/catalog.json and ./schemas/catalog.json differ
+Files /mnt/data/subsolo-p10-base/subsolo-0.5.1-dev/scripts/validate-public-contracts.mjs and ./scripts/validate-public-contracts.mjs differ
+src/lib/application: package-edition.ts
+src/lib/domain: edition-package.ts
+Files /mnt/data/subsolo-p10-base/subsolo-0.5.1-dev/tests/contract/public-static.test.mjs and ./tests/contract/public-static.test.mjs differ
+tests: packager

@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "id": "media_01K0ABCDEFFGHJKMNPQRSTVWXE",
+  "type": "imagem",
+  "alt": "Retrato técnico de teste com formas geométricas, usado apenas para validar cortes e formatos do pipeline.",
+  "caption": "Fixture técnica; não representa integrante da redação.",
+  "credit": "Subsolo — fixture técnica",
+  "license": "Uso exclusivo em testes do projeto",
+  "derivatives": [
+    {
+      "path": "/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-profile.avif",
+      "width": 1024,
+      "height": 1024,
+      "format": "avif",
+      "variant": "profile",
+      "mime_type": "image/avif",
+      "bytes": 17558,
+      "sha256": "b8a628c1c7a46cf2d85ce1f7fdf50ddacbeb289a127219722763780f2b69a270"
+    },
+    {
+      "path": "/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-profile.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "variant": "profile",
+      "mime_type": "image/webp",
+      "bytes": 11844,
+      "sha256": "e9d12812cd55c6508ac50a19ed2bc976d6a01c8b48f364c07cfb7e712ca41018"
+    },
+    {
+      "path": "/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-profile.jpg",
+      "width": 1024,
+      "height": 1024,
+      "format": "jpeg",
+      "variant": "profile",
+      "mime_type": "image/jpeg",
+      "bytes": 34220,
+      "sha256": "362d42ba8bf61ad061508fb6bf89b188c0f910dea70c8614b51d1dc0d3b628cf"
+    },
+    {
+      "path": "/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-card.avif",
+      "width": 480,
+      "height": 480,
+      "format": "avif",
+      "variant": "card",
+      "mime_type": "image/avif",
+      "bytes": 8248,
+      "sha256": "c75dbba80e4a424dfca504da8fcebf02d111ba6fdfc7121acf329771ad526810"
+    },
+    {
+      "path": "/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-card.webp",
+      "width": 480,
+      "height": 480,
+      "format": "webp",
+      "variant": "card",
+      "mime_type": "image/webp",
+      "bytes": 5260,
+      "sha256": "992089241b8ff6f845da0b4f1d4c5925cd86556782e130229604aa85133d5873"
+    },
+    {
+      "path": "/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-card.jpg",
+      "width": 480,
+      "height": 480,
+      "format": "jpeg",
+      "variant": "card",
+      "mime_type": "image/jpeg",
+      "bytes": 14646,
+      "sha256": "8bacf12241fdef5f0d46c22c2bb73dcee5c13c7e5b220e23f60e6d1e5195e3bb"
+    },
+    {
+      "path": "/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-circle-safe.avif",
+      "width": 512,
+      "height": 512,
+      "format": "avif",
+      "variant": "circle-safe",
+      "mime_type": "image/avif",
+      "bytes": 8365,
+      "sha256": "36e933f913a18cf7575ab7d017e8696e72326cd454138fae1c9d68c1cf8da8fe"
+    },
+    {
+      "path": "/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-circle-safe.webp",
+      "width": 512,
+      "height": 512,
+      "format": "webp",
+      "variant": "circle-safe",
+      "mime_type": "image/webp",
+      "bytes": 5584,
+      "sha256": "3085363dd8b1878117adcc6fa391486afbee4425fa3222c2b86323576b055c02"
+    },
+    {
+      "path": "/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-circle-safe.jpg",
+      "width": 512,
+      "height": 512,
+      "format": "jpeg",
+      "variant": "circle-safe",
+      "mime_type": "image/jpeg",
+      "bytes": 15093,
+      "sha256": "6ceb70524072608634d598ad372a006bd226e170b628f06ff1fad6e7d8775951"
+    },
+    {
+      "path": "/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-social.avif",
+      "width": 1200,
+      "height": 630,
+      "format": "avif",
+      "variant": "social",
+      "mime_type": "image/avif",
+      "bytes": 11610,
+      "sha256": "0c9898535422b1ea52e012b77e14f9142b8973702cc83a85a865f933bc8e2e32"
+    },
+    {
+      "path": "/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-social.webp",
+      "width": 1200,
+      "height": 630,
+      "format": "webp",
+      "variant": "social",
+      "mime_type": "image/webp",
+      "bytes": 7906,
+      "sha256": "16ea3b211b4c522cd4b9b764165bc3972ce1b011742367de3013891bc8cc9375"
+    },
+    {
+      "path": "/media/portraits/cora-fixture/cora-fixture-0b69ff6088ae1257-social.jpg",
+      "width": 1200,
+      "height": 630,
+      "format": "jpeg",
+      "variant": "social",
+      "mime_type": "image/jpeg",
+      "bytes": 24632,
+      "sha256": "ae8319033f0b3f62309a57dfdf1126fbc2c7990a0fe8d8ec06ad80543b55ff1f"
+    }
+  ]
+}

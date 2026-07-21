@@ -1,0 +1,125 @@
+{
+  "editorial_statuses": [
+    "IDEIA",
+    "TRIAGEM",
+    "APROVADA",
+    "PESQUISA",
+    "EM_PRODUCAO",
+    "AGUARDANDO_FONTE",
+    "REVISAO_EDITORIAL",
+    "REVISAO_FACTUAL",
+    "AJUSTES",
+    "PRONTO_PARA_PUBLICAR",
+    "PR_CRIADO",
+    "AGUARDANDO_MERGE",
+    "PUBLICADO",
+    "CORRECAO_PENDENTE",
+    "ARQUIVADO",
+    "RECUSADO"
+  ],
+  "edition_statuses": [
+    "PLANEJADA",
+    "ABERTA",
+    "PUBLICADA",
+    "SELADA"
+  ],
+  "public_states": [
+    "NAO_PUBLICADO",
+    "PUBLICADO",
+    "EM_DESENVOLVIMENTO",
+    "ATUALIZADO",
+    "CORRIGIDO",
+    "RETIRADO",
+    "ARQUIVADO"
+  ],
+  "priorities": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "coverage_levels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "slot_states": [
+    "CONFIRMADO",
+    "RESERVADO",
+    "ABERTO"
+  ],
+  "review_states": [
+    "PENDENTE",
+    "EM_REVISAO",
+    "APROVADA",
+    "REPROVADA",
+    "NAO_APLICAVEL"
+  ],
+  "destinations": [
+    "BDD",
+    "PUBLICACAO_PROPRIA",
+    "QUADRO_CURTO",
+    "COLUNA",
+    "COBERTURA_ESPECIAL",
+    "ACOMPANHAMENTO_INTERNO",
+    "RESERVATORIO_EDITORIAL",
+    "DESCARTE"
+  ],
+  "content_types": [
+    "NOTICIA",
+    "REPORTAGEM",
+    "ANALISE",
+    "INVESTIGACAO",
+    "EDITORIAL",
+    "GUIA",
+    "DOCUMENTO_COMENTADO",
+    "BOLETIM",
+    "ACOMPANHAMENTO",
+    "PERFIL",
+    "ENSAIO",
+    "ANALISE_DE_PARTIDA",
+    "COLUNA"
+  ],
+  "source_types": [
+    "DOCUMENTO_PRIMARIO",
+    "ORGAO_PUBLICO",
+    "COMUNICADO_OFICIAL",
+    "BASE_DE_DADOS",
+    "ENTREVISTA",
+    "VEICULO_JORNALISTICO",
+    "PESQUISA_ACADEMICA",
+    "REPOSITORIO",
+    "REDE_SOCIAL",
+    "OUTRO"
+  ],
+  "correction_types": [
+    "CORRECAO_FACTUAL",
+    "ESCLARECIMENTO",
+    "ATUALIZACAO_MATERIAL",
+    "RETIRADA"
+  ],
+  "origins": [
+    "FRESHRSS",
+    "GMAIL",
+    "SEARXNG",
+    "EQUIPE",
+    "LEITOR",
+    "FONTE",
+    "AGENDA",
+    "DOCUMENTO",
+    "ACOMPANHAMENTO"
+  ],
+  "preliminary_classifications": [
+    "PRELIMINAR_NAO_EDITORIAL"
+  ],
+  "verification_states": [
+    "NAO_VERIFICADO",
+    "EM_VERIFICACAO",
+    "VERIFICADO",
+    "DESCARTADO"
+  ]
+}

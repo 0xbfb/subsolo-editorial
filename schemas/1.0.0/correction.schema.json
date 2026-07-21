@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://subsolo.invalid/schemas/1.0.0/public-correction.schema.json",
+  "title": "Public Correction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "publication_id",
+    "type",
+    "published_at",
+    "summary",
+    "impact",
+    "previous_revision",
+    "new_revision"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^corr_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "publication_id": {
+      "type": "string",
+      "pattern": "^pub_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "type": {
+      "enum": [
+        "correcao-factual",
+        "esclarecimento",
+        "atualizacao-material",
+        "retirada"
+      ]
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "impact": {
+      "type": "string",
+      "minLength": 1
+    },
+    "previous_revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "new_revision": {
+      "type": "integer",
+      "minimum": 2
+    }
+  }
+}

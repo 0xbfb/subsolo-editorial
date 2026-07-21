@@ -1,0 +1,10 @@
+{
+  "kind": "clarification",
+  "at": "2026-07-20T16:30:00-03:00",
+  "previous_revision": 1,
+  "summary": "O texto passa a distinguir operador, mantenedora e órgão concedente.",
+  "reason": "A formulação original podia sugerir que todas as funções pertenciam à mesma empresa.",
+  "impact": "O esclarecimento melhora a atribuição sem modificar os fatos ou a análise.",
+  "factual_change": false,
+  "material_change": false
+}

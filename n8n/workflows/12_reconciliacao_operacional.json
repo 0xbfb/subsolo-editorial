@@ -1,0 +1,13 @@
+{
+  "name": "12_reconciliacao_operacional",
+  "active": false,
+  "nodes": [
+    {"parameters":{},"id":"manual","name":"Execução manual","type":"n8n-nodes-base.manualTrigger","typeVersion":1,"position":[0,0]},
+    {"parameters":{"command":"node /workspace/cli/subsolo.mjs reconcile --input /workspace/.runtime/input/operational-reconciliation.json --dry-run"},"id":"reconcile","name":"Detectar divergências","type":"n8n-nodes-base.executeCommand","typeVersion":1,"position":[240,0]},
+    {"parameters":{"command":"node /workspace/infra/scripts/alert.sh --severity warning --code RECONCILIATION_REQUIRES_REVIEW --action 'Revisar o relatório de reconciliação.' --component reconciliation --dry-run"},"id":"alert","name":"Preparar alerta acionável","type":"n8n-nodes-base.executeCommand","typeVersion":1,"position":[480,0]}
+  ],
+  "connections":{"Execução manual":{"main":[[{"node":"Detectar divergências","type":"main","index":0}]]},"Detectar divergências":{"main":[[{"node":"Preparar alerta acionável","type":"main","index":0}]]}},
+  "settings":{"executionOrder":"v1"},
+  "meta":{"subsolo_export":"sanitized","purpose":"Detecta divergências Sheets/Drive/GitHub sem correção silenciosa.","editorial_effect":"none","human_review":"required"},
+  "tags":[]
+}

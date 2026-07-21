@@ -1,0 +1,32 @@
+---
+import Breadcrumbs from '../../../../../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../../../../../components/editorial/PageIntro.astro';
+import EditionLifecycleBadge from '../../../../../components/editorial/EditionLifecycleBadge.astro';
+import SectionRule from '../../../../../components/editorial/SectionRule.astro';
+import ArticleCard from '../../../../../components/article/ArticleCard.astro';
+import JornalConcretoLayout from '../../../../../layouts/JornalConcretoLayout.astro';
+import { editorialSite, authorNames, channelNames } from '../../../../../lib/presentation/site-repository';
+import { findPublication, navigationFor } from '../../../../../lib/presentation/editorial-site';
+
+const edition = editorialSite.edition;
+const publications = edition.publicationIds.map((id) => findPublication(editorialSite, id));
+---
+<JornalConcretoLayout title={`Edição de ${edition.label}`} description={edition.summary} dateLabel={editorialSite.site.dateLabel} navigation={navigationFor('/edicoes/2026/07/20/')} canonicalPath="/edicoes/2026/07/20/">
+  <main id="conteudo">
+    <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Edições', href: '/edicoes/' }, edition.label]} />
+    <PageIntro eyebrow={`Edição diária · revisão ${edition.revision}`} title={edition.title} summary={edition.summary} detail={`Fechamento ${edition.closing} · estado ${edition.status}`} />
+    <EditionLifecycleBadge status={edition.status} revision={edition.revision} sealedAt={edition.sealedAt} />
+    <SectionRule label="Publicações da edição" detail={`${publications.length} conteúdos`} />
+    <section class="edition-stack">
+      {publications.map((publication, index) => <ArticleCard publication={publication} channelName={channelNames[publication.channel]} authorNames={publication.authors.map((slug) => authorNames[slug])} feature={index === 0} />)}
+    </section>
+    <SectionRule label="Histórico da edição" detail={`${edition.revisionHistory.length} revisões preservadas`} />
+    <ol class="edition-stack">
+      {edition.revisionHistory.map((item) => <li><strong>r{item.revision} · {item.status}</strong><p>{item.publishedAt} · {item.summary}</p></li>)}
+    </ol>
+    <section class="edition-note">
+      <h2>Sobre esta edição</h2>
+      <p>A edição é uma capa diária. Cada publicação mantém URL própria, autoria, fontes, estado e conexões com histórias acompanhadas.</p>
+    </section>
+  </main>
+</JornalConcretoLayout>

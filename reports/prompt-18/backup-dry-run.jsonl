@@ -1,0 +1,4 @@
+{"timestamp":"2026-07-21T02:32:43Z","level":"info","service":"subsolo-infra","event":"operation","message":"Plano de backup: PostgreSQL lógico, n8n, FreshRSS e Uptime Kuma."}
+{"timestamp":"2026-07-21T02:32:43Z","level":"info","service":"subsolo-infra","event":"operation","message":"Artefato final criptografado: /mnt/data/subsolo-p18-work/subsolo-0.8.4-dev/infra/backups/subsolo-backup-20260721T023243Z.tar.gz.enc"}
+{"timestamp":"2026-07-21T02:32:43Z","level":"info","service":"subsolo-infra","event":"operation","message":"RPO=24h; RTO=4h; retenção local=14 dias."}
+{"timestamp":"2026-07-21T02:32:43Z","level":"info","service":"subsolo-infra","event":"operation","message":"DRY-RUN: nenhum container, volume ou arquivo será alterado."}

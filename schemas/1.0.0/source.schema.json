@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://subsolo.invalid/schemas/1.0.0/public-source.schema.json",
+  "title": "Public Source",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "type",
+    "title",
+    "publisher",
+    "url",
+    "published_at",
+    "accessed_at",
+    "archived_url",
+    "supports"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^src_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "type": {
+      "enum": [
+        "documento-primario",
+        "base-oficial",
+        "comunicado-oficial",
+        "entrevista",
+        "apuracao-propria",
+        "pesquisa-academica",
+        "documentacao-tecnica",
+        "dados-de-mercado",
+        "alerta-meteorologico",
+        "reportagem-secundaria"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "publisher": {
+      "type": "string",
+      "minLength": 1
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "published_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "accessed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "archived_url": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "supports": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

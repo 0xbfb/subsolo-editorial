@@ -1,0 +1,426 @@
+{
+  "documentId": "fixture-transporte",
+  "title": "A cidade terceirizou o relógio",
+  "tabs": [
+    {
+      "tabProperties": {
+        "tabId": "tab-main",
+        "title": "Publicação",
+        "index": 0
+      },
+      "documentTab": {
+        "body": {
+          "content": [
+            {
+              "sectionBreak": {
+                "sectionStyle": {}
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": "O acontecimento\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "HEADING_2"
+                }
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": "A operação registrou uma nova interrupção durante a manhã.\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                }
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": ":::fact\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                }
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": "O incidente começou às 7h42, segundo o relatório operacional.\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                }
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": ":::\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                }
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": ":::why-it-matters\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                }
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": "A fragmentação contratual dificulta identificar responsabilidades e comparar reincidências.\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                }
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": ":::\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                }
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": "O que ainda não sabemos\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "HEADING_2"
+                }
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": "A causa raiz ainda não foi apresentada em documento público.\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                }
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": "O operador prometeu relatório conclusivo.\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                },
+                "bullet": {
+                  "listId": "list-1",
+                  "nestingLevel": 0
+                }
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": "A agência reguladora ainda não se pronunciou.\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                },
+                "bullet": {
+                  "listId": "list-1",
+                  "nestingLevel": 0
+                }
+              }
+            },
+            {
+              "table": {
+                "tableRows": [
+                  {
+                    "tableCells": [
+                      {
+                        "content": [
+                          {
+                            "paragraph": {
+                              "elements": [
+                                {
+                                  "textRun": {
+                                    "content": "Horário\n",
+                                    "textStyle": {}
+                                  }
+                                }
+                              ],
+                              "paragraphStyle": {
+                                "namedStyleType": "NORMAL_TEXT"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "content": [
+                          {
+                            "paragraph": {
+                              "elements": [
+                                {
+                                  "textRun": {
+                                    "content": "Evento\n",
+                                    "textStyle": {}
+                                  }
+                                }
+                              ],
+                              "paragraphStyle": {
+                                "namedStyleType": "NORMAL_TEXT"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tableCells": [
+                      {
+                        "content": [
+                          {
+                            "paragraph": {
+                              "elements": [
+                                {
+                                  "textRun": {
+                                    "content": "07:42\n",
+                                    "textStyle": {}
+                                  }
+                                }
+                              ],
+                              "paragraphStyle": {
+                                "namedStyleType": "NORMAL_TEXT"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "content": [
+                          {
+                            "paragraph": {
+                              "elements": [
+                                {
+                                  "textRun": {
+                                    "content": "Início da interrupção\n",
+                                    "textStyle": {}
+                                  }
+                                }
+                              ],
+                              "paragraphStyle": {
+                                "namedStyleType": "NORMAL_TEXT"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tableCells": [
+                      {
+                        "content": [
+                          {
+                            "paragraph": {
+                              "elements": [
+                                {
+                                  "textRun": {
+                                    "content": "08:31\n",
+                                    "textStyle": {}
+                                  }
+                                }
+                              ],
+                              "paragraphStyle": {
+                                "namedStyleType": "NORMAL_TEXT"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "content": [
+                          {
+                            "paragraph": {
+                              "elements": [
+                                {
+                                  "textRun": {
+                                    "content": "Retomada parcial\n",
+                                    "textStyle": {}
+                                  }
+                                }
+                              ],
+                              "paragraphStyle": {
+                                "namedStyleType": "NORMAL_TEXT"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": "> A normalização ocorreu de forma gradual.\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                }
+              }
+            },
+            {
+              "paragraph": {
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                },
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": "Documento de origem",
+                      "textStyle": {
+                        "link": {
+                          "url": "https://example.org/relatorio-operacional"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "textRun": {
+                      "content": "\n",
+                      "textStyle": {}
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "lists": {
+          "list-1": {
+            "listProperties": {
+              "nestingLevels": [
+                {
+                  "glyphType": "BULLET"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "childTabs": []
+    },
+    {
+      "tabProperties": {
+        "tabId": "tab-notes",
+        "title": "Notas",
+        "index": 1
+      },
+      "documentTab": {
+        "body": {
+          "content": [
+            {
+              "paragraph": {
+                "elements": [
+                  {
+                    "textRun": {
+                      "content": "NÃO PUBLICAR: nota interna\n",
+                      "textStyle": {}
+                    }
+                  }
+                ],
+                "paragraphStyle": {
+                  "namedStyleType": "NORMAL_TEXT"
+                }
+              }
+            }
+          ]
+        },
+        "lists": {}
+      },
+      "childTabs": []
+    }
+  ]
+}

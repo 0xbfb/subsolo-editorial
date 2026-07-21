@@ -1,0 +1,10 @@
+site: dist
+output_subdir: pagefind
+root_selector: html
+exclude_selectors:
+  - "[data-pagefind-ignore]"
+  - "nav"
+  - "footer"
+  - "script"
+  - "form"
+keep_index_url: false

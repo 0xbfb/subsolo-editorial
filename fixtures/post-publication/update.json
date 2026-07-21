@@ -1,0 +1,10 @@
+{
+  "kind": "update",
+  "at": "2026-07-20T18:00:00-03:00",
+  "previous_revision": 1,
+  "summary": "O relatório técnico completo foi publicado e incorporado à matéria.",
+  "reason": "Uma fonte primária materialmente nova ficou disponível após o fechamento inicial.",
+  "impact": "A atualização confirma a causa técnica e acrescenta o próximo prazo de fiscalização.",
+  "factual_change": false,
+  "material_change": true
+}

@@ -1,0 +1,2 @@
+automation_id,name,enabled,mode,last_run_id,last_status,last_run_at,next_action
+automation-editorial-sync,Sincronização editorial,false,MANUAL,,NAO_CONFIGURADA,,Implementar somente no Prompt 12.

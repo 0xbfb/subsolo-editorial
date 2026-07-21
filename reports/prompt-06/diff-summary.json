@@ -1,0 +1,17 @@
+{
+  "version": "0.3.1-dev",
+  "routes_preview": 114,
+  "publications": 4,
+  "channels": 9,
+  "authors": 44,
+  "stories": 1,
+  "documents": 1,
+  "static_tests_passed": 31,
+  "astro_build_executed": false,
+  "browser_rendering_executed": false,
+  "limitations": [
+    "npm registry EAI_AGAIN",
+    "browser ERR_BLOCKED_BY_ADMINISTRATOR",
+    "Docker unavailable"
+  ]
+}

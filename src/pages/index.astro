@@ -1,0 +1,40 @@
+---
+import homeFixture from '../data/fixtures/jornal-concreto-home.json';
+import channelCatalog from '../data/editorial/catalogs/channels.json';
+import Breadcrumbs from '../components/navigation/Breadcrumbs.astro';
+import HomeHero from '../components/home/HomeHero.astro';
+import DailyEditionBanner from '../components/home/DailyEditionBanner.astro';
+import SectionRule from '../components/editorial/SectionRule.astro';
+import StorySummary from '../components/editorial/StorySummary.astro';
+import ChannelCard from '../components/editorial/ChannelCard.astro';
+import JornalConcretoLayout from '../layouts/JornalConcretoLayout.astro';
+import { parseHomePageData } from '../lib/presentation/home-page';
+
+const page = parseHomePageData(homeFixture);
+const channels = channelCatalog.map((channel, index) => ({
+  number: String(index + 1).padStart(2, '0'),
+  name: channel.name,
+  summary: channel.function,
+  href: `/canais/${channel.slug}/`,
+}));
+---
+<JornalConcretoLayout
+  title={page.pageTitle}
+  description={page.description}
+  dateLabel={page.dateLabel}
+  navigation={page.navigation}
+>
+  <main id="conteudo">
+    <Breadcrumbs items={page.breadcrumbs} />
+    <HomeHero hero={page.hero} sideStories={page.sideStories} />
+    <SectionRule label="Transmissões recentes" detail={page.closingLabel} />
+    <section class="news-grid" aria-label="Transmissões recentes">
+      {page.transmissions.map((story) => <StorySummary {...story} />)}
+    </section>
+    <DailyEditionBanner edition={page.dailyEdition} />
+    <SectionRule label="Canais do Subsolo" detail="Nove frentes editoriais" />
+    <section class="channel-directory" id="canais" aria-label="Canais do Subsolo">
+      {channels.map((channel) => <ChannelCard {...channel} />)}
+    </section>
+  </main>
+</JornalConcretoLayout>

@@ -1,0 +1,7 @@
+---
+import { withBasePath } from '../../lib/presentation/site-path';
+import Portrait from '../media/Portrait.astro';
+interface Props { readonly slug: string; readonly nickname: string; readonly role: string; readonly department: string; readonly portrait?: any|null; }
+const { slug, nickname, role, department, portrait=null } = Astro.props; const href = withBasePath(`/redacao/${slug}/`, import.meta.env.BASE_URL);
+---
+<article class="directory-card"><Portrait portrait={portrait} nickname={nickname} size="card"/><div><div class="kicker">{department}</div><h3><a href={href}>{nickname}</a></h3><p>{role}</p></div></article>

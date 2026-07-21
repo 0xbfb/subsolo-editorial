@@ -1,0 +1,14 @@
+{
+  "version": "0.8.3-dev",
+  "prompt": 16,
+  "node_tests": {"total": 185, "passed": 185, "failed": 0, "skipped": 0},
+  "schemas": 13,
+  "json_files": 185,
+  "discovery_records": 25,
+  "feeds": 11,
+  "package_r2_sha256": "b7619ec333f54849749911393ffd87be4959a8d907569108b21ba99cde0fb41f",
+  "package_r3_sha256": "f859d5529018049fab364ec525eefb5d66b56a77f14d73747fbb8a4c1546292e",
+  "pnpm_available": false,
+  "docker_available": false,
+  "external_services_executed": false
+}

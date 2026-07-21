@@ -1,0 +1,6 @@
+node_modules
+dist
+.astro
+references/jornal-concreto-html
+references/source-materials
+pnpm-lock.yaml

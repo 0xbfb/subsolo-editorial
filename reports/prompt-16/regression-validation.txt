@@ -1,0 +1,60 @@
+\n$ node scripts/check-boundaries.mjs
+Fronteiras arquiteturais válidas.
+\n$ node scripts/verify-source-manifest.mjs
+12 fontes verificadas por SHA-256.
+\n$ node scripts/validate-editorial-fixtures.mjs
+{
+  "status": "passed",
+  "tabs": 12,
+  "authors": 44,
+  "channels": 9,
+  "frames": 74,
+  "pitches": 2,
+  "articles": 3,
+  "edition": "ed_2026-07-20"
+}
+\n$ node scripts/validate-editorial-site.mjs
+Fixture editorial válida: 4 publicações, 9 canais, 44 autores, 3 história e 1 documento.
+\n$ node scripts/validate-public-content.mjs
+{
+  "status": "passed",
+  "roots": [
+    "content/publications"
+  ]
+}
+\n$ node scripts/validate-public-contracts.mjs
+{
+  "status": "passed",
+  "schemas": 13,
+  "draft": "2020-12"
+}
+\n$ node scripts/generate-discovery-assets.mjs
+Descoberta gerada: 25 registros, 8 dias, 11 feeds.
+\n$ node scripts/validate-discovery-assets.mjs
+Assets de descoberta válidos: 25 registros, 11 feeds.
+\n$ node scripts/validate-infra.mjs
+Infraestrutura estática válida: 6 serviços, 6 healthchecks, 5 portas locais.
+\n$ node scripts/verify-workflows.mjs
+Workflows aprovados: 4 arquivos, permissões mínimas e versões explícitas.
+\n$ node cli/subsolo.mjs validate-package --package fixtures/post-publication/golden/r2-correction.zip
+{
+  "status": "passed",
+  "package": "/mnt/data/subsolo-p16-work/subsolo-0.8.3-dev/fixtures/post-publication/golden/r2-correction.zip",
+  "edition_id": "ed_2026-07-20",
+  "run_id": "run_20260720T161000-0300_r2",
+  "revision": 2,
+  "entries": 11,
+  "checksums_valid": true,
+  "package_sha256": "b7619ec333f54849749911393ffd87be4959a8d907569108b21ba99cde0fb41f"
+}
+\n$ node cli/subsolo.mjs validate-package --package fixtures/post-publication/golden/r3-withdrawal.zip
+{
+  "status": "passed",
+  "package": "/mnt/data/subsolo-p16-work/subsolo-0.8.3-dev/fixtures/post-publication/golden/r3-withdrawal.zip",
+  "edition_id": "ed_2026-07-20",
+  "run_id": "run_20260720T190000-0300_r3",
+  "revision": 3,
+  "entries": 11,
+  "checksums_valid": true,
+  "package_sha256": "f859d5529018049fab364ec525eefb5d66b56a77f14d73747fbb8a4c1546292e"
+}

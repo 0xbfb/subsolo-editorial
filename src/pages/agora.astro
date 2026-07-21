@@ -1,0 +1,43 @@
+---
+import Breadcrumbs from '../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../components/editorial/PageIntro.astro';
+import ArticleCard from '../components/article/ArticleCard.astro';
+import SectionRule from '../components/editorial/SectionRule.astro';
+import Timeline from '../components/archive/Timeline.astro';
+import JornalConcretoLayout from '../layouts/JornalConcretoLayout.astro';
+import { editorialSite, authorNames, channelNames } from '../lib/presentation/site-repository';
+import { navigationFor } from '../lib/presentation/editorial-site';
+import { withBasePath } from '../lib/presentation/site-path';
+
+const priority = editorialSite.publications.find((publication) => publication.featured) ?? editorialSite.publications[0];
+const others = editorialSite.publications.filter((publication) => publication.id !== priority.id);
+const story = editorialSite.stories[0];
+const storyHref = withBasePath(`/historias/${story.slug}/`, import.meta.env.BASE_URL);
+const guardianHref = withBasePath(`/redacao/${story.guardian}/`, import.meta.env.BASE_URL);
+---
+<JornalConcretoLayout
+  title="Agora"
+  description="O estado editorial atual do Subsolo: prioridades, publicações, histórias abertas e próximos passos."
+  dateLabel={editorialSite.site.dateLabel}
+  navigation={navigationFor('/agora/')}
+  canonicalPath="/agora/"
+>
+  <main id="conteudo">
+    <Breadcrumbs items={[{ label: 'Início', href: '/' }, 'Agora']} />
+    <PageIntro eyebrow="Estado editorial" title="O que merece atenção agora" summary="Uma leitura curta do dia: prioridade principal, publicações recentes e histórias que continuam abertas." detail={editorialSite.site.closingLabel} />
+    <ArticleCard publication={priority} channelName={channelNames[priority.channel]} authorNames={priority.authors.map((slug) => authorNames[slug])} feature />
+    <SectionRule label="Transmissões recentes" detail={`${others.length} publicações`} />
+    <section class="news-grid news-grid--spaced" aria-label="Publicações recentes">
+      {others.map((publication) => <ArticleCard publication={publication} channelName={channelNames[publication.channel]} authorNames={publication.authors.map((slug) => authorNames[slug])} />)}
+    </section>
+    <SectionRule label="História em acompanhamento" detail={story.status} light />
+    <section class="split-layout">
+      <div>
+        <h2><a href={storyHref}>{story.title}</a></h2>
+        <p class="lead">{story.summary}</p>
+        <p><strong>Guardião editorial:</strong> <a href={guardianHref}>{authorNames[story.guardian]}</a></p>
+      </div>
+      <Timeline items={story.timeline.slice(-2)} />
+    </section>
+  </main>
+</JornalConcretoLayout>

@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "apply",
+  "source": "gmail",
+  "generated_at": "2026-07-20T23:04:02.371Z",
+  "input_count": 1,
+  "created_count": 0,
+  "planned_count": 0,
+  "duplicate_count": 0,
+  "probable_duplicate_count": 0,
+  "rejected_count": 1,
+  "quarantine_count": 1,
+  "editorial_transition": "TRIAGEM_ONLY",
+  "publication_effects": false,
+  "warnings": [],
+  "outcomes": [
+    {
+      "disposition": "rejected",
+      "code": "SUBSOLO_INGEST_ATTACHMENT_SUSPICIOUS",
+      "source_record_id": "gmail-exe",
+      "count": 1
+    }
+  ],
+  "provider": "fixture",
+  "output": "/mnt/data/subsolo-p15-work/subsolo-0.8.1-dev/.runtime/prompt-15/gmail-suspicious",
+  "sheets_write": false
+}

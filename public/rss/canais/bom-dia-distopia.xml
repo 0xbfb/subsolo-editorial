@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bom Dia, Distopia — Subsolo</title>
+    <link>https://subsolo.example/</link>
+    <description>Selecionar e explicar os acontecimentos mais relevantes das últimas 24 horas e estabelecer a primeira hierarquia editorial do dia.</description>
+    <language>pt-BR</language>
+    <atom:link href="https://subsolo.example/rss/canais/bom-dia-distopia.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bom Dia, Distopia — 20 de julho de 2026</title>
+      <link>https://subsolo.example/2026/07/20/bom-dia-distopia-20-de-julho-de-2026/</link>
+      <guid isPermaLink="true">https://subsolo.example/2026/07/20/bom-dia-distopia-20-de-julho-de-2026/</guid>
+      <pubDate>Mon, 20 Jul 2026 10:05:00 GMT</pubDate>
+      <description>A edição matinal organiza os fatos que merecem atravessar o ruído antes que o trânsito e os comunicados oficiais façam hora extra.</description>
+    </item>
+    <item>
+      <title>Bom Dia, Distopia — 19 de julho de 2026</title>
+      <link>https://subsolo.example/arquivo/registros/bom-dia-distopia-19-de-julho-de-2026/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/bom-dia-distopia-19-de-julho-de-2026/</guid>
+      <pubDate>Sun, 19 Jul 2026 10:05:00 GMT</pubDate>
+      <description>O conflito seguiu sem trégua, o xadrez ganhou final e os mercados passaram o domingo praticando lateralidade.</description>
+    </item>
+    <item>
+      <title>Bom Dia, Distopia — 18 de julho de 2026</title>
+      <link>https://subsolo.example/arquivo/registros/bom-dia-distopia-18-de-julho-de-2026/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/bom-dia-distopia-18-de-julho-de-2026/</guid>
+      <pubDate>Sat, 18 Jul 2026 10:05:00 GMT</pubDate>
+      <description>A guerra acumulou vítimas, o Judiciário fechou portas e Chennai abriu mais uma linha de cálculo.</description>
+    </item>
+    <item>
+      <title>Bom Dia, Distopia — 17 de julho de 2026</title>
+      <link>https://subsolo.example/arquivo/registros/bom-dia-distopia-17-de-julho-de-2026/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/bom-dia-distopia-17-de-julho-de-2026/</guid>
+      <pubDate>Fri, 17 Jul 2026 10:05:00 GMT</pubDate>
+      <description>Reciprocidade virou linha oficial, o crédito extraordinário apareceu e plataformas assinaram mais um protocolo eleitoral.</description>
+    </item>
+    <item>
+      <title>Bom Dia, Distopia — 16 de julho de 2026</title>
+      <link>https://subsolo.example/arquivo/registros/bom-dia-distopia-16-de-julho-de-2026/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/bom-dia-distopia-16-de-julho-de-2026/</guid>
+      <pubDate>Thu, 16 Jul 2026 10:05:00 GMT</pubDate>
+      <description>A tarifa ganhou data, exceções e uma quantidade industrial de respostas que ainda não eram decisões.</description>
+    </item>
+    <item>
+      <title>Bom Dia, Distopia — 15 de julho de 2026</title>
+      <link>https://subsolo.example/arquivo/registros/bom-dia-distopia-15-de-julho-de-2026/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/bom-dia-distopia-15-de-julho-de-2026/</guid>
+      <pubDate>Wed, 15 Jul 2026 10:05:00 GMT</pubDate>
+      <description>Serviços recuaram, tarifas avançaram e a política fez o esforço habitual para transformar incerteza em palanque.</description>
+    </item>
+    <item>
+      <title>Bom Dia, Distopia — 14 de julho de 2026</title>
+      <link>https://subsolo.example/arquivo/registros/bom-dia-distopia-14-de-julho-de-2026/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/bom-dia-distopia-14-de-julho-de-2026/</guid>
+      <pubDate>Tue, 14 Jul 2026 10:05:00 GMT</pubDate>
+      <description>A disputa em Ormuz ganhou materialidade enquanto o mercado ensaiou calma sem apresentar atestado médico.</description>
+    </item>
+    <item>
+      <title>Bom Dia, Distopia — 13 de julho de 2026</title>
+      <link>https://subsolo.example/arquivo/registros/bom-dia-distopia-13-de-julho-de-2026/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/bom-dia-distopia-13-de-julho-de-2026/</guid>
+      <pubDate>Mon, 13 Jul 2026 10:05:00 GMT</pubDate>
+      <description>Ormuz, petróleo e o frio paulistano abriram a semana com os sistemas lembrando que planejamento continua sendo um recurso escasso.</description>
+    </item>
+  </channel>
+</rss>

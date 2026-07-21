@@ -1,0 +1,20 @@
+---
+import type { EditorialPublication } from '../../lib/presentation/editorial-site';
+interface Props {
+  readonly publication: EditorialPublication;
+  readonly primarySources: number;
+  readonly independentSources: number;
+}
+const { publication, primarySources, independentSources } = Astro.props;
+---
+<section class="fact-sheet" aria-labelledby="ficha-editorial">
+  <h2 id="ficha-editorial">Ficha editorial</h2>
+  <dl class="publication-facts">
+    <div><dt>Natureza</dt><dd>{publication.type}</dd></div>
+    <div><dt>Estado</dt><dd>{publication.state}</dd></div>
+    <div><dt>Fontes primárias</dt><dd>{primarySources}</dd></div>
+    <div><dt>Fontes independentes</dt><dd>{independentSources}</dd></div>
+    <div><dt>Temas</dt><dd>{publication.topics.join(', ')}</dd></div>
+    <div><dt>Idioma</dt><dd>Português do Brasil</dd></div>
+  </dl>
+</section>

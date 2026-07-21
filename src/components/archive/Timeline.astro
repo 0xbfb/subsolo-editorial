@@ -1,0 +1,13 @@
+---
+interface TimelineItem { readonly date: string; readonly title: string; readonly text: string; }
+interface Props { readonly items: readonly TimelineItem[]; }
+const { items } = Astro.props;
+---
+<ol class="timeline">
+  {items.map((item) => (
+    <li>
+      <div class="timeline__date">{item.date}</div>
+      <div><h3>{item.title}</h3><p>{item.text}</p></div>
+    </li>
+  ))}
+</ol>

@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "issues": [],
+  "publications": 10000,
+  "durationMs": 99.67,
+  "heapDeltaBytes": 16586952,
+  "archiveIndexBytes": 5218932,
+  "facets": {
+    "channels": 9,
+    "authors": 44,
+    "topics": 18
+  },
+  "pageCount": 400,
+  "rssItems": 100,
+  "budgets": {
+    "synthetic_publications": 10000,
+    "generation_ms": 5000,
+    "heap_delta_bytes": 268435456,
+    "archive_index_bytes": 12582912,
+    "rss_items": 100,
+    "page_size": 25
+  }
+}

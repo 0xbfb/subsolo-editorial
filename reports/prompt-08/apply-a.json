@@ -1,0 +1,13 @@
+{
+  "mode": "apply",
+  "article_id": "artigo-2026-07-20-transporte",
+  "publication_id": "pub_MB76FYPQZ5RTPENBAR5611AJJ0",
+  "destination": "/mnt/data/subsolo-p8-final/.tmp/prompt-08-apply-a",
+  "written": [
+    "/mnt/data/subsolo-p8-final/.tmp/prompt-08-apply-a/publication.md",
+    "/mnt/data/subsolo-p8-final/.tmp/prompt-08-apply-a/sources.json",
+    "/mnt/data/subsolo-p8-final/.tmp/prompt-08-apply-a/corrections.json",
+    "/mnt/data/subsolo-p8-final/.tmp/prompt-08-apply-a/media.json",
+    "/mnt/data/subsolo-p8-final/.tmp/prompt-08-apply-a/provenance.public.json"
+  ]
+}

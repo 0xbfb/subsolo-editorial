@@ -1,0 +1,23 @@
+---
+import StatusBadge from '../editorial/StatusBadge.astro';
+import type { EditorialPublication } from '../../lib/presentation/editorial-site';
+import { publicationHref } from '../../lib/presentation/editorial-site';
+import { withBasePath } from '../../lib/presentation/site-path';
+interface Props {
+  readonly publication: EditorialPublication;
+  readonly channelName: string;
+  readonly authorNames?: readonly string[];
+  readonly feature?: boolean;
+}
+const { publication, channelName, authorNames = [], feature = false } = Astro.props;
+const href = withBasePath(publicationHref(publication), import.meta.env.BASE_URL);
+---
+<article class:list={['article-card', feature && 'article-card--feature']}>
+  <div class="kicker">{channelName} · {publication.type}</div>
+  <h2><a href={href}>{publication.title}</a></h2>
+  <p>{publication.subtitle}</p>
+  <div class="article-meta-row article-meta-row--wrap">
+    <StatusBadge label={publication.state} kind={publication.stateKind} />
+    <span class="meta">{authorNames.length > 0 ? `por ${authorNames.join(', ')} · ` : ''}{publication.readingTime}</span>
+  </div>
+</article>

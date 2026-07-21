@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "issues": [],
+  "metaEnforcedDirectives": [
+    "default-src",
+    "base-uri",
+    "connect-src",
+    "font-src",
+    "form-action",
+    "img-src",
+    "manifest-src",
+    "media-src",
+    "object-src",
+    "script-src",
+    "style-src",
+    "worker-src"
+  ],
+  "residualPlatformLimits": [
+    "GitHub Pages does not provide repository-controlled arbitrary response headers.",
+    "frame-ancestors, Permissions-Policy and X-Content-Type-Options require an HTTP response header and are not claimed through meta tags."
+  ]
+}

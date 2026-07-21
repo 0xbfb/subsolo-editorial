@@ -1,0 +1,25 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "media_01K0ABCDEFFGHJKMNPQRSTVWXE",
+    "type": "imagem",
+    "alt": "Plataforma ferroviária vista através de uma grade de manutenção.",
+    "caption": "Área operacional durante a manhã.",
+    "credit": "Subsolo Editorial",
+    "license": "Uso editorial autorizado",
+    "derivatives": [
+      {
+        "path": "/media/2026/07/transporte-1280.avif",
+        "width": 1280,
+        "height": 720,
+        "format": "avif"
+      },
+      {
+        "path": "/media/2026/07/transporte-1280.webp",
+        "width": 1280,
+        "height": 720,
+        "format": "webp"
+      }
+    ]
+  }
+]

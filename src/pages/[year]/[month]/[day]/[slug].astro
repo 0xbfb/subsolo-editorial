@@ -1,0 +1,86 @@
+---
+import Breadcrumbs from '../../../../components/navigation/Breadcrumbs.astro';
+import EditorialHeader from '../../../../components/article/EditorialHeader.astro';
+import TableOfContents from '../../../../components/article/TableOfContents.astro';
+import ArticleBody from '../../../../components/article/ArticleBody.astro';
+import EditorialFactSheet from '../../../../components/article/EditorialFactSheet.astro';
+import SourceList from '../../../../components/article/SourceList.astro';
+import CorrectionNotice from '../../../../components/article/CorrectionNotice.astro';
+import WithdrawalTombstone from '../../../../components/article/WithdrawalTombstone.astro';
+import ConnectionList from '../../../../components/article/ConnectionList.astro';
+import JornalConcretoLayout from '../../../../layouts/JornalConcretoLayout.astro';
+import PagefindMetadata from '../../../../components/discovery/PagefindMetadata.astro';
+import { editorialSite, authorNames, channelNames } from '../../../../lib/presentation/site-repository';
+import { connectionsFor, formatTimestamp, navigationFor, publicationHref, sourcesFor, type EditorialPublication, type EditorialRedirect } from '../../../../lib/presentation/editorial-site';
+import { withBasePath } from '../../../../lib/presentation/site-path';
+
+const paramsFromPath = (pathname: string) => {
+  const match = /^\/(\d{4})\/(\d{2})\/(\d{2})\/([a-z0-9]+(?:-[a-z0-9]+)*)\/$/.exec(pathname);
+  if (!match) throw new Error(`Caminho editorial inválido: ${pathname}`);
+  return { year: match[1], month: match[2], day: match[3], slug: match[4] };
+};
+
+export function getStaticPaths() {
+  const publications = editorialSite.publications.map((publication) => ({
+    params: paramsFromPath(publicationHref(publication)),
+    props: { publication, redirect: null },
+  }));
+  const redirects = editorialSite.redirects.map((redirect) => ({
+    params: paramsFromPath(redirect.fromPath),
+    props: { publication: null, redirect },
+  }));
+  return [...publications, ...redirects];
+}
+
+interface Props {
+  readonly publication: EditorialPublication | null;
+  readonly redirect: EditorialRedirect | null;
+}
+const { publication, redirect } = Astro.props;
+if (redirect) return Astro.redirect(withBasePath(redirect.toPath, import.meta.env.BASE_URL), redirect.statusCode);
+if (!publication) throw new Error('Publicação ausente.');
+const sources = sourcesFor(editorialSite, publication);
+const connections = connectionsFor(editorialSite, publication);
+const authorLabels = publication.authors.map((slug) => authorNames[slug] ?? slug);
+const publishedLabel = formatTimestamp(publication.publishedAt);
+const updatedLabel = publication.updatedAt ? formatTimestamp(publication.updatedAt) : null;
+const publicPublicationHref = withBasePath(publicationHref(publication), import.meta.env.BASE_URL);
+const publicStoryHref = publication.story ? withBasePath(`/historias/${publication.story}/`, import.meta.env.BASE_URL) : null;
+const pageSummary = publication.bodyVisibility === 'tombstone' && publication.tombstone ? publication.tombstone.impact : publication.subtitle;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': publication.type === 'boletim' ? 'NewsArticle' : 'Article',
+  headline: publication.title,
+  description: pageSummary,
+  datePublished: publication.publishedAt,
+  dateModified: publication.updatedAt ?? publication.publishedAt,
+  author: authorLabels.map((name) => ({ '@type': 'Person', name })),
+  publisher: { '@type': 'Organization', name: 'Subsolo' },
+  mainEntityOfPage: new URL(publicPublicationHref, Astro.site ?? Astro.url.origin).toString(),
+};
+---
+<JornalConcretoLayout title={publication.title} description={pageSummary} dateLabel={editorialSite.site.dateLabel} navigation={navigationFor(publicationHref(publication))} canonicalPath={publicationHref(publication)} ogType="article" jsonLd={jsonLd}>
+  <main id="conteudo" data-pagefind-body>
+    <PagefindMetadata channel={publication.channel} topics={publication.topics} authors={publication.authors} type={publication.type} state={publication.state} story={publication.story} date={publication.date} title={publication.title} summary={pageSummary} />
+    <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: channelNames[publication.channel], href: `/canais/${publication.channel}/` }, publication.title]} />
+    <EditorialHeader publication={publication} channelName={channelNames[publication.channel]} authorNames={authorLabels} editorName={authorNames[publication.editor] ?? publication.editor} publishedLabel={publishedLabel} updatedLabel={updatedLabel} />
+    {publication.bodyVisibility === 'tombstone' ? (
+      <>
+        <WithdrawalTombstone publication={publication} />
+        <CorrectionNotice corrections={publication.corrections} />
+      </>
+    ) : (
+      <>
+        <div class="article-layout">
+          <TableOfContents items={publication.toc} />
+          <ArticleBody sections={publication.sections} />
+        </div>
+        <EditorialFactSheet publication={publication} primarySources={sources.filter((source) => source.type === 'Documento primário').length} independentSources={sources.filter((source) => source.type !== 'Documento primário' && source.type !== 'Comunicado oficial').length} />
+        <SourceList sources={sources} />
+        <CorrectionNotice corrections={publication.corrections} />
+      </>
+    )}
+    {publication.story && <p class="story-link"><strong>História acompanhada:</strong> <a href={publicStoryHref ?? undefined}>abrir cronologia e contexto</a>.</p>}
+    <ConnectionList publications={connections} channelNames={channelNames} />
+  </main>
+</JornalConcretoLayout>

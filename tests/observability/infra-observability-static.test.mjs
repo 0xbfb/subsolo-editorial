@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';
+const read=(path)=>readFile(new URL(`../../${path}`,import.meta.url),'utf8');
+test('backup excludes plaintext env and requires encrypted portable artifact',async()=>{const backup=await read('infra/scripts/backup.sh');assert.doesNotMatch(backup,/env\.snapshot/);assert.match(backup,/aes-256-cbc/);assert.match(backup,/SUBSOLO_BACKUP_PASSPHRASE_FILE/);});
+test('restore supports test and guarded apply',async()=>{const restore=await read('infra/scripts/restore.sh');assert.match(restore,/--test/);assert.match(restore,/RESTORE_SUBSOLO/);assert.match(restore,/backup-manifest\.mjs[\"']? validate/);});
+test('monitor catalog and scheduled external smoke exist',async()=>{const monitors=JSON.parse(await read('infra/uptime-kuma/monitors.json'));assert.equal(monitors.public.length,4);assert.equal(monitors.local.length,5);const workflow=await read('.github/workflows/scheduled-checks.yml');assert.match(workflow,/schedule:/);assert.match(workflow,/smoke-site\.mjs/);});

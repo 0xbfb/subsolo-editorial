@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "apply",
+  "source": "gmail",
+  "generated_at": "2026-07-20T23:04:02.142Z",
+  "input_count": 1,
+  "created_count": 1,
+  "planned_count": 0,
+  "duplicate_count": 0,
+  "probable_duplicate_count": 0,
+  "rejected_count": 0,
+  "quarantine_count": 1,
+  "editorial_transition": "TRIAGEM_ONLY",
+  "publication_effects": false,
+  "warnings": [],
+  "outcomes": [
+    {
+      "disposition": "created",
+      "pauta_id": "pauta-2026-07-20-3a3d2c018cf9e393",
+      "status": "TRIAGEM",
+      "classification": "PRELIMINAR_NAO_EDITORIAL",
+      "source_record_id": "<gmail-001@fonte-confiavel.example>",
+      "claim_nature": "MENSAGEM_DE_FONTE"
+    }
+  ],
+  "provider": "fixture",
+  "output": "/mnt/data/subsolo-p15-work/subsolo-0.8.1-dev/.runtime/prompt-15/gmail-trusted",
+  "sheets_write": false
+}

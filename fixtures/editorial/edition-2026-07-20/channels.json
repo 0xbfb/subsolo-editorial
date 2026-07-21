@@ -1,0 +1,110 @@
+[
+  {
+    "channel_id": "bom-dia-distopia",
+    "name": "Bom Dia, Distopia",
+    "slug": "bom-dia-distopia",
+    "department": "Mesa Central — Bom Dia, Distopia",
+    "editor_id": "redacao011-cora",
+    "question": "O que aconteceu, o que realmente importa hoje e qual contradição a cidade está tentando normalizar antes do café?",
+    "function": "Selecionar e explicar os acontecimentos mais relevantes das últimas 24 horas e estabelecer a primeira hierarquia editorial do dia.",
+    "periodicity": "Diária, com fechamento matinal no fuso America/Sao_Paulo.",
+    "status": "ativo",
+    "is_daily": true
+  },
+  {
+    "channel_id": "depois-da-poeira",
+    "name": "Depois da Poeira",
+    "slug": "depois-da-poeira",
+    "department": "Departamento de Memória — Depois da Poeira",
+    "editor_id": "redacao011-recibo",
+    "question": "O que aconteceu depois que a notícia perdeu destaque?",
+    "function": "Acompanhar desfechos, atrasos, recuos, contradições, promessas e consequências de histórias já noticiadas.",
+    "periodicity": "Semanal, preferencialmente na sexta-feira ou no sábado.",
+    "status": "ativo",
+    "is_daily": false
+  },
+  {
+    "channel_id": "sinais-fracos",
+    "name": "Sinais Fracos",
+    "slug": "sinais-fracos",
+    "department": "Departamento de Antecipação — Sinais Fracos",
+    "editor_id": "redacao011-limiar",
+    "question": "O que está começando a mudar antes de virar manchete?",
+    "function": "Identificar sinais, riscos, datas e tendências ainda discretas com evidência observável e possibilidade futura de verificação.",
+    "periodicity": "Semanal, preferencialmente no domingo à noite ou na segunda-feira de manhã.",
+    "status": "ativo",
+    "is_daily": false
+  },
+  {
+    "channel_id": "autopsia-da-semana",
+    "name": "Autópsia da Semana",
+    "slug": "autopsia-da-semana",
+    "department": "Departamento de Investigações — Autópsia da Semana",
+    "editor_id": "redacao011-corte",
+    "question": "O que realmente aconteceu, como chegamos aqui e quais estruturas sustentam o problema?",
+    "function": "Analisar um acontecimento, documento, problema ou tendência em profundidade, com contexto, evidência e mapeamento de interesses.",
+    "periodicity": "Semanal ou quinzenal.",
+    "status": "ativo",
+    "is_daily": false
+  },
+  {
+    "channel_id": "manual-de-sobrevivencia-digital",
+    "name": "Manual de Sobrevivência Digital",
+    "slug": "manual-de-sobrevivencia-digital",
+    "department": "Departamento de Autonomia — Manual de Sobrevivência Digital",
+    "editor_id": "redacao011-modo",
+    "question": "O que mudou e o que o leitor pode fazer de maneira proporcional, segura e prática?",
+    "function": "Transformar acontecimentos de tecnologia, segurança, privacidade e plataformas em ações verificáveis.",
+    "periodicity": "Semanal, com edições extraordinárias quando houver risco urgente.",
+    "status": "ativo",
+    "is_daily": false
+  },
+  {
+    "channel_id": "sao-paulo-sob-o-capo",
+    "name": "São Paulo Sob o Capô",
+    "slug": "sao-paulo-sob-o-capo",
+    "department": "Departamento da Megacidade — São Paulo Sob o Capô",
+    "editor_id": "redacao011-trilho",
+    "question": "Como a cidade e o estado realmente funcionam, quem opera e quem responde quando falham?",
+    "function": "Acompanhar infraestrutura, serviços, concessões, contratos, operação pública e falhas recorrentes em São Paulo.",
+    "periodicity": "Semanal.",
+    "status": "ativo",
+    "is_daily": false
+  },
+  {
+    "channel_id": "poder-de-plataforma",
+    "name": "Poder de Plataforma",
+    "slug": "poder-de-plataforma",
+    "department": "Departamento de Governança Digital — Poder de Plataforma",
+    "editor_id": "redacao011-lock",
+    "question": "Que poder privado está sendo exercido, que dependência foi criada e quais alternativas permanecem reais?",
+    "function": "Acompanhar plataformas privadas que operam como infraestrutura de comunicação, trabalho, cultura e distribuição.",
+    "periodicity": "Semanal ou quinzenal.",
+    "status": "ativo",
+    "is_daily": false
+  },
+  {
+    "channel_id": "cultura-digital-sem-marketing",
+    "name": "Cultura Digital sem Marketing",
+    "slug": "cultura-digital-sem-marketing",
+    "department": "Departamento de Cultura Digital sem Marketing",
+    "editor_id": "redacao011-yumi",
+    "question": "O que existe além do anúncio, do lançamento e da nota?",
+    "function": "Analisar jogos, software, comunidades, protocolos e obras digitais sem reproduzir automaticamente o ciclo promocional.",
+    "periodicity": "Semanal ou quinzenal.",
+    "status": "ativo",
+    "is_daily": false
+  },
+  {
+    "channel_id": "xadrez-em-profundidade",
+    "name": "Xadrez em Profundidade",
+    "slug": "xadrez-em-profundidade",
+    "department": "Departamento de Xadrez em Profundidade",
+    "editor_id": "redacao011-clara",
+    "question": "Por que a partida, posição, tendência ou decisão importou além do resultado?",
+    "function": "Acompanhar xadrez profissional por partidas, preparação, tendências competitivas, tecnologia e contexto histórico.",
+    "periodicity": "Semanal em calendário competitivo relevante; quinzenal em períodos menos movimentados.",
+    "status": "ativo",
+    "is_daily": false
+  }
+]

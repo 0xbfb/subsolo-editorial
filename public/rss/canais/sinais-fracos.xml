@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sinais Fracos — Subsolo</title>
+    <link>https://subsolo.example/</link>
+    <description>Identificar sinais, riscos, datas e tendências ainda discretas com evidência observável e possibilidade futura de verificação.</description>
+    <language>pt-BR</language>
+    <atom:link href="https://subsolo.example/rss/canais/sinais-fracos.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A lista ainda não saiu, mas as fábricas já refazem a conta</title>
+      <link>https://subsolo.example/arquivo/registros/a-lista-ainda-nao-saiu-mas-as-fabricas-ja-refazem-a-conta/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/a-lista-ainda-nao-saiu-mas-as-fabricas-ja-refazem-a-conta/</guid>
+      <pubDate>Wed, 15 Jul 2026 18:00:00 GMT</pubDate>
+      <description>Exposição setorial e limites dos dados disponíveis foram apresentados sem antecipar a lista tarifária definitiva.</description>
+    </item>
+    <item>
+      <title>A semana antes do alarme: frete, café e campanha por procuração</title>
+      <link>https://subsolo.example/arquivo/registros/a-semana-antes-do-alarme-frete-cafe-e-campanha-por-procuracao/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/a-semana-antes-do-alarme-frete-cafe-e-campanha-por-procuracao/</guid>
+      <pubDate>Mon, 13 Jul 2026 22:30:00 GMT</pubDate>
+      <description>Três sinais verificáveis foram organizados por evidência, horizonte e gatilhos de confirmação.</description>
+    </item>
+  </channel>
+</rss>

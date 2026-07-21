@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "pipeline_version": "1.0.0",
+  "media_id": "media_01K0ABCDEFFGHJKMNPQRSTVWXE",
+  "source_sha256": "e7d9b533c88c3fd77214baddf537d602f401a7aef98514a4c20c73a618af2d43",
+  "source_dimensions": {
+    "width": 2048,
+    "height": 2048
+  },
+  "metadata_removed": true,
+  "derivative_count": 12,
+  "total_public_bytes": 164966
+}

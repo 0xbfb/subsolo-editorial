@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xadrez em Profundidade — Subsolo</title>
+    <link>https://subsolo.example/</link>
+    <description>Acompanhar xadrez profissional por partidas, preparação, tendências competitivas, tecnologia e contexto histórico.</description>
+    <language>pt-BR</language>
+    <atom:link href="https://subsolo.example/rss/canais/xadrez-em-profundidade.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chennai após quatro rodadas: a liderança de Firouzja é mais estreita que a tabela</title>
+      <link>https://subsolo.example/arquivo/registros/chennai-apos-quatro-rodadas-a-lideranca-de-firouzja-e-mais-estreita-que-a-tabela/</link>
+      <guid isPermaLink="true">https://subsolo.example/arquivo/registros/chennai-apos-quatro-rodadas-a-lideranca-de-firouzja-e-mais-estreita-que-a-tabela/</guid>
+      <pubDate>Sun, 19 Jul 2026 18:00:00 GMT</pubDate>
+      <description>A liderança foi analisada pelas chances desperdiçadas e pelas decisões práticas amplificadas pelo torneio curto.</description>
+    </item>
+  </channel>
+</rss>

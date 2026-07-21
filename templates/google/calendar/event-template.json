@@ -1,0 +1,15 @@
+{
+  "title": "[pauta_id ou artigo_id] Título",
+  "entity_id": "",
+  "responsible": "",
+  "status": "",
+  "start": "",
+  "end": "",
+  "timezone": "America/Sao_Paulo",
+  "links": {
+    "document": "",
+    "sheet": "",
+    "research_folder": ""
+  },
+  "notes_private": ""
+}

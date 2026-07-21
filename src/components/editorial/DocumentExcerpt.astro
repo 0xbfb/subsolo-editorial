@@ -1,0 +1,8 @@
+---
+interface Props { readonly page: string; readonly text: string; readonly comment: string; }
+const { page, text, comment } = Astro.props;
+---
+<figure class="document-excerpt">
+  <blockquote>{text}</blockquote>
+  <figcaption>{page} · comentário editorial: {comment}</figcaption>
+</figure>

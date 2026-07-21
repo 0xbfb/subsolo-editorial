@@ -1,0 +1,9 @@
+{"timestamp":"2026-07-21T02:33:34Z","level":"info","service":"subsolo-infra","event":"operation","message":"Plano de backup: PostgreSQL lógico, n8n, FreshRSS e Uptime Kuma."}
+{"timestamp":"2026-07-21T02:33:34Z","level":"info","service":"subsolo-infra","event":"operation","message":"Artefato final criptografado: /tmp/tmp.07SWJv0SvE/backups/subsolo-backup-20260720T233000Z.tar.gz.enc"}
+{"timestamp":"2026-07-21T02:33:34Z","level":"info","service":"subsolo-infra","event":"operation","message":"RPO=24h; RTO=4h; retenção local=14 dias."}
+{"timestamp":"2026-07-21T02:33:34Z","level":"info","service":"subsolo-infra","event":"backup.postgres.start","message":"Gerando dump lógico PostgreSQL."}
+{"timestamp":"2026-07-21T02:33:34Z","level":"info","service":"subsolo-infra","event":"backup.volume.start","message":"Arquivando volume n8n_data."}
+{"timestamp":"2026-07-21T02:33:35Z","level":"info","service":"subsolo-infra","event":"backup.volume.start","message":"Arquivando volume freshrss_data."}
+{"timestamp":"2026-07-21T02:33:35Z","level":"info","service":"subsolo-infra","event":"backup.volume.start","message":"Arquivando volume freshrss_extensions."}
+{"timestamp":"2026-07-21T02:33:35Z","level":"info","service":"subsolo-infra","event":"backup.volume.start","message":"Arquivando volume uptime_kuma_data."}
+{"timestamp":"2026-07-21T02:33:35Z","level":"info","service":"subsolo-infra","event":"operation","message":"Backup criptografado concluído: /tmp/tmp.07SWJv0SvE/backups/subsolo-backup-20260720T233000Z.tar.gz.enc"}
