@@ -6,7 +6,9 @@ import { dirname, resolve } from 'node:path';
 const root = resolve(process.cwd());
 const allowBlockers = process.argv.includes('--allow-blockers');
 const reportIndex = process.argv.indexOf('--report');
-const reportPath = resolve(reportIndex >= 0 ? process.argv[reportIndex + 1] : 'reports/prompt-20/release-verification.json');
+const reportPath = resolve(
+  reportIndex >= 0 ? process.argv[reportIndex + 1] : 'reports/prompt-20/release-verification.json',
+);
 const commands = [
   ['node-tests', process.execPath, ['scripts/test-all.mjs']],
   ['verify-workflows', process.execPath, ['scripts/verify-workflows.mjs']],
@@ -23,7 +25,11 @@ const commands = [
   ['validate-discovery', process.execPath, ['scripts/validate-discovery-assets.mjs']],
   ['render-preview', process.execPath, ['scripts/render-editorial-preview.mjs']],
   ['validate-preview-links', process.execPath, ['scripts/validate-preview-links.mjs']],
-  ['scan-preview-artifact', process.execPath, ['scripts/scan-public-artifact.mjs', 'reports/prompt-06/preview']],
+  [
+    'scan-preview-artifact',
+    process.execPath,
+    ['scripts/scan-public-artifact.mjs', 'reports/prompt-06/preview'],
+  ],
   ['audit-security', process.execPath, ['scripts/audit-security.mjs']],
   ['scan-secrets', process.execPath, ['scripts/scan-repository-secrets.mjs']],
   ['check-security-headers', process.execPath, ['scripts/check-security-headers.mjs']],
@@ -33,8 +39,16 @@ const commands = [
   ['test-scale', process.execPath, ['scripts/test-scale.mjs']],
   ['test-degraded', process.execPath, ['scripts/check-degraded-modes.mjs']],
   ['typescript-offline', 'tsc', ['-p', 'config/release/tsconfig.offline.json']],
-  ['python-media-compile', 'python3', ['-m', 'py_compile', 'scripts/process-media.py', 'scripts/browser-acceptance.py']],
-  ['fixture-flow', process.execPath, ['scripts/release-fixture-flow.mjs', 'reports/prompt-20/fixture-flow.json']],
+  [
+    'python-media-compile',
+    'python3',
+    ['-m', 'py_compile', 'scripts/process-media.py', 'scripts/browser-acceptance.py'],
+  ],
+  [
+    'fixture-flow',
+    process.execPath,
+    ['scripts/release-fixture-flow.mjs', 'reports/prompt-20/fixture-flow.json'],
+  ],
   ['generate-sbom', process.execPath, ['scripts/generate-sbom.mjs']],
 ];
 
@@ -60,8 +74,12 @@ for (const [name, command, args] of commands) {
     command: [command, ...args].join(' '),
     status,
     duration_ms: Date.now() - started,
-    stdout_tail: inheritedIo ? [] : (result.stdout ?? '').trim().split('\n').filter(Boolean).slice(-4),
-    stderr_tail: inheritedIo ? [] : (result.stderr ?? '').trim().split('\n').filter(Boolean).slice(-4),
+    stdout_tail: inheritedIo
+      ? []
+      : (result.stdout ?? '').trim().split('\n').filter(Boolean).slice(-4),
+    stderr_tail: inheritedIo
+      ? []
+      : (result.stderr ?? '').trim().split('\n').filter(Boolean).slice(-4),
   });
   if (status !== 0) {
     commandFailure = true;
@@ -84,11 +102,18 @@ const internalEvidenceRequirements = [
 ];
 const blockers = [];
 for (const [path, description] of internalEvidenceRequirements) {
-  if (!(await exists(path))) blockers.push({ code: 'missing-internal-evidence', path, description });
+  if (!(await exists(path)))
+    blockers.push({ code: 'missing-internal-evidence', path, description });
   else {
     try {
       const evidence = JSON.parse(await readFile(resolve(root, path), 'utf8'));
-      if (!String(evidence.status ?? '').startsWith('pass')) blockers.push({ code: 'internal-evidence-not-pass', path, description, status: evidence.status ?? 'unknown' });
+      if (!String(evidence.status ?? '').startsWith('pass'))
+        blockers.push({
+          code: 'internal-evidence-not-pass',
+          path,
+          description,
+          status: evidence.status ?? 'unknown',
+        });
     } catch {
       blockers.push({ code: 'invalid-internal-evidence', path, description });
     }
@@ -100,18 +125,36 @@ const evidenceRequirements = [
   ['node_modules/.bin/astro', 'Dependências instaladas em ambiente limpo'],
   ['dist/index.html', 'Build Astro real'],
   ['dist/pagefind/pagefind.js', 'Índice Pagefind real'],
-  ['reports/prompt-20/evidence/dependency-audit.json', 'Auditoria transitiva de vulnerabilidades e licenças'],
+  [
+    'reports/prompt-20/evidence/dependency-audit.json',
+    'Auditoria transitiva de vulnerabilidades e licenças',
+  ],
   ['reports/prompt-20/evidence/docker-stack.json', 'Stack Docker real e healthchecks'],
-  ['reports/prompt-20/evidence/google-workspace.json', 'Fluxo real com Docs, Sheets e Drive de teste'],
-  ['reports/prompt-20/evidence/github-pages.json', 'PR, build, deploy e smoke reais no GitHub Pages'],
-  ['reports/prompt-20/evidence/manual-acceptance.json', 'Aceite manual desktop, mobile, teclado e leitor de tela'],
+  [
+    'reports/prompt-20/evidence/google-workspace.json',
+    'Fluxo real com Docs, Sheets e Drive de teste',
+  ],
+  [
+    'reports/prompt-20/evidence/github-pages.json',
+    'PR, build, deploy e smoke reais no GitHub Pages',
+  ],
+  [
+    'reports/prompt-20/evidence/manual-acceptance.json',
+    'Aceite manual desktop, mobile, teclado e leitor de tela',
+  ],
 ];
 for (const [path, description] of evidenceRequirements) {
   if (!(await exists(path))) blockers.push({ code: 'missing-evidence', path, description });
   else {
     try {
       const evidence = JSON.parse(await readFile(resolve(root, path), 'utf8'));
-      if (evidence.status !== 'pass') blockers.push({ code: 'evidence-not-pass', path, description, status: evidence.status ?? 'unknown' });
+      if (evidence.status !== 'pass')
+        blockers.push({
+          code: 'evidence-not-pass',
+          path,
+          description,
+          status: evidence.status ?? 'unknown',
+        });
     } catch {
       if (path.endsWith('.json')) blockers.push({ code: 'invalid-evidence', path, description });
     }
@@ -119,7 +162,8 @@ for (const [path, description] of evidenceRequirements) {
 }
 
 const pkg = JSON.parse(await readFile(resolve(root, 'package.json'), 'utf8'));
-if (pkg.version !== '1.0.0-pre') blockers.push({ code: 'wrong-version', actual: pkg.version, expected: '1.0.0-pre' });
+if (pkg.version !== '1.0.0-pre')
+  blockers.push({ code: 'wrong-version', actual: pkg.version, expected: '1.0.0-pre' });
 if (commandFailure) blockers.push({ code: 'offline-validation-failed' });
 
 const status = commandFailure ? 'fail' : blockers.length > 0 ? 'no-go' : 'go';
@@ -136,5 +180,7 @@ const report = {
 };
 await mkdir(dirname(reportPath), { recursive: true });
 await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`);
-console.log(`\nRelease verification: ${status}; ${blockers.length} bloqueadores; relatório ${reportPath}.`);
+console.log(
+  `\nRelease verification: ${status}; ${blockers.length} bloqueadores; relatório ${reportPath}.`,
+);
 if (commandFailure || (blockers.length > 0 && !allowBlockers)) process.exit(1);

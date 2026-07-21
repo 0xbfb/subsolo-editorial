@@ -96,14 +96,8 @@
       "channel": "poder-de-plataforma",
       "type": "analise",
       "state": "Análise",
-      "authors": [
-        "termos"
-      ],
-      "topics": [
-        "plataformas-digitais",
-        "economia",
-        "desenvolvimento-de-software"
-      ],
+      "authors": ["termos"],
+      "topics": ["plataformas-digitais", "economia", "desenvolvimento-de-software"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,
@@ -122,14 +116,8 @@
       "channel": "manual-de-sobrevivencia-digital",
       "type": "guia",
       "state": "Retirado",
-      "authors": [
-        "modo"
-      ],
-      "topics": [
-        "privacidade",
-        "seguranca-digital",
-        "software-livre"
-      ],
+      "authors": ["modo"],
+      "topics": ["privacidade", "seguranca-digital", "software-livre"],
       "story": null,
       "correctionCount": 1,
       "correctionType": "retirada",
@@ -148,14 +136,8 @@
       "channel": "sao-paulo-sob-o-capo",
       "type": "reportagem",
       "state": "Corrigido",
-      "authors": [
-        "malu"
-      ],
-      "topics": [
-        "mobilidade",
-        "infraestrutura",
-        "concessoes"
-      ],
+      "authors": ["malu"],
+      "topics": ["mobilidade", "infraestrutura", "concessoes"],
       "story": "operacao-transporte-metropolitano",
       "correctionCount": 1,
       "correctionType": "correcao-factual",
@@ -174,14 +156,8 @@
       "channel": "bom-dia-distopia",
       "type": "boletim",
       "state": "Publicado",
-      "authors": [
-        "cora"
-      ],
-      "topics": [
-        "sao-paulo",
-        "tecnologia",
-        "privacidade"
-      ],
+      "authors": ["cora"],
+      "topics": ["sao-paulo", "tecnologia", "privacidade"],
       "story": "operacao-transporte-metropolitano",
       "correctionCount": 0,
       "correctionType": null,
@@ -200,13 +176,8 @@
       "channel": "cultura-digital-sem-marketing",
       "type": "reportagem",
       "state": "Arquivado",
-      "authors": [
-        "yumi",
-        "save"
-      ],
-      "topics": [
-        "cultura-digital"
-      ],
+      "authors": ["yumi", "save"],
+      "topics": ["cultura-digital"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,
@@ -225,13 +196,8 @@
       "channel": "xadrez-em-profundidade",
       "type": "analise-de-partida",
       "state": "Arquivado",
-      "authors": [
-        "clara",
-        "zeit"
-      ],
-      "topics": [
-        "xadrez-profissional"
-      ],
+      "authors": ["clara", "zeit"],
+      "topics": ["xadrez-profissional"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,
@@ -250,15 +216,8 @@
       "channel": "bom-dia-distopia",
       "type": "boletim",
       "state": "Arquivado",
-      "authors": [
-        "cora",
-        "pavio"
-      ],
-      "topics": [
-        "geopolitica",
-        "xadrez-profissional",
-        "bitcoin"
-      ],
+      "authors": ["cora", "pavio"],
+      "topics": ["geopolitica", "xadrez-profissional", "bitcoin"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,
@@ -277,15 +236,8 @@
       "channel": "cultura-digital-sem-marketing",
       "type": "analise",
       "state": "Arquivado",
-      "authors": [
-        "yumi",
-        "save"
-      ],
-      "topics": [
-        "industria-de-jogos",
-        "trabalho",
-        "economia"
-      ],
+      "authors": ["yumi", "save"],
+      "topics": ["industria-de-jogos", "trabalho", "economia"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,
@@ -304,15 +256,8 @@
       "channel": "depois-da-poeira",
       "type": "acompanhamento",
       "state": "Arquivado",
-      "authors": [
-        "recibo",
-        "replay"
-      ],
-      "topics": [
-        "geopolitica",
-        "economia",
-        "politica-brasileira"
-      ],
+      "authors": ["recibo", "replay"],
+      "topics": ["geopolitica", "economia", "politica-brasileira"],
       "story": "crise-ormuz",
       "correctionCount": 0,
       "correctionType": null,
@@ -331,15 +276,8 @@
       "channel": "bom-dia-distopia",
       "type": "boletim",
       "state": "Arquivado",
-      "authors": [
-        "cora",
-        "pavio"
-      ],
-      "topics": [
-        "geopolitica",
-        "justica",
-        "xadrez-profissional"
-      ],
+      "authors": ["cora", "pavio"],
+      "topics": ["geopolitica", "justica", "xadrez-profissional"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,
@@ -358,15 +296,8 @@
       "channel": "sao-paulo-sob-o-capo",
       "type": "reportagem",
       "state": "Arquivado",
-      "authors": [
-        "trilho",
-        "malu"
-      ],
-      "topics": [
-        "sao-paulo",
-        "infraestrutura",
-        "saude"
-      ],
+      "authors": ["trilho", "malu"],
+      "topics": ["sao-paulo", "infraestrutura", "saude"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,
@@ -385,15 +316,8 @@
       "channel": "poder-de-plataforma",
       "type": "analise",
       "state": "Arquivado",
-      "authors": [
-        "lock",
-        "termos"
-      ],
-      "topics": [
-        "plataformas-digitais",
-        "politica-brasileira",
-        "direitos-civis"
-      ],
+      "authors": ["lock", "termos"],
+      "topics": ["plataformas-digitais", "politica-brasileira", "direitos-civis"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,
@@ -412,15 +336,8 @@
       "channel": "bom-dia-distopia",
       "type": "boletim",
       "state": "Arquivado",
-      "authors": [
-        "cora",
-        "pavio"
-      ],
-      "topics": [
-        "politica-brasileira",
-        "economia",
-        "plataformas-digitais"
-      ],
+      "authors": ["cora", "pavio"],
+      "topics": ["politica-brasileira", "economia", "plataformas-digitais"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,
@@ -439,15 +356,8 @@
       "channel": "poder-de-plataforma",
       "type": "analise",
       "state": "Arquivado",
-      "authors": [
-        "lock",
-        "termos"
-      ],
-      "topics": [
-        "inteligencia-artificial",
-        "geopolitica",
-        "plataformas-digitais"
-      ],
+      "authors": ["lock", "termos"],
+      "topics": ["inteligencia-artificial", "geopolitica", "plataformas-digitais"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,
@@ -466,15 +376,8 @@
       "channel": "autopsia-da-semana",
       "type": "documento-comentado",
       "state": "Arquivado",
-      "authors": [
-        "corte",
-        "fio"
-      ],
-      "topics": [
-        "economia",
-        "administracao-publica",
-        "relacoes-internacionais"
-      ],
+      "authors": ["corte", "fio"],
+      "topics": ["economia", "administracao-publica", "relacoes-internacionais"],
       "story": "tarifas-comerciais",
       "correctionCount": 1,
       "correctionType": null,
@@ -493,15 +396,8 @@
       "channel": "bom-dia-distopia",
       "type": "boletim",
       "state": "Arquivado",
-      "authors": [
-        "cora",
-        "pavio"
-      ],
-      "topics": [
-        "economia",
-        "relacoes-internacionais",
-        "xadrez-profissional"
-      ],
+      "authors": ["cora", "pavio"],
+      "topics": ["economia", "relacoes-internacionais", "xadrez-profissional"],
       "story": "tarifas-comerciais",
       "correctionCount": 0,
       "correctionType": null,
@@ -520,15 +416,8 @@
       "channel": "autopsia-da-semana",
       "type": "analise",
       "state": "Arquivado",
-      "authors": [
-        "corte",
-        "fio"
-      ],
-      "topics": [
-        "economia",
-        "politica-brasileira",
-        "relacoes-internacionais"
-      ],
+      "authors": ["corte", "fio"],
+      "topics": ["economia", "politica-brasileira", "relacoes-internacionais"],
       "story": "tarifas-comerciais",
       "correctionCount": 0,
       "correctionType": null,
@@ -547,15 +436,8 @@
       "channel": "sinais-fracos",
       "type": "explicador",
       "state": "Arquivado",
-      "authors": [
-        "limiar",
-        "radar"
-      ],
-      "topics": [
-        "economia",
-        "trabalho",
-        "economia"
-      ],
+      "authors": ["limiar", "radar"],
+      "topics": ["economia", "trabalho", "economia"],
       "story": "tarifas-comerciais",
       "correctionCount": 0,
       "correctionType": null,
@@ -574,15 +456,8 @@
       "channel": "bom-dia-distopia",
       "type": "boletim",
       "state": "Arquivado",
-      "authors": [
-        "cora",
-        "pavio"
-      ],
-      "topics": [
-        "economia",
-        "politica-brasileira",
-        "trabalho"
-      ],
+      "authors": ["cora", "pavio"],
+      "topics": ["economia", "politica-brasileira", "trabalho"],
       "story": "tarifas-comerciais",
       "correctionCount": 0,
       "correctionType": null,
@@ -601,15 +476,8 @@
       "channel": "manual-de-sobrevivencia-digital",
       "type": "guia",
       "state": "Arquivado",
-      "authors": [
-        "modo",
-        "patch"
-      ],
-      "topics": [
-        "seguranca-digital",
-        "software-livre",
-        "inteligencia-artificial"
-      ],
+      "authors": ["modo", "patch"],
+      "topics": ["seguranca-digital", "software-livre", "inteligencia-artificial"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,
@@ -628,15 +496,8 @@
       "channel": "poder-de-plataforma",
       "type": "analise",
       "state": "Arquivado",
-      "authors": [
-        "lock",
-        "termos"
-      ],
-      "topics": [
-        "inteligencia-artificial",
-        "seguranca-digital",
-        "plataformas-digitais"
-      ],
+      "authors": ["lock", "termos"],
+      "topics": ["inteligencia-artificial", "seguranca-digital", "plataformas-digitais"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,
@@ -655,15 +516,8 @@
       "channel": "bom-dia-distopia",
       "type": "boletim",
       "state": "Arquivado",
-      "authors": [
-        "cora",
-        "pavio"
-      ],
-      "topics": [
-        "relacoes-internacionais",
-        "economia",
-        "energia"
-      ],
+      "authors": ["cora", "pavio"],
+      "topics": ["relacoes-internacionais", "economia", "energia"],
       "story": "crise-ormuz",
       "correctionCount": 0,
       "correctionType": null,
@@ -682,15 +536,8 @@
       "channel": "sinais-fracos",
       "type": "analise",
       "state": "Arquivado",
-      "authors": [
-        "limiar",
-        "radar"
-      ],
-      "topics": [
-        "economia",
-        "geopolitica",
-        "politica-brasileira"
-      ],
+      "authors": ["limiar", "radar"],
+      "topics": ["economia", "geopolitica", "politica-brasileira"],
       "story": "crise-ormuz",
       "correctionCount": 0,
       "correctionType": null,
@@ -709,15 +556,8 @@
       "channel": "autopsia-da-semana",
       "type": "reportagem",
       "state": "Arquivado",
-      "authors": [
-        "corte",
-        "fio"
-      ],
-      "topics": [
-        "relacoes-internacionais",
-        "geopolitica",
-        "economia"
-      ],
+      "authors": ["corte", "fio"],
+      "topics": ["relacoes-internacionais", "geopolitica", "economia"],
       "story": "crise-ormuz",
       "correctionCount": 0,
       "correctionType": null,
@@ -736,15 +576,8 @@
       "channel": "bom-dia-distopia",
       "type": "boletim",
       "state": "Arquivado",
-      "authors": [
-        "cora",
-        "pavio"
-      ],
-      "topics": [
-        "relacoes-internacionais",
-        "geopolitica",
-        "sao-paulo"
-      ],
+      "authors": ["cora", "pavio"],
+      "topics": ["relacoes-internacionais", "geopolitica", "sao-paulo"],
       "story": null,
       "correctionCount": 0,
       "correctionType": null,

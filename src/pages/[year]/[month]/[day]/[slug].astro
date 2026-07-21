@@ -14,13 +14,13 @@ import { editorialSite, authorNames, channelNames } from '../../../../lib/presen
 import { connectionsFor, formatTimestamp, navigationFor, publicationHref, sourcesFor, type EditorialPublication, type EditorialRedirect } from '../../../../lib/presentation/editorial-site';
 import { withBasePath } from '../../../../lib/presentation/site-path';
 
-const paramsFromPath = (pathname: string) => {
-  const match = /^\/(\d{4})\/(\d{2})\/(\d{2})\/([a-z0-9]+(?:-[a-z0-9]+)*)\/$/.exec(pathname);
-  if (!match) throw new Error(`Caminho editorial inválido: ${pathname}`);
-  return { year: match[1], month: match[2], day: match[3], slug: match[4] };
-};
-
 export function getStaticPaths() {
+  const paramsFromPath = (pathname: string) => {
+    const match = /^\/(\d{4})\/(\d{2})\/(\d{2})\/([a-z0-9]+(?:-[a-z0-9]+)*)\/$/.exec(pathname);
+    if (!match) throw new Error(`Caminho editorial inválido: ${pathname}`);
+    return { year: match[1], month: match[2], day: match[3], slug: match[4] };
+  };
+
   const publications = editorialSite.publications.map((publication) => ({
     params: paramsFromPath(publicationHref(publication)),
     props: { publication, redirect: null },

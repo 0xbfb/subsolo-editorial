@@ -15,15 +15,15 @@ O sistema deve preservar quatro propriedades:
 
 ## 2. Ativos
 
-| Ativo | Sensibilidade | Controle principal |
-|---|---|---|
-| conteúdo publicado | público, integridade alta | PR humano, schemas, checksums e pacotes imutáveis |
-| pautas e Mapa do Dia | privado | Sheets/Drive privados e allowlist de exportação |
-| credenciais Google/GitHub/n8n | secreto | variáveis de ambiente, scopes mínimos e secret scan |
-| masters de mídia | privado/licenciado | nunca entram em `public/`; apenas derivados aprovados |
-| backups | confidencial | criptografia, checksum e restore de teste |
-| logs operacionais | interno | redação de segredos e exclusão de corpo editorial |
-| histórico de revisão | público e imutável | cadeia `supersedes`, redirects e tombstones |
+| Ativo                         | Sensibilidade             | Controle principal                                    |
+| ----------------------------- | ------------------------- | ----------------------------------------------------- |
+| conteúdo publicado            | público, integridade alta | PR humano, schemas, checksums e pacotes imutáveis     |
+| pautas e Mapa do Dia          | privado                   | Sheets/Drive privados e allowlist de exportação       |
+| credenciais Google/GitHub/n8n | secreto                   | variáveis de ambiente, scopes mínimos e secret scan   |
+| masters de mídia              | privado/licenciado        | nunca entram em `public/`; apenas derivados aprovados |
+| backups                       | confidencial              | criptografia, checksum e restore de teste             |
+| logs operacionais             | interno                   | redação de segredos e exclusão de corpo editorial     |
+| histórico de revisão          | público e imutável        | cadeia `supersedes`, redirects e tombstones           |
 
 ## 3. Fronteiras de confiança
 
@@ -99,14 +99,14 @@ GitHub Pages não oferece configuração arbitrária de headers pelo repositóri
 
 ## 6. Matriz de risco residual
 
-| Risco | Severidade | Estado | Decisão |
-|---|---:|---|---|
-| lockfile ausente | alta | aberto | bloqueia 1.0.0 |
-| auditoria transitiva offline | alta | aberto | bloquear release até auditoria online |
-| revisão real com leitor de tela não executada | média | aberto | gate manual de release |
-| headers não suportados pelo Pages | média | aceito temporariamente | avaliar host/CDN definitivo |
-| contato de segurança ainda provisório | média | aberto | bloquear publicação de `security.txt` |
-| serviços Docker não executados neste ambiente | média | aberto | homologar em host local real |
+| Risco                                         | Severidade | Estado                 | Decisão                               |
+| --------------------------------------------- | ---------: | ---------------------- | ------------------------------------- |
+| lockfile ausente                              |       alta | aberto                 | bloqueia 1.0.0                        |
+| auditoria transitiva offline                  |       alta | aberto                 | bloquear release até auditoria online |
+| revisão real com leitor de tela não executada |      média | aberto                 | gate manual de release                |
+| headers não suportados pelo Pages             |      média | aceito temporariamente | avaliar host/CDN definitivo           |
+| contato de segurança ainda provisório         |      média | aberto                 | bloquear publicação de `security.txt` |
+| serviços Docker não executados neste ambiente |      média | aberto                 | homologar em host local real          |
 
 ## 7. Processo de revisão
 

@@ -4,13 +4,13 @@ A stack local executa automações e ferramentas editoriais. Ela **não hospeda 
 
 ## Serviços core
 
-| Serviço | Imagem fixada | Acesso local |
-|---|---|---|
-| PostgreSQL | `postgres:17.10-alpine3.24` | somente rede Docker |
-| n8n | `docker.n8n.io/n8nio/n8n:2.29.10` | `http://127.0.0.1:5678` |
-| FreshRSS | `freshrss/freshrss:1.29.1` | `http://127.0.0.1:8080` |
-| SearXNG | `ghcr.io/searxng/searxng:2026.5.10-df1f24fb7` | `http://127.0.0.1:8081` |
-| Uptime Kuma | `louislam/uptime-kuma:2.3.2` | `http://127.0.0.1:3001` |
+| Serviço     | Imagem fixada                                 | Acesso local            |
+| ----------- | --------------------------------------------- | ----------------------- |
+| PostgreSQL  | `postgres:17.10-alpine3.24`                   | somente rede Docker     |
+| n8n         | `docker.n8n.io/n8nio/n8n:2.29.10`             | `http://127.0.0.1:5678` |
+| FreshRSS    | `freshrss/freshrss:1.29.1`                    | `http://127.0.0.1:8080` |
+| SearXNG     | `ghcr.io/searxng/searxng:2026.5.10-df1f24fb7` | `http://127.0.0.1:8081` |
+| Uptime Kuma | `louislam/uptime-kuma:2.3.2`                  | `http://127.0.0.1:3001` |
 
 O profile `alerts` adiciona `binwiederhier/ntfy:v2.23.0` em `127.0.0.1:8082`.
 

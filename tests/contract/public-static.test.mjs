@@ -21,7 +21,20 @@ test('Astro usa loaders atuais e Zod sem contaminar o domínio', () => {
   assert.match(zodSchemas, /PUBLICATION_TYPES/);
   assert.match(zodSchemas, /PUBLIC_SCHEMA_VERSION/);
   assert.ok((zodSchemas.match(/\.strict\(\)/g) ?? []).length >= 13);
-  for (const schema of ['publicPublicationSchema', 'publicEditionSchema', 'publicSourceSchema', 'publicCorrectionSchema', 'publicMediaSchema', 'publicStorySchema', 'publicAuthorSchema', 'publicChannelSchema', 'publicTopicSchema', 'publicRedirectSchema', 'publicTombstoneSchema']) assert.match(zodSchemas, new RegExp(`export const ${schema}`));
+  for (const schema of [
+    'publicPublicationSchema',
+    'publicEditionSchema',
+    'publicSourceSchema',
+    'publicCorrectionSchema',
+    'publicMediaSchema',
+    'publicStorySchema',
+    'publicAuthorSchema',
+    'publicChannelSchema',
+    'publicTopicSchema',
+    'publicRedirectSchema',
+    'publicTombstoneSchema',
+  ])
+    assert.match(zodSchemas, new RegExp(`export const ${schema}`));
   assert.doesNotMatch(domainContract, /astro:/);
 });
 
@@ -33,4 +46,5 @@ test('fixture pública contém front matter e blocos permitidos', () => {
 
 test('fixture insegura exercita detecção de script', () => assert.match(unsafe, /<script>/));
 
-test('fixture privada exercita rejeição de campos desconhecidos', () => assert.match(privateField, /internal_note/));
+test('fixture privada exercita rejeição de campos desconhecidos', () =>
+  assert.match(privateField, /internal_note/));

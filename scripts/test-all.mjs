@@ -10,7 +10,7 @@ async function collect(directory) {
   const files = [];
   for (const entry of entries.sort((a, b) => a.name.localeCompare(b.name))) {
     const path = join(directory, entry.name);
-    if (entry.isDirectory()) files.push(...await collect(path));
+    if (entry.isDirectory()) files.push(...(await collect(path)));
     else if (entry.isFile() && entry.name.endsWith('.test.mjs')) files.push(path);
   }
   return files;

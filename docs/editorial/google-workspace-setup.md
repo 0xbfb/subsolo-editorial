@@ -1,4 +1,3 @@
-
 # Configuração do ambiente editorial Google
 
 ## Planilha

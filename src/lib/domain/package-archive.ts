@@ -42,11 +42,33 @@ export type PackageArchivePlan = Readonly<{
 }>;
 
 export type PackageArchivePort = Readonly<{
-  validateRoot(rootFolderId: string): Promise<Readonly<{ id: string; name: string; driveId: string | null }>>;
-  planPath(rootFolderId: string, year: string, month: string): Promise<Readonly<{ folderId: string | null; path: string; segments: readonly ArchivePathSegment[] }>>;
-  ensurePath(rootFolderId: string, year: string, month: string): Promise<Readonly<{ folderId: string; path: string; segments: readonly ArchivePathSegment[] }>>;
-  findByPackageSha256(folderId: string, packageSha256: string): Promise<Readonly<Record<string, unknown>> | null>;
-  uploadResumable(input: Readonly<{ folderId: string; name: string; bytes: Uint8Array; metadata: Readonly<Record<string, string>> }>): Promise<Readonly<Record<string, unknown>>>;
+  validateRoot(
+    rootFolderId: string,
+  ): Promise<Readonly<{ id: string; name: string; driveId: string | null }>>;
+  planPath(
+    rootFolderId: string,
+    year: string,
+    month: string,
+  ): Promise<
+    Readonly<{ folderId: string | null; path: string; segments: readonly ArchivePathSegment[] }>
+  >;
+  ensurePath(
+    rootFolderId: string,
+    year: string,
+    month: string,
+  ): Promise<Readonly<{ folderId: string; path: string; segments: readonly ArchivePathSegment[] }>>;
+  findByPackageSha256(
+    folderId: string,
+    packageSha256: string,
+  ): Promise<Readonly<Record<string, unknown>> | null>;
+  uploadResumable(
+    input: Readonly<{
+      folderId: string;
+      name: string;
+      bytes: Uint8Array;
+      metadata: Readonly<Record<string, string>>;
+    }>,
+  ): Promise<Readonly<Record<string, unknown>>>;
   getMetadata(fileId: string): Promise<Readonly<Record<string, unknown>>>;
   download(fileId: string): Promise<Uint8Array>;
 }>;

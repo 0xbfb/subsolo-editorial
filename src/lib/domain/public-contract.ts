@@ -262,5 +262,4 @@ export type ContractIssue = Readonly<{
 }>;
 
 export type ContractResult<T> =
-  | Readonly<{ ok: true; value: T }>
-  | Readonly<{ ok: false; issues: readonly ContractIssue[] }>;
+  Readonly<{ ok: true; value: T }> | Readonly<{ ok: false; issues: readonly ContractIssue[] }>;

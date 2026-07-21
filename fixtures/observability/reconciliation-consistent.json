@@ -1,8 +1,32 @@
 {
   "kind": "operational-reconciliation",
   "generated_at": "2026-07-20T23:30:00-03:00",
-  "sheets": [{"article_id":"art_subsolo_2026_0001","revision":1,"status":"AGUARDANDO_MERGE","package_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","drive_file_id":"drive_a","pr_url":"https://github.invalid/subsolo/pull/1"}],
-  "drive": [{"article_id":"art_subsolo_2026_0001","revision":1,"package_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","file_id":"drive_a"}],
-  "github": [{"article_id":"art_subsolo_2026_0001","revision":1,"state":"open","pr_url":"https://github.invalid/subsolo/pull/1","merge_commit_sha":null}],
+  "sheets": [
+    {
+      "article_id": "art_subsolo_2026_0001",
+      "revision": 1,
+      "status": "AGUARDANDO_MERGE",
+      "package_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "drive_file_id": "drive_a",
+      "pr_url": "https://github.invalid/subsolo/pull/1"
+    }
+  ],
+  "drive": [
+    {
+      "article_id": "art_subsolo_2026_0001",
+      "revision": 1,
+      "package_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "file_id": "drive_a"
+    }
+  ],
+  "github": [
+    {
+      "article_id": "art_subsolo_2026_0001",
+      "revision": 1,
+      "state": "open",
+      "pr_url": "https://github.invalid/subsolo/pull/1",
+      "merge_commit_sha": null
+    }
+  ],
   "deployments": []
 }

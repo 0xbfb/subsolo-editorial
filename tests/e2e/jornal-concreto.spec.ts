@@ -5,7 +5,10 @@ test.describe('Jornal Concreto', () => {
     await page.goto('/');
     await expect(page.locator('h1')).toContainText('A cidade terceirizou o relógio');
     await expect(page.locator('.hero-headline--static')).toHaveCSS('text-decoration-line', 'none');
-    await expect(page.locator('.channel-card__title').first()).toHaveCSS('text-decoration-line', 'underline');
+    await expect(page.locator('.channel-card__title').first()).toHaveCSS(
+      'text-decoration-line',
+      'underline',
+    );
 
     const toggle = page.locator('[data-theme-toggle]');
     await expect(toggle).toHaveAttribute('aria-pressed', 'false');
@@ -17,7 +20,9 @@ test.describe('Jornal Concreto', () => {
   test('não produz overflow horizontal no viewport móvel', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('/');
-    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+    const overflow = await page.evaluate(
+      () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    );
     expect(overflow).toBeLessThanOrEqual(1);
     await expect(page).toHaveScreenshot('jornal-concreto-mobile.png', { fullPage: true });
   });

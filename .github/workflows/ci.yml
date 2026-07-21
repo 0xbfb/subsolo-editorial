@@ -26,8 +26,25 @@ jobs:
         uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
-      - name: Preparar projeto
-        uses: ./.github/actions/setup-project
+      - name: Configurar pnpm
+        uses: pnpm/action-setup@v6.0.8
+        with:
+          version: '11.15.1'
+          run_install: false
+      - name: Configurar Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: '22.16.0'
+      - name: Instalar dependências
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -f pnpm-lock.yaml ]]; then
+            pnpm install --frozen-lockfile
+          else
+            echo "::warning title=Lockfile ausente::pnpm-lock.yaml ainda não foi gerado; instalação não congelada apenas para homologação."
+            pnpm install --no-frozen-lockfile
+          fi
       - name: Verificar workflows
         run: pnpm verify:workflows
       - name: Auditar segurança e permissões
@@ -39,7 +56,7 @@ jobs:
       - name: Typecheck
         run: pnpm typecheck
       - name: Testes
-        run: pnpm test
+        run: pnpm test && pnpm test:source-manifest
       - name: Build estático
         run: pnpm build
       - name: Verificar artefato

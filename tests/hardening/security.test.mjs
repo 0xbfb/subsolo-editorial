@@ -40,14 +40,16 @@ test('scripts públicos não usam sinks de HTML dinâmico', async () => {
 });
 
 test('workflows e compose respeitam permissões mínimas', async () => {
-  const report = await checkMinimumPermissions({ root: new URL('../..', import.meta.url).pathname });
+  const report = await checkMinimumPermissions({
+    root: new URL('../..', import.meta.url).pathname,
+  });
   assert.equal(report.status, 'pass');
   assert.equal(report.workflows, 4);
   assert.equal(report.serviceCount, 6);
 });
 
 test('checkouts desativam persistência de credenciais e CI executa hardening', async () => {
-  for (const file of ['ci.yml','deploy-pages.yml','preview.yml','scheduled-checks.yml']) {
+  for (const file of ['ci.yml', 'deploy-pages.yml', 'preview.yml', 'scheduled-checks.yml']) {
     const workflow = await text(`.github/workflows/${file}`);
     const checkouts = workflow.match(/uses: actions\/checkout@v7\.0\.1/g) ?? [];
     assert.ok(checkouts.length >= 1);
@@ -85,5 +87,8 @@ test('portal declara política de privacidade sem analytics ou tracking', async 
   const source = `${page}\n${await text('src/layouts/JornalConcretoLayout.astro')}`;
   assert.match(page, /não incorpora analytics/i);
   assert.match(page, /subsolo-theme/);
-  assert.doesNotMatch(source, /google-analytics|googletagmanager|segment\.com|plausible\.io|matomo/i);
+  assert.doesNotMatch(
+    source,
+    /google-analytics|googletagmanager|segment\.com|plausible\.io|matomo/i,
+  );
 });

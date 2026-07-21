@@ -9,8 +9,6 @@
     "published_at": "2026-07-20T07:55:00-03:00",
     "accessed_at": "2026-07-20T08:00:00-03:00",
     "archived_url": null,
-    "supports": [
-      "claim-incident-start"
-    ]
+    "supports": ["claim-incident-start"]
   }
 ]

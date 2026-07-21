@@ -273,9 +273,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-media-assets.mjs /tmp/subsolo-pre-flow-oKLAOf/media",
       "status": 0,
       "duration_ms": 1315,
-      "stdout_tail": [
-        "Ativos de mídia aprovados: 12 derivados."
-      ],
+      "stdout_tail": ["Ativos de mídia aprovados: 12 derivados."],
       "stderr_tail": []
     },
     {
@@ -283,9 +281,7 @@
       "command": "tar -czf /tmp/subsolo-pre-flow-oKLAOf/backup-staging/n8n_data.tar.gz -C /tmp/subsolo-pre-flow-oKLAOf/n8n_data .",
       "status": 0,
       "duration_ms": 29,
-      "stdout_tail": [
-        ""
-      ],
+      "stdout_tail": [""],
       "stderr_tail": []
     },
     {
@@ -293,9 +289,7 @@
       "command": "tar -czf /tmp/subsolo-pre-flow-oKLAOf/backup-staging/freshrss_data.tar.gz -C /tmp/subsolo-pre-flow-oKLAOf/freshrss_data .",
       "status": 0,
       "duration_ms": 29,
-      "stdout_tail": [
-        ""
-      ],
+      "stdout_tail": [""],
       "stderr_tail": []
     },
     {
@@ -303,9 +297,7 @@
       "command": "tar -czf /tmp/subsolo-pre-flow-oKLAOf/backup-staging/freshrss_extensions.tar.gz -C /tmp/subsolo-pre-flow-oKLAOf/freshrss_extensions .",
       "status": 0,
       "duration_ms": 29,
-      "stdout_tail": [
-        ""
-      ],
+      "stdout_tail": [""],
       "stderr_tail": []
     },
     {
@@ -313,9 +305,7 @@
       "command": "tar -czf /tmp/subsolo-pre-flow-oKLAOf/backup-staging/uptime_kuma_data.tar.gz -C /tmp/subsolo-pre-flow-oKLAOf/uptime_kuma_data .",
       "status": 0,
       "duration_ms": 29,
-      "stdout_tail": [
-        ""
-      ],
+      "stdout_tail": [""],
       "stderr_tail": []
     },
     {
@@ -343,9 +333,7 @@
       "command": "tar -czf /tmp/subsolo-pre-flow-oKLAOf/subsolo-backup-pre.tar.gz -C /tmp/subsolo-pre-flow-oKLAOf/backup-staging .",
       "status": 0,
       "duration_ms": 31,
-      "stdout_tail": [
-        ""
-      ],
+      "stdout_tail": [""],
       "stderr_tail": []
     },
     {
@@ -353,9 +341,7 @@
       "command": "openssl enc -aes-256-cbc -pbkdf2 -salt -in /tmp/subsolo-pre-flow-oKLAOf/subsolo-backup-pre.tar.gz -out /tmp/subsolo-pre-flow-oKLAOf/backup/subsolo-backup-pre.tar.gz.enc -pass file:/tmp/subsolo-pre-flow-oKLAOf/backup.pass",
       "status": 0,
       "duration_ms": 25,
-      "stdout_tail": [
-        ""
-      ],
+      "stdout_tail": [""],
       "stderr_tail": []
     },
     {

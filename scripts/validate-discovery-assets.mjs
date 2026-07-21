@@ -20,7 +20,14 @@ if (index.total !== index.entries.length || index.total < 20) {
   throw new Error('DISCOVERY_INDEX_INVALID');
 }
 
-const forbiddenKeys = new Set(['body', 'sections', 'content', 'sources', 'internalNotes', 'private']);
+const forbiddenKeys = new Set([
+  'body',
+  'sections',
+  'content',
+  'sources',
+  'internalNotes',
+  'private',
+]);
 const ids = new Set();
 const hrefs = new Set();
 for (const [position, entry] of index.entries.entries()) {
@@ -36,12 +43,14 @@ for (const [position, entry] of index.entries.entries()) {
   }
 }
 
-
 const withdrawn = index.entries.find((entry) => entry.bodyVisibility === 'tombstone');
 if (!withdrawn || withdrawn.state !== 'Retirado' || !withdrawn.correctionSummary) {
   throw new Error('DISCOVERY_WITHDRAWAL_NOT_PRESERVED');
 }
-if (/aplicativo mudou os termos/i.test(withdrawn.summary) && withdrawn.summary === 'O aplicativo mudou os termos') {
+if (
+  /aplicativo mudou os termos/i.test(withdrawn.summary) &&
+  withdrawn.summary === 'O aplicativo mudou os termos'
+) {
   throw new Error('DISCOVERY_WITHDRAWAL_BODY_LEAK');
 }
 
@@ -51,7 +60,9 @@ if (!rss.includes('<rss version="2.0"') || !rss.includes('<item>')) {
 }
 
 const channelFeedDirectory = 'public/rss/canais';
-const channelFeeds = (await readdir(channelFeedDirectory)).filter((name) => name.endsWith('.xml')).sort();
+const channelFeeds = (await readdir(channelFeedDirectory))
+  .filter((name) => name.endsWith('.xml'))
+  .sort();
 if (channelFeeds.length !== 9) {
   throw new Error(`DISCOVERY_CHANNEL_FEEDS_INVALID expected=9 actual=${channelFeeds.length}`);
 }
@@ -63,7 +74,12 @@ for (const name of channelFeeds) {
 }
 
 const corrections = await readFile('public/rss/correcoes.xml', 'utf8');
-if (!corrections.includes('<rss version="2.0"') || !corrections.includes('<channel>') || !corrections.includes('Correção:') || !corrections.includes('Retirada:')) {
+if (
+  !corrections.includes('<rss version="2.0"') ||
+  !corrections.includes('<channel>') ||
+  !corrections.includes('Correção:') ||
+  !corrections.includes('Retirada:')
+) {
   throw new Error('DISCOVERY_CORRECTIONS_FEED_INVALID');
 }
 
@@ -80,14 +96,21 @@ if (!/^Sitemap: https?:\/\//m.test(robots)) {
   throw new Error('DISCOVERY_ROBOTS_WITHOUT_SITEMAP');
 }
 
-
 const redirectRegistry = JSON.parse(await readFile('public/redirects.json', 'utf8'));
-if (redirectRegistry.schemaVersion !== '1.0.0' || !Array.isArray(redirectRegistry.redirects) || redirectRegistry.redirects.length < 1) {
+if (
+  redirectRegistry.schemaVersion !== '1.0.0' ||
+  !Array.isArray(redirectRegistry.redirects) ||
+  redirectRegistry.redirects.length < 1
+) {
   throw new Error('DISCOVERY_REDIRECT_REGISTRY_INVALID');
 }
 const redirectMap = new Map();
 for (const redirect of redirectRegistry.redirects) {
-  if (redirect.statusCode !== 308 || redirect.fromPath === redirect.toPath || redirectMap.has(redirect.fromPath)) {
+  if (
+    redirect.statusCode !== 308 ||
+    redirect.fromPath === redirect.toPath ||
+    redirectMap.has(redirect.fromPath)
+  ) {
     throw new Error('DISCOVERY_REDIRECT_INVALID');
   }
   redirectMap.set(redirect.fromPath, redirect.toPath);
@@ -102,4 +125,6 @@ for (const source of redirectMap.keys()) {
   }
 }
 
-console.log(`Assets de descoberta válidos: ${index.total} registros, ${channelFeeds.length + 2} feeds.`);
+console.log(
+  `Assets de descoberta válidos: ${index.total} registros, ${channelFeeds.length + 2} feeds.`,
+);

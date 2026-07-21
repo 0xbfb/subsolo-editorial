@@ -5,11 +5,21 @@ import { createHash } from 'node:crypto';
 const root = resolve(process.cwd());
 const output = resolve(process.argv[2] ?? 'sbom/subsolo-1.0.0-pre.cdx.json');
 const pkg = JSON.parse(await readFile(resolve(root, 'package.json'), 'utf8'));
-const licenses = JSON.parse(await readFile(resolve(root, 'licenses/direct-dependencies.json'), 'utf8'));
+const licenses = JSON.parse(
+  await readFile(resolve(root, 'licenses/direct-dependencies.json'), 'utf8'),
+);
 const licenseByName = new Map(licenses.packages.map((entry) => [entry.name, entry.license]));
 const dependencies = [
-  ...Object.entries(pkg.dependencies ?? {}).map(([name, version]) => ({ name, version, scope: 'required' })),
-  ...Object.entries(pkg.devDependencies ?? {}).map(([name, version]) => ({ name, version, scope: 'optional' })),
+  ...Object.entries(pkg.dependencies ?? {}).map(([name, version]) => ({
+    name,
+    version,
+    scope: 'required',
+  })),
+  ...Object.entries(pkg.devDependencies ?? {}).map(([name, version]) => ({
+    name,
+    version,
+    scope: 'optional',
+  })),
 ].sort((a, b) => a.name.localeCompare(b.name));
 
 const components = dependencies.map(({ name, version, scope }) => ({
@@ -26,7 +36,11 @@ const components = dependencies.map(({ name, version, scope }) => ({
   ],
 }));
 
-const serialSeed = JSON.stringify({ name: pkg.name, version: pkg.version, components: components.map((c) => c['bom-ref']) });
+const serialSeed = JSON.stringify({
+  name: pkg.name,
+  version: pkg.version,
+  components: components.map((c) => c['bom-ref']),
+});
 const serial = createHash('sha256').update(serialSeed).digest('hex').slice(0, 32);
 const bom = {
   bomFormat: 'CycloneDX',
@@ -53,4 +67,6 @@ const bom = {
 
 await mkdir(dirname(output), { recursive: true });
 await writeFile(output, `${JSON.stringify(bom, null, 2)}\n`);
-console.log(`SBOM direto gerado: ${basename(output)} com ${components.length} componentes; inventário transitivo bloqueado sem lockfile.`);
+console.log(
+  `SBOM direto gerado: ${basename(output)} com ${components.length} componentes; inventário transitivo bloqueado sem lockfile.`,
+);

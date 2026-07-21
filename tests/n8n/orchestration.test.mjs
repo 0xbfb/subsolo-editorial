@@ -1,13 +1,91 @@
-import test from 'node:test'; import assert from 'node:assert/strict';
-import {createIdempotencyKey,planPublicationRun,executePublicationRun,reconcilePublication,OrchestrationFailure} from '../../src/lib/application/publication-orchestrator.mjs';
-import {createFixtureOrchestrationPorts} from '../../src/lib/infrastructure/orchestration/fixture-ports.mjs';
-const candidate={article_id:'art_subsolo_2026_0001',revision:1,edition_id:'ed_2026-07-20',editorial_status:'PRONTO_PARA_PUBLICAR',document_id:'doc_fixture_0001'};
-test('idempotency key is stable per article and revision',()=>assert.equal(createIdempotencyKey(candidate),createIdempotencyKey({...candidate})));
-test('dry-run explains all ordered effects and writes nothing',()=>{const p=planPublicationRun({candidate});assert.equal(p.writes,false);assert.deepEqual(p.ordered_steps.slice(0,5),['lock','export','validate','package','archive-drive']);});
-test('one candidate creates exactly one PR and archives before Git',async()=>{const {ports,state}=createFixtureOrchestrationPorts({candidate});const r=await executePublicationRun({candidate,ports});assert.equal(r.run.state,'completed');assert.equal(state.prs.size,1);assert.ok(state.events.indexOf('drive:archive')<state.events.indexOf('git:branch'));assert.equal(state.sheet.editorial_status,'PR_CRIADO');});
-test('completed run is idempotent',async()=>{const f=createFixtureOrchestrationPorts({candidate});const first=await executePublicationRun({candidate,ports:f.ports});const second=await executePublicationRun({candidate,ports:f.ports});assert.equal(second.disposition,'already-completed');assert.equal(f.state.prs.size,1);assert.equal(second.run.run_id,first.run.run_id);});
-test('lock contention fails before effects',async()=>{const f=createFixtureOrchestrationPorts({candidate});const key=createIdempotencyKey(candidate);f.state.locks.add(key);await assert.rejects(()=>executePublicationRun({candidate,ports:f.ports}),e=>e instanceof OrchestrationFailure&&e.code==='SUBSOLO_ORCHESTRATION_LOCKED');assert.equal(f.state.prs.size,0);});
-test('Drive failure prevents branch and PR and creates actionable dead letter',async()=>{const f=createFixtureOrchestrationPorts({candidate,failureAt:'drive'});await assert.rejects(()=>executePublicationRun({candidate,ports:f.ports}));assert.equal(f.state.prs.size,0);assert.equal(f.state.events.includes('git:branch'),false);assert.equal(f.state.deadLetters.length,1);assert.equal(f.state.alerts.length,1);});
-test('Sheets divergence blocks orchestration',async()=>{const f=createFixtureOrchestrationPorts({candidate});f.state.sheet.revision=2;await assert.rejects(()=>executePublicationRun({candidate,ports:f.ports}),e=>e.code==='SUBSOLO_ORCHESTRATION_SHEETS_DIVERGED');});
-test('existing PR is returned instead of duplicated',async()=>{const f=createFixtureOrchestrationPorts({candidate});f.state.prs.set('editorial/art_subsolo_2026_0001-r1',{url:'https://github.invalid/subsolo/pull/4'});const r=await executePublicationRun({candidate,ports:f.ports});assert.equal(r.disposition,'existing-pr');assert.equal(f.state.prs.size,1);});
-test('reconciliation never silently applies ambiguous fixes',async()=>{const f=createFixtureOrchestrationPorts({candidate});f.state.sheet.editorial_status='PR_CRIADO';const result=await reconcilePublication({candidate,ports:f.ports});assert.equal(result.issues[0].code,'SHEETS_PR_DIVERGED');await assert.rejects(()=>reconcilePublication({candidate,ports:f.ports,mode:'apply'}),e=>e.code==='SUBSOLO_RECONCILIATION_REQUIRES_HUMAN');});
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {
+  createIdempotencyKey,
+  planPublicationRun,
+  executePublicationRun,
+  reconcilePublication,
+  OrchestrationFailure,
+} from '../../src/lib/application/publication-orchestrator.mjs';
+import { createFixtureOrchestrationPorts } from '../../src/lib/infrastructure/orchestration/fixture-ports.mjs';
+const candidate = {
+  article_id: 'art_subsolo_2026_0001',
+  revision: 1,
+  edition_id: 'ed_2026-07-20',
+  editorial_status: 'PRONTO_PARA_PUBLICAR',
+  document_id: 'doc_fixture_0001',
+};
+test('idempotency key is stable per article and revision', () =>
+  assert.equal(createIdempotencyKey(candidate), createIdempotencyKey({ ...candidate })));
+test('dry-run explains all ordered effects and writes nothing', () => {
+  const p = planPublicationRun({ candidate });
+  assert.equal(p.writes, false);
+  assert.deepEqual(p.ordered_steps.slice(0, 5), [
+    'lock',
+    'export',
+    'validate',
+    'package',
+    'archive-drive',
+  ]);
+});
+test('one candidate creates exactly one PR and archives before Git', async () => {
+  const { ports, state } = createFixtureOrchestrationPorts({ candidate });
+  const r = await executePublicationRun({ candidate, ports });
+  assert.equal(r.run.state, 'completed');
+  assert.equal(state.prs.size, 1);
+  assert.ok(state.events.indexOf('drive:archive') < state.events.indexOf('git:branch'));
+  assert.equal(state.sheet.editorial_status, 'PR_CRIADO');
+});
+test('completed run is idempotent', async () => {
+  const f = createFixtureOrchestrationPorts({ candidate });
+  const first = await executePublicationRun({ candidate, ports: f.ports });
+  const second = await executePublicationRun({ candidate, ports: f.ports });
+  assert.equal(second.disposition, 'already-completed');
+  assert.equal(f.state.prs.size, 1);
+  assert.equal(second.run.run_id, first.run.run_id);
+});
+test('lock contention fails before effects', async () => {
+  const f = createFixtureOrchestrationPorts({ candidate });
+  const key = createIdempotencyKey(candidate);
+  f.state.locks.add(key);
+  await assert.rejects(
+    () => executePublicationRun({ candidate, ports: f.ports }),
+    (e) => e instanceof OrchestrationFailure && e.code === 'SUBSOLO_ORCHESTRATION_LOCKED',
+  );
+  assert.equal(f.state.prs.size, 0);
+});
+test('Drive failure prevents branch and PR and creates actionable dead letter', async () => {
+  const f = createFixtureOrchestrationPorts({ candidate, failureAt: 'drive' });
+  await assert.rejects(() => executePublicationRun({ candidate, ports: f.ports }));
+  assert.equal(f.state.prs.size, 0);
+  assert.equal(f.state.events.includes('git:branch'), false);
+  assert.equal(f.state.deadLetters.length, 1);
+  assert.equal(f.state.alerts.length, 1);
+});
+test('Sheets divergence blocks orchestration', async () => {
+  const f = createFixtureOrchestrationPorts({ candidate });
+  f.state.sheet.revision = 2;
+  await assert.rejects(
+    () => executePublicationRun({ candidate, ports: f.ports }),
+    (e) => e.code === 'SUBSOLO_ORCHESTRATION_SHEETS_DIVERGED',
+  );
+});
+test('existing PR is returned instead of duplicated', async () => {
+  const f = createFixtureOrchestrationPorts({ candidate });
+  f.state.prs.set('editorial/art_subsolo_2026_0001-r1', {
+    url: 'https://github.invalid/subsolo/pull/4',
+  });
+  const r = await executePublicationRun({ candidate, ports: f.ports });
+  assert.equal(r.disposition, 'existing-pr');
+  assert.equal(f.state.prs.size, 1);
+});
+test('reconciliation never silently applies ambiguous fixes', async () => {
+  const f = createFixtureOrchestrationPorts({ candidate });
+  f.state.sheet.editorial_status = 'PR_CRIADO';
+  const result = await reconcilePublication({ candidate, ports: f.ports });
+  assert.equal(result.issues[0].code, 'SHEETS_PR_DIVERGED');
+  await assert.rejects(
+    () => reconcilePublication({ candidate, ports: f.ports, mode: 'apply' }),
+    (e) => e.code === 'SUBSOLO_RECONCILIATION_REQUIRES_HUMAN',
+  );
+});

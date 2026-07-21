@@ -10,7 +10,8 @@
     },
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "ignoreDeprecations": "6.0"
   },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist", "node_modules", "references"]

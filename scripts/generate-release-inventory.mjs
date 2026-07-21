@@ -10,7 +10,14 @@ const excluded = new Set([
   'reports/prompt-20/changed-files.txt',
   'reports/prompt-20/package-inventory.json',
 ]);
-const excludedSegments = new Set(['.git', 'node_modules', 'dist', '.astro', 'coverage', '.runtime']);
+const excludedSegments = new Set([
+  '.git',
+  'node_modules',
+  'dist',
+  '.astro',
+  'coverage',
+  '.runtime',
+]);
 
 async function walk(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -22,7 +29,7 @@ async function walk(directory) {
     if (excluded.has(rel)) continue;
     const stat = await lstat(path);
     if (stat.isSymbolicLink()) throw new Error(`SUBSOLO_RELEASE_SYMLINK: ${rel}`);
-    if (entry.isDirectory()) files.push(...await walk(path));
+    if (entry.isDirectory()) files.push(...(await walk(path)));
     else if (entry.isFile()) {
       const bytes = await readFile(path);
       files.push({

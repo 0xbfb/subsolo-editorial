@@ -16,10 +16,7 @@
       "name": "Entrada de revisão",
       "type": "n8n-nodes-base.executeWorkflowTrigger",
       "typeVersion": 1,
-      "position": [
-        0,
-        0
-      ]
+      "position": [0, 0]
     },
     {
       "parameters": {
@@ -29,10 +26,7 @@
       "name": "Executar ciclo da edição",
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
-      "position": [
-        300,
-        0
-      ]
+      "position": [300, 0]
     },
     {
       "parameters": {},
@@ -40,10 +34,7 @@
       "name": "Aguardar PR da revisão",
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
-      "position": [
-        600,
-        0
-      ]
+      "position": [600, 0]
     }
   ],
   "connections": {

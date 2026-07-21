@@ -13,12 +13,12 @@ runs:
   using: composite
   steps:
     - name: Configurar pnpm
-      uses: pnpm/action-setup@v6.0.9
+      uses: pnpm/action-setup@v6.0.8
       with:
         version: ${{ inputs.pnpm-version }}
         run_install: false
     - name: Configurar Node.js
-      uses: actions/setup-node@v6.5.0
+      uses: actions/setup-node@v6.4.0
       with:
         node-version: ${{ inputs.node-version }}
     - name: Instalar dependências

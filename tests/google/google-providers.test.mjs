@@ -27,11 +27,16 @@ const suggestionResponse = 'fixtures/google/docs/document-suggestion.json';
 const sheetPage1 = 'fixtures/google/sheets/page-1.json';
 const sheetPage2 = 'fixtures/google/sheets/page-2.json';
 const goldenDir = 'fixtures/exporter/golden';
-const tokenProvider = { async getToken() { return 'test-access-token'; } };
-const jsonResponse = (data, init = {}) => new Response(JSON.stringify(data), {
-  status: init.status ?? 200,
-  headers: { 'content-type': 'application/json', ...(init.headers ?? {}) },
-});
+const tokenProvider = {
+  async getToken() {
+    return 'test-access-token';
+  },
+};
+const jsonResponse = (data, init = {}) =>
+  new Response(JSON.stringify(data), {
+    status: init.status ?? 200,
+    headers: { 'content-type': 'application/json', ...(init.headers ?? {}) },
+  });
 const captureFailure = async (fn) => {
   try {
     await fn();
@@ -129,14 +134,25 @@ test('providers Google produzem exatamente os mesmos bytes do provider fixture',
   const page2 = await readJson(sheetPage2);
   const fetchImpl = async (url) => {
     const target = decodeURIComponent(String(url));
-    if (target.startsWith('https://docs.googleapis.com/')) return jsonResponse(apiDocument, { headers: { etag: '"rev-google"' } });
+    if (target.startsWith('https://docs.googleapis.com/'))
+      return jsonResponse(apiDocument, { headers: { etag: '"rev-google"' } });
     if (target.includes('A1:AZ2')) return jsonResponse(page1);
     if (target.includes('A3:AZ4')) return jsonResponse(page2);
     throw new Error(`URL inesperada: ${target}`);
   };
-  const sheetProvider = createGoogleSheetsProvider({ spreadsheetId: 'sheet-test', range: 'ARTIGOS!A:AZ', pageSize: 2, tokenProvider, fetchImpl });
+  const sheetProvider = createGoogleSheetsProvider({
+    spreadsheetId: 'sheet-test',
+    range: 'ARTIGOS!A:AZ',
+    pageSize: 2,
+    tokenProvider,
+    fetchImpl,
+  });
   const documentProvider = createGoogleDocsProvider({ tokenProvider, fetchImpl });
-  const input = await loadGoogleEditorialInput({ articleId: 'artigo-2026-07-20-transporte', sheetProvider, documentProvider });
+  const input = await loadGoogleEditorialInput({
+    articleId: 'artigo-2026-07-20-transporte',
+    sheetProvider,
+    documentProvider,
+  });
   const output = buildExport(input);
   for (const [name, content] of output.files) {
     assert.equal(content, await readFile(path.join(goldenDir, name), 'utf8'), name);
@@ -154,7 +170,11 @@ test('request repete 429 e respeita Retry-After', async () => {
     random: () => 0,
     fetchImpl: async () => {
       attempts += 1;
-      if (attempts === 1) return jsonResponse({ error: { status: 'RESOURCE_EXHAUSTED' } }, { status: 429, headers: { 'retry-after': '1' } });
+      if (attempts === 1)
+        return jsonResponse(
+          { error: { status: 'RESOURCE_EXHAUSTED' } },
+          { status: 429, headers: { 'retry-after': '1' } },
+        );
       return jsonResponse({ ok: true });
     },
   });
@@ -165,29 +185,36 @@ test('request repete 429 e respeita Retry-After', async () => {
 
 test('request normaliza acesso negado sem retry', async () => {
   let attempts = 0;
-  const error = await captureFailure(() => requestGoogleJson({
-    url: 'https://docs.googleapis.com/v1/documents/x',
-    tokenProvider,
-    maxAttempts: 3,
-    fetchImpl: async () => {
-      attempts += 1;
-      return jsonResponse({ error: { status: 'PERMISSION_DENIED' } }, { status: 403 });
-    },
-  }));
+  const error = await captureFailure(() =>
+    requestGoogleJson({
+      url: 'https://docs.googleapis.com/v1/documents/x',
+      tokenProvider,
+      maxAttempts: 3,
+      fetchImpl: async () => {
+        attempts += 1;
+        return jsonResponse({ error: { status: 'PERMISSION_DENIED' } }, { status: 403 });
+      },
+    }),
+  );
   assert.equal(error.code, 'SUBSOLO_GOOGLE_ACCESS_DENIED');
   assert.equal(attempts, 1);
 });
 
 test('request encerra chamadas que excedem timeout', async () => {
-  const error = await captureFailure(() => requestGoogleJson({
-    url: 'https://docs.googleapis.com/v1/documents/x',
-    tokenProvider,
-    timeoutMs: 5,
-    maxAttempts: 1,
-    fetchImpl: async (_url, options) => new Promise((_resolve, reject) => {
-      options.signal.addEventListener('abort', () => reject(Object.assign(new Error('abort'), { name: 'AbortError' })));
+  const error = await captureFailure(() =>
+    requestGoogleJson({
+      url: 'https://docs.googleapis.com/v1/documents/x',
+      tokenProvider,
+      timeoutMs: 5,
+      maxAttempts: 1,
+      fetchImpl: async (_url, options) =>
+        new Promise((_resolve, reject) => {
+          options.signal.addEventListener('abort', () =>
+            reject(Object.assign(new Error('abort'), { name: 'AbortError' })),
+          );
+        }),
     }),
-  }));
+  );
   assert.equal(error.code, 'SUBSOLO_GOOGLE_TIMEOUT');
   assert.equal(error.retryable, true);
 });
@@ -216,12 +243,15 @@ test('conta de serviço cria JWT, usa somente scopes de leitura e reutiliza toke
   const { privateKey } = generateKeyPairSync('rsa', { modulusLength: 2048 });
   const directory = await mkdtemp(path.join(tmpdir(), 'subsolo-google-auth-'));
   const credentialPath = path.join(directory, 'service-account.json');
-  await writeFile(credentialPath, JSON.stringify({
-    client_email: 'subsolo-test@example.iam.gserviceaccount.com',
-    // secret-scan: allow-next-line — chave efêmera gerada em runtime para o teste.
-    private_key: privateKey.export({ type: 'pkcs8', format: 'pem' }),
-    token_uri: 'https://oauth2.googleapis.com/token',
-  }));
+  await writeFile(
+    credentialPath,
+    JSON.stringify({
+      client_email: 'subsolo-test@example.iam.gserviceaccount.com',
+      // secret-scan: allow-next-line — chave efêmera gerada em runtime para o teste.
+      private_key: privateKey.export({ type: 'pkcs8', format: 'pem' }),
+      token_uri: 'https://oauth2.googleapis.com/token',
+    }),
+  );
   const bodies = [];
   const provider = createServiceAccountTokenProvider({
     credentialPath,
@@ -242,21 +272,35 @@ test('conta de serviço cria JWT, usa somente scopes de leitura e reutiliza toke
 });
 
 test('JSON inválido em coluna estruturada é rejeitado', async () => {
-  const error = await captureFailure(() => Promise.resolve(rowsFromSheetValues([
-    ['artigo_id', 'fontes'],
-    ['artigo-1', '{invalido'],
-  ])));
+  const error = await captureFailure(() =>
+    Promise.resolve(
+      rowsFromSheetValues([
+        ['artigo_id', 'fontes'],
+        ['artigo-1', '{invalido'],
+      ]),
+    ),
+  );
   assert.equal(error.code, 'SUBSOLO_GOOGLE_SHEETS_JSON_INVALID');
 });
 
 test('integração Google exige confirmação humana de comentários resolvidos', async () => {
   const row = await readJson('fixtures/exporter/valid/sheet-row.json');
   row.comentarios_resolvidos = false;
-  const error = await captureFailure(() => loadGoogleEditorialInput({
-    articleId: row.artigo_id,
-    sheetProvider: { async read() { return row; } },
-    documentProvider: { async read() { return readJson('fixtures/exporter/valid/document.json'); } },
-  }));
+  const error = await captureFailure(() =>
+    loadGoogleEditorialInput({
+      articleId: row.artigo_id,
+      sheetProvider: {
+        async read() {
+          return row;
+        },
+      },
+      documentProvider: {
+        async read() {
+          return readJson('fixtures/exporter/valid/document.json');
+        },
+      },
+    }),
+  );
   assert.equal(error.code, 'SUBSOLO_GOOGLE_COMMENTS_GATE_PENDING');
 });
 

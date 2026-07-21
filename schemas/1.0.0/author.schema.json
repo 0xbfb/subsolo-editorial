@@ -33,12 +33,7 @@
       "maxLength": 96
     },
     "role": {
-      "enum": [
-        "editor",
-        "jornalista",
-        "colunista",
-        "convidado"
-      ]
+      "enum": ["editor", "jornalista", "colunista", "convidado"]
     },
     "title": {
       "type": "string",
@@ -49,20 +44,14 @@
       "minLength": 1
     },
     "status": {
-      "enum": [
-        "ativo",
-        "arquivado"
-      ]
+      "enum": ["ativo", "arquivado"]
     },
     "portrait": {
       "anyOf": [
         {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "src",
-            "alt"
-          ],
+          "required": ["src", "alt"],
           "properties": {
             "src": {
               "type": "string",

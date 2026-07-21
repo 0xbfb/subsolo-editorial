@@ -40,12 +40,7 @@
       "sheet_sha256": "0da75236f0be04df4634f8db35926074e57407486a395f165fee55c29367ac91",
       "document_sha256": "4dbca142bba6bc214814bbc7c763e319ea866c23acffa572629d0a39a1ab23d3"
     },
-    "public_files": [
-      "publication.md",
-      "sources.json",
-      "corrections.json",
-      "media.json"
-    ],
+    "public_files": ["publication.md", "sources.json", "corrections.json", "media.json"],
     "source_counts": {
       "sources": 1,
       "corrections": 0,

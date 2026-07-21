@@ -1,4 +1,3 @@
-
 # Catálogos editoriais iniciais
 
 - colaboradores: **44**;

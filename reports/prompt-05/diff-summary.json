@@ -56,9 +56,5 @@
     "package.json",
     "src/pages/index.astro"
   ],
-  "removed_files": [
-    "src/components/.gitkeep",
-    "src/layouts/.gitkeep",
-    "src/styles/.gitkeep"
-  ]
+  "removed_files": ["src/components/.gitkeep", "src/layouts/.gitkeep", "src/styles/.gitkeep"]
 }

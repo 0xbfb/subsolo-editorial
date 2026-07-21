@@ -33,11 +33,7 @@
       "minimum": 1
     },
     "status": {
-      "enum": [
-        "publicada",
-        "selada",
-        "corrigida"
-      ]
+      "enum": ["publicada", "selada", "corrigida"]
     },
     "timezone": {
       "const": "America/Sao_Paulo"
@@ -74,11 +70,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": [
-          "id",
-          "position",
-          "featured"
-        ],
+        "required": ["id", "position", "featured"],
         "properties": {
           "id": {
             "type": "string",

@@ -1,8 +1,58 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-const read=(path)=>readFile(new URL(`../../${path}`,import.meta.url),'utf8');
-test('rotas editoriais essenciais existem',async()=>{const paths=['src/pages/agora.astro','src/pages/edicoes/index.astro','src/pages/edicoes/2026/07/20/index.astro','src/pages/[year]/[month]/[day]/[slug].astro','src/pages/canais/index.astro','src/pages/canais/[slug].astro','src/pages/temas/[slug].astro','src/pages/redacao/[slug].astro','src/pages/historias/[slug].astro','src/pages/documentos/[slug].astro','src/pages/arquivo/index.astro','src/pages/arquivo/pagina/[page].astro','src/pages/arquivo/[year]/[month]/[day]/index.astro','src/pages/arquivo/registros/[slug].astro','src/pages/a-redacao.astro','src/pages/busca.astro','src/pages/404.astro'];for(const path of paths)assert.ok((await read(path)).length>80,path);});
-test('busca ativa Pagefind e mantém fallback estático',async()=>{const page=await read('src/pages/busca.astro');const component=await read('src/components/discovery/SearchInterface.astro');const script=await read('public/assets/search.js');assert.match(page,/SearchInterface/);assert.match(script,/pagefind\.search/);assert.match(component,/archive-index\.json/);assert.match(component,/type="search"/);assert.match(component,/<noscript>/);});
-test('página de matéria usa transparência editorial e metadados de busca',async()=>{const source=await read('src/pages/[year]/[month]/[day]/[slug].astro');for(const component of ['EditorialHeader','TableOfContents','EditorialFactSheet','SourceList','CorrectionNotice','ConnectionList','PagefindMetadata'])assert.match(source,new RegExp(component));assert.match(source,/data-pagefind-body/);});
-test('home tem links reais e manchete continua sem span sublinhado',async()=>{const fixture=JSON.parse(await read('src/data/fixtures/jornal-concreto-home.json'));assert.ok(fixture.navigation.every((item)=>item.available));assert.match(fixture.hero.href,/^\//);const hero=await read('src/components/home/HomeHero.astro');assert.match(hero,/class="hero-headline"/);assert.doesNotMatch(hero,/hero-headline--static/);});
+const read = (path) => readFile(new URL(`../../${path}`, import.meta.url), 'utf8');
+test('rotas editoriais essenciais existem', async () => {
+  const paths = [
+    'src/pages/agora.astro',
+    'src/pages/edicoes/index.astro',
+    'src/pages/edicoes/2026/07/20/index.astro',
+    'src/pages/[year]/[month]/[day]/[slug].astro',
+    'src/pages/canais/index.astro',
+    'src/pages/canais/[slug].astro',
+    'src/pages/temas/[slug].astro',
+    'src/pages/redacao/[slug].astro',
+    'src/pages/historias/[slug].astro',
+    'src/pages/documentos/[slug].astro',
+    'src/pages/arquivo/index.astro',
+    'src/pages/arquivo/pagina/[page].astro',
+    'src/pages/arquivo/[year]/[month]/[day]/index.astro',
+    'src/pages/arquivo/registros/[slug].astro',
+    'src/pages/a-redacao.astro',
+    'src/pages/busca.astro',
+    'src/pages/404.astro',
+  ];
+  for (const path of paths) assert.ok((await read(path)).length > 80, path);
+});
+test('busca ativa Pagefind e mantém fallback estático', async () => {
+  const page = await read('src/pages/busca.astro');
+  const component = await read('src/components/discovery/SearchInterface.astro');
+  const script = await read('public/assets/search.js');
+  assert.match(page, /SearchInterface/);
+  assert.match(script, /pagefind\.search/);
+  assert.match(component, /archive-index\.json/);
+  assert.match(component, /type="search"/);
+  assert.match(component, /<noscript>/);
+});
+test('página de matéria usa transparência editorial e metadados de busca', async () => {
+  const source = await read('src/pages/[year]/[month]/[day]/[slug].astro');
+  for (const component of [
+    'EditorialHeader',
+    'TableOfContents',
+    'EditorialFactSheet',
+    'SourceList',
+    'CorrectionNotice',
+    'ConnectionList',
+    'PagefindMetadata',
+  ])
+    assert.match(source, new RegExp(component));
+  assert.match(source, /data-pagefind-body/);
+});
+test('home tem links reais e manchete continua sem span sublinhado', async () => {
+  const fixture = JSON.parse(await read('src/data/fixtures/jornal-concreto-home.json'));
+  assert.ok(fixture.navigation.every((item) => item.available));
+  assert.match(fixture.hero.href, /^\//);
+  const hero = await read('src/components/home/HomeHero.astro');
+  assert.match(hero, /class="hero-headline"/);
+  assert.doesNotMatch(hero, /hero-headline--static/);
+});

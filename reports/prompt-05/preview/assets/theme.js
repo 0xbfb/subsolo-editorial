@@ -1,1 +1,21 @@
-(()=>{const r=document.documentElement,b=[...document.querySelectorAll('[data-theme-toggle]')],s=()=>{const d=r.dataset.theme==='dark';b.forEach(x=>{x.setAttribute('aria-pressed',String(d));x.textContent=d?'Papel claro':'Inverter papel'})};s();b.forEach(x=>x.addEventListener('click',()=>{r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('subsolo-theme',r.dataset.theme)}catch(_){}s()}))})();
+(() => {
+  const r = document.documentElement,
+    b = [...document.querySelectorAll('[data-theme-toggle]')],
+    s = () => {
+      const d = r.dataset.theme === 'dark';
+      b.forEach((x) => {
+        x.setAttribute('aria-pressed', String(d));
+        x.textContent = d ? 'Papel claro' : 'Inverter papel';
+      });
+    };
+  s();
+  b.forEach((x) =>
+    x.addEventListener('click', () => {
+      r.dataset.theme = r.dataset.theme === 'dark' ? 'light' : 'dark';
+      try {
+        localStorage.setItem('subsolo-theme', r.dataset.theme);
+      } catch (_) {}
+      s();
+    }),
+  );
+})();

@@ -1,7 +1,7 @@
 {
   "version": "0.8.3-dev",
   "prompt": 16,
-  "node_tests": {"total": 185, "passed": 185, "failed": 0, "skipped": 0},
+  "node_tests": { "total": 185, "passed": 185, "failed": 0, "skipped": 0 },
   "schemas": 13,
   "json_files": 185,
   "discovery_records": 25,

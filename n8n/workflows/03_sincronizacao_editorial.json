@@ -14,10 +14,7 @@
       "name": "Manual ou agenda",
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
-      "position": [
-        0,
-        0
-      ]
+      "position": [0, 0]
     },
     {
       "parameters": {
@@ -27,10 +24,7 @@
       "name": "Consultar candidatos",
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
-      "position": [
-        240,
-        0
-      ]
+      "position": [240, 0]
     },
     {
       "parameters": {
@@ -47,10 +41,7 @@
       "name": "Executar workflow 04",
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1,
-      "position": [
-        500,
-        0
-      ]
+      "position": [500, 0]
     }
   ],
   "connections": {

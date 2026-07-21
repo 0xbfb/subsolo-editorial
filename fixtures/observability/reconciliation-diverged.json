@@ -2,16 +2,52 @@
   "kind": "operational-reconciliation",
   "generated_at": "2026-07-20T23:30:00-03:00",
   "sheets": [
-    {"article_id":"art_subsolo_2026_0001","revision":2,"status":"PR_CRIADO","package_sha256":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","drive_file_id":"drive_expected","pr_url":"https://github.invalid/subsolo/pull/2"},
-    {"article_id":"art_subsolo_2026_0002","revision":1,"status":"PUBLICADO","package_sha256":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc","drive_file_id":"drive_c","pr_url":"https://github.invalid/subsolo/pull/3"}
+    {
+      "article_id": "art_subsolo_2026_0001",
+      "revision": 2,
+      "status": "PR_CRIADO",
+      "package_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "drive_file_id": "drive_expected",
+      "pr_url": "https://github.invalid/subsolo/pull/2"
+    },
+    {
+      "article_id": "art_subsolo_2026_0002",
+      "revision": 1,
+      "status": "PUBLICADO",
+      "package_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "drive_file_id": "drive_c",
+      "pr_url": "https://github.invalid/subsolo/pull/3"
+    }
   ],
   "drive": [
-    {"article_id":"art_subsolo_2026_0001","revision":2,"package_sha256":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","file_id":"drive_other"},
-    {"article_id":"art_orphan","revision":1,"package_sha256":"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd","file_id":"drive_orphan"}
+    {
+      "article_id": "art_subsolo_2026_0001",
+      "revision": 2,
+      "package_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "file_id": "drive_other"
+    },
+    {
+      "article_id": "art_orphan",
+      "revision": 1,
+      "package_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "file_id": "drive_orphan"
+    }
   ],
   "github": [
-    {"article_id":"art_subsolo_2026_0002","revision":1,"state":"merged","pr_url":"https://github.invalid/subsolo/pull/3","merge_commit_sha":"commit_c"},
-    {"article_id":"art_pr_orphan","revision":1,"state":"open","pr_url":"https://github.invalid/subsolo/pull/9","merge_commit_sha":null}
+    {
+      "article_id": "art_subsolo_2026_0002",
+      "revision": 1,
+      "state": "merged",
+      "pr_url": "https://github.invalid/subsolo/pull/3",
+      "merge_commit_sha": "commit_c"
+    },
+    {
+      "article_id": "art_pr_orphan",
+      "revision": 1,
+      "state": "open",
+      "pr_url": "https://github.invalid/subsolo/pull/9",
+      "merge_commit_sha": null
+    }
   ],
   "deployments": []
 }

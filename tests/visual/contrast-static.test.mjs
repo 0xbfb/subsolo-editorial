@@ -3,9 +3,9 @@ import { test } from 'node:test';
 
 const channel = (hex, start) => Number.parseInt(hex.slice(start, start + 2), 16) / 255;
 const luminance = (hex) => {
-  const values = [1, 3, 5].map((start) => channel(hex, start)).map((value) =>
-    value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4,
-  );
+  const values = [1, 3, 5]
+    .map((start) => channel(hex, start))
+    .map((value) => (value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4));
   return 0.2126 * values[0] + 0.7152 * values[1] + 0.0722 * values[2];
 };
 const contrast = (first, second) => {
@@ -29,6 +29,9 @@ test('tokens textuais essenciais atingem contraste AA em ambos os papéis', () =
     ['#d6ac58', '#151515', 'âmbar escuro'],
   ];
   for (const [foreground, background, label] of pairs) {
-    assert.ok(contrast(foreground, background) >= 4.5, `${label}: ${contrast(foreground, background).toFixed(2)}`);
+    assert.ok(
+      contrast(foreground, background) >= 4.5,
+      `${label}: ${contrast(foreground, background).toFixed(2)}`,
+    );
   }
 });

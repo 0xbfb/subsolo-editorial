@@ -1,4 +1,3 @@
-
 export type EditorialCatalogIndex = Readonly<{
   authorIds: ReadonlySet<string>;
   channelIds: ReadonlySet<string>;

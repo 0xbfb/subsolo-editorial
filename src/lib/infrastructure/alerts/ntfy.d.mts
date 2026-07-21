@@ -1,2 +1,24 @@
-export declare class NtfyFailure extends Error { code: string; action: string; retryable: boolean; details: Record<string, unknown>; toJSON(): Record<string, unknown>; }
-export declare const createNtfyNotifier: (input: { baseUrl: string; topic: string; token?: string | null; fetchImpl?: typeof fetch; timeoutMs?: number; logger?: { info?: (event: string, context?: Record<string, unknown>) => void } | null }) => { send(input: { severity?: 'info'|'warning'|'error'|'critical'; code: string; action: string; message?: string | null; run_id?: string | null; component?: string }): Promise<Record<string, unknown>> };
+export declare class NtfyFailure extends Error {
+  code: string;
+  action: string;
+  retryable: boolean;
+  details: Record<string, unknown>;
+  toJSON(): Record<string, unknown>;
+}
+export declare const createNtfyNotifier: (input: {
+  baseUrl: string;
+  topic: string;
+  token?: string | null;
+  fetchImpl?: typeof fetch;
+  timeoutMs?: number;
+  logger?: { info?: (event: string, context?: Record<string, unknown>) => void } | null;
+}) => {
+  send(input: {
+    severity?: 'info' | 'warning' | 'error' | 'critical';
+    code: string;
+    action: string;
+    message?: string | null;
+    run_id?: string | null;
+    component?: string;
+  }): Promise<Record<string, unknown>>;
+};

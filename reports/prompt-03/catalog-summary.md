@@ -1,15 +1,15 @@
 # Resumo dos catálogos editoriais
 
-| Catálogo | Quantidade |
-|---|---:|
-| Colaboradores | 44 |
-| Editores | 11 |
-| Jornalistas | 33 |
-| Departamentos | 11 |
-| Canais públicos | 9 |
-| Quadros qualificados | 74 |
-| Temas iniciais | 42 |
-| Abas do workbook | 12 |
+| Catálogo             | Quantidade |
+| -------------------- | ---------: |
+| Colaboradores        |         44 |
+| Editores             |         11 |
+| Jornalistas          |         33 |
+| Departamentos        |         11 |
+| Canais públicos      |          9 |
+| Quadros qualificados |         74 |
+| Temas iniciais       |         42 |
+| Abas do workbook     |         12 |
 
 ## Decisões
 

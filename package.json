@@ -98,6 +98,7 @@
     "hardening:prebuild": "pnpm audit:security && pnpm check:headers && pnpm check:permissions && pnpm check:a11y",
     "hardening:artifact": "pnpm check:performance && pnpm test:degraded && pnpm scan:public-artifact",
     "test:all": "node scripts/test-all.mjs",
+    "test:source-manifest": "node --test tests/source-manifest.test.mjs",
     "release:fixture-flow": "node scripts/release-fixture-flow.mjs",
     "release:sbom": "node scripts/generate-sbom.mjs",
     "release:inventory": "node scripts/generate-release-inventory.mjs",

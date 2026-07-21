@@ -6,12 +6,12 @@
 
 ## Testes automatizados
 
-| Verificação | Resultado |
-|---|---:|
-| Suite Node acumulada | 108 aprovados, 0 falhas, 0 ignorados |
-| Testes específicos do Google Drive | 18 aprovados, 0 falhas |
-| Compilação TypeScript isolada | aprovada |
-| Arquivos JSON analisados | 115 válidos |
+| Verificação                        |                            Resultado |
+| ---------------------------------- | -----------------------------------: |
+| Suite Node acumulada               | 108 aprovados, 0 falhas, 0 ignorados |
+| Testes específicos do Google Drive |               18 aprovados, 0 falhas |
+| Compilação TypeScript isolada      |                             aprovada |
+| Arquivos JSON analisados           |                          115 válidos |
 
 Os testes específicos cobrem:
 

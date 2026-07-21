@@ -1,4 +1,3 @@
-
 # SUBSOLO — Modelo de Artigo
 
 > Este documento é privado durante produção. Campos marcados como `[INTERNO]` não podem ser exportados.

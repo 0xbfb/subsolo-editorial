@@ -14,7 +14,9 @@ test('todas as imagens possuem versão explícita', () => {
 });
 
 test('portas administrativas são vinculadas a localhost', () => {
-  const ports = [...compose.matchAll(/^      - "([^"]+)"$/gm)].map((m) => m[1]).filter((v) => v.includes(':'));
+  const ports = [...compose.matchAll(/^      - "([^"]+)"$/gm)]
+    .map((m) => m[1])
+    .filter((v) => v.includes(':'));
   assert.ok(ports.length >= 5);
   for (const port of ports) assert.match(port, /^127\.0\.0\.1:/);
 });

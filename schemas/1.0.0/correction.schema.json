@@ -28,12 +28,7 @@
       "pattern": "^pub_[0-9A-HJKMNP-TV-Z]{26}$"
     },
     "type": {
-      "enum": [
-        "correcao-factual",
-        "esclarecimento",
-        "atualizacao-material",
-        "retirada"
-      ]
+      "enum": ["correcao-factual", "esclarecimento", "atualizacao-material", "retirada"]
     },
     "published_at": {
       "type": "string",

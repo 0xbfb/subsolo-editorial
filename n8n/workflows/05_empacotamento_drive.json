@@ -16,10 +16,7 @@
       "name": "Entrada exportada",
       "type": "n8n-nodes-base.executeWorkflowTrigger",
       "typeVersion": 1,
-      "position": [
-        0,
-        0
-      ]
+      "position": [0, 0]
     },
     {
       "parameters": {
@@ -29,10 +26,7 @@
       "name": "Empacotar",
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
-      "position": [
-        240,
-        0
-      ]
+      "position": [240, 0]
     },
     {
       "parameters": {
@@ -42,10 +36,7 @@
       "name": "Preservar no Drive",
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
-      "position": [
-        500,
-        0
-      ]
+      "position": [500, 0]
     },
     {
       "parameters": {
@@ -62,10 +53,7 @@
       "name": "Executar workflow 06",
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1,
-      "position": [
-        760,
-        0
-      ]
+      "position": [760, 0]
     }
   ],
   "connections": {

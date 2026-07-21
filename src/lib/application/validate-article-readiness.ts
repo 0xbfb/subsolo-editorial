@@ -1,4 +1,3 @@
-
 import type { EditorialCatalogIndex } from '../domain/editorial-catalog';
 import type { EditorialStatus } from '../domain/editorial-state';
 
@@ -120,7 +119,7 @@ export const validateArticleReadiness = (
     }
   }
 
-  if (article.imagem_capa && !(article.texto_alt?.trim())) {
+  if (article.imagem_capa && !article.texto_alt?.trim()) {
     errors.push({
       code: 'SUBSOLO_ARTICLE_IMAGE_ALT_MISSING',
       field: 'texto_alt',

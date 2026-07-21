@@ -16,9 +16,7 @@
       "summary": {
         "content": "O operador informou que divulgará detalhes técnicos. A informação ainda precisa de confirmação documental."
       },
-      "categories": [
-        "São Paulo — cidade"
-      ]
+      "categories": ["São Paulo — cidade"]
     },
     {
       "id": "feed/item/002",
@@ -36,9 +34,7 @@
       "summary": {
         "content": "O anúncio foi publicado pelo mantenedor e ainda exige análise independente."
       },
-      "categories": [
-        "Software livre"
-      ]
+      "categories": ["Software livre"]
     }
   ]
 }

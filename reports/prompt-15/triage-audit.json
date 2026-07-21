@@ -8,19 +8,13 @@
   "rejected_count": 2,
   "quarantine_count": 2,
   "stored_pitches": 6,
-  "statuses": [
-    "TRIAGEM"
-  ],
-  "classifications": [
-    "PRELIMINAR_NAO_EDITORIAL"
-  ],
+  "statuses": ["TRIAGEM"],
+  "classifications": ["PRELIMINAR_NAO_EDITORIAL"],
   "publication_effects": false,
   "warnings": [
     {
       "code": "SUBSOLO_INGEST_SEARCH_PARTIAL",
-      "failed_engines": [
-        "engine-x"
-      ]
+      "failed_engines": ["engine-x"]
     }
   ]
 }

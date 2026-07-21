@@ -12,7 +12,7 @@ const walk = async (dir) => {
   const files = [];
   for (const entry of entries) {
     const relative = join(dir, entry.name);
-    if (entry.isDirectory()) files.push(...await walk(`${relative}/`));
+    if (entry.isDirectory()) files.push(...(await walk(`${relative}/`)));
     else files.push(relative);
   }
   return files;
@@ -44,7 +44,10 @@ test('manchete principal não recebe sublinhado e títulos secundários recebem'
 test('conteúdo editorial da home está fora dos componentes', async () => {
   const fixture = JSON.parse(await text('src/data/fixtures/jornal-concreto-home.json'));
   const home = await text('src/pages/index.astro');
-  assert.equal(fixture.hero.title, 'A cidade terceirizou o relógio — e agora ninguém sabe quem responde pelo atraso');
+  assert.equal(
+    fixture.hero.title,
+    'A cidade terceirizou o relógio — e agora ninguém sabe quem responde pelo atraso',
+  );
   assert.match(home, /parseHomePageData\(homeFixture\)/);
   assert.doesNotMatch(home, /A cidade terceirizou/);
   assert.doesNotMatch(home, /Doze acontecimentos/);
@@ -61,7 +64,8 @@ test('não reintroduz mensagens de protótipo no código público', async () => 
   ];
   for (const file of files) {
     const content = await text(file);
-    for (const phrase of forbidden) assert.equal(content.includes(phrase), false, `${phrase} em ${file}`);
+    for (const phrase of forbidden)
+      assert.equal(content.includes(phrase), false, `${phrase} em ${file}`);
   }
 });
 
@@ -86,5 +90,8 @@ test('rota interna de inventário existe fora da navegação pública', async ()
   const page = await text('src/pages/__design/jornal-concreto.astro');
   const fixture = JSON.parse(await text('src/data/fixtures/jornal-concreto-home.json'));
   assert.match(page, /Inventário interno/);
-  assert.equal(fixture.navigation.some((item) => item.href.includes('__design')), false);
+  assert.equal(
+    fixture.navigation.some((item) => item.href.includes('__design')),
+    false,
+  );
 });

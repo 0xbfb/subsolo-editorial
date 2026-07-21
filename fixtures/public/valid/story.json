@@ -6,13 +6,7 @@
   "status": "aberta",
   "summary": "Acompanhamento de falhas, contratos e responsabilização.",
   "started_at": "2026-07-15",
-  "topics": [
-    "mobilidade",
-    "infraestrutura"
-  ],
-  "actors": [
-    "Órgão público de exemplo",
-    "Operadora de exemplo"
-  ],
+  "topics": ["mobilidade", "infraestrutura"],
+  "actors": ["Órgão público de exemplo", "Operadora de exemplo"],
   "next_expected_event": "2026-07-25"
 }

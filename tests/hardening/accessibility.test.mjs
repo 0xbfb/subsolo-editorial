@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { test } from 'node:test';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
 import { checkAccessibility } from '../../scripts/check-a11y.mjs';
 
 const rootPath = new URL('../..', import.meta.url).pathname;
@@ -14,9 +16,26 @@ test('fontes Astro passam na auditoria de acessibilidade estática', async () =>
 });
 
 test('preview representativo possui landmarks, h1 único, labels e imagens dimensionadas', async () => {
-  const report = await checkAccessibility({ root: rootPath, site: new URL('../../reports/prompt-06/preview', import.meta.url).pathname });
+  const report = await checkAccessibility({
+    root: rootPath,
+    site: new URL('../../reports/prompt-06/preview', import.meta.url).pathname,
+  });
   assert.equal(report.status, 'pass');
   assert.ok(report.rendered.htmlFiles >= 100);
+});
+
+test('redirect estático não exige semântica de página editorial', async () => {
+  const site = await mkdtemp(join(tmpdir(), 'subsolo-a11y-redirect-'));
+  try {
+    await writeFile(
+      join(site, 'index.html'),
+      '<!doctype html><title>Redirecting</title><meta http-equiv="refresh" content="0;url=/destino/">',
+    );
+    const report = await checkAccessibility({ root: rootPath, site });
+    assert.equal(report.status, 'pass', report.issues.join('\n'));
+  } finally {
+    await rm(site, { recursive: true, force: true });
+  }
 });
 
 test('tema oferece foco, movimento reduzido, alto contraste e cores forçadas', async () => {

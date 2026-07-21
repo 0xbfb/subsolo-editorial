@@ -38,9 +38,7 @@
                     "textRun": {
                       "content": "A operação registrou uma nova interrupção durante a manhã.\n",
                       "textStyle": {},
-                      "suggestedInsertionIds": [
-                        "suggestion-1"
-                      ]
+                      "suggestedInsertionIds": ["suggestion-1"]
                     }
                   }
                 ],

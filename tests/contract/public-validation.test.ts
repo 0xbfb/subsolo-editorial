@@ -6,7 +6,15 @@ import topics from '../../fixtures/public/valid/topics.json';
 import story from '../../fixtures/public/valid/story.json';
 import redirect from '../../fixtures/public/valid/redirect.json';
 import tombstone from '../../fixtures/public/valid/tombstone.json';
-import { validatePublicAuthor, validatePublicChannel, validatePublicEdition, validatePublicRedirect, validatePublicStory, validatePublicTombstone, validatePublicTopic } from '../../src/lib/domain/public-validation';
+import {
+  validatePublicAuthor,
+  validatePublicChannel,
+  validatePublicEdition,
+  validatePublicRedirect,
+  validatePublicStory,
+  validatePublicTombstone,
+  validatePublicTopic,
+} from '../../src/lib/domain/public-validation';
 
 describe('contratos públicos', () => {
   it('aceita fixtures válidas', () => {

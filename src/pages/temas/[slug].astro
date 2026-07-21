@@ -1,5 +1,27 @@
 ---
-import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro'; import PageIntro from '../../components/editorial/PageIntro.astro'; import ArchiveCollection from '../../components/discovery/ArchiveCollection.astro'; import JornalConcretoLayout from '../../layouts/JornalConcretoLayout.astro'; import { topics, editorialSite } from '../../lib/presentation/site-repository'; import { discoveryFacets, archiveEntriesForTopic } from '../../lib/presentation/archive-repository'; import { navigationFor } from '../../lib/presentation/editorial-site';
-const synthetic=Object.keys(discoveryFacets.topic).filter((slug)=>!topics.some((topic)=>topic.slug===slug)).map((slug)=>({topic_id:`derived-${slug}`,name:slug.replaceAll('-',' ').replace(/^./,(c)=>c.toUpperCase()),slug,status:'ativo',is_sensitive:false})); const all=[...topics,...synthetic]; export function getStaticPaths(){return all.map((topic)=>({params:{slug:topic.slug},props:{topic}}));} const {topic}=Astro.props; const entries=archiveEntriesForTopic(topic.slug);
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageIntro from '../../components/editorial/PageIntro.astro';
+import ArchiveCollection from '../../components/discovery/ArchiveCollection.astro';
+import JornalConcretoLayout from '../../layouts/JornalConcretoLayout.astro';
+import { topics, editorialSite } from '../../lib/presentation/site-repository';
+import { discoveryFacets, archiveEntriesForTopic } from '../../lib/presentation/archive-repository';
+import { navigationFor } from '../../lib/presentation/editorial-site';
+
+export function getStaticPaths() {
+  const synthetic = Object.keys(discoveryFacets.topic)
+    .filter((slug) => !topics.some((topic) => topic.slug === slug))
+    .map((slug) => ({
+      topic_id: `derived-${slug}`,
+      name: slug.replaceAll('-', ' ').replace(/^./, (character) => character.toUpperCase()),
+      slug,
+      status: 'ativo',
+      is_sensitive: false,
+    }));
+  const all = [...topics, ...synthetic];
+  return all.map((topic) => ({ params: { slug: topic.slug }, props: { topic } }));
+}
+
+const { topic } = Astro.props;
+const entries = archiveEntriesForTopic(topic.slug);
 ---
 <JornalConcretoLayout title={topic.name} description={`Publicações relacionadas a ${topic.name}.`} dateLabel={editorialSite.site.dateLabel} navigation={navigationFor(`/temas/${topic.slug}/`)} canonicalPath={`/temas/${topic.slug}/`}><main id="conteudo"><Breadcrumbs items={[{label:'Início',href:'/'},topic.name]} /><PageIntro eyebrow="Linha de interesse" title={topic.name} summary={`Arquivo, histórias e publicações relacionadas a ${topic.name.toLowerCase()}.`} detail={topic.is_sensitive?'Tema sujeito a revisão reforçada':'Tema ativo'} />{entries.length?<ArchiveCollection entries={entries}/>:<section class="empty-state"><h2>Arquivo em formação</h2></section>}</main></JornalConcretoLayout>

@@ -1,4 +1,3 @@
-
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { readFile, readdir } from 'node:fs/promises';
@@ -12,8 +11,18 @@ const frames = await readJson('src/data/editorial/catalogs/frames.json');
 
 test('workbook declara as doze abas obrigatórias', () => {
   assert.deepEqual(Object.keys(workbook.tabs), [
-    'PAUTAS', 'ARTIGOS', 'EDICOES', 'AUTORES', 'CANAIS', 'QUADROS',
-    'TEMAS', 'FONTES', 'PUBLICACOES', 'CORRECOES', 'AUTOMACOES', 'CONFIGURACOES',
+    'PAUTAS',
+    'ARTIGOS',
+    'EDICOES',
+    'AUTORES',
+    'CANAIS',
+    'QUADROS',
+    'TEMAS',
+    'FONTES',
+    'PUBLICACOES',
+    'CORRECOES',
+    'AUTOMACOES',
+    'CONFIGURACOES',
   ]);
 });
 

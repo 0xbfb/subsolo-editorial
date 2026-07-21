@@ -24,9 +24,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/verify-workflows.mjs",
       "status": 0,
       "duration_ms": 75,
-      "stdout_tail": [
-        "Workflows aprovados: 5 arquivos, permissões mínimas e versões explícitas."
-      ],
+      "stdout_tail": ["Workflows aprovados: 5 arquivos, permissões mínimas e versões explícitas."],
       "stderr_tail": []
     },
     {
@@ -34,9 +32,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/verify-source-manifest.mjs",
       "status": 0,
       "duration_ms": 91,
-      "stdout_tail": [
-        "12 fontes verificadas por SHA-256."
-      ],
+      "stdout_tail": ["12 fontes verificadas por SHA-256."],
       "stderr_tail": []
     },
     {
@@ -44,9 +40,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/check-boundaries.mjs",
       "status": 0,
       "duration_ms": 95,
-      "stdout_tail": [
-        "Fronteiras arquiteturais válidas."
-      ],
+      "stdout_tail": ["Fronteiras arquiteturais válidas."],
       "stderr_tail": []
     },
     {
@@ -90,12 +84,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-public-content.mjs",
       "status": 0,
       "duration_ms": 83,
-      "stdout_tail": [
-        "  \"roots\": [",
-        "    \"content/publications\"",
-        "  ]",
-        "}"
-      ],
+      "stdout_tail": ["  \"roots\": [", "    \"content/publications\"", "  ]", "}"],
       "stderr_tail": []
     },
     {
@@ -113,9 +102,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-public-media-if-present.mjs",
       "status": 0,
       "duration_ms": 92,
-      "stdout_tail": [
-        "Mídia pública: nenhum ativo aprovado; placeholders permanecem ativos."
-      ],
+      "stdout_tail": ["Mídia pública: nenhum ativo aprovado; placeholders permanecem ativos."],
       "stderr_tail": []
     },
     {
@@ -123,9 +110,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-observability.mjs",
       "status": 0,
       "duration_ms": 79,
-      "stdout_tail": [
-        "Observabilidade válida: 9 monitores, 3 tópicos e smoke externo agendado."
-      ],
+      "stdout_tail": ["Observabilidade válida: 9 monitores, 3 tópicos e smoke externo agendado."],
       "stderr_tail": []
     },
     {
@@ -133,9 +118,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/generate-discovery-assets.mjs",
       "status": 0,
       "duration_ms": 114,
-      "stdout_tail": [
-        "Descoberta gerada: 25 registros, 8 dias, 11 feeds."
-      ],
+      "stdout_tail": ["Descoberta gerada: 25 registros, 8 dias, 11 feeds."],
       "stderr_tail": []
     },
     {
@@ -143,9 +126,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-discovery-assets.mjs",
       "status": 0,
       "duration_ms": 92,
-      "stdout_tail": [
-        "Assets de descoberta válidos: 25 registros, 11 feeds."
-      ],
+      "stdout_tail": ["Assets de descoberta válidos: 25 registros, 11 feeds."],
       "stderr_tail": []
     },
     {
@@ -163,9 +144,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/validate-preview-links.mjs",
       "status": 0,
       "duration_ms": 139,
-      "stdout_tail": [
-        "114 páginas e links internos validados."
-      ],
+      "stdout_tail": ["114 páginas e links internos validados."],
       "stderr_tail": []
     },
     {
@@ -193,9 +172,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/scan-repository-secrets.mjs",
       "status": 0,
       "duration_ms": 577,
-      "stdout_tail": [
-        "Varredura de segredos aprovada: 897 arquivos textuais."
-      ],
+      "stdout_tail": ["Varredura de segredos aprovada: 897 arquivos textuais."],
       "stderr_tail": []
     },
     {
@@ -203,9 +180,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/check-security-headers.mjs",
       "status": 0,
       "duration_ms": 142,
-      "stdout_tail": [
-        "CSP e política de referrer aprovadas; 12 diretivas verificadas."
-      ],
+      "stdout_tail": ["CSP e política de referrer aprovadas; 12 diretivas verificadas."],
       "stderr_tail": []
     },
     {
@@ -213,9 +188,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/check-minimum-permissions.mjs",
       "status": 0,
       "duration_ms": 96,
-      "stdout_tail": [
-        "Permissões mínimas aprovadas: 4 workflows e 6 serviços."
-      ],
+      "stdout_tail": ["Permissões mínimas aprovadas: 4 workflows e 6 serviços."],
       "stderr_tail": []
     },
     {
@@ -223,9 +196,7 @@
       "command": "/opt/nvm/versions/node/v22.16.0/bin/node scripts/check-a11y.mjs",
       "status": 0,
       "duration_ms": 127,
-      "stdout_tail": [
-        "Acessibilidade estática aprovada: 23 páginas-fonte."
-      ],
+      "stdout_tail": ["Acessibilidade estática aprovada: 23 páginas-fonte."],
       "stderr_tail": []
     },
     {

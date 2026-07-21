@@ -1,10 +1,7 @@
 {
   "site": {
     "description": "Subsolo — portal editorial independente. O ruído passa. O que importa fica.",
-    "dateLabel": [
-      "SEGUNDA-FEIRA",
-      "20 JULHO 2026"
-    ],
+    "dateLabel": ["SEGUNDA-FEIRA", "20 JULHO 2026"],
     "closingLabel": "Fechamento 11:42 BRT"
   },
   "edition": {
@@ -57,40 +54,20 @@
       "stateKind": "corrected",
       "title": "A cidade terceirizou o relógio — e agora ninguém sabe quem responde pelo atraso",
       "subtitle": "Uma falha repetida expõe contratos fragmentados, fiscalização opaca e a velha tecnologia pública de empurrar responsabilidade até ela cair no colo do passageiro.",
-      "authors": [
-        "malu"
-      ],
+      "authors": ["malu"],
       "editor": "trilho",
       "publishedAt": "2026-07-20T10:48:00-03:00",
       "updatedAt": "2026-07-20T16:10:00-03:00",
       "readingTime": "8 min",
-      "territories": [
-        "São Paulo"
-      ],
-      "topics": [
-        "mobilidade",
-        "infraestrutura",
-        "concessoes"
-      ],
+      "territories": ["São Paulo"],
+      "topics": ["mobilidade", "infraestrutura", "concessoes"],
       "story": "operacao-transporte-metropolitano",
       "featured": true,
       "toc": [
-        [
-          "o-acontecimento",
-          "O acontecimento"
-        ],
-        [
-          "contrato-fragmentado",
-          "O contrato fragmentado"
-        ],
-        [
-          "responsabilidade",
-          "Sob responsabilidade de quem?"
-        ],
-        [
-          "ainda-nao-sabemos",
-          "O que ainda não sabemos"
-        ]
+        ["o-acontecimento", "O acontecimento"],
+        ["contrato-fragmentado", "O contrato fragmentado"],
+        ["responsabilidade", "Sob responsabilidade de quem?"],
+        ["ainda-nao-sabemos", "O que ainda não sabemos"]
       ],
       "sections": [
         {
@@ -158,10 +135,7 @@
           ]
         }
       ],
-      "sourceIds": [
-        "doc-relatorio-operacional",
-        "src-contrato-operacao"
-      ],
+      "sourceIds": ["doc-relatorio-operacional", "src-contrato-operacao"],
       "corrections": [
         {
           "date": "20 de julho de 2026, 16h10",
@@ -173,10 +147,7 @@
           "newRevision": 2
         }
       ],
-      "connectionIds": [
-        "pub-bdd-20260720",
-        "pub-plataforma-20260720"
-      ],
+      "connectionIds": ["pub-bdd-20260720", "pub-plataforma-20260720"],
       "bodyVisibility": "full",
       "tombstone": null
     },
@@ -191,42 +162,20 @@
       "stateKind": "confirmed",
       "title": "Bom Dia, Distopia — 20 de julho de 2026",
       "subtitle": "A edição matinal organiza os fatos que merecem atravessar o ruído antes que o trânsito e os comunicados oficiais façam hora extra.",
-      "authors": [
-        "cora"
-      ],
+      "authors": ["cora"],
       "editor": "cora",
       "publishedAt": "2026-07-20T07:05:00-03:00",
       "updatedAt": null,
       "readingTime": "12 min",
-      "territories": [
-        "São Paulo",
-        "Brasil",
-        "Mundo"
-      ],
-      "topics": [
-        "sao-paulo",
-        "tecnologia",
-        "privacidade"
-      ],
+      "territories": ["São Paulo", "Brasil", "Mundo"],
+      "topics": ["sao-paulo", "tecnologia", "privacidade"],
       "story": "operacao-transporte-metropolitano",
       "featured": false,
       "toc": [
-        [
-          "abertura",
-          "Abertura"
-        ],
-        [
-          "cidade",
-          "Cidade"
-        ],
-        [
-          "plataformas",
-          "Tecnologia e plataformas"
-        ],
-        [
-          "pings",
-          "Pings do Subsolo"
-        ]
+        ["abertura", "Abertura"],
+        ["cidade", "Cidade"],
+        ["plataformas", "Tecnologia e plataformas"],
+        ["pings", "Pings do Subsolo"]
       ],
       "sections": [
         {
@@ -281,10 +230,7 @@
           "blocks": []
         }
       ],
-      "sourceIds": [
-        "doc-relatorio-operacional",
-        "src-termos-plataforma"
-      ],
+      "sourceIds": ["doc-relatorio-operacional", "src-termos-plataforma"],
       "corrections": [],
       "connectionIds": [
         "pub-transporte-20260720",
@@ -305,36 +251,19 @@
       "stateKind": "analysis",
       "title": "Aceite a nova regra ou desapareça da fila",
       "subtitle": "A mudança reorganiza distribuição, risco e dependência sem chamar isso de poder.",
-      "authors": [
-        "termos"
-      ],
+      "authors": ["termos"],
       "editor": "lock",
       "publishedAt": "2026-07-20T12:10:00-03:00",
       "updatedAt": "2026-07-20T18:20:00-03:00",
       "readingTime": "7 min",
-      "territories": [
-        "Global"
-      ],
-      "topics": [
-        "plataformas-digitais",
-        "economia",
-        "desenvolvimento-de-software"
-      ],
+      "territories": ["Global"],
+      "topics": ["plataformas-digitais", "economia", "desenvolvimento-de-software"],
       "story": null,
       "featured": false,
       "toc": [
-        [
-          "mudanca",
-          "A mudança"
-        ],
-        [
-          "dependencia",
-          "A dependência criada"
-        ],
-        [
-          "alternativas",
-          "Alternativas e saídas"
-        ]
+        ["mudanca", "A mudança"],
+        ["dependencia", "A dependência criada"],
+        ["alternativas", "Alternativas e saídas"]
       ],
       "sections": [
         {
@@ -380,14 +309,9 @@
           ]
         }
       ],
-      "sourceIds": [
-        "src-termos-plataforma"
-      ],
+      "sourceIds": ["src-termos-plataforma"],
       "corrections": [],
-      "connectionIds": [
-        "pub-bdd-20260720",
-        "pub-termos-20260720"
-      ],
+      "connectionIds": ["pub-bdd-20260720", "pub-termos-20260720"],
       "bodyVisibility": "full",
       "tombstone": null
     },
@@ -402,36 +326,19 @@
       "stateKind": "corrected",
       "title": "Seu aplicativo mudou os termos. Eis o que merece atenção de verdade",
       "subtitle": "Três verificações úteis, duas permissões dispensáveis e uma alternativa aberta que funciona.",
-      "authors": [
-        "modo"
-      ],
+      "authors": ["modo"],
       "editor": "modo",
       "publishedAt": "2026-07-20T11:20:00-03:00",
       "updatedAt": "2026-07-20T19:00:00-03:00",
       "readingTime": "5 min",
-      "territories": [
-        "Global"
-      ],
-      "topics": [
-        "privacidade",
-        "seguranca-digital",
-        "software-livre"
-      ],
+      "territories": ["Global"],
+      "topics": ["privacidade", "seguranca-digital", "software-livre"],
       "story": null,
       "featured": false,
       "toc": [
-        [
-          "agora",
-          "O que fazer agora"
-        ],
-        [
-          "nao-precisa",
-          "O que não precisa ser feito"
-        ],
-        [
-          "alternativa",
-          "Alternativa aberta"
-        ]
+        ["agora", "O que fazer agora"],
+        ["nao-precisa", "O que não precisa ser feito"],
+        ["alternativa", "Alternativa aberta"]
       ],
       "sections": [
         {
@@ -471,9 +378,7 @@
           ]
         }
       ],
-      "sourceIds": [
-        "src-termos-plataforma"
-      ],
+      "sourceIds": ["src-termos-plataforma"],
       "corrections": [
         {
           "date": "20 de julho de 2026, 19h00",
@@ -485,9 +390,7 @@
           "newRevision": 2
         }
       ],
-      "connectionIds": [
-        "pub-plataforma-20260720"
-      ],
+      "connectionIds": ["pub-plataforma-20260720"],
       "bodyVisibility": "tombstone",
       "tombstone": {
         "publishedAt": "2026-07-20T19:00:00-03:00",
@@ -504,15 +407,8 @@
       "status": "Aberta",
       "summary": "Acompanhamento de falhas, contratos, fiscalização e responsabilização no transporte metropolitano.",
       "guardian": "trilho",
-      "topics": [
-        "mobilidade",
-        "infraestrutura",
-        "concessoes"
-      ],
-      "publicationIds": [
-        "pub-bdd-20260720",
-        "pub-transporte-20260720"
-      ],
+      "topics": ["mobilidade", "infraestrutura", "concessoes"],
+      "publicationIds": ["pub-bdd-20260720", "pub-transporte-20260720"],
       "nextExpectedEvent": "2026-07-25",
       "timeline": [
         {
@@ -554,11 +450,7 @@
       "status": "Em desenvolvimento",
       "summary": "Bloqueio, ataques, frete e energia acompanhados como uma história de infraestrutura geopolítica.",
       "guardian": "pavio",
-      "topics": [
-        "relacoes-internacionais",
-        "geopolitica",
-        "energia"
-      ],
+      "topics": ["relacoes-internacionais", "geopolitica", "energia"],
       "publicationIds": [],
       "nextExpectedEvent": "Nova atualização operacional ou diplomática verificável",
       "timeline": [
@@ -583,11 +475,7 @@
           "text": "Três histórias foram revistas somente pelas mudanças materiais registradas ao longo da semana."
         }
       ],
-      "actors": [
-        "Estados Unidos",
-        "Irã",
-        "Operadores marítimos"
-      ],
+      "actors": ["Estados Unidos", "Irã", "Operadores marítimos"],
       "openQuestions": [
         "Qual é o alcance real do bloqueio?",
         "Que mecanismo sustenta a proposta de cobrança?"
@@ -599,11 +487,7 @@
       "status": "Em desenvolvimento",
       "summary": "Acompanhamento das ordens, exceções, respostas e efeitos setoriais da disputa comercial.",
       "guardian": "lupa",
-      "topics": [
-        "economia",
-        "relacoes-internacionais",
-        "trabalho"
-      ],
+      "topics": ["economia", "relacoes-internacionais", "trabalho"],
       "publicationIds": [],
       "nextExpectedEvent": "Entrada em vigor e publicação das orientações aduaneiras",
       "timeline": [
@@ -633,11 +517,7 @@
           "text": "A ordem publicada foi organizada por setor, vigência, alcance e investigações adicionais."
         }
       ],
-      "actors": [
-        "Governo brasileiro",
-        "Governo dos Estados Unidos",
-        "Setores exportadores"
-      ],
+      "actors": ["Governo brasileiro", "Governo dos Estados Unidos", "Setores exportadores"],
       "openQuestions": [
         "Quais setores ficam efetivamente expostos?",
         "Quais exceções sobreviverão à implementação?"
@@ -665,9 +545,7 @@
           "comment": "A vigência do procedimento não demonstra que ele tenha sido executado nem que seja suficiente."
         }
       ],
-      "relatedPublicationIds": [
-        "pub-transporte-20260720"
-      ]
+      "relatedPublicationIds": ["pub-transporte-20260720"]
     }
   ],
   "sources": [

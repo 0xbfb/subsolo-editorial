@@ -23,15 +23,7 @@
       "pattern": "^media_[0-9A-HJKMNP-TV-Z]{26}$"
     },
     "type": {
-      "enum": [
-        "imagem",
-        "audio",
-        "video",
-        "documento",
-        "grafico",
-        "mapa",
-        "posicao-de-xadrez"
-      ]
+      "enum": ["imagem", "audio", "video", "documento", "grafico", "mapa", "posicao-de-xadrez"]
     },
     "alt": {
       "type": "string",
@@ -62,12 +54,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": [
-          "path",
-          "width",
-          "height",
-          "format"
-        ],
+        "required": ["path", "width", "height", "format"],
         "properties": {
           "path": {
             "type": "string",
@@ -82,24 +69,14 @@
             "minimum": 1
           },
           "format": {
-            "enum": [
-              "avif",
-              "webp",
-              "jpeg",
-              "png"
-            ]
+            "enum": ["avif", "webp", "jpeg", "png"]
           },
           "variant": {
             "type": "string",
             "minLength": 1
           },
           "mime_type": {
-            "enum": [
-              "image/avif",
-              "image/webp",
-              "image/jpeg",
-              "image/png"
-            ]
+            "enum": ["image/avif", "image/webp", "image/jpeg", "image/png"]
           },
           "bytes": {
             "type": "integer",

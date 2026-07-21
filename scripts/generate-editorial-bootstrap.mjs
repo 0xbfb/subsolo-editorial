@@ -1,4 +1,3 @@
-
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 
 const apply = process.argv.includes('--apply');
@@ -6,7 +5,14 @@ const workbook = JSON.parse(await readFile('templates/google/sheets/workbook.sch
 const bootstrapDir = 'templates/google/sheets/bootstrap';
 
 const escapeCsv = (value) => {
-  const text = value == null ? '' : Array.isArray(value) ? value.join(';') : typeof value === 'object' ? JSON.stringify(value) : String(value);
+  const text =
+    value == null
+      ? ''
+      : Array.isArray(value)
+        ? value.join(';')
+        : typeof value === 'object'
+          ? JSON.stringify(value)
+          : String(value);
   return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
 };
 
@@ -31,11 +37,38 @@ for (const [tab, columns] of Object.entries(workbook.tabs)) {
   const parsed = JSON.parse(await readFile(source, 'utf8'));
   const rows = Array.isArray(parsed) ? parsed : [parsed];
   const headers = columns.map((column) => column.name);
-  const csv = [headers.join(','), ...rows.map((row) => headers.map((header) => escapeCsv(row[header])).join(','))].join('\n') + '\n';
-  plan.push({ tab, source, csvPath: `${bootstrapDir}/${tab}.csv`, jsonPath: `${bootstrapDir}/${tab}.json`, rows: rows.length, csv, json: JSON.stringify(rows, null, 2) + '\n' });
+  const csv =
+    [
+      headers.join(','),
+      ...rows.map((row) => headers.map((header) => escapeCsv(row[header])).join(',')),
+    ].join('\n') + '\n';
+  plan.push({
+    tab,
+    source,
+    csvPath: `${bootstrapDir}/${tab}.csv`,
+    jsonPath: `${bootstrapDir}/${tab}.json`,
+    rows: rows.length,
+    csv,
+    json: JSON.stringify(rows, null, 2) + '\n',
+  });
 }
 
-console.log(JSON.stringify({ mode: apply ? 'apply' : 'dry-run', files: plan.map(({ tab, source, csvPath, jsonPath, rows }) => ({ tab, source, csvPath, jsonPath, rows })) }, null, 2));
+console.log(
+  JSON.stringify(
+    {
+      mode: apply ? 'apply' : 'dry-run',
+      files: plan.map(({ tab, source, csvPath, jsonPath, rows }) => ({
+        tab,
+        source,
+        csvPath,
+        jsonPath,
+        rows,
+      })),
+    },
+    null,
+    2,
+  ),
+);
 
 if (apply) {
   await mkdir(bootstrapDir, { recursive: true });

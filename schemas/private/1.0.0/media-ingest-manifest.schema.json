@@ -26,11 +26,7 @@
       "pattern": "^media_[0-9A-HJKMNP-TV-Z]{26}$"
     },
     "kind": {
-      "enum": [
-        "portrait",
-        "article",
-        "documentary"
-      ]
+      "enum": ["portrait", "article", "documentary"]
     },
     "slug": {
       "type": "string",
@@ -41,13 +37,7 @@
       "minLength": 1
     },
     "declared_mime": {
-      "enum": [
-        "image/jpeg",
-        "image/png",
-        "image/webp",
-        "image/avif",
-        "image/tiff"
-      ]
+      "enum": ["image/jpeg", "image/png", "image/webp", "image/avif", "image/tiff"]
     },
     "alt": {
       "type": "string",
@@ -55,10 +45,7 @@
       "maxLength": 320
     },
     "caption": {
-      "type": [
-        "string",
-        "null"
-      ]
+      "type": ["string", "null"]
     },
     "credit": {
       "type": "string",
@@ -82,10 +69,7 @@
     "focus": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "x",
-        "y"
-      ],
+      "required": ["x", "y"],
       "properties": {
         "x": {
           "type": "number",
@@ -110,11 +94,7 @@
         }
       },
       "then": {
-        "required": [
-          "author_slug",
-          "visual_guide_reference",
-          "focus"
-        ]
+        "required": ["author_slug", "visual_guide_reference", "focus"]
       }
     }
   ]

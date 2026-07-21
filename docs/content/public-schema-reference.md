@@ -39,7 +39,6 @@ A versão `0.6.0-dev` adiciona dois contratos técnicos públicos:
 
 Esses schemas descrevem preservação e operação. Eles não são coleções renderizadas diretamente pelo Astro.
 
-
 ## Ciclo pós-publicação
 
 A versão `0.8.3-dev` adiciona contratos públicos para redirects e tombstones. Correções continuam em `corrections.json`; o tipo determina se a alteração é correção factual, esclarecimento, atualização material ou retirada. A cadeia exige `new_revision = previous_revision + 1`. IDs `redirect_` e `tomb_` seguem o mesmo ULID estável das demais entidades.

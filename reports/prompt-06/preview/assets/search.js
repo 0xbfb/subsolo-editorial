@@ -6,7 +6,14 @@
   const output = root.querySelector('[data-search-results]');
   const indexHref = root.dataset.indexHref;
   const pagefindHref = root.dataset.pagefindHref;
-  if (!(form instanceof HTMLFormElement) || !(status instanceof HTMLElement) || !(output instanceof HTMLOListElement) || !indexHref || !pagefindHref) return;
+  if (
+    !(form instanceof HTMLFormElement) ||
+    !(status instanceof HTMLElement) ||
+    !(output instanceof HTMLOListElement) ||
+    !indexHref ||
+    !pagefindHref
+  )
+    return;
 
   let archiveIndex = null;
   let pagefind = null;
@@ -42,11 +49,12 @@
   };
 
   const selected = () => Object.fromEntries(new FormData(form).entries());
-  const passes = (entry, filters) => (!filters.channel || entry.channel === filters.channel)
-    && (!filters.topic || entry.topics.includes(filters.topic))
-    && (!filters.author || entry.authors.includes(filters.author))
-    && (!filters.type || entry.type === filters.type)
-    && (!filters.state || entry.state === filters.state);
+  const passes = (entry, filters) =>
+    (!filters.channel || entry.channel === filters.channel) &&
+    (!filters.topic || entry.topics.includes(filters.topic)) &&
+    (!filters.author || entry.authors.includes(filters.author)) &&
+    (!filters.type || entry.type === filters.type) &&
+    (!filters.state || entry.state === filters.state);
 
   const search = async () => {
     if (!archiveIndex) return;
@@ -54,14 +62,18 @@
     const query = String(filters.q || '').trim();
     let allowed = archiveIndex.entries.filter((entry) => passes(entry, filters));
     if (query && pagefind) {
-      const filterValues = Object.fromEntries(Object.entries(filters).filter(([key, value]) => key !== 'q' && value));
+      const filterValues = Object.fromEntries(
+        Object.entries(filters).filter(([key, value]) => key !== 'q' && value),
+      );
       const result = await pagefind.search(query, { filters: filterValues });
       const details = await Promise.all(result.results.map((item) => item.data()));
       const hrefs = new Set(details.map((item) => new URL(item.url, location.origin).pathname));
       allowed = allowed.filter((entry) => hrefs.has(new URL(entry.href, location.origin).pathname));
     } else if (query) {
       const needle = query.toLocaleLowerCase('pt-BR');
-      allowed = allowed.filter((entry) => `${entry.title} ${entry.summary}`.toLocaleLowerCase('pt-BR').includes(needle));
+      allowed = allowed.filter((entry) =>
+        `${entry.title} ${entry.summary}`.toLocaleLowerCase('pt-BR').includes(needle),
+      );
     }
     render(allowed, query);
   };
@@ -80,9 +92,23 @@
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    search().catch(() => { status.textContent = 'A busca falhou. O arquivo continua disponível pelas rotas de navegação.'; });
+    search().catch(() => {
+      status.textContent =
+        'A busca falhou. O arquivo continua disponível pelas rotas de navegação.';
+    });
   });
-  form.addEventListener('change', () => { search().catch(() => undefined); });
-  form.addEventListener('reset', () => { setTimeout(() => { search().catch(() => undefined); }); });
-  load().then(search).catch(() => { status.textContent = 'O índice estático não pôde ser carregado. Use o arquivo por data e taxonomia.'; });
+  form.addEventListener('change', () => {
+    search().catch(() => undefined);
+  });
+  form.addEventListener('reset', () => {
+    setTimeout(() => {
+      search().catch(() => undefined);
+    });
+  });
+  load()
+    .then(search)
+    .catch(() => {
+      status.textContent =
+        'O índice estático não pôde ser carregado. Use o arquivo por data e taxonomia.';
+    });
 })();
