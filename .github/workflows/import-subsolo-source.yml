@@ -1,0 +1,51 @@
+name: Import Subsolo source
+
+on:
+  push:
+    branches:
+      - transport/subsolo-1.0.0-pre
+    paths:
+      - .subsolo-import/complete
+
+permissions:
+  contents: write
+
+jobs:
+  import-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout transport branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and validate source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .subsolo-import/chunks/part-* | base64 --decode > /tmp/subsolo-git-source.tar.xz
+          echo "1eaece87ee2ef1af0cb8c797185cbac53547fee480aa5db6e3278e67a12315fd  /tmp/subsolo-git-source.tar.xz" | sha256sum --check --strict
+          mkdir -p /tmp/subsolo-git-source
+          tar -xJf /tmp/subsolo-git-source.tar.xz -C /tmp/subsolo-git-source
+          test "$(find /tmp/subsolo-git-source -type f | wc -l)" -eq 1079
+          test ! -e /tmp/subsolo-git-source/.git
+          test ! -e /tmp/subsolo-git-source/node_modules
+          test ! -e /tmp/subsolo-git-source/dist
+          test ! -e /tmp/subsolo-git-source/.env
+
+      - name: Create the single homologation commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main homologacao/1.0.0-pre
+          git checkout -B homologacao/1.0.0-pre origin/main
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a /tmp/subsolo-git-source/. .
+          test ! -e .subsolo-import
+          git add --all
+          git diff --cached --quiet && { echo "No source changes found" >&2; exit 1; }
+          git config user.name "subsolo-release-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "feat: import Subsolo Editorial 1.0.0-pre"
+          git push --force-with-lease=refs/heads/homologacao/1.0.0-pre:8cb1bd4a41283ad4c4cbfb4ea09c4e5b28fd2cdf origin HEAD:refs/heads/homologacao/1.0.0-pre
