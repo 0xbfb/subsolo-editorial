@@ -1,4 +1,3 @@
-
 export const EDITORIAL_STATUSES = [
   'IDEIA',
   'TRIAGEM',
@@ -56,10 +55,8 @@ export const isEditorialStatus = (value: unknown): value is EditorialStatus =>
 export const allowedEditorialTransitions = (status: EditorialStatus): readonly EditorialStatus[] =>
   transitions[status];
 
-export const canTransitionEditorialStatus = (
-  from: EditorialStatus,
-  to: EditorialStatus,
-): boolean => transitions[from].includes(to);
+export const canTransitionEditorialStatus = (from: EditorialStatus, to: EditorialStatus): boolean =>
+  transitions[from].includes(to);
 
 export const transitionEditorialStatus = (
   from: EditorialStatus,

@@ -3,17 +3,17 @@
 **Versão:** `1.0.0`  
 **Draft:** JSON Schema 2020-12
 
-| Schema | Obrigatórios | Propriedades | Enums diretos | Fixture válida |
-|---|---:|---:|---:|---|
-| `author.schema.json` | 9 | 9 | 2 | `authors.json` |
-| `channel.schema.json` | 10 | 10 | 1 | `channel.json` |
-| `correction.schema.json` | 9 | 9 | 1 | `corrections.json` |
-| `edition.schema.json` | 10 | 10 | 1 | `edition.json` |
-| `media.schema.json` | 8 | 8 | 1 | `media.json` |
-| `publication.schema.json` | 20 | 20 | 2 | `publication.json + publication.md` |
-| `source.schema.json` | 10 | 10 | 1 | `sources.json` |
-| `story.schema.json` | 10 | 10 | 1 | `story.json` |
-| `topic.schema.json` | 6 | 6 | 1 | `topics.json` |
+| Schema                    | Obrigatórios | Propriedades | Enums diretos | Fixture válida                      |
+| ------------------------- | -----------: | -----------: | ------------: | ----------------------------------- |
+| `author.schema.json`      |            9 |            9 |             2 | `authors.json`                      |
+| `channel.schema.json`     |           10 |           10 |             1 | `channel.json`                      |
+| `correction.schema.json`  |            9 |            9 |             1 | `corrections.json`                  |
+| `edition.schema.json`     |           10 |           10 |             1 | `edition.json`                      |
+| `media.schema.json`       |            8 |            8 |             1 | `media.json`                        |
+| `publication.schema.json` |           20 |           20 |             2 | `publication.json + publication.md` |
+| `source.schema.json`      |           10 |           10 |             1 | `sources.json`                      |
+| `story.schema.json`       |           10 |           10 |             1 | `story.json`                        |
+| `topic.schema.json`       |            6 |            6 |             1 | `topics.json`                       |
 
 ## Validações transversais
 

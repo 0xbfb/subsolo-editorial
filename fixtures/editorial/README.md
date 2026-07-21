@@ -1,4 +1,3 @@
-
 # Fixtures editoriais
 
 A pasta `edition-2026-07-20` representa uma edição completa e fictícia para testes. URLs externas usam `example.org`, `example.github.io` ou IDs declaradamente fictícios.

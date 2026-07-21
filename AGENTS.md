@@ -27,7 +27,6 @@ pnpm format:check
 
 Não declarar sucesso para comando não executado. Relatar limitações com evidência.
 
-
 ## Contratos editoriais da versão 0.2.0-dev
 
 - não alterar listas controladas sem atualizar schemas, fixtures, CSVs e testes;
@@ -36,7 +35,6 @@ Não declarar sucesso para comando não executado. Relatar limitações com evid
 - não transformar canais em tags;
 - quadros compartilhados precisam manter ID qualificado pelo canal;
 - `PRONTO_PARA_PUBLICAR` exige as três revisões concluídas.
-
 
 ## Conteúdo público
 
@@ -100,12 +98,11 @@ Não introduza status operacionais do Sheets no contrato público. Toda alteraç
 ## Exportador
 
 A lógica crítica de conversão deve permanecer fora do n8n. Novos providers precisam obedecer às mesmas entradas estruturadas e produzir exatamente o mesmo resultado das fixtures. Comentários, sugestões e links privados bloqueiam publicação; não devem ser removidos silenciosamente.
+
 - fontes, correções e mídia devem ser reconstruídas por allowlist;
 - proveniência pública usa hashes dos snapshots e não IDs privados do Google;
 - apply deve permanecer atômico e overwrite deve remover resíduos;
 - o mesmo input precisa produzir os mesmos bytes.
-
-
 
 ## Google Workspace 0.5.1-dev
 
@@ -159,11 +156,9 @@ A lógica crítica de conversão deve permanecer fora do n8n. Novos providers pr
 - uma edição selada rejeita append comum;
 - correções pós-selo geram nova revisão formal e preservam os ZIPs anteriores.
 
-
 ## Mídia
 
 Nunca copie originais para `public/`. Sempre valide manifesto, direitos e MIME; execute dry-run; publique apenas derivados content-addressed. Retratos exigem aprovação explícita e não podem ser substituídos por imagens genéricas.
-
 
 ## Operação 0.9.0-dev
 
@@ -191,7 +186,6 @@ Nunca copie originais para `public/`. Sempre valide manifesto, direitos e MIME; 
 - conteúdo crítico deve permanecer legível sem JavaScript;
 - aumento de budget ou gatilho de capacidade exige registro de decisão;
 - a revisão manual com teclado e leitor de tela não pode ser substituída apenas por checks estáticos.
-
 
 ## Pré-release 1.0.0-pre
 

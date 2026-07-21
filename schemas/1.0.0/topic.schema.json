@@ -4,14 +4,7 @@
   "title": "Public Topic",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "schema_version",
-    "id",
-    "name",
-    "slug",
-    "description",
-    "status"
-  ],
+  "required": ["schema_version", "id", "name", "slug", "description", "status"],
   "properties": {
     "schema_version": {
       "const": "1.0.0"
@@ -35,10 +28,7 @@
       "minLength": 1
     },
     "status": {
-      "enum": [
-        "ativo",
-        "arquivado"
-      ]
+      "enum": ["ativo", "arquivado"]
     }
   }
 }

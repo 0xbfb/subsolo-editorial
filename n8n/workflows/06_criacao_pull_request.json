@@ -16,10 +16,7 @@
       "name": "Pacote preservado",
       "type": "n8n-nodes-base.executeWorkflowTrigger",
       "typeVersion": 1,
-      "position": [
-        0,
-        0
-      ]
+      "position": [0, 0]
     },
     {
       "parameters": {
@@ -29,10 +26,7 @@
       "name": "Orquestrar branch e PR",
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
-      "position": [
-        300,
-        0
-      ]
+      "position": [300, 0]
     },
     {
       "parameters": {},
@@ -40,10 +34,7 @@
       "name": "Aguardar revisão humana",
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
-      "position": [
-        600,
-        0
-      ]
+      "position": [600, 0]
     }
   ],
   "connections": {

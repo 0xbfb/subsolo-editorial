@@ -1,30 +1,30 @@
 ---
-schema_version: "2.0.0"
-id: "pub_01K0ABCDEFFGHJKMNPQRSTVWXY"
-edition_id: "ed_2026-07-20"
-title: "A cidade terceirizou o relógio"
-slug: "a-cidade-terceirizou-o-relogio"
-description: "Contratos fragmentados tornam responsabilidades difíceis de localizar."
-channel: "sao-paulo-sob-o-capo"
-section: "cidade"
-type: "reportagem"
-status: "em-desenvolvimento"
+schema_version: '2.0.0'
+id: 'pub_01K0ABCDEFFGHJKMNPQRSTVWXY'
+edition_id: 'ed_2026-07-20'
+title: 'A cidade terceirizou o relógio'
+slug: 'a-cidade-terceirizou-o-relogio'
+description: 'Contratos fragmentados tornam responsabilidades difíceis de localizar.'
+channel: 'sao-paulo-sob-o-capo'
+section: 'cidade'
+type: 'reportagem'
+status: 'em-desenvolvimento'
 authors:
-  - "trilho"
-editor: "trilho"
+  - 'trilho'
+editor: 'trilho'
 topics:
-  - "mobilidade"
-  - "infraestrutura"
+  - 'mobilidade'
+  - 'infraestrutura'
 territories:
-  - "sao-paulo"
-story_id: "story_01K0ABCDEFFGHJKMNPQRSTVWXY"
-published_at: "2026-07-20T08:15:22-03:00"
+  - 'sao-paulo'
+story_id: 'story_01K0ABCDEFFGHJKMNPQRSTVWXY'
+published_at: '2026-07-20T08:15:22-03:00'
 updated_at: null
 featured: true
-language: "pt-BR"
+language: 'pt-BR'
 image:
-  src: "/media/2026/07/transporte.webp"
-  alt: "Plataforma ferroviária vista através de uma grade de manutenção."
+  src: '/media/2026/07/transporte.webp'
+  alt: 'Plataforma ferroviária vista através de uma grade de manutenção.'
 ---
 
 ## O acontecimento

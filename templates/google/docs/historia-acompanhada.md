@@ -1,4 +1,3 @@
-
 # SUBSOLO — História Acompanhada
 
 - **Story ID:**
@@ -15,7 +14,7 @@
 ## Cronologia
 
 | Data | Evento | Evidência | Publicação relacionada |
-|---|---|---|---|
+| ---- | ------ | --------- | ---------------------- |
 
 ## Atores
 

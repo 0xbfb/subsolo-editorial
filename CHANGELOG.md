@@ -15,12 +15,16 @@
 
 ### Fixed
 
-- backup passa a obter a versão do produto diretamente de `package.json`, evitando manifesto com versão obsoleta.
+- backup passa a obter a versão do produto diretamente de `package.json`, evitando manifesto com versão obsoleta;
+- helper de parâmetros da rota editorial dinâmica passa a viver dentro de `getStaticPaths()`, eliminando a falha de escopo no build Astro;
+- verificador de fontes aceita artefatos binários deliberadamente omitidos do pacote Git somente quando caminho, tamanho e SHA-256 coincidem com o manifesto externo.
 
 ### Validation
 
-- validações offline acumuladas executadas em árvore de trabalho e repetidas em diretório limpo;
-- pré-release gerada com decisão **NO-GO para RC1** enquanto os gates externos não forem atendidos.
+- 253 testes Node aprovados em 47 arquivos, incluindo regressões do manifesto de fontes;
+- varredura de segredos, fronteiras arquiteturais, workflows, fixtures editoriais, conteúdo público, segurança, permissões, headers e acessibilidade estática aprovados;
+- build Astro/Pagefind e toolchain pnpm permanecem destinados ao CI conectado, pois o registry npm não estava acessível no sandbox local;
+- pré-release permanece **NO-GO para RC1** enquanto os demais gates externos não forem atendidos.
 
 ### Blocking issues
 
@@ -105,7 +109,6 @@
 - remoção de metadata e integridade SHA-256;
 - componentes de retrato e fallback tipográfico;
 - registro dos onze editores sem inventar ativos.
-
 
 ## [0.8.3-dev] — 2026-07-20
 
@@ -207,7 +210,6 @@
 ### Known limitations
 
 - runtime Docker não validado no ambiente de geração.
-
 
 ## [0.2.0-dev] - 2026-07-20
 
@@ -346,7 +348,6 @@
 - nenhuma alteração Git;
 - nenhum pacote ZIP de edição;
 - nenhuma lógica crítica adicionada ao n8n.
-
 
 ## [0.5.1-dev] — 2026-07-20
 

@@ -28,7 +28,13 @@ test('backup obtém a versão do package.json em vez de valor obsoleto', async (
 
 test('gate exige evidências reais e não confunde fluxo fixture com homologação', async () => {
   const verifier = await readFile('scripts/release-verify.mjs', 'utf8');
-  for (const evidence of ['dependency-audit.json', 'docker-stack.json', 'google-workspace.json', 'github-pages.json', 'manual-acceptance.json']) {
+  for (const evidence of [
+    'dependency-audit.json',
+    'docker-stack.json',
+    'google-workspace.json',
+    'github-pages.json',
+    'manual-acceptance.json',
+  ]) {
     assert.match(verifier, new RegExp(evidence.replace('.', '\\.')));
   }
   assert.match(verifier, /NO-GO para RC1/);
@@ -43,7 +49,8 @@ test('resíduos comprovadamente mortos foram removidos e empacotamento é determ
     'src/lib/domain/publication-orchestration.ts',
     'src/lib/infrastructure/exporter/fixture-providers.ts',
     'src/lib/infrastructure/google/google-providers.ts',
-  ]) await assert.rejects(() => access(path));
+  ])
+    await assert.rejects(() => access(path));
   const packager = await readFile('scripts/package-pre-release.py', 'utf8');
   assert.match(packager, /FIXED_TIME = \(2026, 7, 21, 0, 0, 0\)/);
   assert.match(packager, /node_modules/);

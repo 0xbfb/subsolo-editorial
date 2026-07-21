@@ -17,12 +17,7 @@
     "ARQUIVADO",
     "RECUSADO"
   ],
-  "edition_statuses": [
-    "PLANEJADA",
-    "ABERTA",
-    "PUBLICADA",
-    "SELADA"
-  ],
+  "edition_statuses": ["PLANEJADA", "ABERTA", "PUBLICADA", "SELADA"],
   "public_states": [
     "NAO_PUBLICADO",
     "PUBLICADO",
@@ -32,33 +27,10 @@
     "RETIRADO",
     "ARQUIVADO"
   ],
-  "priorities": [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E"
-  ],
-  "coverage_levels": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5
-  ],
-  "slot_states": [
-    "CONFIRMADO",
-    "RESERVADO",
-    "ABERTO"
-  ],
-  "review_states": [
-    "PENDENTE",
-    "EM_REVISAO",
-    "APROVADA",
-    "REPROVADA",
-    "NAO_APLICAVEL"
-  ],
+  "priorities": ["A", "B", "C", "D", "E"],
+  "coverage_levels": [0, 1, 2, 3, 4, 5],
+  "slot_states": ["CONFIRMADO", "RESERVADO", "ABERTO"],
+  "review_states": ["PENDENTE", "EM_REVISAO", "APROVADA", "REPROVADA", "NAO_APLICAVEL"],
   "destinations": [
     "BDD",
     "PUBLICACAO_PROPRIA",
@@ -96,12 +68,7 @@
     "REDE_SOCIAL",
     "OUTRO"
   ],
-  "correction_types": [
-    "CORRECAO_FACTUAL",
-    "ESCLARECIMENTO",
-    "ATUALIZACAO_MATERIAL",
-    "RETIRADA"
-  ],
+  "correction_types": ["CORRECAO_FACTUAL", "ESCLARECIMENTO", "ATUALIZACAO_MATERIAL", "RETIRADA"],
   "origins": [
     "FRESHRSS",
     "GMAIL",
@@ -113,13 +80,6 @@
     "DOCUMENTO",
     "ACOMPANHAMENTO"
   ],
-  "preliminary_classifications": [
-    "PRELIMINAR_NAO_EDITORIAL"
-  ],
-  "verification_states": [
-    "NAO_VERIFICADO",
-    "EM_VERIFICACAO",
-    "VERIFICADO",
-    "DESCARTADO"
-  ]
+  "preliminary_classifications": ["PRELIMINAR_NAO_EDITORIAL"],
+  "verification_states": ["NAO_VERIFICADO", "EM_VERIFICACAO", "VERIFICADO", "DESCARTADO"]
 }

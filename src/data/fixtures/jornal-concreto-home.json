@@ -1,14 +1,9 @@
 {
   "pageTitle": "Início",
   "description": "Subsolo — portal editorial independente. O ruído passa. O que importa fica.",
-  "dateLabel": [
-    "SEGUNDA-FEIRA",
-    "20 JULHO 2026"
-  ],
+  "dateLabel": ["SEGUNDA-FEIRA", "20 JULHO 2026"],
   "closingLabel": "Fechamento 11:42 BRT",
-  "breadcrumbs": [
-    "Início"
-  ],
+  "breadcrumbs": ["Início"],
   "navigation": [
     {
       "label": "Início",
@@ -100,10 +95,7 @@
   ],
   "dailyEdition": {
     "eyebrow": "Edição diária",
-    "title": [
-      "Bom Dia,",
-      "Distopia"
-    ],
+    "title": ["Bom Dia,", "Distopia"],
     "summary": "Doze acontecimentos e nenhuma obrigação de fingir que coletiva vazia é fato histórico.",
     "items": [
       "Transporte muda protocolo após repetição de falhas.",

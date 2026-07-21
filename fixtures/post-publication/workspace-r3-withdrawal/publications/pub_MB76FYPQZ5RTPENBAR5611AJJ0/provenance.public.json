@@ -2,12 +2,7 @@
   "article_id": "artigo-2026-07-20-transporte",
   "exported_at": "2026-07-20T19:00:00-03:00",
   "exporter_version": "0.5.1-dev",
-  "public_files": [
-    "publication.md",
-    "sources.json",
-    "corrections.json",
-    "media.json"
-  ],
+  "public_files": ["publication.md", "sources.json", "corrections.json", "media.json"],
   "publication_id": "pub_MB76FYPQZ5RTPENBAR5611AJJ0",
   "sanitization": {
     "comments_exported": 0,

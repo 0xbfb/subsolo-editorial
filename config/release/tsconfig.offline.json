@@ -20,10 +20,7 @@
     "skipLibCheck": true,
     "allowJs": false
   },
-  "include": [
-    "../../src/lib/**/*.ts",
-    "../../src/lib/**/*.mts"
-  ],
+  "include": ["../../src/lib/**/*.ts", "../../src/lib/**/*.mts"],
   "exclude": [
     "../../src/lib/presentation/public-zod-schemas.ts",
     "../../src/lib/presentation/security-headers.ts"

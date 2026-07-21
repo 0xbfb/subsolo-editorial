@@ -41,7 +41,9 @@ export const isUlid = (value: unknown): value is string =>
 
 export const isEntityId = (value: unknown, prefix?: EntityIdPrefix): value is string => {
   if (typeof value !== 'string') return false;
-  const match = /^(pub|story|src|corr|media|author|redirect|tomb)_([0-9A-HJKMNP-TV-Z]{26})$/.exec(value);
+  const match = /^(pub|story|src|corr|media|author|redirect|tomb)_([0-9A-HJKMNP-TV-Z]{26})$/.exec(
+    value,
+  );
   if (!match) return false;
   return (prefix === undefined || match[1] === prefix) && isUlid(match[2]);
 };
@@ -67,11 +69,7 @@ export const createSlug = (value: string, maximumLength = 96): string => {
 export const isSlug = (value: unknown): value is string =>
   typeof value === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value) && value.length <= 96;
 
-export const createCanonicalUrl = (
-  siteUrl: string,
-  publishedAt: string,
-  slug: string,
-): string => {
+export const createCanonicalUrl = (siteUrl: string, publishedAt: string, slug: string): string => {
   if (!isSlug(slug)) throw new Error('SUBSOLO_CANONICAL_SLUG_INVALID: slug público inválido.');
   const base = new URL(siteUrl);
   if (!['http:', 'https:'].includes(base.protocol)) {
@@ -91,4 +89,7 @@ export const nextRevision = (current: number): number => {
 };
 
 export const isValidRevisionStep = (previous: number, next: number): boolean =>
-  Number.isSafeInteger(previous) && Number.isSafeInteger(next) && previous >= 1 && next === previous + 1;
+  Number.isSafeInteger(previous) &&
+  Number.isSafeInteger(next) &&
+  previous >= 1 &&
+  next === previous + 1;

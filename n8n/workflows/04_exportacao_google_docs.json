@@ -16,10 +16,7 @@
       "name": "Entrada do artigo",
       "type": "n8n-nodes-base.executeWorkflowTrigger",
       "typeVersion": 1,
-      "position": [
-        0,
-        0
-      ]
+      "position": [0, 0]
     },
     {
       "parameters": {
@@ -29,10 +26,7 @@
       "name": "Executar exportador",
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
-      "position": [
-        260,
-        0
-      ]
+      "position": [260, 0]
     },
     {
       "parameters": {
@@ -49,10 +43,7 @@
       "name": "Executar workflow 05",
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1,
-      "position": [
-        540,
-        0
-      ]
+      "position": [540, 0]
     }
   ],
   "connections": {

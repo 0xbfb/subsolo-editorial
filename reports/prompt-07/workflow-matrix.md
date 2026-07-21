@@ -1,11 +1,11 @@
 # Matriz dos workflows
 
-| Workflow | Gatilho | Permissões | Saída | Deploy |
-|---|---|---|---|---|
-| CI | PR, push em main, manual | `contents: read` | checks | não |
-| Preview editorial | PR pronto para revisão | `contents: read` | artefato HTML por 7 dias | não |
-| Publicar GitHub Pages — build | push em main, manual | `contents: read` | artefato Pages validado | não |
-| Publicar GitHub Pages — deploy | após build | `contents: read`, `pages: write`, `id-token: write` | deployment e smoke test | sim |
+| Workflow                       | Gatilho                  | Permissões                                          | Saída                    | Deploy |
+| ------------------------------ | ------------------------ | --------------------------------------------------- | ------------------------ | ------ |
+| CI                             | PR, push em main, manual | `contents: read`                                    | checks                   | não    |
+| Preview editorial              | PR pronto para revisão   | `contents: read`                                    | artefato HTML por 7 dias | não    |
+| Publicar GitHub Pages — build  | push em main, manual     | `contents: read`                                    | artefato Pages validado  | não    |
+| Publicar GitHub Pages — deploy | após build               | `contents: read`, `pages: write`, `id-token: write` | deployment e smoke test  | sim    |
 
 ## Proteções
 

@@ -12,9 +12,7 @@
         "scripts/validate-infra.mjs",
         "tests/infra/compose-static.test.mjs"
       ],
-      "evidence": [
-        "reports/prompt-20/logs/validate-infra.log"
-      ],
+      "evidence": ["reports/prompt-20/logs/validate-infra.log"],
       "assessment": "Configuração estática aprovada; Docker não está instalado e a stack real não foi iniciada."
     },
     {
@@ -26,9 +24,7 @@
         "src/lib/infrastructure/google/google-workspace.mjs",
         "tests/editorial/sheets-model.test.mjs"
       ],
-      "evidence": [
-        "reports/prompt-20/logs/validate-editorial-fixtures.log"
-      ],
+      "evidence": ["reports/prompt-20/logs/validate-editorial-fixtures.log"],
       "assessment": "Workbook e adapters validados por fixtures; nenhuma planilha real de homologação foi usada."
     },
     {
@@ -40,9 +36,7 @@
         "src/lib/infrastructure/google/google-workspace.mjs",
         "tests/google/google-workspace.test.mjs"
       ],
-      "evidence": [
-        "reports/prompt-20/fixture-flow.json"
-      ],
+      "evidence": ["reports/prompt-20/fixture-flow.json"],
       "assessment": "Modelo e conversão validados por fixture; nenhum documento Google real foi lido."
     },
     {
@@ -55,9 +49,7 @@
         "src/lib/application/export-editorial-document.ts",
         "tests/exporter"
       ],
-      "evidence": [
-        "reports/prompt-20/fixture-flow.json"
-      ],
+      "evidence": ["reports/prompt-20/fixture-flow.json"],
       "assessment": "Exportação completa, golden e determinismo aprovados offline."
     },
     {
@@ -85,9 +77,7 @@
         "src/lib/domain/edition-package.ts",
         "tests/packager"
       ],
-      "evidence": [
-        "reports/prompt-20/fixture-flow.json"
-      ],
+      "evidence": ["reports/prompt-20/fixture-flow.json"],
       "assessment": "ZIP determinístico, checksums, validação e restore aprovados."
     },
     {
@@ -99,9 +89,7 @@
         "src/lib/application/archive-edition-package.mjs",
         "tests/drive"
       ],
-      "evidence": [
-        "reports/prompt-11/upload-report.md"
-      ],
+      "evidence": ["reports/prompt-11/upload-report.md"],
       "assessment": "Contrato, retomada e idempotência simulados; upload real não executado."
     },
     {
@@ -113,9 +101,7 @@
         "n8n/workflows/06_criacao_pull_request.json",
         "tests/n8n"
       ],
-      "evidence": [
-        "reports/prompt-20/fixture-flow.json"
-      ],
+      "evidence": ["reports/prompt-20/fixture-flow.json"],
       "assessment": "Orquestração por portas fixture aprovada; branch e PR reais não criados."
     },
     {
@@ -127,23 +113,15 @@
         "docs/operations/branch-protection.md",
         "n8n/workflows/06_criacao_pull_request.json"
       ],
-      "evidence": [
-        "reports/prompt-12/test-results.md"
-      ],
+      "evidence": ["reports/prompt-12/test-results.md"],
       "assessment": "Fronteira humana está implementada e merge automático é proibido; nenhum PR real foi homologado."
     },
     {
       "id": 10,
       "criterion": "Build Astro",
       "status": "blocked",
-      "implementation": [
-        "astro.config.mjs",
-        "src/pages",
-        "package.json"
-      ],
-      "evidence": [
-        "reports/prompt-20/release-verification.json"
-      ],
+      "implementation": ["astro.config.mjs", "src/pages", "package.json"],
+      "evidence": ["reports/prompt-20/release-verification.json"],
       "assessment": "Bloqueado sem instalação, lockfile e dependências."
     },
     {
@@ -156,9 +134,7 @@
         "public/archive-index.json",
         "tests/discovery-static.test.mjs"
       ],
-      "evidence": [
-        "reports/prompt-20/logs/validate-discovery.log"
-      ],
+      "evidence": ["reports/prompt-20/logs/validate-discovery.log"],
       "assessment": "Fallback e contrato passam; índice Pagefind real em dist não foi produzido."
     },
     {
@@ -171,22 +147,15 @@
         "src/pages/canais",
         "tests/discovery.test.mjs"
       ],
-      "evidence": [
-        "reports/prompt-20/logs/validate-discovery.log"
-      ],
+      "evidence": ["reports/prompt-20/logs/validate-discovery.log"],
       "assessment": "Arquivo, facetas, feeds e sitemap aprovados offline."
     },
     {
       "id": 13,
       "criterion": "Deploy no GitHub Pages",
       "status": "blocked",
-      "implementation": [
-        ".github/workflows/deploy-pages.yml",
-        "scripts/smoke-site.mjs"
-      ],
-      "evidence": [
-        "reports/prompt-20/release-verification.json"
-      ],
+      "implementation": [".github/workflows/deploy-pages.yml", "scripts/smoke-site.mjs"],
+      "evidence": ["reports/prompt-20/release-verification.json"],
       "assessment": "Workflow validado estaticamente; deploy e URL reais não existem neste ambiente."
     },
     {
@@ -198,9 +167,7 @@
         "src/lib/infrastructure/google/google-workspace.mjs",
         "tests/n8n"
       ],
-      "evidence": [
-        "reports/prompt-12/test-results.md"
-      ],
+      "evidence": ["reports/prompt-12/test-results.md"],
       "assessment": "Handoff e atualização simulados; Sheets real não foi alterado."
     },
     {
@@ -212,9 +179,7 @@
         "src/lib/application/post-publication-orchestrator.mjs",
         "tests/post-publication"
       ],
-      "evidence": [
-        "reports/prompt-16/revision-chain.md"
-      ],
+      "evidence": ["reports/prompt-16/revision-chain.md"],
       "assessment": "Correção, redirect, tombstone e pacotes r2/r3 aprovados."
     },
     {
@@ -226,9 +191,7 @@
         "src/lib/application/edition-lifecycle.mjs",
         "tests/edition-lifecycle"
       ],
-      "evidence": [
-        "reports/prompt-13/lifecycle-validation.md"
-      ],
+      "evidence": ["reports/prompt-13/lifecycle-validation.md"],
       "assessment": "Cadeia r1/r2/r3 e selo aprovados, sem vazamento de slots privados."
     },
     {
@@ -240,36 +203,23 @@
         "scripts/backup-manifest.mjs",
         "tests/observability/backup-manifest.test.mjs"
       ],
-      "evidence": [
-        "reports/prompt-20/fixture-flow.json"
-      ],
+      "evidence": ["reports/prompt-20/fixture-flow.json"],
       "assessment": "Bundle criptografado sintético criado e validado; backup de containers reais não executado."
     },
     {
       "id": 18,
       "criterion": "Restore testado",
       "status": "pass",
-      "implementation": [
-        "infra/scripts/restore.sh",
-        "tests/observability/backup-restore.test.mjs"
-      ],
-      "evidence": [
-        "reports/prompt-20/fixture-flow.json"
-      ],
+      "implementation": ["infra/scripts/restore.sh", "tests/observability/backup-restore.test.mjs"],
+      "evidence": ["reports/prompt-20/fixture-flow.json"],
       "assessment": "Descriptografia, checksums, dump e quatro volumes restaurados em diretório limpo."
     },
     {
       "id": 19,
       "criterion": "Nenhuma credencial versionada",
       "status": "pass",
-      "implementation": [
-        "scripts/scan-repository-secrets.mjs",
-        ".gitignore",
-        "SECURITY.md"
-      ],
-      "evidence": [
-        "reports/prompt-20/logs/scan-secrets.log"
-      ],
+      "implementation": ["scripts/scan-repository-secrets.mjs", ".gitignore", "SECURITY.md"],
+      "evidence": ["reports/prompt-20/logs/scan-secrets.log"],
       "assessment": "Varredura integral aprovada; nenhuma credencial real detectada."
     },
     {
@@ -281,9 +231,7 @@
         "scripts/check-minimum-permissions.mjs",
         "tests/infra/security-static.test.mjs"
       ],
-      "evidence": [
-        "reports/prompt-20/logs/check-permissions.log"
-      ],
+      "evidence": ["reports/prompt-20/logs/check-permissions.log"],
       "assessment": "Bindings e rede aprovados estaticamente; portas reais não foram inspecionadas."
     },
     {
@@ -310,9 +258,7 @@
         "docs/architecture/decisions/0002-public-site-independent.md",
         "infra/compose.yml"
       ],
-      "evidence": [
-        "reports/prompt-18/operational-baseline.json"
-      ],
+      "evidence": ["reports/prompt-18/operational-baseline.json"],
       "assessment": "Arquitetura não depende da stack local; independência em produção aguarda deploy real."
     }
   ],
@@ -322,12 +268,7 @@
       "name": "Consolidação e contratos",
       "status": "pass",
       "assessment": "Contradições removidas; fonte de verdade, exemplos, schemas e CI estático disponíveis.",
-      "evidence": [
-        "docs/adr",
-        "schemas",
-        "fixtures/public",
-        "reports/prompt-04/test-results.md"
-      ]
+      "evidence": ["docs/adr", "schemas", "fixtures/public", "reports/prompt-04/test-results.md"]
     },
     {
       "phase": "F1",
@@ -345,11 +286,7 @@
       "name": "Ambiente editorial Google",
       "status": "partial",
       "assessment": "Modelos e validações aprovados por fixture; fluxo manual real no Google não homologado.",
-      "evidence": [
-        "templates/google",
-        "fixtures/editorial",
-        "reports/prompt-03/test-results.md"
-      ]
+      "evidence": ["templates/google", "fixtures/editorial", "reports/prompt-03/test-results.md"]
     },
     {
       "phase": "F3",
@@ -367,11 +304,7 @@
       "name": "Portal Astro base",
       "status": "partial",
       "assessment": "Rotas e apresentação aprovadas por preview determinístico e Chromium; build Astro real e aceite manual pendentes.",
-      "evidence": [
-        "src/pages",
-        "src/components",
-        "reports/prompt-20/browser-acceptance.json"
-      ]
+      "evidence": ["src/pages", "src/components", "reports/prompt-20/browser-acceptance.json"]
     },
     {
       "phase": "F5",
@@ -486,10 +419,7 @@
       "name": "Hardening e release 1.0",
       "status": "blocked",
       "assessment": "Controles offline passam; lockfile, auditoria transitiva, build, E2E real e aceite manual bloqueiam o release.",
-      "evidence": [
-        "reports/prompt-20/release-verification.json",
-        "reports/prompt-20/go-no-go.md"
-      ]
+      "evidence": ["reports/prompt-20/release-verification.json", "reports/prompt-20/go-no-go.md"]
     }
   ],
   "prompt_reports": [

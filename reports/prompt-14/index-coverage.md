@@ -2,29 +2,29 @@
 
 ## Acervo público
 
-| Métrica | Valor |
-|---|---:|
-| Registros | 25 |
-| Dias | 8 |
-| Canais representados | 9 |
-| Temas usados | 25 |
-| Autores representados | 18 |
-| Naturezas editoriais | 8 |
-| Estados públicos | 5 |
-| Histórias acompanhadas | 3 |
-| Páginas do arquivo | 4 |
-| Itens por página | 8 |
+| Métrica                | Valor |
+| ---------------------- | ----: |
+| Registros              |    25 |
+| Dias                   |     8 |
+| Canais representados   |     9 |
+| Temas usados           |    25 |
+| Autores representados  |    18 |
+| Naturezas editoriais   |     8 |
+| Estados públicos       |     5 |
+| Histórias acompanhadas |     3 |
+| Páginas do arquivo     |     4 |
+| Itens por página       |     8 |
 
 ## Assets
 
-| Asset | Cobertura |
-|---|---|
+| Asset                | Cobertura                 |
+| -------------------- | ------------------------- |
 | `archive-index.json` | 25 entradas, 20.930 bytes |
-| RSS geral | 25 itens |
-| Feeds de canal | 9 arquivos |
-| Feed de correções | 1 item |
-| Sitemap | 127 URLs |
-| XML validado | 12 arquivos |
+| RSS geral            | 25 itens                  |
+| Feeds de canal       | 9 arquivos                |
+| Feed de correções    | 1 item                    |
+| Sitemap              | 127 URLs                  |
+| XML validado         | 12 arquivos               |
 
 ## Campos do índice compacto
 

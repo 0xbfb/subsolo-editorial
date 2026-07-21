@@ -26,25 +26,25 @@ Enquanto um master aprovado não for recebido, revisado e associado a um `media_
 
 O pipeline foi comprovado com uma composição geométrica determinística que **não representa Cora nem qualquer integrante da redação**.
 
-| Campo | Valor |
-|---|---|
-| Master | `fixtures/media/source/cora-fixture-master.jpg` |
-| Dimensões | `2048 × 2048 px` |
-| SHA-256 | `e7d9b533c88c3fd77214baddf537d602f401a7aef98514a4c20c73a618af2d43` |
-| Endereço curto | `0b69ff6088ae1257` |
-| Metadata de entrada | EXIF proposital |
-| Metadata de saída | removida |
-| Derivados | 12 |
-| Total público | 164966 bytes |
+| Campo               | Valor                                                              |
+| ------------------- | ------------------------------------------------------------------ |
+| Master              | `fixtures/media/source/cora-fixture-master.jpg`                    |
+| Dimensões           | `2048 × 2048 px`                                                   |
+| SHA-256             | `e7d9b533c88c3fd77214baddf537d602f401a7aef98514a4c20c73a618af2d43` |
+| Endereço curto      | `0b69ff6088ae1257`                                                 |
+| Metadata de entrada | EXIF proposital                                                    |
+| Metadata de saída   | removida                                                           |
+| Derivados           | 12                                                                 |
+| Total público       | 164966 bytes                                                       |
 
 ## Variantes
 
-| Variante | Dimensões | AVIF | WebP | JPEG |
-|---|---:|---:|---:|---:|
-| profile | 1024 × 1024 | 17.558 B | 11.844 B | 34.220 B |
-| card | 480 × 480 | 8.248 B | 5.260 B | 14.646 B |
-| circle-safe | 512 × 512 | 8.365 B | 5.584 B | 15.093 B |
-| social | 1200 × 630 | 11.610 B | 7.906 B | 24.632 B |
+| Variante    |   Dimensões |     AVIF |     WebP |     JPEG |
+| ----------- | ----------: | -------: | -------: | -------: |
+| profile     | 1024 × 1024 | 17.558 B | 11.844 B | 34.220 B |
+| card        |   480 × 480 |  8.248 B |  5.260 B | 14.646 B |
+| circle-safe |   512 × 512 |  8.365 B |  5.584 B | 15.093 B |
+| social      |  1200 × 630 | 11.610 B |  7.906 B | 24.632 B |
 
 ## Contrato público
 

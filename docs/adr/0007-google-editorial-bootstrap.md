@@ -1,4 +1,3 @@
-
 # ADR 0007 — Bootstrap editorial declarativo antes das APIs Google
 
 **Status:** aceito  

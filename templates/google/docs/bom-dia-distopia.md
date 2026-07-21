@@ -1,4 +1,3 @@
-
 # SUBSOLO — Modelo de Edição do Bom Dia, Distopia
 
 ## Metadados privados

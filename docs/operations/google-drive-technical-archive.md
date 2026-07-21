@@ -105,14 +105,14 @@ O nome não participa como prova de identidade. Mais de um resultado para o mesm
 
 ## Falhas
 
-| Código | Significado | Ação |
-|---|---|---|
-| `SUBSOLO_DRIVE_ACCESS_DENIED` | raiz ou arquivo sem autorização | revisar compartilhamento |
-| `SUBSOLO_DRIVE_QUOTA_EXCEEDED` | limite temporário | aguardar retry ou reduzir frequência |
-| `SUBSOLO_DRIVE_TIMEOUT` | chamada excedeu timeout | verificar rede antes de aumentar limite |
-| `SUBSOLO_DRIVE_UPLOAD_INCOMPLETE` | sessão sem conclusão | repetir sem apagar o ZIP local |
-| `SUBSOLO_ARCHIVE_REMOTE_METADATA_INVALID` | metadata remota divergente | não registrar file ID |
-| `SUBSOLO_ARCHIVE_DOWNLOAD_CHECKSUM_INVALID` | download divergente | repetir preservação e auditar |
+| Código                                      | Significado                     | Ação                                    |
+| ------------------------------------------- | ------------------------------- | --------------------------------------- |
+| `SUBSOLO_DRIVE_ACCESS_DENIED`               | raiz ou arquivo sem autorização | revisar compartilhamento                |
+| `SUBSOLO_DRIVE_QUOTA_EXCEEDED`              | limite temporário               | aguardar retry ou reduzir frequência    |
+| `SUBSOLO_DRIVE_TIMEOUT`                     | chamada excedeu timeout         | verificar rede antes de aumentar limite |
+| `SUBSOLO_DRIVE_UPLOAD_INCOMPLETE`           | sessão sem conclusão            | repetir sem apagar o ZIP local          |
+| `SUBSOLO_ARCHIVE_REMOTE_METADATA_INVALID`   | metadata remota divergente      | não registrar file ID                   |
+| `SUBSOLO_ARCHIVE_DOWNLOAD_CHECKSUM_INVALID` | download divergente             | repetir preservação e auditar           |
 
 ## Privacidade
 

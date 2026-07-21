@@ -52,10 +52,7 @@
       "maxLength": 96
     },
     "status": {
-      "enum": [
-        "ativo",
-        "arquivado"
-      ]
+      "enum": ["ativo", "arquivado"]
     },
     "accent": {
       "type": "string",

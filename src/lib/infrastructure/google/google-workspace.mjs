@@ -54,7 +54,11 @@ const opaqueId = (value) => `sha256:${sha256(value).slice(0, 12)}`;
 const stableValue = (value) => {
   if (Array.isArray(value)) return value.map(stableValue);
   if (value && typeof value === 'object') {
-    return Object.fromEntries(Object.keys(value).sort().map((key) => [key, stableValue(value[key])]));
+    return Object.fromEntries(
+      Object.keys(value)
+        .sort()
+        .map((key) => [key, stableValue(value[key])]),
+    );
   }
   return value;
 };
@@ -62,11 +66,21 @@ const stableStringify = (value) => JSON.stringify(stableValue(value));
 const base64url = (value) => Buffer.from(value).toString('base64url');
 
 const redactValue = (value, key = '') => {
-  if (/token|authorization|private.?key|client.?secret|password|credential/i.test(key)) return '[REDACTED]';
-  if (/document.?id|spreadsheet.?id|tab.?id|client.?email|email/i.test(key) && typeof value === 'string') return opaqueId(value);
+  if (/token|authorization|private.?key|client.?secret|password|credential/i.test(key))
+    return '[REDACTED]';
+  if (
+    /document.?id|spreadsheet.?id|tab.?id|client.?email|email/i.test(key) &&
+    typeof value === 'string'
+  )
+    return opaqueId(value);
   if (Array.isArray(value)) return value.map((item) => redactValue(item));
   if (value && typeof value === 'object') {
-    return Object.fromEntries(Object.entries(value).map(([entryKey, entryValue]) => [entryKey, redactValue(entryValue, entryKey)]));
+    return Object.fromEntries(
+      Object.entries(value).map(([entryKey, entryValue]) => [
+        entryKey,
+        redactValue(entryValue, entryKey),
+      ]),
+    );
   }
   if (typeof value === 'string') {
     return value
@@ -226,7 +240,11 @@ export const requestGoogleJson = async ({
             baseDelayMs,
             random,
           });
-          logger.warn('google.request.retry', { attempt, wait_ms: waitMs, status: response.status });
+          logger.warn('google.request.retry', {
+            attempt,
+            wait_ms: waitMs,
+            status: response.status,
+          });
           await sleep(waitMs);
           lastError = failure;
           continue;
@@ -246,8 +264,12 @@ export const requestGoogleJson = async ({
       const timedOut = error?.name === 'AbortError';
       const failure = new GoogleWorkspaceFailure(
         timedOut ? 'SUBSOLO_GOOGLE_TIMEOUT' : 'SUBSOLO_GOOGLE_NETWORK_ERROR',
-        timedOut ? 'A chamada ao Google excedeu o tempo limite.' : 'Falha de rede ao acessar o Google.',
-        timedOut ? 'Aumente o timeout apenas se necessário ou use o modo offline.' : 'Verifique a rede e tente novamente.',
+        timedOut
+          ? 'A chamada ao Google excedeu o tempo limite.'
+          : 'Falha de rede ao acessar o Google.',
+        timedOut
+          ? 'Aumente o timeout apenas se necessário ou use o modo offline.'
+          : 'Verifique a rede e tente novamente.',
         { attempt },
         true,
       );
@@ -315,19 +337,23 @@ export const createServiceAccountTokenProvider = ({
       const issuedAt = Math.floor(now() / 1000);
       const tokenUri = credentials.token_uri || 'https://oauth2.googleapis.com/token';
       const header = base64url(JSON.stringify({ alg: 'RS256', typ: 'JWT' }));
-      const claim = base64url(JSON.stringify({
-        iss: credentials.client_email,
-        scope: scopes.join(' '),
-        aud: tokenUri,
-        iat: issuedAt,
-        exp: issuedAt + 3600,
-      }));
+      const claim = base64url(
+        JSON.stringify({
+          iss: credentials.client_email,
+          scope: scopes.join(' '),
+          aud: tokenUri,
+          iat: issuedAt,
+          exp: issuedAt + 3600,
+        }),
+      );
       const unsigned = `${header}.${claim}`;
       const signer = createSign('RSA-SHA256');
       signer.update(unsigned);
       signer.end();
       const assertion = `${unsigned}.${signer.sign(credentials.private_key).toString('base64url')}`;
-      logger.debug('google.auth.service_account.requested', { client_email: credentials.client_email });
+      logger.debug('google.auth.service_account.requested', {
+        client_email: credentials.client_email,
+      });
       const response = await fetchImpl(tokenUri, {
         method: 'POST',
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
@@ -359,8 +385,10 @@ export const createDefaultGoogleTokenProvider = ({
   fetchImpl = globalThis.fetch,
   logger = noOpLogger,
 } = {}) => {
-  if (env.GOOGLE_WORKSPACE_ACCESS_TOKEN?.trim()) return createEnvironmentAccessTokenProvider({ env });
-  const credentialPath = env.SUBSOLO_GOOGLE_SERVICE_ACCOUNT_FILE || env.GOOGLE_APPLICATION_CREDENTIALS;
+  if (env.GOOGLE_WORKSPACE_ACCESS_TOKEN?.trim())
+    return createEnvironmentAccessTokenProvider({ env });
+  const credentialPath =
+    env.SUBSOLO_GOOGLE_SERVICE_ACCOUNT_FILE || env.GOOGLE_APPLICATION_CREDENTIALS;
   return createServiceAccountTokenProvider({ credentialPath, fetchImpl, logger });
 };
 
@@ -385,16 +413,19 @@ const createExpiringCache = ({ ttlMs = 0, now = () => Date.now() } = {}) => {
   };
 };
 
-const textFromElements = (elements = []) => elements.map((element) => {
-  if (element.textRun) {
-    const raw = element.textRun.content ?? '';
-    const text = raw.replace(/\n$/, '');
-    const url = element.textRun.textStyle?.link?.url;
-    return url && text ? `[${text}](${url})` : text;
-  }
-  if (element.autoText) return element.autoText.content ?? '';
-  return '';
-}).join('');
+const textFromElements = (elements = []) =>
+  elements
+    .map((element) => {
+      if (element.textRun) {
+        const raw = element.textRun.content ?? '';
+        const text = raw.replace(/\n$/, '');
+        const url = element.textRun.textStyle?.link?.url;
+        return url && text ? `[${text}](${url})` : text;
+      }
+      if (element.autoText) return element.autoText.content ?? '';
+      return '';
+    })
+    .join('');
 
 const countSuggestions = (value, seen = new WeakSet()) => {
   if (!value || typeof value !== 'object') return 0;
@@ -413,16 +444,21 @@ const countSuggestions = (value, seen = new WeakSet()) => {
 };
 
 const listIsOrdered = (documentTab, listId, nestingLevel = 0) => {
-  const glyphType = documentTab?.lists?.[listId]?.listProperties?.nestingLevels?.[nestingLevel]?.glyphType;
+  const glyphType =
+    documentTab?.lists?.[listId]?.listProperties?.nestingLevels?.[nestingLevel]?.glyphType;
   if (!glyphType) return false;
   return !['BULLET', 'GLYPH_TYPE_UNSPECIFIED'].includes(glyphType);
 };
 
-const cellText = (cell) => (cell?.content ?? []).map((element) => {
-  if (element.paragraph) return textFromElements(element.paragraph.elements);
-  if (element.table) return '';
-  return '';
-}).join('\n').trim();
+const cellText = (cell) =>
+  (cell?.content ?? [])
+    .map((element) => {
+      if (element.paragraph) return textFromElements(element.paragraph.elements);
+      if (element.table) return '';
+      return '';
+    })
+    .join('\n')
+    .trim();
 
 const tableNode = (table) => {
   const rows = (table.tableRows ?? []).map((row) => (row.tableCells ?? []).map(cellText));
@@ -436,7 +472,11 @@ const paragraphNode = (paragraph, documentTab) => {
   if (paragraph.bullet) {
     return {
       kind: 'list-item',
-      ordered: listIsOrdered(documentTab, paragraph.bullet.listId, paragraph.bullet.nestingLevel ?? 0),
+      ordered: listIsOrdered(
+        documentTab,
+        paragraph.bullet.listId,
+        paragraph.bullet.nestingLevel ?? 0,
+      ),
       text,
     };
   }
@@ -499,7 +539,11 @@ const parseStructuralContent = (documentTab) => {
             'Remova o marcador ou abra um bloco válido antes dele.',
           );
         }
-        result.push({ type: 'editorial-block', kind: activeBlock.kind, children: activeBlock.children });
+        result.push({
+          type: 'editorial-block',
+          kind: activeBlock.kind,
+          children: activeBlock.children,
+        });
         activeBlock = null;
         continue;
       }
@@ -517,7 +561,8 @@ const parseStructuralContent = (documentTab) => {
   return result;
 };
 
-const flattenTabs = (tabs = []) => tabs.flatMap((tab) => [tab, ...flattenTabs(tab.childTabs ?? [])]);
+const flattenTabs = (tabs = []) =>
+  tabs.flatMap((tab) => [tab, ...flattenTabs(tab.childTabs ?? [])]);
 
 export const transformGoogleDocument = (document, { etag = null, tabId = null } = {}) => {
   if (!document?.documentId || !document?.title) {
@@ -554,7 +599,9 @@ export const transformGoogleDocument = (document, { etag = null, tabId = null } 
   } else {
     documentTab = document;
   }
-  const revisionId = etag ? etag.replace(/^W\//, '').replaceAll('"', '') : sha256(stableStringify(document)).slice(0, 24);
+  const revisionId = etag
+    ? etag.replace(/^W\//, '').replaceAll('"', '')
+    : sha256(stableStringify(document)).slice(0, 24);
   return {
     documentId: document.documentId,
     revisionId,
@@ -591,7 +638,9 @@ export const createGoogleDocsProvider = ({
         logger.debug('google.docs.cache_hit', { document_id: documentId });
         return cached;
       }
-      const url = new URL(`https://docs.googleapis.com/v1/documents/${encodeURIComponent(documentId)}`);
+      const url = new URL(
+        `https://docs.googleapis.com/v1/documents/${encodeURIComponent(documentId)}`,
+      );
       url.searchParams.set('includeTabsContent', 'true');
       const response = await request({
         url: url.toString(),
@@ -667,9 +716,12 @@ export const rowsFromSheetValues = (values) => {
       'Corrija os cabeçalhos antes de executar a exportação.',
     );
   }
-  return values.slice(1).filter((row) => row.some((cell) => String(cell ?? '').trim() !== '')).map((row) => Object.fromEntries(
-    headers.map((header, index) => [header, parseCell(row[index], header)]),
-  ));
+  return values
+    .slice(1)
+    .filter((row) => row.some((cell) => String(cell ?? '').trim() !== ''))
+    .map((row) =>
+      Object.fromEntries(headers.map((header, index) => [header, parseCell(row[index], header)])),
+    );
 };
 
 const sheetPageRange = ({ sheet, startColumn, endColumn }, startRow, pageSize) =>
@@ -716,7 +768,9 @@ export const createGoogleSheetsProvider = ({
     for (let page = 0; page < maxPages; page += 1) {
       const startRow = page * pageSize + 1;
       const pageRange = sheetPageRange(parsedRange, startRow, pageSize);
-      const url = new URL(`https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}/values/${encodeURIComponent(pageRange)}`);
+      const url = new URL(
+        `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}/values/${encodeURIComponent(pageRange)}`,
+      );
       url.searchParams.set('majorDimension', 'ROWS');
       url.searchParams.set('valueRenderOption', 'UNFORMATTED_VALUE');
       url.searchParams.set('dateTimeRenderOption', 'FORMATTED_STRING');
@@ -811,7 +865,12 @@ export const createGoogleWorkspaceProvidersFromEnvironment = ({
   };
 };
 
-export const loadGoogleEditorialInput = async ({ articleId, documentId = null, sheetProvider, documentProvider }) => {
+export const loadGoogleEditorialInput = async ({
+  articleId,
+  documentId = null,
+  sheetProvider,
+  documentProvider,
+}) => {
   const row = await sheetProvider.read(articleId);
   if (row.comentarios_resolvidos !== true) {
     throw new GoogleWorkspaceFailure(

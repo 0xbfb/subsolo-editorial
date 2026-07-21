@@ -1,4 +1,3 @@
-
 # SUBSOLO — Mapa do Dia
 
 **Data:** DD de mês de AAAA  
@@ -114,40 +113,40 @@
 ## 6. Histórias em acompanhamento
 
 | História | Guardião | Estado | Próximo evento | Canal possível |
-|---|---|---|---|---|
-| [...] | [...] | [...] | [...] | [...] |
+| -------- | -------- | ------ | -------------- | -------------- |
+| [...]    | [...]    | [...]  | [...]          | [...]          |
 
 ---
 
 ## 7. Pautas reservadas
 
 | Pauta | O que falta | Prazo | Responsável | Plano B |
-|---|---|---|---|---|
-| [...] | [...] | [...] | [...] | [...] |
+| ----- | ----------- | ----- | ----------- | ------- |
+| [...] | [...]       | [...] | [...]       | [...]   |
 
 ---
 
 ## 8. Pautas descartadas
 
 | Pauta | Motivo |
-|---|---|
-| [...] | [...] |
+| ----- | ------ |
+| [...] | [...]  |
 
 ---
 
 ## 9. Equipes e remanejamentos
 
-| Jornalista | Função original | Função do dia | Cobertura | Até |
-|---|---|---|---|---|
-| [...] | [...] | [...] | [...] | [...] |
+| Jornalista | Função original | Função do dia | Cobertura | Até   |
+| ---------- | --------------- | ------------- | --------- | ----- |
+| [...]      | [...]           | [...]         | [...]     | [...] |
 
 ---
 
 ## 10. Colunistas acionados
 
-| Colunista | Tema | Tipo | Prazo |
-|---|---|---|---|
-| [...] | [...] | [...] | [...] |
+| Colunista | Tema  | Tipo  | Prazo |
+| --------- | ----- | ----- | ----- |
+| [...]     | [...] | [...] | [...] |
 
 ---
 

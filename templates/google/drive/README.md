@@ -1,4 +1,3 @@
-
 # Estrutura do Google Drive
 
 O manifesto `structure.json` descreve a estrutura desejada sem criar pastas por API nesta etapa.

@@ -13,17 +13,9 @@
       "title": "Análise secundária do aditivo contratual",
       "url": "https://jornal.example/cidade/aditivo",
       "content": "Snippet de busca resumindo a cobertura.",
-      "engines": [
-        "duckduckgo",
-        "bing"
-      ],
+      "engines": ["duckduckgo", "bing"],
       "category": "news"
     }
   ],
-  "unresponsive_engines": [
-    [
-      "engine-x",
-      "timeout"
-    ]
-  ]
+  "unresponsive_engines": [["engine-x", "timeout"]]
 }

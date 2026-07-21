@@ -54,11 +54,6 @@
     "src/lib/infrastructure/exporter/fixture-providers.ts",
     "tests/exporter/exporter.test.mjs"
   ],
-  "modified_files": [
-    "AGENTS.md",
-    "CHANGELOG.md",
-    "README.md",
-    "package.json"
-  ],
+  "modified_files": ["AGENTS.md", "CHANGELOG.md", "README.md", "package.json"],
   "removed_files": []
 }

@@ -34,12 +34,7 @@
       "minLength": 1
     },
     "status": {
-      "enum": [
-        "aberta",
-        "monitoramento",
-        "concluida",
-        "arquivada"
-      ]
+      "enum": ["aberta", "monitoramento", "concluida", "arquivada"]
     },
     "summary": {
       "type": "string",

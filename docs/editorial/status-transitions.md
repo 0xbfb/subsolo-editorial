@@ -1,4 +1,3 @@
-
 # Estados e transições editoriais
 
 ```text

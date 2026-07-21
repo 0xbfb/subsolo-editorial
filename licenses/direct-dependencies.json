@@ -3,16 +3,76 @@
   "reviewed_at": "2026-07-21",
   "allowed_licenses": ["MIT", "Apache-2.0"],
   "packages": [
-    {"name":"astro","version":"7.1.2","license":"MIT","scope":"runtime","decision":"accepted"},
-    {"name":"@eslint/js","version":"10.0.1","license":"MIT","scope":"development","decision":"accepted"},
-    {"name":"@playwright/test","version":"1.57.0","license":"Apache-2.0","scope":"development","decision":"accepted"},
-    {"name":"@types/node","version":"26.1.1","license":"MIT","scope":"development","decision":"accepted"},
-    {"name":"eslint","version":"10.7.0","license":"MIT","scope":"development","decision":"accepted"},
-    {"name":"pagefind","version":"1.5.2","license":"MIT","scope":"development","decision":"accepted"},
-    {"name":"prettier","version":"3.9.5","license":"MIT","scope":"development","decision":"accepted"},
-    {"name":"typescript","version":"6.0.3","license":"Apache-2.0","scope":"development","decision":"accepted"},
-    {"name":"typescript-eslint","version":"8.64.0","license":"MIT","scope":"development","decision":"accepted"},
-    {"name":"vitest","version":"4.1.10","license":"MIT","scope":"development","decision":"accepted"}
+    {
+      "name": "astro",
+      "version": "7.1.2",
+      "license": "MIT",
+      "scope": "runtime",
+      "decision": "accepted"
+    },
+    {
+      "name": "@eslint/js",
+      "version": "10.0.1",
+      "license": "MIT",
+      "scope": "development",
+      "decision": "accepted"
+    },
+    {
+      "name": "@playwright/test",
+      "version": "1.57.0",
+      "license": "Apache-2.0",
+      "scope": "development",
+      "decision": "accepted"
+    },
+    {
+      "name": "@types/node",
+      "version": "26.1.1",
+      "license": "MIT",
+      "scope": "development",
+      "decision": "accepted"
+    },
+    {
+      "name": "eslint",
+      "version": "10.7.0",
+      "license": "MIT",
+      "scope": "development",
+      "decision": "accepted"
+    },
+    {
+      "name": "pagefind",
+      "version": "1.5.2",
+      "license": "MIT",
+      "scope": "development",
+      "decision": "accepted"
+    },
+    {
+      "name": "prettier",
+      "version": "3.9.5",
+      "license": "MIT",
+      "scope": "development",
+      "decision": "accepted"
+    },
+    {
+      "name": "typescript",
+      "version": "6.0.3",
+      "license": "Apache-2.0",
+      "scope": "development",
+      "decision": "accepted"
+    },
+    {
+      "name": "typescript-eslint",
+      "version": "8.64.0",
+      "license": "MIT",
+      "scope": "development",
+      "decision": "accepted"
+    },
+    {
+      "name": "vitest",
+      "version": "4.1.10",
+      "license": "MIT",
+      "scope": "development",
+      "decision": "accepted"
+    }
   ],
   "transitive_review": {
     "status": "blocked-without-lockfile",

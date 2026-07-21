@@ -2,16 +2,16 @@
 
 **Versão:** `0.8.2-dev`
 
-| Métrica | Total |
-|---|---:|
-| Execuções | 6 |
-| Entradas | 9 |
-| Pautas criadas | 6 |
-| Duplicatas exatas | 0 |
-| Duplicatas prováveis | 1 |
-| Rejeitadas | 2 |
-| Metadados de anexos em quarentena | 2 |
-| Pautas persistidas | 6 |
+| Métrica                           | Total |
+| --------------------------------- | ----: |
+| Execuções                         |     6 |
+| Entradas                          |     9 |
+| Pautas criadas                    |     6 |
+| Duplicatas exatas                 |     0 |
+| Duplicatas prováveis              |     1 |
+| Rejeitadas                        |     2 |
+| Metadados de anexos em quarentena |     2 |
+| Pautas persistidas                |     6 |
 
 ## Resultado editorial
 

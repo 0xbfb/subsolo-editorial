@@ -1,7 +1,8 @@
 import type { NavigationItem, VisualStatusKind } from './home-page.js';
 
 export interface EditorialBlock {
-  readonly kind: 'fact' | 'declaration' | 'unknown' | 'why-it-matters' | 'next-step' | 'document' | 'action';
+  readonly kind:
+    'fact' | 'declaration' | 'unknown' | 'why-it-matters' | 'next-step' | 'document' | 'action';
   readonly label: string;
   readonly text: string;
 }
@@ -125,7 +126,12 @@ export interface EditorialSiteData {
     readonly revision: number;
     readonly status: string;
     readonly sealedAt: string | null;
-    readonly revisionHistory: readonly { readonly revision: number; readonly publishedAt: string; readonly status: string; readonly summary: string }[];
+    readonly revisionHistory: readonly {
+      readonly revision: number;
+      readonly publishedAt: string;
+      readonly status: string;
+      readonly summary: string;
+    }[];
     readonly publishedAt: string;
     readonly closing: string;
     readonly title: string;
@@ -144,7 +150,8 @@ const fail = (path: string, message: string): never => {
 };
 
 const record = (value: unknown, path: string): Record<string, unknown> => {
-  if (typeof value !== 'object' || value === null || Array.isArray(value)) fail(path, 'deve ser objeto');
+  if (typeof value !== 'object' || value === null || Array.isArray(value))
+    fail(path, 'deve ser objeto');
   return value as Record<string, unknown>;
 };
 
@@ -178,7 +185,13 @@ const strings = (value: unknown, path: string): readonly string[] =>
 
 const stateKind = (value: unknown, path: string): VisualStatusKind => {
   const parsed = text(value, path);
-  const allowed: readonly VisualStatusKind[] = ['developing', 'confirmed', 'analysis', 'document', 'corrected'];
+  const allowed: readonly VisualStatusKind[] = [
+    'developing',
+    'confirmed',
+    'analysis',
+    'document',
+    'corrected',
+  ];
   if (!allowed.includes(parsed as VisualStatusKind)) fail(path, 'estado visual desconhecido');
   return parsed as VisualStatusKind;
 };
@@ -209,20 +222,26 @@ const section = (value: unknown, path: string): EditorialSection => {
     id: text(item.id, `${path}.id`),
     heading: text(item.heading, `${path}.heading`),
     paragraphs: strings(item.paragraphs, `${path}.paragraphs`),
-    blocks: Object.freeze(list(item.blocks, `${path}.blocks`).map((entry, index) => block(entry, `${path}.blocks[${index}]`))),
+    blocks: Object.freeze(
+      list(item.blocks, `${path}.blocks`).map((entry, index) =>
+        block(entry, `${path}.blocks[${index}]`),
+      ),
+    ),
   });
 };
 
 const publication = (value: unknown, path: string): EditorialPublication => {
   const item = record(value, path);
-  const toc = Object.freeze(list(item.toc, `${path}.toc`).map((entry, index) => {
-    const pair = list(entry, `${path}.toc[${index}]`);
-    if (pair.length !== 2) fail(`${path}.toc[${index}]`, 'deve ter id e rótulo');
-    return Object.freeze([
-      text(pair[0], `${path}.toc[${index}][0]`),
-      text(pair[1], `${path}.toc[${index}][1]`),
-    ]) as readonly [string, string];
-  }));
+  const toc = Object.freeze(
+    list(item.toc, `${path}.toc`).map((entry, index) => {
+      const pair = list(entry, `${path}.toc[${index}]`);
+      if (pair.length !== 2) fail(`${path}.toc[${index}]`, 'deve ter id e rótulo');
+      return Object.freeze([
+        text(pair[0], `${path}.toc[${index}][0]`),
+        text(pair[1], `${path}.toc[${index}][1]`),
+      ]) as readonly [string, string];
+    }),
+  );
   return Object.freeze({
     id: text(item.id, `${path}.id`),
     slug: text(item.slug, `${path}.slug`),
@@ -244,36 +263,55 @@ const publication = (value: unknown, path: string): EditorialPublication => {
     story: optionalText(item.story, `${path}.story`),
     featured: bool(item.featured, `${path}.featured`),
     toc,
-    sections: Object.freeze(list(item.sections, `${path}.sections`).map((entry, index) => section(entry, `${path}.sections[${index}]`))),
+    sections: Object.freeze(
+      list(item.sections, `${path}.sections`).map((entry, index) =>
+        section(entry, `${path}.sections[${index}]`),
+      ),
+    ),
     sourceIds: strings(item.sourceIds, `${path}.sourceIds`),
     bodyVisibility: (() => {
       const visibility = text(item.bodyVisibility ?? 'full', `${path}.bodyVisibility`);
-      if (!['full', 'tombstone'].includes(visibility)) fail(`${path}.bodyVisibility`, 'deve ser full ou tombstone');
+      if (!['full', 'tombstone'].includes(visibility))
+        fail(`${path}.bodyVisibility`, 'deve ser full ou tombstone');
       return visibility as 'full' | 'tombstone';
     })(),
-    tombstone: item.tombstone === null || item.tombstone === undefined ? null : (() => {
-      const tombstone = record(item.tombstone, `${path}.tombstone`);
-      return Object.freeze({
-        publishedAt: text(tombstone.publishedAt, `${path}.tombstone.publishedAt`),
-        reason: text(tombstone.reason, `${path}.tombstone.reason`),
-        impact: text(tombstone.impact, `${path}.tombstone.impact`),
-        originalPublishedAt: text(tombstone.originalPublishedAt, `${path}.tombstone.originalPublishedAt`),
-      });
-    })(),
-    corrections: Object.freeze(list(item.corrections, `${path}.corrections`).map((entry, index) => {
-      const correction = record(entry, `${path}.corrections[${index}]`);
-      const type = text(correction.type, `${path}.corrections[${index}].type`);
-      if (!['correcao-factual', 'esclarecimento', 'atualizacao-material', 'retirada'].includes(type)) fail(`${path}.corrections[${index}].type`, 'tipo desconhecido');
-      return Object.freeze({
-        date: text(correction.date, `${path}.corrections[${index}].date`),
-        publishedAt: text(correction.publishedAt, `${path}.corrections[${index}].publishedAt`),
-        type: type as EditorialCorrection['type'],
-        summary: text(correction.summary, `${path}.corrections[${index}].summary`),
-        impact: text(correction.impact, `${path}.corrections[${index}].impact`),
-        previousRevision: integer(correction.previousRevision, `${path}.corrections[${index}].previousRevision`),
-        newRevision: integer(correction.newRevision, `${path}.corrections[${index}].newRevision`),
-      });
-    })),
+    tombstone:
+      item.tombstone === null || item.tombstone === undefined
+        ? null
+        : (() => {
+            const tombstone = record(item.tombstone, `${path}.tombstone`);
+            return Object.freeze({
+              publishedAt: text(tombstone.publishedAt, `${path}.tombstone.publishedAt`),
+              reason: text(tombstone.reason, `${path}.tombstone.reason`),
+              impact: text(tombstone.impact, `${path}.tombstone.impact`),
+              originalPublishedAt: text(
+                tombstone.originalPublishedAt,
+                `${path}.tombstone.originalPublishedAt`,
+              ),
+            });
+          })(),
+    corrections: Object.freeze(
+      list(item.corrections, `${path}.corrections`).map((entry, index) => {
+        const correction = record(entry, `${path}.corrections[${index}]`);
+        const type = text(correction.type, `${path}.corrections[${index}].type`);
+        if (
+          !['correcao-factual', 'esclarecimento', 'atualizacao-material', 'retirada'].includes(type)
+        )
+          fail(`${path}.corrections[${index}].type`, 'tipo desconhecido');
+        return Object.freeze({
+          date: text(correction.date, `${path}.corrections[${index}].date`),
+          publishedAt: text(correction.publishedAt, `${path}.corrections[${index}].publishedAt`),
+          type: type as EditorialCorrection['type'],
+          summary: text(correction.summary, `${path}.corrections[${index}].summary`),
+          impact: text(correction.impact, `${path}.corrections[${index}].impact`),
+          previousRevision: integer(
+            correction.previousRevision,
+            `${path}.corrections[${index}].previousRevision`,
+          ),
+          newRevision: integer(correction.newRevision, `${path}.corrections[${index}].newRevision`),
+        });
+      }),
+    ),
     connectionIds: strings(item.connectionIds, `${path}.connectionIds`),
   });
 };
@@ -285,31 +323,45 @@ export const parseEditorialSiteData = (value: unknown): EditorialSiteData => {
   const dateLabel = list(site.dateLabel, 'site.dateLabel');
   if (dateLabel.length !== 2) fail('site.dateLabel', 'deve ter duas linhas');
 
-  const publications = Object.freeze(list(root.publications, 'publications').map((entry, index) => publication(entry, `publications[${index}]`)));
+  const publications = Object.freeze(
+    list(root.publications, 'publications').map((entry, index) =>
+      publication(entry, `publications[${index}]`),
+    ),
+  );
   const publicationIds = new Set(publications.map((item) => item.id));
   if (publicationIds.size !== publications.length) fail('publications', 'IDs duplicados');
   publications.forEach((item) => {
-    if (item.bodyVisibility === 'tombstone' && item.tombstone === null) fail(`publication.${item.id}.tombstone`, 'retirada exige página-túmulo');
-    if (item.bodyVisibility === 'full' && item.tombstone !== null) fail(`publication.${item.id}.tombstone`, 'tombstone inesperado em corpo público');
+    if (item.bodyVisibility === 'tombstone' && item.tombstone === null)
+      fail(`publication.${item.id}.tombstone`, 'retirada exige página-túmulo');
+    if (item.bodyVisibility === 'full' && item.tombstone !== null)
+      fail(`publication.${item.id}.tombstone`, 'tombstone inesperado em corpo público');
   });
 
-  const redirects = Object.freeze(list(root.redirects ?? [], 'redirects').map((entry, index): EditorialRedirect => {
-    const item = record(entry, `redirects[${index}]`);
-    const statusCode = integer(item.statusCode, `redirects[${index}].statusCode`);
-    if (statusCode !== 308) fail(`redirects[${index}].statusCode`, 'deve ser 308');
-    const parsed = Object.freeze({
-      publicationId: text(item.publicationId, `redirects[${index}].publicationId`),
-      fromPath: text(item.fromPath, `redirects[${index}].fromPath`),
-      toPath: text(item.toPath, `redirects[${index}].toPath`),
-      statusCode: 308 as const,
-      effectiveAt: text(item.effectiveAt, `redirects[${index}].effectiveAt`),
-      reason: text(item.reason, `redirects[${index}].reason`),
-    });
-    if (!/^\/\d{4}\/\d{2}\/\d{2}\/[a-z0-9]+(?:-[a-z0-9]+)*\/$/.test(parsed.fromPath) || !/^\/\d{4}\/\d{2}\/\d{2}\/[a-z0-9]+(?:-[a-z0-9]+)*\/$/.test(parsed.toPath)) fail(`redirects[${index}]`, 'caminho inválido');
-    if (parsed.fromPath === parsed.toPath) fail(`redirects[${index}]`, 'redirect aponta para si próprio');
-    if (!publicationIds.has(parsed.publicationId)) fail(`redirects[${index}].publicationId`, 'publicação inexistente');
-    return parsed;
-  }));
+  const redirects = Object.freeze(
+    list(root.redirects ?? [], 'redirects').map((entry, index): EditorialRedirect => {
+      const item = record(entry, `redirects[${index}]`);
+      const statusCode = integer(item.statusCode, `redirects[${index}].statusCode`);
+      if (statusCode !== 308) fail(`redirects[${index}].statusCode`, 'deve ser 308');
+      const parsed = Object.freeze({
+        publicationId: text(item.publicationId, `redirects[${index}].publicationId`),
+        fromPath: text(item.fromPath, `redirects[${index}].fromPath`),
+        toPath: text(item.toPath, `redirects[${index}].toPath`),
+        statusCode: 308 as const,
+        effectiveAt: text(item.effectiveAt, `redirects[${index}].effectiveAt`),
+        reason: text(item.reason, `redirects[${index}].reason`),
+      });
+      if (
+        !/^\/\d{4}\/\d{2}\/\d{2}\/[a-z0-9]+(?:-[a-z0-9]+)*\/$/.test(parsed.fromPath) ||
+        !/^\/\d{4}\/\d{2}\/\d{2}\/[a-z0-9]+(?:-[a-z0-9]+)*\/$/.test(parsed.toPath)
+      )
+        fail(`redirects[${index}]`, 'caminho inválido');
+      if (parsed.fromPath === parsed.toPath)
+        fail(`redirects[${index}]`, 'redirect aponta para si próprio');
+      if (!publicationIds.has(parsed.publicationId))
+        fail(`redirects[${index}].publicationId`, 'publicação inexistente');
+      return parsed;
+    }),
+  );
   const redirectMap = new Map(redirects.map((item) => [item.fromPath, item.toPath]));
   if (redirectMap.size !== redirects.length) fail('redirects', 'origens duplicadas');
   for (const source of redirectMap.keys()) {
@@ -322,80 +374,100 @@ export const parseEditorialSiteData = (value: unknown): EditorialSiteData => {
     }
   }
 
-  const sources = Object.freeze(list(root.sources, 'sources').map((entry, index): EditorialSource => {
-    const item = record(entry, `sources[${index}]`);
-    return Object.freeze({
-      id: text(item.id, `sources[${index}].id`),
-      type: text(item.type, `sources[${index}].type`),
-      title: text(item.title, `sources[${index}].title`),
-      publisher: text(item.publisher, `sources[${index}].publisher`),
-      url: text(item.url, `sources[${index}].url`),
-      accessedAt: text(item.accessedAt, `sources[${index}].accessedAt`),
-      note: text(item.note, `sources[${index}].note`),
-    });
-  }));
-  const sourceIds = new Set(sources.map((item) => item.id));
-  publications.forEach((item) => item.sourceIds.forEach((id) => {
-    if (!sourceIds.has(id)) fail(`publication.${item.id}.sourceIds`, `fonte inexistente: ${id}`);
-  }));
-  publications.forEach((item) => item.connectionIds.forEach((id) => {
-    if (!publicationIds.has(id)) fail(`publication.${item.id}.connectionIds`, `publicação inexistente: ${id}`);
-  }));
-
-  const stories = Object.freeze(list(root.stories, 'stories').map((entry, index): EditorialStory => {
-    const item = record(entry, `stories[${index}]`);
-    const timeline = Object.freeze(list(item.timeline, `stories[${index}].timeline`).map((point, pointIndex) => {
-      const row = record(point, `stories[${index}].timeline[${pointIndex}]`);
+  const sources = Object.freeze(
+    list(root.sources, 'sources').map((entry, index): EditorialSource => {
+      const item = record(entry, `sources[${index}]`);
       return Object.freeze({
-        date: text(row.date, `stories[${index}].timeline[${pointIndex}].date`),
-        title: text(row.title, `stories[${index}].timeline[${pointIndex}].title`),
-        text: text(row.text, `stories[${index}].timeline[${pointIndex}].text`),
+        id: text(item.id, `sources[${index}].id`),
+        type: text(item.type, `sources[${index}].type`),
+        title: text(item.title, `sources[${index}].title`),
+        publisher: text(item.publisher, `sources[${index}].publisher`),
+        url: text(item.url, `sources[${index}].url`),
+        accessedAt: text(item.accessedAt, `sources[${index}].accessedAt`),
+        note: text(item.note, `sources[${index}].note`),
       });
-    }));
-    const storyPublicationIds = strings(item.publicationIds, `stories[${index}].publicationIds`);
-    storyPublicationIds.forEach((id) => {
-      if (!publicationIds.has(id)) fail(`stories[${index}].publicationIds`, `publicação inexistente: ${id}`);
-    });
-    return Object.freeze({
-      slug: text(item.slug, `stories[${index}].slug`),
-      title: text(item.title, `stories[${index}].title`),
-      status: text(item.status, `stories[${index}].status`),
-      summary: text(item.summary, `stories[${index}].summary`),
-      guardian: text(item.guardian, `stories[${index}].guardian`),
-      topics: strings(item.topics, `stories[${index}].topics`),
-      publicationIds: storyPublicationIds,
-      nextExpectedEvent: text(item.nextExpectedEvent, `stories[${index}].nextExpectedEvent`),
-      timeline,
-      actors: strings(item.actors, `stories[${index}].actors`),
-      openQuestions: strings(item.openQuestions, `stories[${index}].openQuestions`),
-    });
-  }));
+    }),
+  );
+  const sourceIds = new Set(sources.map((item) => item.id));
+  publications.forEach((item) =>
+    item.sourceIds.forEach((id) => {
+      if (!sourceIds.has(id)) fail(`publication.${item.id}.sourceIds`, `fonte inexistente: ${id}`);
+    }),
+  );
+  publications.forEach((item) =>
+    item.connectionIds.forEach((id) => {
+      if (!publicationIds.has(id))
+        fail(`publication.${item.id}.connectionIds`, `publicação inexistente: ${id}`);
+    }),
+  );
 
-  const documents = Object.freeze(list(root.documents, 'documents').map((entry, index): EditorialDocument => {
-    const item = record(entry, `documents[${index}]`);
-    const relatedPublicationIds = strings(item.relatedPublicationIds, `documents[${index}].relatedPublicationIds`);
-    relatedPublicationIds.forEach((id) => {
-      if (!publicationIds.has(id)) fail(`documents[${index}].relatedPublicationIds`, `publicação inexistente: ${id}`);
-    });
-    return Object.freeze({
-      slug: text(item.slug, `documents[${index}].slug`),
-      title: text(item.title, `documents[${index}].title`),
-      publisher: text(item.publisher, `documents[${index}].publisher`),
-      date: text(item.date, `documents[${index}].date`),
-      type: text(item.type, `documents[${index}].type`),
-      sourceUrl: text(item.sourceUrl, `documents[${index}].sourceUrl`),
-      summary: text(item.summary, `documents[${index}].summary`),
-      excerpts: Object.freeze(list(item.excerpts, `documents[${index}].excerpts`).map((excerpt, excerptIndex) => {
-        const row = record(excerpt, `documents[${index}].excerpts[${excerptIndex}]`);
-        return Object.freeze({
-          page: text(row.page, `documents[${index}].excerpts[${excerptIndex}].page`),
-          text: text(row.text, `documents[${index}].excerpts[${excerptIndex}].text`),
-          comment: text(row.comment, `documents[${index}].excerpts[${excerptIndex}].comment`),
-        });
-      })),
-      relatedPublicationIds,
-    });
-  }));
+  const stories = Object.freeze(
+    list(root.stories, 'stories').map((entry, index): EditorialStory => {
+      const item = record(entry, `stories[${index}]`);
+      const timeline = Object.freeze(
+        list(item.timeline, `stories[${index}].timeline`).map((point, pointIndex) => {
+          const row = record(point, `stories[${index}].timeline[${pointIndex}]`);
+          return Object.freeze({
+            date: text(row.date, `stories[${index}].timeline[${pointIndex}].date`),
+            title: text(row.title, `stories[${index}].timeline[${pointIndex}].title`),
+            text: text(row.text, `stories[${index}].timeline[${pointIndex}].text`),
+          });
+        }),
+      );
+      const storyPublicationIds = strings(item.publicationIds, `stories[${index}].publicationIds`);
+      storyPublicationIds.forEach((id) => {
+        if (!publicationIds.has(id))
+          fail(`stories[${index}].publicationIds`, `publicação inexistente: ${id}`);
+      });
+      return Object.freeze({
+        slug: text(item.slug, `stories[${index}].slug`),
+        title: text(item.title, `stories[${index}].title`),
+        status: text(item.status, `stories[${index}].status`),
+        summary: text(item.summary, `stories[${index}].summary`),
+        guardian: text(item.guardian, `stories[${index}].guardian`),
+        topics: strings(item.topics, `stories[${index}].topics`),
+        publicationIds: storyPublicationIds,
+        nextExpectedEvent: text(item.nextExpectedEvent, `stories[${index}].nextExpectedEvent`),
+        timeline,
+        actors: strings(item.actors, `stories[${index}].actors`),
+        openQuestions: strings(item.openQuestions, `stories[${index}].openQuestions`),
+      });
+    }),
+  );
+
+  const documents = Object.freeze(
+    list(root.documents, 'documents').map((entry, index): EditorialDocument => {
+      const item = record(entry, `documents[${index}]`);
+      const relatedPublicationIds = strings(
+        item.relatedPublicationIds,
+        `documents[${index}].relatedPublicationIds`,
+      );
+      relatedPublicationIds.forEach((id) => {
+        if (!publicationIds.has(id))
+          fail(`documents[${index}].relatedPublicationIds`, `publicação inexistente: ${id}`);
+      });
+      return Object.freeze({
+        slug: text(item.slug, `documents[${index}].slug`),
+        title: text(item.title, `documents[${index}].title`),
+        publisher: text(item.publisher, `documents[${index}].publisher`),
+        date: text(item.date, `documents[${index}].date`),
+        type: text(item.type, `documents[${index}].type`),
+        sourceUrl: text(item.sourceUrl, `documents[${index}].sourceUrl`),
+        summary: text(item.summary, `documents[${index}].summary`),
+        excerpts: Object.freeze(
+          list(item.excerpts, `documents[${index}].excerpts`).map((excerpt, excerptIndex) => {
+            const row = record(excerpt, `documents[${index}].excerpts[${excerptIndex}]`);
+            return Object.freeze({
+              page: text(row.page, `documents[${index}].excerpts[${excerptIndex}].page`),
+              text: text(row.text, `documents[${index}].excerpts[${excerptIndex}].text`),
+              comment: text(row.comment, `documents[${index}].excerpts[${excerptIndex}].comment`),
+            });
+          }),
+        ),
+        relatedPublicationIds,
+      });
+    }),
+  );
 
   const parsed: EditorialSiteData = Object.freeze({
     site: Object.freeze({
@@ -412,7 +484,10 @@ export const parseEditorialSiteData = (value: unknown): EditorialSiteData => {
       label: text(edition.label, 'edition.label'),
       revision: integer(edition.revision, 'edition.revision'),
       status: text(edition.status, 'edition.status'),
-      sealedAt: edition.sealedAt === null || edition.sealedAt === undefined ? null : text(edition.sealedAt, 'edition.sealedAt'),
+      sealedAt:
+        edition.sealedAt === null || edition.sealedAt === undefined
+          ? null
+          : text(edition.sealedAt, 'edition.sealedAt'),
       revisionHistory: Object.freeze(
         list(edition.revisionHistory ?? [], 'edition.revisionHistory').map((item, index) => {
           const row = record(item, `edition.revisionHistory[${index}]`);
@@ -453,15 +528,36 @@ export const editionHref = (date: string): string => {
   return `/edicoes/${year}/${month}/${day}/`;
 };
 
-export const navigationFor = (currentHref: string): readonly NavigationItem[] => Object.freeze([
-  { label: 'Início', href: '/', current: currentHref === '/', available: true },
-  { label: 'Agora', href: '/agora/', current: currentHref.startsWith('/agora'), available: true },
-  { label: 'Canais', href: '/canais/', current: currentHref.startsWith('/canais'), available: true },
-  { label: 'Tecnologia', href: '/temas/tecnologia/', current: currentHref.startsWith('/temas/tecnologia'), available: true },
-  { label: 'Arquivo', href: '/arquivo/', current: currentHref.startsWith('/arquivo') || currentHref.startsWith('/edicoes'), available: true },
-  { label: 'Busca', href: '/busca/', current: currentHref.startsWith('/busca'), available: true },
-  { label: 'A Redação', href: '/a-redacao/', current: currentHref.startsWith('/a-redacao') || currentHref.startsWith('/redacao'), available: true },
-]);
+export const navigationFor = (currentHref: string): readonly NavigationItem[] =>
+  Object.freeze([
+    { label: 'Início', href: '/', current: currentHref === '/', available: true },
+    { label: 'Agora', href: '/agora/', current: currentHref.startsWith('/agora'), available: true },
+    {
+      label: 'Canais',
+      href: '/canais/',
+      current: currentHref.startsWith('/canais'),
+      available: true,
+    },
+    {
+      label: 'Tecnologia',
+      href: '/temas/tecnologia/',
+      current: currentHref.startsWith('/temas/tecnologia'),
+      available: true,
+    },
+    {
+      label: 'Arquivo',
+      href: '/arquivo/',
+      current: currentHref.startsWith('/arquivo') || currentHref.startsWith('/edicoes'),
+      available: true,
+    },
+    { label: 'Busca', href: '/busca/', current: currentHref.startsWith('/busca'), available: true },
+    {
+      label: 'A Redação',
+      href: '/a-redacao/',
+      current: currentHref.startsWith('/a-redacao') || currentHref.startsWith('/redacao'),
+      available: true,
+    },
+  ]);
 
 export const findPublication = (data: EditorialSiteData, id: string): EditorialPublication => {
   const publication = data.publications.find((item) => item.id === id);
@@ -469,14 +565,20 @@ export const findPublication = (data: EditorialSiteData, id: string): EditorialP
   return publication;
 };
 
-export const sourcesFor = (data: EditorialSiteData, publication: EditorialPublication): readonly EditorialSource[] =>
+export const sourcesFor = (
+  data: EditorialSiteData,
+  publication: EditorialPublication,
+): readonly EditorialSource[] =>
   publication.sourceIds.map((id) => {
     const source = data.sources.find((item) => item.id === id);
     if (!source) throw new Error(`Fonte inexistente: ${id}`);
     return source;
   });
 
-export const connectionsFor = (data: EditorialSiteData, publication: EditorialPublication): readonly EditorialPublication[] =>
+export const connectionsFor = (
+  data: EditorialSiteData,
+  publication: EditorialPublication,
+): readonly EditorialPublication[] =>
   publication.connectionIds.map((id) => findPublication(data, id));
 
 export const formatTimestamp = (value: string): string =>

@@ -2,20 +2,20 @@
 
 **Versão:** 0.3.0-dev
 
-| Referência HTML | Implementação Astro | Responsabilidade |
-|---|---|---|
-| `.sheet` | `JornalConcretoLayout.astro` | documento visual, metadados, skip link e shell |
-| `.masthead` | `Masthead.astro` | data, marca, slogan e tema |
-| `.primary-nav` | `PrimaryNav.astro` | navegação disponível e destinos futuros não interativos |
-| `.breadcrumbs` | `Breadcrumbs.astro` | posição estrutural |
-| `.hero-grid` | `HomeHero.astro` | manchete dominante e destaques laterais |
-| `.status` | `StatusBadge.astro` | estado com texto, forma e cor |
-| `.section-rule` | `SectionRule.astro` | abertura de trilhos editoriais |
-| `.news-card` | `StorySummary.astro` | chamada secundária orientada a dados |
-| `.bdd-banner` | `DailyEditionBanner.astro` | edição diária privilegiada |
-| `.channel-directory article` | `ChannelCard.astro` | identidade e função dos canais |
-| `.footer` | `SiteFooter.astro` | encerramento institucional |
-| `assets/app.js` | `ThemeController.astro` | tema persistente e sincronizado |
+| Referência HTML              | Implementação Astro          | Responsabilidade                                        |
+| ---------------------------- | ---------------------------- | ------------------------------------------------------- |
+| `.sheet`                     | `JornalConcretoLayout.astro` | documento visual, metadados, skip link e shell          |
+| `.masthead`                  | `Masthead.astro`             | data, marca, slogan e tema                              |
+| `.primary-nav`               | `PrimaryNav.astro`           | navegação disponível e destinos futuros não interativos |
+| `.breadcrumbs`               | `Breadcrumbs.astro`          | posição estrutural                                      |
+| `.hero-grid`                 | `HomeHero.astro`             | manchete dominante e destaques laterais                 |
+| `.status`                    | `StatusBadge.astro`          | estado com texto, forma e cor                           |
+| `.section-rule`              | `SectionRule.astro`          | abertura de trilhos editoriais                          |
+| `.news-card`                 | `StorySummary.astro`         | chamada secundária orientada a dados                    |
+| `.bdd-banner`                | `DailyEditionBanner.astro`   | edição diária privilegiada                              |
+| `.channel-directory article` | `ChannelCard.astro`          | identidade e função dos canais                          |
+| `.footer`                    | `SiteFooter.astro`           | encerramento institucional                              |
+| `assets/app.js`              | `ThemeController.astro`      | tema persistente e sincronizado                         |
 
 ## Fontes de dados
 

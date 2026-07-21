@@ -1,4 +1,3 @@
-
 import { readFile, readdir } from 'node:fs/promises';
 
 const fail = (code, message) => {
@@ -20,8 +19,18 @@ try {
   const files = new Set(await readdir('templates/google/sheets/bootstrap'));
 
   const expectedTabs = [
-    'PAUTAS', 'ARTIGOS', 'EDICOES', 'AUTORES', 'CANAIS', 'QUADROS',
-    'TEMAS', 'FONTES', 'PUBLICACOES', 'CORRECOES', 'AUTOMACOES', 'CONFIGURACOES',
+    'PAUTAS',
+    'ARTIGOS',
+    'EDICOES',
+    'AUTORES',
+    'CANAIS',
+    'QUADROS',
+    'TEMAS',
+    'FONTES',
+    'PUBLICACOES',
+    'CORRECOES',
+    'AUTOMACOES',
+    'CONFIGURACOES',
   ];
   if (JSON.stringify(Object.keys(workbook.tabs)) !== JSON.stringify(expectedTabs)) {
     fail('SUBSOLO_WORKBOOK_TABS_INVALID', 'As doze abas obrigatórias não estão na ordem canônica.');
@@ -32,10 +41,14 @@ try {
     }
   }
 
-  if (authors.length !== 44) fail('SUBSOLO_AUTHORS_COUNT_INVALID', `Esperado 44; recebido ${authors.length}.`);
-  if (channels.length !== 9) fail('SUBSOLO_CHANNELS_COUNT_INVALID', `Esperado 9; recebido ${channels.length}.`);
-  if (frames.length < 60) fail('SUBSOLO_FRAMES_COUNT_INVALID', `Esperado ao menos 60; recebido ${frames.length}.`);
-  if (edition.edition_id !== 'ed_2026-07-20') fail('SUBSOLO_EDITION_FIXTURE_INVALID', 'edition_id inesperado.');
+  if (authors.length !== 44)
+    fail('SUBSOLO_AUTHORS_COUNT_INVALID', `Esperado 44; recebido ${authors.length}.`);
+  if (channels.length !== 9)
+    fail('SUBSOLO_CHANNELS_COUNT_INVALID', `Esperado 9; recebido ${channels.length}.`);
+  if (frames.length < 60)
+    fail('SUBSOLO_FRAMES_COUNT_INVALID', `Esperado ao menos 60; recebido ${frames.length}.`);
+  if (edition.edition_id !== 'ed_2026-07-20')
+    fail('SUBSOLO_EDITION_FIXTURE_INVALID', 'edition_id inesperado.');
 
   const authorIds = new Set(authors.map((item) => item.author_id));
   const channelIds = new Set(channels.map((item) => item.channel_id));
@@ -50,7 +63,8 @@ try {
     if (article.quadro) {
       const frame = frameById.get(article.quadro);
       if (!frame) fail('SUBSOLO_ARTICLE_FRAME_UNKNOWN', article.artigo_id);
-      else if (frame.channel_id !== article.canal) fail('SUBSOLO_ARTICLE_FRAME_CHANNEL_MISMATCH', article.artigo_id);
+      else if (frame.channel_id !== article.canal)
+        fail('SUBSOLO_ARTICLE_FRAME_CHANNEL_MISMATCH', article.artigo_id);
     }
     if (article.status === 'PRONTO_PARA_PUBLICAR') {
       for (const field of ['revisao_editorial', 'revisao_factual', 'revisao_tecnica']) {
@@ -62,17 +76,26 @@ try {
   }
 
   if (!process.exitCode) {
-    console.log(JSON.stringify({
-      status: 'passed',
-      tabs: expectedTabs.length,
-      authors: authors.length,
-      channels: channels.length,
-      frames: frames.length,
-      pitches: pitches.length,
-      articles: articles.length,
-      edition: edition.edition_id,
-    }, null, 2));
+    console.log(
+      JSON.stringify(
+        {
+          status: 'passed',
+          tabs: expectedTabs.length,
+          authors: authors.length,
+          channels: channels.length,
+          frames: frames.length,
+          pitches: pitches.length,
+          articles: articles.length,
+          edition: edition.edition_id,
+        },
+        null,
+        2,
+      ),
+    );
   }
 } catch (error) {
-  fail('SUBSOLO_EDITORIAL_VALIDATION_ERROR', error instanceof Error ? error.message : String(error));
+  fail(
+    'SUBSOLO_EDITORIAL_VALIDATION_ERROR',
+    error instanceof Error ? error.message : String(error),
+  );
 }

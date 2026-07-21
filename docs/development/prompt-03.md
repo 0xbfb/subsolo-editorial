@@ -1,4 +1,3 @@
-
 # Prompt 03 — Ambiente editorial, planilhas, modelos e estados operacionais
 
 **Versão resultante:** `0.2.0-dev`

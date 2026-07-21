@@ -1,16 +1,158 @@
-import test from 'node:test';import assert from 'node:assert/strict';
-import {readFile,mkdtemp,rm} from 'node:fs/promises';import os from 'node:os';import path from 'node:path';
-import {createPlannedEdition,openEdition,appendPublication,publishEdition,reviseEdition,sealEdition,correctSealedEdition,toPackageEdition,toPublicEdition,registerPrivateSlot,EditionLifecycleFailure} from '../../src/lib/application/edition-lifecycle.mjs';
-import {packageLifecycleRevision} from '../../src/lib/application/edition-lifecycle-package.mjs';
-const pub={id:'pub_MB76FYPQZ5RTPENBAR5611AJJ0',channel:'sao-paulo-sob-o-capo',date:'2026-07-20',path:'publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0',position:10,featured:true,slot_state:'confirmado',public:true};
-const planned=()=>createPlannedEdition({date:'2026-07-20',map_day_id:'mapa_2026-07-20'});
-const opened=()=>openEdition(planned(),{at:'2026-07-20T05:55:00-03:00'});
-const r1=()=>publishEdition(appendPublication(opened(),pub),{at:'2026-07-20T07:05:00-03:00'});
-test('planned edition opens once',()=>{const s=opened();assert.equal(s.lifecycle_state,'aberta');assert.throws(()=>openEdition(s,{at:'2026-07-20T06:00:00-03:00'}),EditionLifecycleFailure);});
-test('reserved and open slots stay private',()=>{const state=registerPrivateSlot(opened(),{id:'slot-noite',state:'reservado',working_title:'segredo operacional'});assert.equal(state.private.slots.length,1);assert.throws(()=>appendPublication(state,{...pub,id:'pub_01J3Q47K9M2NP5RSTVWXYZABCD',slot_state:'reservado'}),e=>e.code==='SUBSOLO_EDITION_SLOT_NOT_PUBLIC');});
-test('publication from another date requires explicit carryover',()=>{assert.throws(()=>appendPublication(opened(),{...pub,date:'2026-07-19'}),e=>e.code==='SUBSOLO_EDITION_DATE_MISMATCH');assert.doesNotThrow(()=>appendPublication(opened(),{...pub,date:'2026-07-19',carryover:{allowed:true,reason:'desenvolvimento material confirmado hoje'}}));});
-test('r1, r2 and seal preserve URLs and revision chain',()=>{const first=r1();const second=reviseEdition(first,{at:'2026-07-20T15:00:00-03:00',publication_order:[pub.id]});const sealed=sealEdition(second,{at:'2026-07-20T21:00:00-03:00'});assert.deepEqual([first.revision,second.revision,sealed.revision],[1,2,3]);assert.equal(second.history.at(-1).supersedes,first.current_run_id);assert.equal(sealed.history.at(-1).supersedes,second.current_run_id);assert.equal(sealed.publications[0].id,pub.id);assert.equal(sealed.lifecycle_state,'selada');});
-test('sealed edition rejects common append',()=>{const sealed=sealEdition(r1(),{at:'2026-07-20T21:00:00-03:00'});assert.throws(()=>appendPublication(sealed,pub),e=>e.code==='SUBSOLO_EDITION_APPEND_INVALID');});
-test('sealed correction is a formal new revision',()=>{const sealed=sealEdition(r1(),{at:'2026-07-20T21:00:00-03:00'});const corrected=correctSealedEdition(sealed,{at:'2026-07-20T21:20:00-03:00',reason:'Correção factual na identificação do operador.'});assert.equal(corrected.revision,3);assert.equal(corrected.lifecycle_state,'selada');assert.equal(toPackageEdition(corrected,{generated_at:'2026-07-20T21:20:00-03:00'}).status,'corrigida');});
-test('public edition strips Map of Day, reserved slots, deferred and withdrawn',()=>{let state=opened();state=registerPrivateSlot(state,{id:'slot-reservado',state:'reservado',working_title:'não publicar'});state={...state,private:{...state.private,deferred:[{secret:'não publicar'}],withdrawn:[{reason:'privado'}]}};state=publishEdition(appendPublication(state,pub),{at:'2026-07-20T07:05:00-03:00'});const publicEdition=toPublicEdition(state);const raw=JSON.stringify(publicEdition);assert.equal(/map_day|slot|deferred|withdrawn|secret|não publicar/.test(raw),false);});
-test('package each revision and preserve prior ZIPs',async()=>{const temp=await mkdtemp(path.join(os.tmpdir(),'subsolo-edition-'));try{const first=r1();const p1=await packageLifecycleRevision({state:first,workspaceTemplate:'fixtures/edition-lifecycle/workspace',destination:temp,mode:'apply'});const second=reviseEdition(first,{at:'2026-07-20T15:00:00-03:00',publication_order:[pub.id]});const p2=await packageLifecycleRevision({state:second,workspaceTemplate:'fixtures/edition-lifecycle/workspace',destination:temp,previousPackage:p1.destination,mode:'apply'});const sealed=sealEdition(second,{at:'2026-07-20T21:00:00-03:00'});const p3=await packageLifecycleRevision({state:sealed,workspaceTemplate:'fixtures/edition-lifecycle/workspace',destination:temp,previousPackage:p2.destination,mode:'apply'});assert.equal(new Set([p1.destination,p2.destination,p3.destination]).size,3);assert.equal((await readFile(p1.destination)).length>0,true);assert.equal((await readFile(p2.destination)).length>0,true);assert.equal((await readFile(p3.destination)).length>0,true);}finally{await rm(temp,{recursive:true,force:true});}});
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile, mkdtemp, rm } from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import {
+  createPlannedEdition,
+  openEdition,
+  appendPublication,
+  publishEdition,
+  reviseEdition,
+  sealEdition,
+  correctSealedEdition,
+  toPackageEdition,
+  toPublicEdition,
+  registerPrivateSlot,
+  EditionLifecycleFailure,
+} from '../../src/lib/application/edition-lifecycle.mjs';
+import { packageLifecycleRevision } from '../../src/lib/application/edition-lifecycle-package.mjs';
+const pub = {
+  id: 'pub_MB76FYPQZ5RTPENBAR5611AJJ0',
+  channel: 'sao-paulo-sob-o-capo',
+  date: '2026-07-20',
+  path: 'publications/pub_MB76FYPQZ5RTPENBAR5611AJJ0',
+  position: 10,
+  featured: true,
+  slot_state: 'confirmado',
+  public: true,
+};
+const planned = () => createPlannedEdition({ date: '2026-07-20', map_day_id: 'mapa_2026-07-20' });
+const opened = () => openEdition(planned(), { at: '2026-07-20T05:55:00-03:00' });
+const r1 = () =>
+  publishEdition(appendPublication(opened(), pub), { at: '2026-07-20T07:05:00-03:00' });
+test('planned edition opens once', () => {
+  const s = opened();
+  assert.equal(s.lifecycle_state, 'aberta');
+  assert.throws(() => openEdition(s, { at: '2026-07-20T06:00:00-03:00' }), EditionLifecycleFailure);
+});
+test('reserved and open slots stay private', () => {
+  const state = registerPrivateSlot(opened(), {
+    id: 'slot-noite',
+    state: 'reservado',
+    working_title: 'segredo operacional',
+  });
+  assert.equal(state.private.slots.length, 1);
+  assert.throws(
+    () =>
+      appendPublication(state, {
+        ...pub,
+        id: 'pub_01J3Q47K9M2NP5RSTVWXYZABCD',
+        slot_state: 'reservado',
+      }),
+    (e) => e.code === 'SUBSOLO_EDITION_SLOT_NOT_PUBLIC',
+  );
+});
+test('publication from another date requires explicit carryover', () => {
+  assert.throws(
+    () => appendPublication(opened(), { ...pub, date: '2026-07-19' }),
+    (e) => e.code === 'SUBSOLO_EDITION_DATE_MISMATCH',
+  );
+  assert.doesNotThrow(() =>
+    appendPublication(opened(), {
+      ...pub,
+      date: '2026-07-19',
+      carryover: { allowed: true, reason: 'desenvolvimento material confirmado hoje' },
+    }),
+  );
+});
+test('r1, r2 and seal preserve URLs and revision chain', () => {
+  const first = r1();
+  const second = reviseEdition(first, {
+    at: '2026-07-20T15:00:00-03:00',
+    publication_order: [pub.id],
+  });
+  const sealed = sealEdition(second, { at: '2026-07-20T21:00:00-03:00' });
+  assert.deepEqual([first.revision, second.revision, sealed.revision], [1, 2, 3]);
+  assert.equal(second.history.at(-1).supersedes, first.current_run_id);
+  assert.equal(sealed.history.at(-1).supersedes, second.current_run_id);
+  assert.equal(sealed.publications[0].id, pub.id);
+  assert.equal(sealed.lifecycle_state, 'selada');
+});
+test('sealed edition rejects common append', () => {
+  const sealed = sealEdition(r1(), { at: '2026-07-20T21:00:00-03:00' });
+  assert.throws(
+    () => appendPublication(sealed, pub),
+    (e) => e.code === 'SUBSOLO_EDITION_APPEND_INVALID',
+  );
+});
+test('sealed correction is a formal new revision', () => {
+  const sealed = sealEdition(r1(), { at: '2026-07-20T21:00:00-03:00' });
+  const corrected = correctSealedEdition(sealed, {
+    at: '2026-07-20T21:20:00-03:00',
+    reason: 'Correção factual na identificação do operador.',
+  });
+  assert.equal(corrected.revision, 3);
+  assert.equal(corrected.lifecycle_state, 'selada');
+  assert.equal(
+    toPackageEdition(corrected, { generated_at: '2026-07-20T21:20:00-03:00' }).status,
+    'corrigida',
+  );
+});
+test('public edition strips Map of Day, reserved slots, deferred and withdrawn', () => {
+  let state = opened();
+  state = registerPrivateSlot(state, {
+    id: 'slot-reservado',
+    state: 'reservado',
+    working_title: 'não publicar',
+  });
+  state = {
+    ...state,
+    private: {
+      ...state.private,
+      deferred: [{ secret: 'não publicar' }],
+      withdrawn: [{ reason: 'privado' }],
+    },
+  };
+  state = publishEdition(appendPublication(state, pub), { at: '2026-07-20T07:05:00-03:00' });
+  const publicEdition = toPublicEdition(state);
+  const raw = JSON.stringify(publicEdition);
+  assert.equal(/map_day|slot|deferred|withdrawn|secret|não publicar/.test(raw), false);
+});
+test('package each revision and preserve prior ZIPs', async () => {
+  const temp = await mkdtemp(path.join(os.tmpdir(), 'subsolo-edition-'));
+  try {
+    const first = r1();
+    const p1 = await packageLifecycleRevision({
+      state: first,
+      workspaceTemplate: 'fixtures/edition-lifecycle/workspace',
+      destination: temp,
+      mode: 'apply',
+    });
+    const second = reviseEdition(first, {
+      at: '2026-07-20T15:00:00-03:00',
+      publication_order: [pub.id],
+    });
+    const p2 = await packageLifecycleRevision({
+      state: second,
+      workspaceTemplate: 'fixtures/edition-lifecycle/workspace',
+      destination: temp,
+      previousPackage: p1.destination,
+      mode: 'apply',
+    });
+    const sealed = sealEdition(second, { at: '2026-07-20T21:00:00-03:00' });
+    const p3 = await packageLifecycleRevision({
+      state: sealed,
+      workspaceTemplate: 'fixtures/edition-lifecycle/workspace',
+      destination: temp,
+      previousPackage: p2.destination,
+      mode: 'apply',
+    });
+    assert.equal(new Set([p1.destination, p2.destination, p3.destination]).size, 3);
+    assert.equal((await readFile(p1.destination)).length > 0, true);
+    assert.equal((await readFile(p2.destination)).length > 0, true);
+    assert.equal((await readFile(p3.destination)).length > 0, true);
+  } finally {
+    await rm(temp, { recursive: true, force: true });
+  }
+});

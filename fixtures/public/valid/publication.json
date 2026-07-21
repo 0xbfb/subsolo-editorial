@@ -9,17 +9,10 @@
   "section": "cidade",
   "type": "reportagem",
   "status": "em-desenvolvimento",
-  "authors": [
-    "trilho"
-  ],
+  "authors": ["trilho"],
   "editor": "trilho",
-  "topics": [
-    "mobilidade",
-    "infraestrutura"
-  ],
-  "territories": [
-    "sao-paulo"
-  ],
+  "topics": ["mobilidade", "infraestrutura"],
+  "territories": ["sao-paulo"],
   "story_id": "story_01K0ABCDEFFGHJKMNPQRSTVWXY",
   "published_at": "2026-07-20T08:15:22-03:00",
   "updated_at": null,

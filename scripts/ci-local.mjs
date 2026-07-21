@@ -12,7 +12,10 @@ const commands = [
 ];
 for (const [command, args] of commands) {
   console.log(`\n> ${command} ${args.join(' ')}`);
-  const result = spawnSync(command, args, { stdio: 'inherit', shell: process.platform === 'win32' });
+  const result = spawnSync(command, args, {
+    stdio: 'inherit',
+    shell: process.platform === 'win32',
+  });
   if (result.error) {
     console.error(`SUBSOLO_CI_COMMAND_FAILED: ${result.error.message}`);
     process.exit(1);

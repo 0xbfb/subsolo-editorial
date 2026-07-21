@@ -58,10 +58,18 @@
     }
   ],
   "connections": {
-    "Entrada pós-publicação": { "main": [[{ "node": "Aplicar revisão pública", "type": "main", "index": 0 }]] },
-    "Aplicar revisão pública": { "main": [[{ "node": "Gerar e preservar pacote", "type": "main", "index": 0 }]] },
-    "Gerar e preservar pacote": { "main": [[{ "node": "Criar pull request", "type": "main", "index": 0 }]] },
-    "Criar pull request": { "main": [[{ "node": "Aguardar merge humano", "type": "main", "index": 0 }]] }
+    "Entrada pós-publicação": {
+      "main": [[{ "node": "Aplicar revisão pública", "type": "main", "index": 0 }]]
+    },
+    "Aplicar revisão pública": {
+      "main": [[{ "node": "Gerar e preservar pacote", "type": "main", "index": 0 }]]
+    },
+    "Gerar e preservar pacote": {
+      "main": [[{ "node": "Criar pull request", "type": "main", "index": 0 }]]
+    },
+    "Criar pull request": {
+      "main": [[{ "node": "Aguardar merge humano", "type": "main", "index": 0 }]]
+    }
   },
   "pinData": {},
   "meta": {

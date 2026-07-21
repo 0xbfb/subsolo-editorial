@@ -50,4 +50,3 @@
 - `tests/n8n/workflows-static.test.mjs`
 
 ## Removidos
-

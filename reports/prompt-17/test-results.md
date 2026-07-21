@@ -6,18 +6,18 @@
 
 ## Resultado consolidado
 
-| Verificação | Resultado |
-|---|---:|
-| Testes Node | 204 aprovados |
-| Falhas | 0 |
-| Ignorados | 0 |
-| Testes específicos de mídia | 19 aprovados |
-| JSON Schemas públicos | 13 válidos |
-| Arquivos JSON analisados | 192 válidos |
-| Derivados da fixture | 12 válidos |
-| Fontes canônicas | 12 checksums confirmados |
-| Workflows GitHub | 4 válidos |
-| Workflows n8n | 11 sanitizados |
+| Verificação                 |                Resultado |
+| --------------------------- | -----------------------: |
+| Testes Node                 |            204 aprovados |
+| Falhas                      |                        0 |
+| Ignorados                   |                        0 |
+| Testes específicos de mídia |             19 aprovados |
+| JSON Schemas públicos       |               13 válidos |
+| Arquivos JSON analisados    |              192 válidos |
+| Derivados da fixture        |               12 válidos |
+| Fontes canônicas            | 12 checksums confirmados |
+| Workflows GitHub            |                4 válidos |
+| Workflows n8n               |           11 sanitizados |
 
 A suíte acumulada terminou com:
 

@@ -3,9 +3,7 @@
     {
       "id": "gmail-001",
       "internalDate": "1784547300000",
-      "labelIds": [
-        "SUBSOLO/Pautas"
-      ],
+      "labelIds": ["SUBSOLO/Pautas"],
       "snippet": "Sugestão de pauta com relatório anexo.",
       "payload": {
         "headers": [

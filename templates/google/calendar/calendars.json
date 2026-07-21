@@ -21,13 +21,7 @@
       "purpose": "Materiais com restrição temporal."
     }
   ],
-  "event_required_fields": [
-    "title",
-    "entity_id",
-    "responsible",
-    "status",
-    "links"
-  ],
+  "event_required_fields": ["title", "entity_id", "responsible", "status", "links"],
   "recurring_editorial_events": [
     {
       "title": "Mesa de Abertura",

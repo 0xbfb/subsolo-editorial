@@ -1,4 +1,3 @@
-
 # SUBSOLO — Bootstrap do Google Sheets
 
 A planilha principal chama-se **SUBSOLO — Controle Editorial**.

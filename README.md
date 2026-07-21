@@ -297,7 +297,6 @@ node cli/subsolo.mjs ingest --source freshrss --provider fixture --input fixture
 
 Consulte `docs/operations/editorial-sources.md` e `docs/operations/editorial-triage-policy.md`.
 
-
 ## Orquestração local
 
 Os workflows em `n8n/workflows` coordenam a CLI sem duplicar regras de domínio. Execute `node cli/subsolo.mjs orchestrate --input fixtures/n8n/publication-candidate.json --dry-run` para inspecionar a cadeia sem efeitos.
@@ -306,11 +305,9 @@ Os workflows em `n8n/workflows` coordenam a CLI sem duplicar regras de domínio.
 
 O ciclo operacional é executado por `subsolo edition`. A primeira publicação cria r1; cada revisão e o selo final geram um novo pacote imutável. Dados do Mapa do Dia nunca entram no manifesto público.
 
-
 ## Mídia
 
 O pipeline local publica apenas derivados AVIF/WebP/JPEG. Veja `docs/operations/media-pipeline.md` e execute `pnpm process:media:dry-run`. Originais permanecem fora do Git.
-
 
 ## Operação, observabilidade e recuperação
 

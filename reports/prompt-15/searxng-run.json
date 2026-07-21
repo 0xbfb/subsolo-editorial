@@ -15,9 +15,7 @@
   "warnings": [
     {
       "code": "SUBSOLO_INGEST_SEARCH_PARTIAL",
-      "failed_engines": [
-        "engine-x"
-      ]
+      "failed_engines": ["engine-x"]
     }
   ],
   "outcomes": [

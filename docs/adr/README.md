@@ -2,7 +2,6 @@
 
 Os ADRs registram decisões estáveis e suas consequências.
 
-
 - `0008-public-content-contract-v1.md`: contrato público Markdown/JSON, schemas e validação.
 - `0009-jornal-concreto-design-system.md`: sistema visual, componentes e regressão.
 - [0010 — Pipeline manual controlado para GitHub Pages](0010-github-actions-pages-pipeline.md)

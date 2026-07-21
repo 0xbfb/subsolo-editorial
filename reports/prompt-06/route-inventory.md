@@ -2,17 +2,17 @@
 
 O preview determinístico gerou **114 rotas**:
 
-| Grupo | Quantidade |
-|---|---:|
-| Home | 1 |
-| Publicações | 4 |
-| Edições | 2 |
-| Canais, incluindo diretório | 10 |
-| Temas | 45 |
-| Redação, incluindo diretório | 45 |
-| Histórias | 1 |
-| Documentos | 1 |
-| Agora, arquivo, busca, A Redação e 404 | 5 |
+| Grupo                                  | Quantidade |
+| -------------------------------------- | ---------: |
+| Home                                   |          1 |
+| Publicações                            |          4 |
+| Edições                                |          2 |
+| Canais, incluindo diretório            |         10 |
+| Temas                                  |         45 |
+| Redação, incluindo diretório           |         45 |
+| Histórias                              |          1 |
+| Documentos                             |          1 |
+| Agora, arquivo, busca, A Redação e 404 |          5 |
 
 ## Conteúdo representativo
 

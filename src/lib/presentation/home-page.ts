@@ -48,7 +48,8 @@ const fail = (message: string): never => {
 };
 
 const asRecord = (value: unknown, path: string): Record<string, unknown> => {
-  if (typeof value !== 'object' || value === null || Array.isArray(value)) fail(`${path} deve ser um objeto`);
+  if (typeof value !== 'object' || value === null || Array.isArray(value))
+    fail(`${path} deve ser um objeto`);
   return value as Record<string, unknown>;
 };
 
@@ -77,19 +78,24 @@ const tuple2 = (value: unknown, path: string): readonly [string, string] => {
 };
 
 const stringList = (value: unknown, path: string): readonly string[] =>
-  Object.freeze(asArray(value, path).map((item, index) => nonEmptyString(item, `${path}[${index}]`)));
+  Object.freeze(
+    asArray(value, path).map((item, index) => nonEmptyString(item, `${path}[${index}]`)),
+  );
 
 const storyList = (value: unknown, path: string): readonly StorySummary[] =>
-  Object.freeze(asArray(value, path).map((item, index) => {
-    const record = asRecord(item, `${path}[${index}]`);
-    const href = typeof record.href === 'string' && record.href.trim() !== '' ? record.href : null;
-    return Object.freeze({
-      channel: nonEmptyString(record.channel, `${path}[${index}].channel`),
-      title: nonEmptyString(record.title, `${path}[${index}].title`),
-      summary: nonEmptyString(record.summary, `${path}[${index}].summary`),
-      ...(href === null ? {} : { href }),
-    });
-  }));
+  Object.freeze(
+    asArray(value, path).map((item, index) => {
+      const record = asRecord(item, `${path}[${index}]`);
+      const href =
+        typeof record.href === 'string' && record.href.trim() !== '' ? record.href : null;
+      return Object.freeze({
+        channel: nonEmptyString(record.channel, `${path}[${index}].channel`),
+        title: nonEmptyString(record.title, `${path}[${index}].title`),
+        summary: nonEmptyString(record.summary, `${path}[${index}].summary`),
+        ...(href === null ? {} : { href }),
+      });
+    }),
+  );
 
 export const parseHomePageData = (value: unknown): HomePageData => {
   const root = asRecord(value, 'raiz');
@@ -103,17 +109,20 @@ export const parseHomePageData = (value: unknown): HomePageData => {
     'document',
     'corrected',
   ];
-  if (!allowedStates.includes(stateKind as VisualStatusKind)) fail('hero.stateKind não é reconhecido');
+  if (!allowedStates.includes(stateKind as VisualStatusKind))
+    fail('hero.stateKind não é reconhecido');
 
-  const navigation = Object.freeze(asArray(root.navigation, 'navigation').map((item, index): NavigationItem => {
-    const record = asRecord(item, `navigation[${index}]`);
-    return Object.freeze({
-      label: nonEmptyString(record.label, `navigation[${index}].label`),
-      href: nonEmptyString(record.href, `navigation[${index}].href`),
-      current: booleanValue(record.current, `navigation[${index}].current`),
-      available: booleanValue(record.available, `navigation[${index}].available`),
-    });
-  }));
+  const navigation = Object.freeze(
+    asArray(root.navigation, 'navigation').map((item, index): NavigationItem => {
+      const record = asRecord(item, `navigation[${index}]`);
+      return Object.freeze({
+        label: nonEmptyString(record.label, `navigation[${index}].label`),
+        href: nonEmptyString(record.href, `navigation[${index}].href`),
+        current: booleanValue(record.current, `navigation[${index}].current`),
+        available: booleanValue(record.available, `navigation[${index}].available`),
+      });
+    }),
+  );
 
   const parsed = {
     pageTitle: nonEmptyString(root.pageTitle, 'pageTitle'),

@@ -28,10 +28,10 @@ A sequência é:
 
 ## Variáveis
 
-| Variável | Função | Padrão |
-|---|---|---|
-| `SUBSOLO_SITE_URL` | origem absoluta de feeds e sitemap | `https://subsolo.example` |
-| `SUBSOLO_BASE_PATH` | base de GitHub Pages ou domínio | `/` |
+| Variável            | Função                             | Padrão                    |
+| ------------------- | ---------------------------------- | ------------------------- |
+| `SUBSOLO_SITE_URL`  | origem absoluta de feeds e sitemap | `https://subsolo.example` |
+| `SUBSOLO_BASE_PATH` | base de GitHub Pages ou domínio    | `/`                       |
 
 ## Arquivo
 
