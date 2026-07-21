@@ -24,7 +24,35 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat .subsolo-import/chunks/part-* | base64 --decode > /tmp/subsolo-git-source.tar.xz
+          python3 - <<'PY'
+          from pathlib import Path
+
+          base = 0x3400
+          expected_bytes = 703272
+          encoded = ''.join(
+              path.read_text(encoding='utf-8')
+              for path in sorted(Path('.subsolo-import/chunks').glob('part-*'))
+          )
+          accumulator = 0
+          available_bits = 0
+          output = bytearray()
+
+          for character in encoded:
+              value = ord(character) - base
+              if not 0 <= value < 32768:
+                  raise SystemExit(f'invalid transport character: U+{ord(character):04X}')
+              accumulator = (accumulator << 15) | value
+              available_bits += 15
+              while available_bits >= 8 and len(output) < expected_bytes:
+                  available_bits -= 8
+                  output.append((accumulator >> available_bits) & 0xFF)
+                  accumulator &= (1 << available_bits) - 1 if available_bits else 0
+
+          if len(output) != expected_bytes:
+              raise SystemExit(f'invalid decoded length: {len(output)} != {expected_bytes}')
+
+          Path('/tmp/subsolo-git-source.tar.xz').write_bytes(output)
+          PY
           echo "1eaece87ee2ef1af0cb8c797185cbac53547fee480aa5db6e3278e67a12315fd  /tmp/subsolo-git-source.tar.xz" | sha256sum --check --strict
           mkdir -p /tmp/subsolo-git-source
           tar -xJf /tmp/subsolo-git-source.tar.xz -C /tmp/subsolo-git-source
